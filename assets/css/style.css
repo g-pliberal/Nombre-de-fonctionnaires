@@ -884,7 +884,7 @@ th[aria-sort="descending"] button.tri::after { content: "↓"; opacity: 1; }
 }
 .fiche-dep dl { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 0.75rem; margin: 0.6rem 0 0; font-size: 0.92em; }
 .fiche-dep dt { color: var(--texte-doux); }
-.fiche-dep dd { margin: 0; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.fiche-dep dd { margin: 0; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .fiche-dep .sparkline { margin-top: 0.75rem; }
 .fiche-dep__vide { color: var(--texte-doux); font-style: italic; }
 

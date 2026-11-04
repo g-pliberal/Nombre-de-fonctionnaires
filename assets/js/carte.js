@@ -617,7 +617,7 @@
       const alerte = (D.alertes[c] || {})[annees[i]];
       const lignesVersants = ["fpe", "fpt", "fph"].map((vv) => {
         const e = effectif(c, vv, i);
-        return `<dt><span class="pastille-versant" style="background:var(--c-${vv})"></span>${vv === "fpe" ? "État" : vv === "fpt" ? "Territoriale" : "Hospitalière"}</dt><dd>${PLF.fmt.nombre(e)} <span style="font-weight:400;color:var(--texte-doux)">(${PLF.fmt.decimal1(taux(c, vv, i))} ‰)</span></dd>`;
+        return `<dt><span class="pastille-versant" style="background:var(--c-${vv})"></span>${vv === "fpe" ? "État" : vv === "fpt" ? "Territoriale" : "Hospitalière"}</dt><dd>${PLF.fmt.nombre(e)} <span style="font-weight:400;color:var(--texte-doux)">(${PLF.fmt.decimal1(taux(c, vv, i))}\u00a0‰)</span></dd>`;
       }).join("");
       zoneFiche.innerHTML = `<h3>${nomDe(c)} <span style="font-weight:500;color:var(--texte-doux)">(${c})</span></h3>
         <p class="fiche-dep__valeur">${formatValeur(v)}</p>
