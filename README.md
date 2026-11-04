@@ -48,14 +48,28 @@ assets/
   fonts/               Jost et Atkinson Hyperlegible (licence SIL OFL)
   img/logo-plf.svg     logo du parti
 donnees/
-  csv/                 données propres, téléchargeables (séparateur « ; »)
+  csv/                 données propres, téléchargeables (séparateur « ; »), une source par ligne
   site/                mêmes données, au format lu par le site (générées)
   geo/                 fond de carte des départements (généré)
-  SOURCES.md           description détaillée de chaque source
+  methodologie_series_nationales.md   extraction des séries nationales : sources, champs, ruptures, contrôles
+  methodologie_departements.md        extraction des données départementales : idem
+  empreintes_fichiers_sources.txt     empreintes SHA-256 des fichiers officiels utilisés
 outils/
   fond_de_carte.py     construit le fond de carte (Lambert-93, encarts outre-mer)
   construire_donnees.py  transforme donnees/csv/ en donnees/site/
 ```
+
+## Ce que contiennent les données
+
+- **Séries nationales** : effectifs par versant de 1980 à 2024 (série DGAFP actuelle 1996-2024 et
+  série historique 1980-1997, affichées sans « raccord »), statuts 2002-2024, catégories A/B/C
+  2010-2024 (et repères 1996-2010), population Insee.
+- **Carte** : agents civils par département, 2010-2024 (période homogène, source Siasp), plus
+  2005-2009 en option (ancienne méthode, métropole seulement). Les militaires (≈ 313 000) ne sont
+  pas localisés par la statistique publique ; Mayotte n'est pas couverte par la source.
+- Chaque chiffre renvoie à sa source dans `donnees/csv/sources.csv` (adresse exacte du fichier
+  officiel). Les seuls calculs sont des sommes, des parts, des taux pour 1 000 habitants et des
+  évolutions.
 
 ## Mettre à jour les données (chaque année)
 
@@ -63,14 +77,17 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
 (Insee Première sur l'emploi public, rapport annuel de la DGAFP en novembre).
 
 1. Ajouter les nouvelles lignes dans les fichiers de `donnees/csv/`
-   (même format, une ligne par année / département / versant).
+   (même format, une ligne par année / département / versant), en citant la source
+   (`source_id`, à décrire dans `sources.csv` si elle est nouvelle).
 2. Régénérer les fichiers du site :
    ```
    python3 outils/construire_donnees.py
    ```
    Le script vérifie la cohérence (totaux, années, départements) et s'arrête en
    cas d'anomalie.
-3. Ouvrir `index.html` pour contrôler, puis publier (commit + push).
+3. Mettre à jour à la main les quelques chiffres écrits en toutes lettres dans les pages HTML
+   (les chiffres clés et les graphiques se mettent à jour seuls).
+4. Ouvrir `index.html` pour contrôler, puis publier (commit + push).
 
 Le fond de carte n'a besoin d'être reconstruit qu'en cas de changement des
 limites départementales (`python3 outils/fond_de_carte.py`, nécessite Node.js).

@@ -79,7 +79,7 @@ CADRES = {
 REPERES = {
     "metro": [
         {"texte": "Manche", "lonlat": (-2.6, 49.75), "type": "mer"},
-        {"texte": "Océan Atlantique", "lonlat": (-4.3, 45.3), "type": "mer"},
+        {"texte": "Océan Atlantique", "lonlat": (-3.2, 45.2), "type": "mer"},
         {"texte": "Mer Méditerranée", "lonlat": (5.4, 42.3), "type": "mer"},
         {"texte": "Espagne", "lonlat": (-1.2, 42.35), "type": "pays"},
         {"texte": "Italie", "lonlat": (8.6, 44.9), "type": "pays"},

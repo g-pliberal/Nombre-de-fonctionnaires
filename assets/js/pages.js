@@ -28,7 +28,16 @@
   function remplirCles(cles) {
     document.querySelectorAll("[data-cle]").forEach((n) => {
       const v = cles[n.dataset.cle];
-      if (v != null) n.textContent = v;
+      if (v == null) return;
+      // Dans les chiffres clés, l'unité (« millions ») est affichée plus petite.
+      const m = n.classList.contains("chiffre__valeur") && /^(.+?)\s(millions?)$/.exec(v);
+      if (m) {
+        n.textContent = m[1] + " ";
+        const u = document.createElement("span");
+        u.className = "chiffre__unite";
+        u.textContent = m[2];
+        n.appendChild(u);
+      } else n.textContent = v;
     });
   }
   function legende(ul, items, tirets) {
@@ -60,7 +69,7 @@
     // Barre de répartition par versant
     const barre = document.getElementById("barre-versants");
     if (barre) {
-      const E = N.effectifs;
+      const E = N.effectifs.actuelle;
       const i = dernierIndice(E.total);
       const dessiner = () => {
         barre.innerHTML = VERSANTS.map((v) => {
@@ -73,6 +82,32 @@
       document.addEventListener("plf:affichage", dessiner);
       barre.setAttribute("aria-label", "Répartition des agents : " + VERSANTS.map((v) => `${v.long} ${PLF.fmt.pourcent((100 * E[v.id][i]) / E.total[i], 0)}`).join(", "));
     }
+    // Au-delà de la fonction publique
+    const large = document.getElementById("emploi-large");
+    if (large && N.emploiPublicLarge) {
+      const L = N.emploiPublicLarge;
+      const groupes = [];
+      L.lignes.forEach((l) => {
+        let g = groupes.find((x) => x.nom === l.ensemble);
+        if (!g) groupes.push((g = { nom: l.ensemble, total: 0, lignes: [] }));
+        g.total += l.milliers;
+        g.lignes.push(l);
+      });
+      const couleurs = ["--c-fpe", "--c-militaires", "--c-fpt", "--c-fph"];
+      const total = groupes.reduce((a, g) => a + g.total, 0);
+      const dessiner = () => {
+        large.querySelector(".barre-repartition").innerHTML = groupes.map((g, k) => {
+          const fond = PLF.couleur(couleurs[k]);
+          const part = (100 * g.total) / total;
+          return `<span style="width:${part}%;background:${fond};color:${PLF.texteSur(fond)}" title="${g.nom}">${part > 9 ? PLF.fmt.pourcent(part, 0) : ""}</span>`;
+        }).join("");
+        large.querySelector(".legende").innerHTML = groupes.map((g, k) => `<li><span class="legende__carre" style="background:${PLF.couleur(couleurs[k])}"></span><span><b>${g.nom}</b> : ${PLF.fmt.nombre(g.total * 1000)} personnes${g.lignes.length > 1 ? ` <small>(${g.lignes.map((l) => `${l.composante.replace(/ \(.*\)/, "")} ${PLF.fmt.nombre(l.milliers * 1000)}`).join(" ; ")})</small>` : ""}</span></li>`).join("");
+      };
+      dessiner();
+      document.addEventListener("plf:affichage", dessiner);
+      large.querySelector(".barre-repartition").setAttribute("aria-label", groupes.map((g) => `${g.nom} : ${PLF.fmt.nombre(g.total * 1000)} personnes`).join(", "));
+      large.querySelector(".figure__note").textContent = `Effectifs au 31 décembre ${L.annee}, France hors Mayotte. La fonction publique est comptée ici avec ses bénéficiaires de contrats aidés. Source : ${L.source}, figure 3 « Place de l'emploi public dans l'économie ».`;
+    }
     // Petite carte d'appel (décorative, la vraie carte est sur carte.html)
     const visuel = document.getElementById("appel-visuel");
     if (visuel && window.PLF_DONNEES.fond_de_carte && window.PLF_DONNEES.departements) miniCarte(visuel);
@@ -83,7 +118,7 @@
     const D = window.PLF_DONNEES.departements;
     const i = D.annees.length - 1;
     const c = geo.cadres.metro;
-    const pal = ["#fdf4d2", "#d2e2a3", "#75cca7", "#33a795", "#007979", "#004b59"];
+    const pal = ["#fdf6d8", "#dce5ac", "#97d6a4", "#50baa1", "#21968b", "#006e73"];
     const taux = {};
     Object.keys(D.departements).forEach((code) => {
       const d = D.departements[code];
@@ -107,78 +142,84 @@
   function evolution(N) {
     remplirCles(N.cles);
     const E = N.effectifs;
-    const P = N.population;
     const zone = document.getElementById("graphique-evolution");
     if (!zone) return;
-    const pop = E.annees.map((a) => { const k = P.annees.indexOf(a); return k >= 0 ? P.valeurs[k] : null; });
-    const premiere = E.annees[0];
+    const annees = E.annees;
+    const pop = E.population;
+    const debutActuelle = annees[E.actuelle.total.findIndex((v) => v != null)];
+    const interpolees = new Set(E.interpolees);
     const noteAnnee = (a) => {
-      const k = E.annees.indexOf(a);
-      const s = E.series[E.serie[k]];
-      return s ? `Série : ${s.court}` : "";
+      const k = annees.indexOf(a);
+      const notes = [];
+      if (E.historique.total[k] != null && E.actuelle.total[k] != null) notes.push("Les deux séries se recouvrent cette année-là : l'écart vient de la différence de champ.");
+      else if (E.historique.total[k] != null) notes.push("Série historique (champ différent de la série actuelle).");
+      if (interpolees.has(a)) notes.push("Année estimée par la DGAFP (moyenne des années voisines).");
+      return notes.join(" ");
     };
-    function series(mesure) {
-      const conv = (vals) => vals.map((v, k) => {
-        if (v == null) return null;
-        if (mesure === "taux") return pop[k] ? (1000 * v) / pop[k] : null;
-        if (mesure === "base100") {
-          const b = vals.find((x) => x != null);
-          return (100 * v) / b;
-        }
-        return v;
-      });
-      return VERSANTS.map((v) => ({ id: v.id, libelle: v.libelle, libelleCourt: v.libelle, couleur: v.couleur, valeurs: conv(E[v.id]) }));
-    }
     const etat = { mesure: "nombre", mode: "courbes" };
-    const formats = {
-      nombre: { axe: PLF.fmt.axeMillions, val: PLF.fmt.nombre, titre: "Nombre d'agents" },
-      taux: { axe: (v) => PLF.fmt.nombre(v), val: PLF.fmt.decimal1, titre: "Agents pour 1 000 habitants" },
-      base100: { axe: (v) => PLF.fmt.nombre(v), val: PLF.fmt.decimal1, titre: `Indice, base 100 en ${premiere}` },
-    };
+    const parHabitant = (vals) => vals.map((v, k) => (v == null || !pop[k] ? null : (1000 * v) / pop[k]));
+    function series() {
+      const conv = etat.mesure === "taux" ? parHabitant : (x) => x;
+      if (etat.mode === "empile") {
+        // Empilement : uniquement la série actuelle, pour ne pas additionner deux champs différents.
+        return VERSANTS.map((v) => ({ id: v.id, libelle: v.libelle, couleur: v.couleur, valeurs: conv(E.actuelle[v.id]) }));
+      }
+      return VERSANTS.flatMap((v) => [
+        { id: v.id, libelle: v.libelle, libelleCourt: v.libelle, couleur: v.couleur, valeurs: conv(E.actuelle[v.id]) },
+        { id: v.id + "-h", libelle: `${v.libelle} (série historique)`, couleur: v.couleur, valeurs: conv(E.historique[v.id]), tirets: true, sansEtiquette: true, epaisseur: 2.2 },
+      ]);
+    }
     function cfg() {
-      const f = formats[etat.mesure];
-      const empile = etat.mode === "empile" && etat.mesure !== "base100";
+      const taux = etat.mesure === "taux";
+      const empile = etat.mode === "empile";
+      const debut = empile ? annees.indexOf(debutActuelle) : taux ? pop.findIndex((p) => p != null) : 0;
+      const garde = (arr) => arr.slice(debut);
+      const s = series().map((x) => Object.assign({}, x, { valeurs: garde(x.valeurs) }));
       return {
-        annees: E.annees,
-        series: series(etat.mesure),
+        annees: garde(annees),
+        series: s,
         empile,
-        formatAxe: f.axe,
-        formatValeur: f.val,
-        titreAxeY: f.titre,
-        yMin: etat.mesure === "base100" ? null : 0,
-        ruptures: E.ruptures,
+        formatAxe: taux ? (v) => PLF.fmt.nombre(v) : PLF.fmt.axeMillions,
+        formatValeur: taux ? PLF.fmt.decimal1 : PLF.fmt.nombre,
+        titreAxeY: taux ? "Agents pour 1 000 habitants" : "Nombre d'agents",
+        yMin: 0,
+        ruptures: empile ? [] : [{ annee: debutActuelle, court: "changement de série" }],
         noteAnnee,
-        titreAccessible: `Agents de la fonction publique par versant, ${f.titre.toLowerCase()}, de ${premiere} à ${E.annees[E.annees.length - 1]}`,
+        titreAccessible: `Agents de la fonction publique par versant, ${taux ? "pour 1 000 habitants" : "en nombre"}, de ${annees[debut]} à ${annees[annees.length - 1]}`,
       };
     }
     const graphique = G.courbes(zone, cfg());
-    legende(document.getElementById("evol-legende"), VERSANTS.map((v) => ({ libelle: v.long, couleur: v.couleur, trait: true })));
+    const legendeEvol = () => legende(document.getElementById("evol-legende"),
+      etat.mode === "empile" ? VERSANTS.map((v) => ({ libelle: v.long, couleur: v.couleur }))
+        : VERSANTS.map((v) => ({ libelle: v.long, couleur: v.couleur, trait: true })).concat([{ libelle: `Pointillés : série historique ${annees[0]}-${E.annees[dernierIndice(E.historique.total)]}`, couleur: "--texte-doux", trait: true, tirets: true }]));
+    legendeEvol();
+    const note = document.getElementById("evol-note");
+    const majNote = () => {
+      const base = `Trait plein : ${E.series.actuelle.court} — ${E.series.actuelle.champ}. Pointillés : ${E.series.historique.court} — ${E.series.historique.champ}.`;
+      const extra = etat.mode === "empile" ? ` Le mode empilé ne montre que la série actuelle (${debutActuelle}-${annees[annees.length - 1]}), pour ne pas additionner deux champs différents.` : "";
+      const extraTaux = etat.mesure === "taux" ? ` Pour 1 000 habitants : population au 1er janvier de l'année suivante, France hors Mayotte (disponible à partir de ${annees[pop.findIndex((p) => p != null)]}). ${N.populationSource}.` : "";
+      note.textContent = `${base}${extra}${extraTaux} Sources : ${E.series.actuelle.source} ; ${E.series.historique.source}.`;
+    };
+    majNote();
     document.querySelector("#figure-evolution .figure__controles").addEventListener("change", (e) => {
       if (e.target.name === "evol-mesure") etat.mesure = e.target.value;
       if (e.target.name === "evol-mode") etat.mode = e.target.value;
-      const base = document.querySelector('input[name="evol-mode"][value="empile"]');
-      base.disabled = etat.mesure === "base100";
-      if (base.disabled && etat.mode === "empile") { etat.mode = "courbes"; document.querySelector('input[name="evol-mode"][value="courbes"]').checked = true; }
       graphique.maj(cfg());
-      majTableau();
+      legendeEvol();
+      majNote();
     });
-    const sous = document.getElementById("evol-sous-titre");
-    if (sous) sous.textContent = `Effectifs au 31 décembre, ${E.champ}.`;
-    document.getElementById("evol-note").innerHTML = `Sources : ${Object.values(E.series).map((s) => `${s.court} — ${s.source}`).join(" ; ")}. Population : ${P.source}.`;
 
     // Tableau
-    const conteneurDonnees = document.getElementById("evol-donnees");
-    let table;
-    function lignes() {
-      return E.annees.map((a, k) => ({
-        annee: a, fpe: E.fpe[k], fpt: E.fpt[k], fph: E.fph[k], total: E.total[k],
-        taux: pop[k] && E.total[k] != null ? (1000 * E.total[k]) / pop[k] : null,
-        serie: E.series[E.serie[k]] ? E.series[E.serie[k]].court : "",
-      }));
-    }
-    function majTableau() { if (table) PLF.majTableau(table, lignes()); }
-    table = PLF.tableau({
-      legende: "Agents de la fonction publique au 31 décembre, par versant",
+    const lignes = () => annees.map((a, k) => ({
+      annee: a,
+      fpe: E.actuelle.fpe[k], fpt: E.actuelle.fpt[k], fph: E.actuelle.fph[k], total: E.actuelle.total[k],
+      taux: pop[k] && E.actuelle.total[k] != null ? (1000 * E.actuelle.total[k]) / pop[k] : null,
+      hist: E.historique.total[k],
+      htaux: pop[k] && E.historique.total[k] != null ? (1000 * E.historique.total[k]) / pop[k] : null,
+      note: interpolees.has(a) ? "estimée (DGAFP)" : "",
+    }));
+    const table = PLF.tableau({
+      legende: "Agents de la fonction publique au 31 décembre, par versant (série actuelle) et total de la série historique",
       colonnes: [
         { titre: "Année", cle: "annee" },
         { titre: "État", cle: "fpe", format: PLF.fmt.nombre },
@@ -186,46 +227,53 @@
         { titre: "Hospitalière", cle: "fph", format: PLF.fmt.nombre },
         { titre: "Total", cle: "total", format: PLF.fmt.nombre },
         { titre: "Pour 1 000 hab.", cle: "taux", format: PLF.fmt.decimal1 },
-        { titre: "Série", cle: "serie", texte: true },
+        { titre: "Total, série historique", cle: "hist", format: PLF.fmt.nombre },
+        { titre: "Pour 1 000 hab. (historique)", cle: "htaux", format: PLF.fmt.decimal1 },
+        { titre: "Remarque", cle: "note", texte: true, format: (v) => v || "" },
       ],
       lignes: lignes(),
     });
-    PLF.blocDonnees(conteneurDonnees, {
+    PLF.blocDonnees(document.getElementById("evol-donnees"), {
       table,
       csvNom: "fonction-publique-effectifs-par-versant.csv",
-      csvEntetes: ["annee", "fpe", "fpt", "fph", "total", "population", "agents_pour_1000_hab", "serie"],
-      csvLignes: () => lignes().map((l, k) => [l.annee, l.fpe, l.fpt, l.fph, l.total, pop[k], l.taux == null ? null : Math.round(l.taux * 10) / 10, l.serie]),
+      csvEntetes: ["annee", "serie", "fpe", "fpt", "fph", "total", "population_1er_janvier_suivant"],
+      csvLignes: () => {
+        const l = [];
+        annees.forEach((a, k) => {
+          if (E.historique.total[k] != null) l.push([a, "historique", E.historique.fpe[k], E.historique.fpt[k], E.historique.fph[k], E.historique.total[k], pop[k]]);
+          if (E.actuelle.total[k] != null) l.push([a, "actuelle", E.actuelle.fpe[k], E.actuelle.fpt[k], E.actuelle.fph[k], E.actuelle.total[k], pop[k]]);
+        });
+        return l;
+      },
     });
 
-    // Variation annuelle
+    // Variation annuelle, calculée à l'intérieur d'une même série seulement
     const zv = document.getElementById("graphique-variation");
     if (zv) {
-      const annees = [], valeurs = [];
-      E.annees.forEach((a, k) => {
-        if (k === 0) return;
-        const avant = E.total[k - 1], apres = E.total[k];
-        const memeSerie = E.serie[k - 1] === E.serie[k];
-        const consecutif = E.annees[k - 1] === a - 1;
-        annees.push(a);
-        valeurs.push(avant != null && apres != null && memeSerie && consecutif ? apres - avant : null);
+      const an = [], valeurs = [];
+      annees.forEach((a, k) => {
+        if (k === 0 || annees[k - 1] !== a - 1) return;
+        const serie = a < debutActuelle ? E.historique : a > debutActuelle ? E.actuelle : null;
+        an.push(a);
+        valeurs.push(serie && serie.total[k] != null && serie.total[k - 1] != null ? serie.total[k] - serie.total[k - 1] : null);
       });
       G.colonnes(zv, {
-        annees, valeurs, libelle: "Variation",
+        annees: an, valeurs, libelle: "Variation",
         formatValeur: (v) => (v > 0 ? "+" : v < 0 ? "−" : "") + PLF.fmt.nombre(Math.abs(v)) + " agents",
         formatAxe: (v) => (v > 0 ? "+" : v < 0 ? "−" : "") + PLF.fmt.nombre(Math.abs(v)),
         couleurPositive: "--c-fpt", couleurNegative: "--c-fph",
-        ruptures: E.ruptures,
-        noteAnnee,
+        ruptures: [{ annee: debutActuelle, court: "changement de série" }],
+        noteAnnee: (a) => (a === debutActuelle ? "Changement de série : variation non calculée." : interpolees.has(a) || interpolees.has(a - 1) ? "Calculée avec une année estimée par la DGAFP : variation lissée." : ""),
         titreAccessible: "Variation annuelle du nombre total d'agents",
       });
-      document.getElementById("variation-note").textContent = "Les années de changement de série ne sont pas calculées (variation non significative).";
+      document.getElementById("variation-note").textContent = `Jusqu'en ${debutActuelle - 1} : série historique ; à partir de ${debutActuelle + 1} : série actuelle. Pas de variation calculée en ${debutActuelle} (changement de série) ni entre 1980 et 1982 (1981 manquant). Les années ${[...interpolees].join(", ")} étant estimées par la DGAFP, les variations qui les encadrent sont lissées.`;
       const t2 = PLF.tableau({
         legende: "Variation annuelle du nombre total d'agents",
         colonnes: [
           { titre: "Année", cle: "annee" },
-          { titre: "Variation (agents)", cle: "v", format: (v) => (v == null ? "n.d." : (v > 0 ? "+" : v < 0 ? "−" : "") + PLF.fmt.nombre(Math.abs(v))) },
+          { titre: "Variation (agents)", cle: "v", format: (v) => (v == null ? "non calculée" : (v > 0 ? "+" : v < 0 ? "−" : "") + PLF.fmt.nombre(Math.abs(v))) },
         ],
-        lignes: annees.map((a, k) => ({ annee: a, v: valeurs[k] })),
+        lignes: an.map((a, k) => ({ annee: a, v: valeurs[k] })),
       });
       PLF.blocDonnees(document.getElementById("variation-donnees"), { table: t2 });
     }
@@ -332,6 +380,25 @@
         table.caption.textContent = `Répartition par catégorie (%) — ${versant === "ensemble" ? "ensemble des trois versants" : libVersants.find((v) => v.id === versant).long}`;
       });
       document.getElementById("cat-evol-note").textContent = `${C.noteEvolution || ""} Source : ${C.source}.`;
+      // Repères plus anciens (sources et champs différents)
+      const zr = document.getElementById("cat-reperes");
+      if (zr && C.reperes && C.reperes.length) {
+        const nomV = { ensemble: "Ensemble", fpe: "État", fpt: "Territoriale", fph: "Hospitalière" };
+        const tr = PLF.tableau({
+          legende: "Repères avant 2010 : répartition par catégorie (%), sources et champs différents de la série 2010-2024",
+          colonnes: [
+            { titre: "Année", cle: "annee" },
+            { titre: "Fonction publique", cle: "v", texte: true },
+            { titre: "A", cle: "A", format: (v) => PLF.fmt.pourcent(v, 1) },
+            { titre: "B", cle: "B", format: (v) => PLF.fmt.pourcent(v, 1) },
+            { titre: "C", cle: "C", format: (v) => PLF.fmt.pourcent(v, 1) },
+            { titre: "Indéterminée", cle: "ind", format: (v) => (v == null ? "–" : PLF.fmt.pourcent(v, 1)) },
+            { titre: "Source", cle: "source", texte: true },
+          ],
+          lignes: C.reperes.map((r) => Object.assign({}, r, { v: nomV[r.versant] })),
+        });
+        PLF.blocDonnees(zr, { resume: "Repères plus anciens (1996-2010)", table: tr });
+      }
       table = PLF.tableau({
         legende: "Répartition par catégorie (%) — ensemble des trois versants",
         colonnes: [{ titre: "Année", cle: "a" }].concat(cats.map((c) => ({ titre: c.libelle, cle: c.id, format: (v) => PLF.fmt.pourcent(v, 1) }))),

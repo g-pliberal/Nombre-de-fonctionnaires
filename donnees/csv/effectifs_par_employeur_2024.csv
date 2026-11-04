@@ -1,0 +1,18 @@
+versant;niveau;employeur;effectif_2024;source_id
+fpe;0;Fonction publique de l'État (FPE);2588962;INSEE_CC_2493501
+fpe;1;Ministères;2061000;INSEE_CC_2493501
+fpe;2;Éducation, enseignement et recherche;1144000;INSEE_CC_2493501
+fpe;2;Économie, finances et industrie;130300;INSEE_CC_2493501
+fpe;2;Intérieur et défense;578800;INSEE_CC_2493501
+fpe;2;Logement, transports et développement durable;45600;INSEE_CC_2493501
+fpe;2;Affaires sociales, santé et travail;13400;INSEE_CC_2493501
+fpe;2;Autres (y c. Justice);148900;INSEE_CC_2493501
+fpe;1;Établissements publics à caractère administratif;527963;INSEE_CC_2493501
+fpt;0;Fonction publique territoriale (FPT);2039367;INSEE_CC_2493501
+fpt;1;Régions;99675;INSEE_CC_2493501
+fpt;1;Départements;361337;INSEE_CC_2493501
+fpt;1;Secteur communal;1578355;INSEE_CC_2493501
+fph;0;Fonction publique hospitalière (FPH);1249917;INSEE_CC_2493501
+fph;1;Hôpitaux;1089424;INSEE_CC_2493501
+fph;1;Établissements médico-sociaux;160493;INSEE_CC_2493501
+ensemble;0;Ensemble (FPE+FPT+FPH);5878246;INSEE_CC_2493501

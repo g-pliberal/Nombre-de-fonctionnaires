@@ -17,7 +17,9 @@
 
   // Palette séquentielle : safran pâle -> turquoise -> pétrole (lisible par les
   // daltoniens car la luminosité décroît régulièrement d'une classe à l'autre).
-  const SEQUENTIELLE = ["#fdf4d2", "#d2e2a3", "#75cca7", "#33a795", "#007979", "#004b59"];
+  const SEQUENTIELLE = ["#fdf6d8", "#dce5ac", "#97d6a4", "#50baa1", "#21968b", "#006e73", "#014855"];
+  // Limites de classes : quantiles (sixièmes) + une classe pour les valeurs extrêmes (4 % les plus élevées).
+  const QUANTILES = [1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 0.96];
   // Palette divergente : ocre (baisse) / neutre / turquoise-pétrole (hausse).
   const DIVERGENTE = ["#845a0f", "#b48c2b", "#dbc276", "#f3f2e9", "#91d4c6", "#3d9e98", "#00626a"];
   const SEUILS_EVOLUTION = [-10, -5, -1, 1, 5, 10];
@@ -29,9 +31,9 @@
     fph: "fonction publique hospitalière",
   };
   const INDICATEURS = {
-    taux: { titre: "Agents publics pour 1 000 habitants", court: "pour 1 000 hab." },
-    effectif: { titre: "Nombre d'agents publics", court: "agents" },
-    evolution: { titre: "Évolution du nombre d'agents", court: "%" },
+    taux: { titre: "Agents publics civils pour 1 000 habitants", court: "pour 1 000 hab." },
+    effectif: { titre: "Nombre d'agents publics civils", court: "agents" },
+    evolution: { titre: "Évolution du nombre d'agents civils", court: "%" },
   };
 
   function el(nom, attrs, parent) {
@@ -47,15 +49,15 @@
     return trie[b + 1] !== undefined ? trie[b] + r * (trie[b + 1] - trie[b]) : trie[b];
   }
   // Seuils « ronds » issus des quantiles de toutes les années réunies.
-  function seuilsRonds(valeurs, nClasses) {
+  function seuilsRonds(valeurs, quantiles) {
     const trie = valeurs.filter((v) => v != null && isFinite(v)).sort((a, b) => a - b);
     const med = quantile(trie, 0.5) || 1;
     const pas = med >= 40 ? 5 : med >= 12 ? 2 : med >= 4 ? 1 : 0.5;
     const seuils = [];
-    for (let k = 1; k < nClasses; k++) {
-      const s = Math.round(quantile(trie, k / nClasses) / pas) * pas;
+    quantiles.forEach((q) => {
+      const s = Math.round(quantile(trie, q) / pas) * pas;
       if (!seuils.length || s > seuils[seuils.length - 1]) seuils.push(s);
-    }
+    });
     return seuils;
   }
   function classe(v, seuils) {
@@ -81,14 +83,17 @@
     const nomDe = (c) => D.departements[c].nom || geo.departements[c].nom;
 
     /* ---------- État (mémorisé dans l'adresse pour pouvoir partager une vue) ---------- */
+    const iHomogene = Math.max(0, annees.indexOf(D.debutHomogene));
     const etat = {
       indicateur: "taux",
       versant: "ensemble",
       i: annees.length - 1,
-      ref: 0,
+      ref: iHomogene,
       selection: null,
       numeros: false,
+      anciennes: false, // années avant la période homogène (ancienne méthode)
     };
+    const premierIndice = () => (etat.anciennes ? 0 : iHomogene);
     function lireAdresse() {
       const p = new URLSearchParams(location.hash.slice(1));
       if (INDICATEURS[p.get("indicateur")]) etat.indicateur = p.get("indicateur");
@@ -98,6 +103,7 @@
       const r = annees.indexOf(Number(p.get("depuis")));
       if (r >= 0) etat.ref = r;
       if (D.departements[p.get("dep")]) etat.selection = p.get("dep");
+      if (p.get("anciennes") === "1" || etat.i < iHomogene || etat.ref < iHomogene) etat.anciennes = true;
     }
     function ecrireAdresse() {
       const p = new URLSearchParams();
@@ -106,10 +112,11 @@
       p.set("annee", annees[etat.i]);
       if (etat.indicateur === "evolution") p.set("depuis", annees[etat.ref]);
       if (etat.selection) p.set("dep", etat.selection);
+      if (etat.anciennes) p.set("anciennes", "1");
       history.replaceState(null, "", "#" + p.toString());
     }
     lireAdresse();
-    if (etat.ref >= etat.i) etat.ref = 0;
+    if (etat.ref >= etat.i) etat.ref = premierIndice();
 
     /* ---------- Valeurs ---------- */
     function effectif(code, v, i) {
@@ -150,8 +157,9 @@
     const seuilsTaux = {};
     Object.keys(LIBELLES_VERSANT).forEach((v) => {
       const toutes = [];
-      codes.forEach((c) => annees.forEach((_, i) => toutes.push(taux(c, v, i))));
-      seuilsTaux[v] = seuilsRonds(toutes, SEQUENTIELLE.length);
+      // Classes calculées sur la période homogène, puis appliquées à toutes les années.
+      codes.forEach((c) => annees.forEach((_, i) => { if (i >= iHomogene) toutes.push(taux(c, v, i)); }));
+      seuilsTaux[v] = seuilsRonds(toutes, QUANTILES);
     });
     const maxEffectif = {};
     Object.keys(LIBELLES_VERSANT).forEach((v) => {
@@ -160,9 +168,13 @@
       maxEffectif[v] = m;
     });
 
+    function paletteTaux() {
+      const n = seuilsTaux[etat.versant].length + 1;
+      return n >= SEQUENTIELLE.length ? SEQUENTIELLE : SEQUENTIELLE.slice(SEQUENTIELLE.length - n);
+    }
     function couleurDe(v) {
       if (v == null) return null;
-      if (etat.indicateur === "taux") return SEQUENTIELLE[classe(v, seuilsTaux[etat.versant])];
+      if (etat.indicateur === "taux") return paletteTaux()[classe(v, seuilsTaux[etat.versant])];
       if (etat.indicateur === "evolution") return DIVERGENTE[classe(v, SEUILS_EVOLUTION)];
       return null;
     }
@@ -196,11 +208,13 @@
         <div class="curseur-annee__ligne">
           <span class="curseur-annee__valeur" aria-hidden="true" id="carte-annee-affichee"></span>
           <button type="button" class="bouton bouton--secondaire bouton-rond" data-pas="-1" aria-label="Année précédente"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></button>
-          <input type="range" id="carte-annee" min="0" max="${annees.length - 1}" step="1">
+          <input type="range" id="carte-annee" min="${iHomogene}" max="${annees.length - 1}" step="1">
           <button type="button" class="bouton bouton--secondaire bouton-rond" data-pas="1" aria-label="Année suivante"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg></button>
           <button type="button" class="bouton" id="carte-lecture" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span>Animer</span></button>
         </div>
         <p class="figure__note" id="carte-plage" style="margin-top:.35rem"></p>
+        <label style="display:flex;align-items:center;gap:.5rem;font-weight:600;min-height:44px;margin:0"><input type="checkbox" id="carte-anciennes" style="width:1.2rem;height:1.2rem"> Afficher aussi ${annees[0]}-${annees[iHomogene - 1]} (ancienne méthode, métropole seulement)</label>
+        <div class="encadre encadre--attention" id="carte-avertissement" hidden style="margin:.5rem 0 0"></div>
       </div>
       <div class="selecteur-dep" id="carte-ref-bloc" hidden>
         <div>
@@ -228,7 +242,6 @@
     const titre = document.createElement("h2");
     titre.className = "carte-titre";
     titre.id = "carte-titre";
-    titre.setAttribute("aria-live", "polite");
     panneauCarte.appendChild(titre);
 
     const cadres = document.createElement("div");
@@ -255,11 +268,11 @@
     ib.setAttribute("aria-hidden", "true");
     panneauCarte.appendChild(ib);
 
-    const lateral = document.createElement("aside");
+    const lateral = document.createElement("section");
     lateral.className = "carte-panneau";
     lateral.setAttribute("aria-label", "Légende et fiche du département");
     lateral.innerHTML = `<p class="legende-titre" id="legende-titre"></p><ul class="legende-carte" id="legende-carte"></ul><div id="legende-cercles"></div>
-      <div class="fiche-dep" id="fiche-dep" aria-live="polite"></div>
+      <div class="fiche-dep" id="fiche-dep"></div>
       <div class="palmares" id="palmares"></div>`;
     zone.appendChild(lateral);
 
@@ -353,7 +366,12 @@
     });
     const curseur = formulaire.querySelector("#carte-annee");
     const anneeAffichee = formulaire.querySelector("#carte-annee-affichee");
-    formulaire.querySelector("#carte-plage").textContent = `Données disponibles de ${annees[0]} à ${annees[annees.length - 1]}${D.anneesManquantes && D.anneesManquantes.length ? ` (sauf ${D.anneesManquantes.join(", ")})` : ""}.`;
+    const plage = formulaire.querySelector("#carte-plage");
+    const majPlage = () => {
+      plage.textContent = etat.anciennes
+        ? `Données de ${annees[0]} à ${annees[annees.length - 1]}. Avant ${D.debutHomogene}, ancienne méthode statistique et outre-mer non détaillé : comparez avec prudence.`
+        : `Période homogène : ${D.debutHomogene} à ${annees[annees.length - 1]} (même source statistique, Siasp).`;
+    };
 
     /* ---------- Tableau ---------- */
     const sectionTableau = document.getElementById("carte-tableau");
@@ -491,10 +509,31 @@
       formulaire.querySelectorAll('input[name="versant"]').forEach((r) => (r.checked = r.value === etat.versant));
       formulaire.querySelector("#carte-ref-bloc").hidden = etat.indicateur !== "evolution";
       selRef.value = String(etat.ref);
-      Array.from(selRef.options).forEach((o) => (o.disabled = Number(o.value) >= etat.i));
+      Array.from(selRef.options).forEach((o) => {
+        o.disabled = Number(o.value) >= etat.i;
+        o.hidden = Number(o.value) < premierIndice();
+      });
       selDep.value = etat.selection || "";
       formulaire.querySelector("#carte-numeros").checked = etat.numeros;
+      formulaire.querySelector("#carte-anciennes").checked = etat.anciennes;
+      curseur.min = String(premierIndice());
+      majPlage();
+      avertissement();
       ecrireAdresse();
+    }
+
+    // Avertissements de comparabilité (ancienne méthode, changement de source).
+    function avertissement() {
+      const zoneAv = formulaire.querySelector("#carte-avertissement");
+      const messages = [];
+      const debut = D.debutHomogene;
+      if (annees[etat.i] < debut) {
+        messages.push(`<strong>${annees[etat.i]} : ancienne méthode statistique.</strong> Avant ${debut}, les effectifs proviennent d'autres sources (fichier de paie de l'État, enquêtes) et l'outre-mer n'est pas détaillé : ne comparez pas directement avec ${debut} et après.`);
+      } else if (etat.indicateur === "evolution" && annees[etat.ref] < debut) {
+        messages.push(`<strong>Évolution peu fiable :</strong> la source statistique change entre ${debut - 1} et ${debut}. Une partie de l'écart entre ${annees[etat.ref]} et ${annees[etat.i]} vient de ce changement, pas d'une vraie évolution (jusqu'à +43 % dans certains départements).`);
+      }
+      zoneAv.innerHTML = messages.map((m) => `<p>${m}</p>`).join("");
+      zoneAv.hidden = !messages.length;
     }
 
     function legende(vals) {
@@ -510,10 +549,10 @@
         ul.appendChild(li);
       };
       if (etat.indicateur === "taux") {
-        titreLeg.textContent = "Agents pour 1 000 habitants";
+        titreLeg.textContent = "Agents civils pour 1 000 habitants";
         const s = seuilsTaux[etat.versant];
         const f = (v) => PLF.fmt.nombre(v);
-        SEQUENTIELLE.forEach((col, k) => {
+        paletteTaux().forEach((col, k) => {
           const bas = s[k - 1], haut = s[k];
           const texte = k === 0 ? `moins de ${f(haut)}` : k === s.length ? `${f(bas)} ou plus` : `de ${f(bas)} à moins de ${f(haut)}`;
           ajouter(col, texte, compte((v) => v != null && classe(v, s) === k));
@@ -556,17 +595,26 @@
     function fiche() {
       const zoneFiche = lateral.querySelector("#fiche-dep");
       const c = etat.selection;
+      const libFrance = D.couverture[etat.i] === "metropole" ? "France métropolitaine" : "France (hors Mayotte)";
       if (!c) {
         const vf = valeurFrance();
-        zoneFiche.innerHTML = `<h3>France entière</h3><p class="fiche-dep__valeur">${formatValeur(vf)}</p><p class="figure__note" style="margin-top:.2rem">${INDICATEURS[etat.indicateur].titre.toLowerCase()} — ${LIBELLES_VERSANT[etat.versant]}, ${etat.indicateur === "evolution" ? `${annees[etat.ref]}-${annees[etat.i]}` : annees[etat.i]}</p><p class="fiche-dep__vide">Survolez ou sélectionnez un département (clic, clavier ou liste « Aller à un département ») pour afficher sa fiche.</p>`;
+        zoneFiche.innerHTML = `<h3>${libFrance}</h3><p class="fiche-dep__valeur">${formatValeur(vf)}</p><p class="figure__note" style="margin-top:.2rem">${INDICATEURS[etat.indicateur].titre.toLowerCase()} — ${LIBELLES_VERSANT[etat.versant]}, ${etat.indicateur === "evolution" ? `${annees[etat.ref]}-${annees[etat.i]}` : annees[etat.i]}</p><p class="fiche-dep__vide">Survolez ou sélectionnez un département (clic, clavier ou liste « Aller à un département ») pour afficher sa fiche.</p>`;
         return;
       }
       const i = etat.i;
       const v = valeur(c);
+      if (effectif(c, "ensemble", i) == null && effectif(c, "fpe", i) == null) {
+        zoneFiche.innerHTML = `<h3>${nomDe(c)} <span style="font-weight:500;color:var(--texte-doux)">(${c})</span></h3>
+          <p>${messageSansDonnee(c)}</p>
+          <p><button type="button" class="bouton bouton--secondaire" id="fiche-fermer">Revenir à la France entière</button></p>`;
+        zoneFiche.querySelector("#fiche-fermer").addEventListener("click", () => selectionner(null, true));
+        return;
+      }
       const vals = codes.map((cc) => ({ c: cc, v: valeur(cc) }));
       const rangs = rangsDe(vals);
       const nb = vals.filter((x) => x.v != null).length;
       const vf = valeurFrance();
+      const alerte = (D.alertes[c] || {})[annees[i]];
       const lignesVersants = ["fpe", "fpt", "fph"].map((vv) => {
         const e = effectif(c, vv, i);
         return `<dt><span class="pastille-versant" style="background:var(--c-${vv})"></span>${vv === "fpe" ? "État" : vv === "fpt" ? "Territoriale" : "Hospitalière"}</dt><dd>${PLF.fmt.nombre(e)} <span style="font-weight:400;color:var(--texte-doux)">(${PLF.fmt.decimal1(taux(c, vv, i))} ‰)</span></dd>`;
@@ -576,22 +624,38 @@
         <p class="figure__note" style="margin-top:.2rem">${etat.indicateur === "taux" ? "agents pour 1 000 habitants" : etat.indicateur === "effectif" ? "agents" : `évolution du nombre d'agents depuis ${annees[etat.ref]}`} — ${LIBELLES_VERSANT[etat.versant]}, ${annees[i]}</p>
         <dl>
           <dt>Rang</dt><dd>${rangs[c] ? `${rangs[c]}<sup>${rangs[c] === 1 ? "er" : "e"}</sup> sur ${nb}` : "–"}</dd>
-          <dt>France entière</dt><dd>${formatValeur(vf)}</dd>
+          <dt>${libFrance}</dt><dd>${formatValeur(vf)}</dd>
           <dt>Population</dt><dd>${PLF.fmt.nombre(population(c, i))}</dd>
           <dt>Agents (3 versants)</dt><dd>${PLF.fmt.nombre(effectif(c, "ensemble", i))}</dd>
           ${lignesVersants}
         </dl>
+        ${alerte ? `<p class="encadre encadre--attention" style="font-size:.9em"><strong>À noter :</strong> ${alerte}</p>` : ""}
         <div class="sparkline" id="fiche-spark"></div>
         <p><button type="button" class="bouton bouton--secondaire" id="fiche-fermer">Revenir à la France entière</button></p>`;
-      const serie = annees.map((_, k) => (etat.indicateur === "evolution" ? taux(c, etat.versant, k) : etat.indicateur === "taux" ? taux(c, etat.versant, k) : effectif(c, etat.versant, k)));
-      const ref = etat.indicateur === "effectif" ? null : annees.map((_, k) => taux("FR", etat.versant, k));
+      // La petite courbe suit la période affichée (homogène par défaut).
+      const k0 = premierIndice();
+      const anneesS = annees.slice(k0);
+      const serie = anneesS.map((_, j) => (etat.indicateur === "effectif" ? effectif(c, etat.versant, j + k0) : taux(c, etat.versant, j + k0)));
+      const ref = etat.indicateur === "effectif" ? null : anneesS.map((_, j) => taux("FR", etat.versant, j + k0));
       G.sparkline(zoneFiche.querySelector("#fiche-spark"), {
-        annees, valeurs: serie, reference: ref,
+        annees: anneesS, valeurs: serie, reference: ref,
         formatValeur: etat.indicateur === "effectif" ? PLF.fmt.nombre : PLF.fmt.decimal1,
         libelle: etat.indicateur === "effectif" ? `Agents, ${nomDe(c)}` : `Pour 1 000 hab., ${nomDe(c)}`,
         libelleRef: "France entière",
       });
       zoneFiche.querySelector("#fiche-fermer").addEventListener("click", () => selectionner(null, true));
+    }
+
+    function messageSansDonnee(c) {
+      if (c === "976" && D.mayotte) {
+        const k = D.mayotte.annees.indexOf(annees[etat.i]);
+        const j = k >= 0 ? k : D.mayotte.annees.length - 1;
+        return D.mayotte.texte.replace("{v}", PLF.fmt.nombre(D.mayotte.valeurs[j])).replace("{a}", D.mayotte.annees[j]);
+      }
+      if (annees[etat.i] < D.debutHomogene && ["971", "972", "973", "974"].includes(c)) {
+        return `Pas de données par département pour l'outre-mer avant ${D.debutHomogene} dans la source.`;
+      }
+      return "Donnée non disponible pour cette année dans la source.";
     }
 
     function valeurFrance() {
@@ -617,7 +681,9 @@
     function montrerInfobulle(code, evt) {
       const v = valeur(code);
       const i = etat.i;
-      ib.innerHTML = `<span class="infobulle__titre">${nomDe(code)} (${code})</span>
+      if (effectif(code, "ensemble", i) == null && effectif(code, "fpe", i) == null) {
+        ib.innerHTML = `<span class="infobulle__titre">${nomDe(code)} (${code})</span><div style="max-width:16rem">${messageSansDonnee(code)}</div>`;
+      } else ib.innerHTML = `<span class="infobulle__titre">${nomDe(code)} (${code})</span>
         <div class="infobulle__ligne"><span>${etat.indicateur === "taux" ? "Pour 1 000 hab." : etat.indicateur === "effectif" ? "Agents" : `Depuis ${annees[etat.ref]}`}</span><b>${formatValeur(v)}</b></div>
         ${etat.indicateur !== "effectif" ? `<div class="infobulle__ligne"><span>Agents</span><b>${PLF.fmt.nombre(effectif(code, etat.versant, i))}</b></div>` : `<div class="infobulle__ligne"><span>Pour 1 000 hab.</span><b>${PLF.fmt.decimal1(taux(code, etat.versant, i))}</b></div>`}
         <div class="infobulle__ligne"><span>Population</span><b>${PLF.fmt.nombre(population(code, i))}</b></div>`;
@@ -719,24 +785,32 @@
       const t = evt.target;
       if (t.name === "indicateur") {
         etat.indicateur = t.value;
-        if (etat.indicateur === "evolution" && etat.ref >= etat.i) etat.ref = 0;
+        if (etat.indicateur === "evolution" && etat.ref >= etat.i) etat.ref = premierIndice();
       } else if (t.name === "versant") etat.versant = t.value;
       else if (t.id === "carte-dep") { selectionner(t.value || null, true); return; }
       else if (t.id === "carte-ref") etat.ref = Number(t.value);
       else if (t.id === "carte-numeros") etat.numeros = t.checked;
+      else if (t.id === "carte-anciennes") {
+        etat.anciennes = t.checked;
+        if (!etat.anciennes) {
+          etat.i = Math.max(etat.i, iHomogene);
+          etat.ref = Math.max(etat.ref, iHomogene);
+          if (etat.ref >= etat.i) etat.ref = iHomogene;
+        }
+      }
       else return;
       rendu();
       annoncerResume();
     });
     curseur.addEventListener("input", () => {
-      etat.i = Number(curseur.value);
-      if (etat.ref >= etat.i) etat.ref = 0;
+      etat.i = Math.max(premierIndice(), Number(curseur.value));
+      if (etat.ref >= etat.i) etat.ref = premierIndice();
       rendu();
     });
     curseur.addEventListener("change", annoncerResume);
     formulaire.querySelectorAll("[data-pas]").forEach((b) => b.addEventListener("click", () => {
-      etat.i = Math.max(0, Math.min(annees.length - 1, etat.i + Number(b.dataset.pas)));
-      if (etat.ref >= etat.i) etat.ref = 0;
+      etat.i = Math.max(premierIndice(), Math.min(annees.length - 1, etat.i + Number(b.dataset.pas)));
+      if (etat.ref >= etat.i) etat.ref = premierIndice();
       rendu();
       annoncerResume();
     }));
@@ -753,7 +827,7 @@
     }
     lecture.addEventListener("click", () => {
       if (minuteur) { arreter(); annoncerResume(); return; }
-      if (etat.i >= annees.length - 1) etat.i = etat.indicateur === "evolution" ? Math.min(etat.ref + 1, annees.length - 1) : 0;
+      if (etat.i >= annees.length - 1) etat.i = etat.indicateur === "evolution" ? Math.min(etat.ref + 1, annees.length - 1) : premierIndice();
       rendu();
       lecture.setAttribute("aria-pressed", "true");
       lecture.querySelector("span").textContent = "Pause";
@@ -782,7 +856,12 @@
       Object.keys(svgs).forEach((cle) => {
         const svg = svgs[cle];
         const k = unitesParPixel(cle);
-        svg._textes.forEach((t) => t.n.setAttribute("font-size", t.px * k));
+        const etroit = svg.getBoundingClientRect().width < 480;
+        svg._textes.forEach((t) => {
+          t.n.setAttribute("font-size", t.px * k);
+          // Sur petit écran, les noms des mers et des pays voisins encombreraient la carte.
+          t.n.style.display = etroit ? "none" : "";
+        });
         const { y0, tiques, te } = svg._echelle;
         tiques.forEach((l) => { l.setAttribute("y1", y0 - 4 * k); l.setAttribute("y2", y0 + 1 * k); });
         te.setAttribute("y", y0 - 7 * k);
@@ -800,6 +879,13 @@
       }
     }).observe(svgs.metro);
     document.addEventListener("plf:affichage", () => rendu());
+
+    // Un lien partagé (#indicateur=…&annee=…) ouvert dans un onglet déjà chargé.
+    window.addEventListener("hashchange", () => {
+      lireAdresse();
+      if (etat.ref >= etat.i) etat.ref = premierIndice();
+      rendu();
+    });
 
     construireTableau();
     ajusterTextes();

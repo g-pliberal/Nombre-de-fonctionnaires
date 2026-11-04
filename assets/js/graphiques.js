@@ -211,6 +211,7 @@
       if (etiquettesFin) {
         const positions = [];
         cfg.series.forEach((s, k) => {
+          if (s.sansEtiquette) return;
           let i = base[k].length - 1;
           while (i >= 0 && base[k][i] == null) i--;
           if (i < 0) return;

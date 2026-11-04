@@ -65,17 +65,17 @@
 
   /* Séries des graphiques (contraste ≥ 3:1 sur la surface) */
   --c-fpe: #003340;
-  --c-fpt: #0f8a7e;
-  --c-fph: #b07800;
+  --c-fpt: #007d70;
+  --c-fph: #9a6a00;
   --c-total: #5a6b70;
   --c-fonctionnaires: #003340;
-  --c-contractuels: #0f8a7e;
+  --c-contractuels: #007d70;
   --c-militaires: #6b5aa6;
-  --c-autres: #b07800;
+  --c-autres: #9a6a00;
   --c-aides: #9aa9ad;
   --c-a: #003340;
-  --c-b: #0f8a7e;
-  --c-c: #b07800;
+  --c-b: #007d70;
+  --c-c: #9a6a00;
   --c-ind: #9aa9ad;
   --grille: #dfe7e8;
   --axe: #5c747b;
@@ -139,9 +139,9 @@
   --grille: #134b58;
   --axe: #a9c4c8;
 
-  --mer: #0b4250;
-  --pays-voisins: #1a4f5b;
-  --pays-voisins-trait: #2b6370;
+  --mer: #0a2730;
+  --pays-voisins: #183a44;
+  --pays-voisins-trait: #2b5560;
   --frontiere-dep: #00242e;
   --frontiere-reg: #e9c53d;
   --texte-carte: #bcd7da;
@@ -181,6 +181,7 @@ html {
 
 body {
   margin: 0;
+  overflow-wrap: break-word;
   background: var(--fond);
   color: var(--texte);
   font-family: var(--police-texte);
@@ -260,7 +261,7 @@ img, svg { max-width: 100%; }
 
 /* ---------- En-tête (identité PLF) ---------- */
 .entete {
-  background: radial-gradient(circle at 92% 20%, #0f6f72 0%, #003340 58%);
+  background: radial-gradient(circle at 92% 20%, #0a5a62 0%, #003340 58%);
   color: #fff;
 }
 .entete__haut {
@@ -363,6 +364,25 @@ img, svg { max-width: 100%; }
 }
 .navigation__bouton { display: none; }
 
+.marque__parti, .marque__site { white-space: nowrap; }
+/* Noms de fichiers et adresses longues dans les notes : coupure autorisée partout. */
+.figure__note, .source-liste, .carte-mention, .telechargements, .encadre, .chiffre__detail { overflow-wrap: anywhere; }
+@media (max-width: 22.5rem) {
+  .marque__parti, .marque__site { white-space: normal; }
+  .marque__logo { width: 2.3rem; }
+  .marque__parti { font-size: 0.98rem; }
+}
+@media (max-width: 36rem) {
+  .entete__haut { gap: 0.5rem; }
+  /* Boutons de l'en-tête réduits à leur icône ; le libellé reste lu par les lecteurs d'écran. */
+  .entete__outils .bouton { padding-inline: 0.65rem; }
+  .entete__outils .bouton span {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .marque { gap: 0.5rem; }
+  .marque__site { font-size: 0.78rem; }
+}
 @media (max-width: 47.99rem) {
   .navigation__bouton { display: inline-flex; }
   .navigation ul { display: none; flex-direction: column; align-items: stretch; }
@@ -892,6 +912,8 @@ input[type="search"] { min-width: min(100%, 18rem); }
 
 /* Barre de sélection rapide d'un département */
 .selecteur-dep { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: end; }
+.selecteur-dep > div { min-width: 0; max-width: 100%; }
+select { max-width: 100%; }
 .selecteur-dep label { font-weight: 700; display: block; margin-bottom: 0.3rem; font-size: 0.95em; }
 .selecteur-dep select { max-width: 100%; }
 
@@ -997,3 +1019,11 @@ input[type="search"] { min-width: min(100%, 18rem); }
   .chiffre::before { background: CanvasText; }
   .choix label:has(input:checked) { outline: 3px solid Highlight; }
 }
+
+/* Liste des principaux employeurs dans les cartes des versants */
+details.employeurs { margin-top: 0.75rem; border-top: 1px solid var(--bordure); padding-top: 0.5rem; font-size: 0.92em; }
+details.employeurs summary { cursor: pointer; font-weight: 700; color: var(--lien); min-height: 44px; display: flex; align-items: center; }
+details.employeurs ul { list-style: none; padding: 0; margin: 0.25rem 0 0; }
+details.employeurs li { display: flex; justify-content: space-between; gap: 0.75rem; margin: 0.2rem 0; }
+details.employeurs b { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chiffre__unite { font-size: 0.55em; font-weight: 600; margin-left: 0.15em; }
