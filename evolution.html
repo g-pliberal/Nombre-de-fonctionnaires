@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr" data-theme="clair">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'évolution du nombre d'agents publics depuis 1980 – Fonction publique : les chiffres</title>
+<meta name="description" content="Le nombre d'agents de la fonction publique de 1980 à 2024, par versant, en nombre et pour 1 000 habitants.">
+<meta name="theme-color" content="#003340">
+<meta property="og:title" content="L'évolution du nombre d'agents publics depuis 1980 – Fonction publique : les chiffres">
+<meta property="og:description" content="Le nombre d'agents de la fonction publique de 1980 à 2024, par versant, en nombre et pour 1 000 habitants.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="assets/img/logo-plf.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/jost-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Applique les options d'affichage avant l'affichage de la page (évite un flash). */
+(function () {
+  var r = document.documentElement;
+  try {
+    var o = JSON.parse(localStorage.getItem("plf-fp-options") || "{}");
+    var t = o.theme || "auto";
+    var s = t === "sombre" || (t === "auto" && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches);
+    r.dataset.theme = s ? "sombre" : "clair";
+    if (o.taille) r.dataset.taille = o.taille;
+    if (o.police) r.dataset.police = o.police;
+    if (o.interligne) r.dataset.interligne = o.interligne;
+  } catch (e) {
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) r.dataset.theme = "sombre";
+  }
+})();
+</script>
+</head>
+<body data-page="evolution">
+<div class="evitement">
+  <a href="#contenu">Aller au contenu</a>
+  <a href="#navigation">Aller au menu</a>
+  <a href="#pied">Aller au pied de page</a>
+</div>
+<header class="entete">
+  <div class="conteneur entete__haut">
+    <a class="marque" href="index.html" aria-label="Accueil – Fonction publique : les chiffres, un site du Parti Libéral Français">
+      <img class="marque__logo" src="assets/img/logo-plf.svg" alt="" width="566" height="378">
+      <span class="marque__texte" aria-hidden="true">
+        <span class="marque__parti">Parti Libéral Français</span>
+        <span class="marque__site">Fonction publique : les chiffres</span>
+      </span>
+    </a>
+    <div class="entete__outils">
+      <button type="button" class="bouton bouton--clair" data-ouvrir-options aria-haspopup="dialog">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        <span>Affichage</span>
+      </button>
+      <button type="button" class="bouton bouton--clair navigation__bouton" aria-expanded="false" aria-controls="navigation">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="navigation" id="navigation" aria-label="Menu principal">
+    <div class="conteneur">
+      <ul>
+        <li><a href="index.html">L'essentiel</a></li>
+        <li><a href="evolution.html" aria-current="page">L'évolution</a></li>
+        <li><a href="carte.html">La carte</a></li>
+        <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
+        <li><a href="methode.html">Sources et méthode</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="conteneur bandeau">
+    <p class="bandeau__surtitre">Évolution</p>
+    <h1>Comment le nombre d'agents a-t-il <span class="souligne">évolué</span>&nbsp;?</h1>
+    <p class="bandeau__chapeau">De 1980 à 2024, année par année, pour chacune des trois fonctions publiques — en nombre d'agents et rapporté à la population.</p>
+  </div>
+
+</header>
+<main id="contenu" tabindex="-1">
+
+<section class="section" aria-labelledby="titre-evol">
+  <div class="conteneur">
+    <figure class="figure" aria-labelledby="titre-evol" id="figure-evolution">
+      <h2 class="figure__titre" id="titre-evol">Agents de la fonction publique, 1980-2024</h2>
+      <p class="figure__sous-titre" id="evol-sous-titre">Effectifs au 31 décembre, hors contrats aidés.</p>
+      <form class="figure__controles" aria-label="Réglages du graphique" onsubmit="return false">
+        <fieldset>
+          <legend>Mesure</legend>
+          <div class="choix">
+            <label><input type="radio" name="evol-mesure" value="nombre" checked>Nombre d'agents</label>
+            <label><input type="radio" name="evol-mesure" value="taux">Pour 1&nbsp;000 habitants</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Présentation</legend>
+          <div class="choix">
+            <label><input type="radio" name="evol-mode" value="courbes" checked>Une courbe par versant</label>
+            <label><input type="radio" name="evol-mode" value="empile">Total empilé</label>
+          </div>
+        </fieldset>
+      </form>
+      <ul class="legende" id="evol-legende"></ul>
+      <div id="graphique-evolution"></div>
+      <p class="figure__note" id="evol-note"></p>
+      <div id="evol-donnees"></div>
+    </figure>
+
+    <div class="grille grille--2">
+      <div class="carte-info">
+        <h3>Les grandes étapes</h3>
+        <ul class="etapes-liste">
+          <li><strong>1982-1984 — Décentralisation.</strong> Les lois Defferre transfèrent des compétences aux communes, départements et régions, et la loi du 26 janvier 1984 crée le statut de la fonction publique territoriale : celle-ci passe de 1,08 million d'agents en 1980 à 1,46 million en 1996 (série historique).</li>
+          <li><strong>2006-2009 — Transferts de personnels.</strong> En application de la loi du 13 août 2004, environ 93&nbsp;000 personnels techniques des collèges et lycées et 30&nbsp;000 agents des directions de l'Équipement passent de l'État aux départements et aux régions : une partie de la baisse dans l'État et de la hausse dans la territoriale est un simple changement d'employeur.</li>
+          <li><strong>2008-2012 — Révision générale des politiques publiques.</strong> Dans l'État, un départ à la retraite sur deux n'est pas remplacé.</li>
+          <li><strong>Depuis 2016 — La hausse vient des contractuels.</strong> Leur nombre passe de 1,00 million (2016) à 1,41 million (2024), tandis que celui des fonctionnaires titulaires recule depuis 2015. La loi du 6 août 2019 de transformation de la fonction publique a élargi le recours aux contrats.</li>
+        </ul>
+      </div>
+      <div class="carte-info" id="encadre-ruptures">
+        <h3>Pourquoi plusieurs séries&nbsp;?</h3>
+        <p id="texte-ruptures">Il n'existe pas de série unique de 1980 à aujourd'hui. Nous montrons la <strong>série actuelle</strong> de la DGAFP, homogène de 1996 à 2024 (trait plein), et la <strong>série historique</strong> de la DGAFP pour 1980-1997 (pointillés), dont le champ est différent : elle inclut notamment des établissements publics à caractère industriel et commercial, des régies et organismes privés financés par les collectivités, les emplois secondaires des agents territoriaux et, pour l'État, l'outre-mer et l'étranger. En 1996, année commune aux deux séries, la première compte 4,64 millions d'agents et la seconde 4,92 millions : seules les <em>évolutions</em> de chaque série sont comparables, pas leurs niveaux. Nous ne les avons pas « raccordées ».</p>
+        <p><a class="lien-fleche" href="methode.html#series">Le détail des séries</a></p>
+      </div>
+    </div>
+
+    <figure class="figure" aria-labelledby="titre-variation" id="figure-variation">
+      <h2 class="figure__titre" id="titre-variation">Variation du nombre d'agents d'une année sur l'autre</h2>
+      <p class="figure__sous-titre">Ensemble des trois versants. Une colonne vers le haut signifie que le nombre d'agents a augmenté par rapport à l'année précédente.</p>
+      <div id="graphique-variation"></div>
+      <p class="figure__note" id="variation-note"></p>
+      <div id="variation-donnees"></div>
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied" id="pied">
+  <div class="conteneur">
+    <div class="pied__grille">
+      <div>
+        <h2>Fonction publique : les chiffres</h2>
+        <p>Un site d'information du <a href="https://partiliberalfrancais.fr/">Parti Libéral Français</a>. Tous les chiffres proviennent de la statistique publique (Insee, DGAFP) ; les sources et les limites sont détaillées dans la page <a href="methode.html">Sources et méthode</a>.</p>
+      </div>
+      <div>
+        <h2>Ce site</h2>
+        <ul>
+          <li><a href="index.html">L'essentiel</a></li>
+          <li><a href="evolution.html">L'évolution</a></li>
+          <li><a href="carte.html">La carte</a></li>
+          <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
+          <li><a href="methode.html">Sources et méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Données ouvertes</h2>
+        <ul>
+          <li><a href="methode.html#telecharger">Télécharger toutes les données (CSV)</a></li>
+          <li><a href="https://www.insee.fr/fr/statistiques/2493501">Insee – effectifs de la fonction publique</a></li>
+          <li><a href="https://www.fonction-publique.gouv.fr/collection-etudes-et-statistiques/rapport-annuel">DGAFP – rapport annuel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>Données mises à jour le 4 novembre 2026. Contenus réutilisables en citant la source.</span>
+      <span><a href="methode.html#accessibilite">Accessibilité : partiellement conforme</a> · Aucun cookie, aucun traceur</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="options" id="options-affichage" aria-labelledby="options-titre">
+  <div class="options__contenu">
+    <div class="options__entete">
+      <h2 id="options-titre">Paramètres d'affichage</h2>
+      <button type="button" class="bouton bouton--secondaire" data-fermer>Fermer</button>
+    </div>
+    <fieldset>
+      <legend>Couleurs</legend>
+      <div class="choix">
+        <label><input type="radio" name="theme" value="clair">Fond clair</label>
+        <label><input type="radio" name="theme" value="sombre">Fond sombre (couleurs du PLF)</label>
+        <label><input type="radio" name="theme" value="auto">Comme mon appareil</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Taille du texte</legend>
+      <div class="choix">
+        <label><input type="radio" name="taille" value="normal">Normale</label>
+        <label><input type="radio" name="taille" value="grand">Grande</label>
+        <label><input type="radio" name="taille" value="tres-grand">Très grande</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Police de caractères</legend>
+      <div class="choix">
+        <label><input type="radio" name="police" value="standard">Standard</label>
+        <label><input type="radio" name="police" value="lisible">Très lisible (Atkinson Hyperlegible)</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Espacement du texte</legend>
+      <div class="choix">
+        <label><input type="radio" name="interligne" value="normal">Normal</label>
+        <label><input type="radio" name="interligne" value="large">Aéré</label>
+      </div>
+    </fieldset>
+    <p style="margin-top:1.2rem"><button type="button" class="bouton bouton--secondaire" data-reinitialiser>Rétablir les réglages par défaut</button></p>
+    <p class="figure__note">Ces choix sont enregistrés uniquement dans votre navigateur (aucun cookie, aucun envoi de données).</p>
+  </div>
+</dialog>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/graphiques.js"></script>
+<script src="donnees/site/national.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

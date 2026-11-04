@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr" data-theme="clair">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carte des agents publics par département – Fonction publique : les chiffres</title>
+<meta name="description" content="Carte interactive : agents de la fonction publique pour 1 000 habitants par département, de 2010 à 2024, outre-mer compris.">
+<meta name="theme-color" content="#003340">
+<meta property="og:title" content="Carte des agents publics par département – Fonction publique : les chiffres">
+<meta property="og:description" content="Carte interactive : agents de la fonction publique pour 1 000 habitants par département, de 2010 à 2024, outre-mer compris.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="assets/img/logo-plf.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/jost-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Applique les options d'affichage avant l'affichage de la page (évite un flash). */
+(function () {
+  var r = document.documentElement;
+  try {
+    var o = JSON.parse(localStorage.getItem("plf-fp-options") || "{}");
+    var t = o.theme || "auto";
+    var s = t === "sombre" || (t === "auto" && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches);
+    r.dataset.theme = s ? "sombre" : "clair";
+    if (o.taille) r.dataset.taille = o.taille;
+    if (o.police) r.dataset.police = o.police;
+    if (o.interligne) r.dataset.interligne = o.interligne;
+  } catch (e) {
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) r.dataset.theme = "sombre";
+  }
+})();
+</script>
+</head>
+<body data-page="carte">
+<div class="evitement">
+  <a href="#contenu">Aller au contenu</a>
+  <a href="#navigation">Aller au menu</a>
+  <a href="#pied">Aller au pied de page</a>
+</div>
+<header class="entete">
+  <div class="conteneur entete__haut">
+    <a class="marque" href="index.html" aria-label="Accueil – Fonction publique : les chiffres, un site du Parti Libéral Français">
+      <img class="marque__logo" src="assets/img/logo-plf.svg" alt="" width="566" height="378">
+      <span class="marque__texte" aria-hidden="true">
+        <span class="marque__parti">Parti Libéral Français</span>
+        <span class="marque__site">Fonction publique : les chiffres</span>
+      </span>
+    </a>
+    <div class="entete__outils">
+      <button type="button" class="bouton bouton--clair" data-ouvrir-options aria-haspopup="dialog">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        <span>Affichage</span>
+      </button>
+      <button type="button" class="bouton bouton--clair navigation__bouton" aria-expanded="false" aria-controls="navigation">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="navigation" id="navigation" aria-label="Menu principal">
+    <div class="conteneur">
+      <ul>
+        <li><a href="index.html">L'essentiel</a></li>
+        <li><a href="evolution.html">L'évolution</a></li>
+        <li><a href="carte.html" aria-current="page">La carte</a></li>
+        <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
+        <li><a href="methode.html">Sources et méthode</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="conteneur bandeau">
+    <p class="bandeau__surtitre">La carte</p>
+    <h1>Où travaillent les <span class="souligne">agents publics</span>&nbsp;?</h1>
+    <p class="bandeau__chapeau">Nombre d'agents civils de la fonction publique pour 1&nbsp;000 habitants, département par département, de 2010 à 2024, outre-mer compris. Choisissez l'année, la fonction publique et la mesure.</p>
+  </div>
+
+</header>
+<main id="contenu" tabindex="-1">
+
+<section class="section" aria-labelledby="carte-titre" style="padding-top:1.5rem">
+  <div class="conteneur">
+    <noscript><p class="encadre encadre--attention">La carte interactive nécessite JavaScript. Les données sont disponibles en téléchargement dans la page <a href="methode.html#telecharger">Sources et méthode</a>.</p></noscript>
+    <div id="carte-app"><p class="chargement">Chargement de la carte…</p></div>
+
+    <div class="grille grille--2" style="margin-top:1.5rem">
+      <div class="carte-info">
+        <h2 style="font-size:1.25rem">Comment lire la carte</h2>
+        <ul class="liste-lecture">
+          <li><strong>Plus la couleur est foncée, plus il y a d'agents par habitant.</strong> Les classes de couleur sont les mêmes pour toutes les années : une couleur qui fonce d'une année sur l'autre signale une vraie hausse.</li>
+          <li><strong>Les agents sont comptés là où ils travaillent.</strong> Les ministères, les sièges d'établissements nationaux et les grands hôpitaux expliquent les valeurs élevées de Paris.</li>
+          <li><strong>Les militaires ne sont pas sur la carte</strong> : la statistique publique ne les localise pas par département (environ 312 854 personnes).</li>
+          <li><strong>Un chiffre bas ne veut pas dire « moins de service public »</strong> : selon les territoires, les mêmes services (eau, transports, Ehpad, crèches…) sont assurés par des agents publics ou par des entreprises et des associations.</li>
+        </ul>
+      </div>
+      <div class="carte-info">
+        <h2 style="font-size:1.25rem">Ce que mesure le taux</h2>
+        <p>Nous rapportons le <strong>nombre de personnes</strong> employées (agents civils, au 31 décembre) à la population du département au 1<sup>er</sup> janvier suivant.</p>
+        <p>Le «&nbsp;taux d'administration&nbsp;» publié par la DGAFP est calculé en <strong>équivalent temps plein</strong> : il est un peu plus bas (en 2024, 76,8 pour 1&nbsp;000 habitants en France, contre 80,8 ici).</p>
+        <p><a class="lien-fleche" href="methode.html#carte-methode">Méthode détaillée de la carte</a></p>
+      </div>
+    </div>
+
+    <h2 id="tableau-titre" style="margin-top:2.5rem;font-size:1.5rem">Tous les départements</h2>
+    <p class="section__intro">Le tableau suit les réglages de la carte (année, fonction publique). Cliquez sur un titre de colonne pour trier.</p>
+    <div id="carte-tableau"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied" id="pied">
+  <div class="conteneur">
+    <div class="pied__grille">
+      <div>
+        <h2>Fonction publique : les chiffres</h2>
+        <p>Un site d'information du <a href="https://partiliberalfrancais.fr/">Parti Libéral Français</a>. Tous les chiffres proviennent de la statistique publique (Insee, DGAFP) ; les sources et les limites sont détaillées dans la page <a href="methode.html">Sources et méthode</a>.</p>
+      </div>
+      <div>
+        <h2>Ce site</h2>
+        <ul>
+          <li><a href="index.html">L'essentiel</a></li>
+          <li><a href="evolution.html">L'évolution</a></li>
+          <li><a href="carte.html">La carte</a></li>
+          <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
+          <li><a href="methode.html">Sources et méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Données ouvertes</h2>
+        <ul>
+          <li><a href="methode.html#telecharger">Télécharger toutes les données (CSV)</a></li>
+          <li><a href="https://www.insee.fr/fr/statistiques/2493501">Insee – effectifs de la fonction publique</a></li>
+          <li><a href="https://www.fonction-publique.gouv.fr/collection-etudes-et-statistiques/rapport-annuel">DGAFP – rapport annuel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>Données mises à jour le 4 novembre 2026. Contenus réutilisables en citant la source.</span>
+      <span><a href="methode.html#accessibilite">Accessibilité : partiellement conforme</a> · Aucun cookie, aucun traceur</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="options" id="options-affichage" aria-labelledby="options-titre">
+  <div class="options__contenu">
+    <div class="options__entete">
+      <h2 id="options-titre">Paramètres d'affichage</h2>
+      <button type="button" class="bouton bouton--secondaire" data-fermer>Fermer</button>
+    </div>
+    <fieldset>
+      <legend>Couleurs</legend>
+      <div class="choix">
+        <label><input type="radio" name="theme" value="clair">Fond clair</label>
+        <label><input type="radio" name="theme" value="sombre">Fond sombre (couleurs du PLF)</label>
+        <label><input type="radio" name="theme" value="auto">Comme mon appareil</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Taille du texte</legend>
+      <div class="choix">
+        <label><input type="radio" name="taille" value="normal">Normale</label>
+        <label><input type="radio" name="taille" value="grand">Grande</label>
+        <label><input type="radio" name="taille" value="tres-grand">Très grande</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Police de caractères</legend>
+      <div class="choix">
+        <label><input type="radio" name="police" value="standard">Standard</label>
+        <label><input type="radio" name="police" value="lisible">Très lisible (Atkinson Hyperlegible)</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Espacement du texte</legend>
+      <div class="choix">
+        <label><input type="radio" name="interligne" value="normal">Normal</label>
+        <label><input type="radio" name="interligne" value="large">Aéré</label>
+      </div>
+    </fieldset>
+    <p style="margin-top:1.2rem"><button type="button" class="bouton bouton--secondaire" data-reinitialiser>Rétablir les réglages par défaut</button></p>
+    <p class="figure__note">Ces choix sont enregistrés uniquement dans votre navigateur (aucun cookie, aucun envoi de données).</p>
+  </div>
+</dialog>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/graphiques.js"></script>
+<script src="donnees/site/fond_de_carte.js"></script>
+<script src="donnees/site/departements.js"></script>
+<script src="assets/js/carte.js"></script>
+</body>
+</html>

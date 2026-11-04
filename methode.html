@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="fr" data-theme="clair">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources et méthode – Fonction publique : les chiffres</title>
+<meta name="description" content="Sources officielles, définitions, ruptures de séries, limites et téléchargement des données du site.">
+<meta name="theme-color" content="#003340">
+<meta property="og:title" content="Sources et méthode – Fonction publique : les chiffres">
+<meta property="og:description" content="Sources officielles, définitions, ruptures de séries, limites et téléchargement des données du site.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="assets/img/logo-plf.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/jost-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Applique les options d'affichage avant l'affichage de la page (évite un flash). */
+(function () {
+  var r = document.documentElement;
+  try {
+    var o = JSON.parse(localStorage.getItem("plf-fp-options") || "{}");
+    var t = o.theme || "auto";
+    var s = t === "sombre" || (t === "auto" && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches);
+    r.dataset.theme = s ? "sombre" : "clair";
+    if (o.taille) r.dataset.taille = o.taille;
+    if (o.police) r.dataset.police = o.police;
+    if (o.interligne) r.dataset.interligne = o.interligne;
+  } catch (e) {
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) r.dataset.theme = "sombre";
+  }
+})();
+</script>
+</head>
+<body data-page="methode">
+<div class="evitement">
+  <a href="#contenu">Aller au contenu</a>
+  <a href="#navigation">Aller au menu</a>
+  <a href="#pied">Aller au pied de page</a>
+</div>
+<header class="entete">
+  <div class="conteneur entete__haut">
+    <a class="marque" href="index.html" aria-label="Accueil – Fonction publique : les chiffres, un site du Parti Libéral Français">
+      <img class="marque__logo" src="assets/img/logo-plf.svg" alt="" width="566" height="378">
+      <span class="marque__texte" aria-hidden="true">
+        <span class="marque__parti">Parti Libéral Français</span>
+        <span class="marque__site">Fonction publique : les chiffres</span>
+      </span>
+    </a>
+    <div class="entete__outils">
+      <button type="button" class="bouton bouton--clair" data-ouvrir-options aria-haspopup="dialog">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        <span>Affichage</span>
+      </button>
+      <button type="button" class="bouton bouton--clair navigation__bouton" aria-expanded="false" aria-controls="navigation">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="navigation" id="navigation" aria-label="Menu principal">
+    <div class="conteneur">
+      <ul>
+        <li><a href="index.html">L'essentiel</a></li>
+        <li><a href="evolution.html">L'évolution</a></li>
+        <li><a href="carte.html">La carte</a></li>
+        <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
+        <li><a href="methode.html" aria-current="page">Sources et méthode</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="conteneur bandeau">
+    <p class="bandeau__surtitre">Transparence</p>
+    <h1>Sources, définitions et <span class="souligne">limites</span></h1>
+    <p class="bandeau__chapeau">Tous les chiffres de ce site proviennent de la statistique publique. Voici d'où ils viennent, comment ils sont calculés et ce qu'il faut savoir pour bien les lire.</p>
+  </div>
+
+</header>
+<main id="contenu" tabindex="-1">
+
+<section class="section" aria-labelledby="titre-sommaire">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="titre-sommaire" class="visuellement-cache">Sommaire de la page</h2>
+    <ul class="sommaire">
+      <li><a href="#sources">Sources</a></li>
+      <li><a href="#series">Séries et ruptures</a></li>
+      <li><a href="#definitions">Définitions</a></li>
+      <li><a href="#carte-methode">La carte</a></li>
+      <li><a href="#limites">Limites</a></li>
+      <li><a href="#telecharger">Télécharger les données</a></li>
+      <li><a href="#accessibilite">Accessibilité</a></li>
+      <li><a href="#credits">Crédits et mentions</a></li>
+    </ul>
+
+    <h2 id="sources">Sources</h2>
+    <p>Les fichiers officiels ont été téléchargés le 4 novembre 2026. Les seuls calculs effectués sont des sommes, des parts, des taux pour 1&nbsp;000 habitants et des évolutions ; ils sont signalés comme tels.</p>
+    <ul class="source-liste">
+      <li><strong>DGAFP</strong> — Rapport annuel sur l&#x27;état de la fonction publique, édition 2026 – L&#x27;évolution des effectifs de la fonction publique en 2024 (fichier RA_2026_effectifs_donnees_comp_FP.xlsx, figures 3 à 6). Publication : 2026-10-15. <a href="https://www.fonction-publique.gouv.fr/toutes-les-publications/levolution-des-effectifs-de-la-fonction-publique-en-2024-0">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/2026/ra_2026_effectifs.zip">fichier source</a>.<br><small>Champ : Emplois principaux au 31 décembre, tous statuts, France hors Mayotte, hors contrats aidés. Séries rétropolées par la DGAFP à méthode constante (1996-2024) ; 1997, 1999, 2001 et 2003 interpolés par la DGAFP.</small></li>
+      <li><strong>DGAFP</strong> — Rapport annuel sur l&#x27;état de la fonction publique, édition 2026 – Caractéristiques et localisation des postes de la fonction publique en 2024 (fichier ra2026_caracteristiques_postes_donnees_comp_FP.xlsx). Publication : 2026-10-15. <a href="https://www.fonction-publique.gouv.fr/toutes-les-publications/caracteristiques-et-localisation-des-postes-de-la-fonction-publique-en-2024-0">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/2026/ra_2026_postes.zip">fichier source</a>.<br><small>Champ : Emplois principaux au 31 décembre, tous statuts, France hors Mayotte, hors contrats aidés. Statuts 2002-2024 (rétropolés), catégories 2011-2024 (niveaux par millésime), localisation par département.</small></li>
+      <li><strong>DGAFP</strong> — Séries longues du rapport annuel 2021 (données 1996-2019) : FT1.2 effectifs, FT2.1 statuts, FT2.2 catégories hiérarchiques, FT1.2-3 localisation. Publication : 2021-09-08. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/series-longues.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/series_longues/series-longues-2021/FT2.2-SL_Categories_hierarchiques.xlsx">fichier source</a>.<br><small>Champ : Emplois principaux, tous statuts, métropole et DOM (hors Mayotte), hors contrats aidés.</small></li>
+      <li><strong>DGAFP</strong> — Séries longues sur l&#x27;emploi dans la fonction publique 1980-1998 (collection RésulStats), tableau 1-1. Publication : 2005-01-07. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/series-longues.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/resulstats/resulstats_series-longues_2007.pdf">fichier source</a>.<br><small>Champ : Effectifs réels au 31 décembre, hors emplois aidés. Champ « au sens large » dont on a retiré La Poste et France Télécom (calcul) : il reste différent de la série actuelle (EPIC non marchands, régies et organismes financés par les collectivités, emplois secondaires des agents territoriaux, outre-mer et étranger pour l&#x27;État). Pas de donnée 1981 ; 1997 provisoire.</small></li>
+      <li><strong>Cour des comptes</strong> — Les effectifs de l&#x27;État 1980-2008 – Un état des lieux, rapport public thématique (tableau 14, structure par catégorie). Publication : 2009-12-09. <a href="https://www.vie-publique.fr/files/rapport/pdf/094000601.pdf">Page de la publication</a> · <a href="https://www.vie-publique.fr/files/rapport/pdf/094000601.pdf">fichier source</a>.<br><small>Champ : Emplois principaux, hors emplois aidés ; données DGAFP, Insee, Drees, DHOS.</small></li>
+      <li><strong>DGAFP</strong> — Fonction publique : chiffres clés 2005 (données 2003). Publication : 2005. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/collection-fonction-publique-faits-et-chiffres-chiffres-cles-archives.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/chiffres_cles/pdf/Chiffres_cles_2005.pdf">fichier source</a>.<br><small>Champ : Trois fonctions publiques, emplois principaux, hors emplois aidés.</small></li>
+      <li><strong>DGAFP</strong> — Fonction publique : chiffres clés 2008 (données 2006). Publication : 2008. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/collection-fonction-publique-faits-et-chiffres-chiffres-cles-archives.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/chiffres_cles/pdf/Chiffres_cles_2008.pdf">fichier source</a>.<br><small>Champ : Trois fonctions publiques, emplois principaux, hors emplois aidés.</small></li>
+      <li><strong>DGAFP</strong> — Fonction publique : chiffres clés 2009 (données 2007). Publication : 2009. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/collection-fonction-publique-faits-et-chiffres-chiffres-cles-archives.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/chiffres_cles/pdf/Chiffres_cles_2009.pdf">fichier source</a>.<br><small>Champ : Trois fonctions publiques, emplois principaux, hors emplois aidés.</small></li>
+      <li><strong>DGAFP</strong> — Fonction publique : chiffres clés 2011 (données 2009). Publication : 2011. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/collection-fonction-publique-faits-et-chiffres-chiffres-cles-archives.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/chiffres_cles/pdf/chiffres_cles_2011-v2.pdf">fichier source</a>.<br><small>Champ : Trois fonctions publiques, emplois principaux, hors emplois aidés.</small></li>
+      <li><strong>DGAFP</strong> — Fonction publique : chiffres clés 2012 (données 2010). Publication : 2012. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/collection-fonction-publique-faits-et-chiffres-chiffres-cles-archives.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/chiffres_cles/pdf/chiffres-cles-2012.pdf">fichier source</a>.<br><small>Champ : Trois fonctions publiques, emplois principaux, hors emplois aidés.</small></li>
+      <li><strong>DGAFP</strong> — Rapport annuel Fonction publique : faits et chiffres 2005-2006, tableau T 1-5 (données 2004, provisoires). Publication : 2006. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/collection-rapport-annuel.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/rapports_annuels/2005-2006/RA_2005-2006_trois_FP.pdf">fichier source</a>.<br><small>Champ : Emplois principaux au 31/12/2004, hors emplois aidés, métropole et DOM.</small></li>
+      <li><strong>Insee</strong> — Estimation de la population au 1er janvier 2026 – séries par région et département de 1975 à 2026 (fichiers estim-pop-nreg-sexe-gca-1975-2026.xlsx et estim-pop-dep-sexe-gca-1975-2026.xlsx). Publication : 2026-01-13. <a href="https://www.insee.fr/fr/statistiques/8721456">Page de la publication</a> · <a href="https://www.insee.fr/fr/statistiques/fichier/8721456/estim-pop-dep-sexe-gca-1975-2026.xlsx">fichier source</a>.<br><small>Champ : Population au 1er janvier. DOM à partir de 1990 ; Mayotte à partir de 2014 ; 2024-2026 provisoires.</small></li>
+      <li><strong>DGAFP</strong> — Rapport annuel sur l&#x27;état de la fonction publique, édition 2026 – Caractéristiques et localisation des postes de la fonction publique en 2024 (effectifs physiques par département 2011-2024, onglet « Figure 1 loc » ; emploi public à Mayotte, « Figure 5 loc »). Publication : 2026-10-15. <a href="https://www.fonction-publique.gouv.fr/toutes-les-publications/caracteristiques-et-localisation-des-postes-de-la-fonction-publique-en-2024-0">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/2026/ra_2026_postes.zip">fichier source</a>.<br><small>Champ : Emplois principaux au 31 décembre, agents civils (militaires non localisables), France hors Mayotte, hors contrats aidés, département de fonction.</small></li>
+      <li><strong>DGAFP</strong> — Séries longues du rapport annuel 2021 – localisation des effectifs des trois versants par département, 2010-2019 (FT1.2-3-SL_Localisation_ensemble.xlsx). Publication : 2021-09-08. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/series-longues.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/series_longues/series-longues-2021/FT1.2-3-SL_Localisation_ensemble.xlsx">fichier source</a>.<br><small>Champ : Emplois principaux au 31 décembre, agents civils, France hors Mayotte, hors contrats aidés, département de fonction.</small></li>
+      <li><strong>DGAFP</strong> — Rapport annuel 2010-2011 – complément : effectifs physiques et ETP des trois fonctions publiques par département, 2005-2009. Publication : 2012-05-30. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/fonction-publique/fonction-publique-france-40.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/rapports_annuels/2010-2011/xls/RA2010-2011_COMPLEMENT_Effectifs_physiques_ETP_3FP_dep_2005_2009_20120530.xls">fichier source</a>.<br><small>Champ : Avant Siasp : FPE agents civils (fichier général de l&#x27;État), FPT (Colter, DADS), FPH (SAE, DADS) ; emplois principaux, hors emplois aidés ; métropole seulement (les DOM ne sont pas détaillés).</small></li>
+      <li><strong>Insee</strong> — Effectifs dans la fonction publique par versant et ministère – données annuelles de 2011 à 2024 (Chiffres-clés, figure 3). Publication : 2026-02-10. <a href="https://www.insee.fr/fr/statistiques/2493501">Page de la publication</a> · <a href="https://www.insee.fr/fr/statistiques/fichier/2493501/marc-empl-eff-fonc-pub.xlsx">fichier source</a>.<br><small>Champ : France hors Mayotte, postes principaux non annexes au 31 décembre, y compris bénéficiaires de contrats aidés ; source Siasp.</small></li>
+    </ul>
+
+    <h2 id="series" style="margin-top:2.5rem">Séries et ruptures de série</h2>
+    <ul class="liste-lecture">
+      <li><strong>Série actuelle (1996-2024).</strong> Série « rétropolée » publiée par la DGAFP dans son rapport annuel 2026 : les niveaux des années anciennes ont été recalculés pour être comparables à la méthode actuelle. Les années 1997, 1999, 2001 et 2003 sont estimées par la DGAFP (moyenne des années voisines) : ce ne sont pas des observations.</li>
+      <li><strong>Série historique (1980-1997).</strong> Séries longues de la DGAFP (RésulStats), dont nous avons retiré La Poste et France Télécom (sorties de la fonction publique en 1991). Son champ reste différent : en 1996, elle compte 4,92 millions d'agents contre 4,64 millions dans la série actuelle. Elle n'a pas de donnée pour 1981. Nous ne l'avons pas « raccordée » à la série actuelle : seules ses évolutions sont à lire.</li>
+      <li><strong>Changement de source en 2009-2010.</strong> Avant 2009, les effectifs venaient de plusieurs fichiers (fichier de paie de l'État, enquêtes auprès des collectivités et des hôpitaux) ; depuis, d'une source unique, Siasp (Insee). La DGAFP a recalculé les séries nationales, mais pas les données par département : la carte montre donc par défaut la période 2010-2024.</li>
+      <li><strong>Passage à la déclaration sociale nominative (2021-2023).</strong> Pour 2021, 2022 et 2023, la DGAFP publie deux niveaux (ancienne et nouvelle méthode). Nous retenons le plus récent ; une partie des hausses de ces années est méthodologique.</li>
+      <li><strong>Statuts (2002-2024) et catégories (2010-2024).</strong> Séries de la DGAFP par versant, hors contrats aidés. Avant 2010, seules quelques années de repère existent pour les catégories, avec des sources et des champs différents.</li>
+      <li><strong>Population.</strong> Estimations de l'Insee au 1<sup>er</sup> janvier (janvier 2026 ; 2024 à 2026 provisoires). Les effectifs étant mesurés au 31 décembre, nous les rapportons à la population du 1<sup>er</sup> janvier suivant. La population de l'outre-mer n'étant estimée qu'à partir de 1990, les taux nationaux commencent en 1989.</li>
+    </ul>
+
+    <h2 id="definitions" style="margin-top:2.5rem">Définitions</h2>
+    <dl class="glossaire">
+      <dt>Agent public (ou agent de la fonction publique)</dt>
+      <dd>Toute personne employée par un employeur public des trois versants, quel que soit son statut : fonctionnaire, contractuel, militaire ou autre. C'est l'unité de compte de ce site : une personne compte pour un, qu'elle travaille à temps plein ou à temps partiel (« personnes physiques »).</dd>
+      <dt>Fonctionnaire</dt>
+      <dd>Agent titulaire d'un grade dans un corps (État) ou un cadre d'emplois (territoriale), le plus souvent recruté par concours. Au sens strict, seuls les titulaires sont des fonctionnaires.</dd>
+      <dt>Contractuel</dt>
+      <dd>Agent public non titulaire, recruté par contrat à durée déterminée ou indéterminée.</dd>
+      <dt>Autres catégories et statuts</dt>
+      <dd>Enseignants et documentalistes des établissements privés sous contrat, médecins hospitaliers, ouvriers d'État, assistants maternels et familiaux, apprentis, collaborateurs de cabinet, etc.</dd>
+      <dt>Contrats aidés</dt>
+      <dd>Emplois bénéficiant d'une aide publique (contrats emploi solidarité, emplois-jeunes, contrats d'accompagnement dans l'emploi, parcours emploi compétences…). Sauf mention contraire, ils sont exclus des chiffres de ce site, comme dans les publications de la DGAFP.</dd>
+      <dt>Versant</dt>
+      <dd>Chacune des trois fonctions publiques : État (ministères, établissements publics nationaux, armées), territoriale (communes, intercommunalités, départements, régions et leurs établissements) et hospitalière (hôpitaux publics, établissements sociaux et médico-sociaux publics).</dd>
+      <dt>Catégories A, B, C</dt>
+      <dd>Niveaux hiérarchiques des corps et cadres d'emplois : A (conception, encadrement), B (application, encadrement intermédiaire), C (exécution). La catégorie est surtout définie pour les titulaires ; pour certains contractuels et statuts particuliers, elle est estimée ou indéterminée.</dd>
+      <dt>Taux d'administration</dt>
+      <dd>Nombre d'agents publics pour 1&nbsp;000 habitants. Il permet de comparer des territoires ou des années de population différente.</dd>
+      <dt>Équivalent temps plein (ETP)</dt>
+      <dd>Mesure du volume de travail : un agent à mi-temps toute l'année compte pour 0,5 ETP. Les effectifs en ETP sont inférieurs aux effectifs en personnes physiques, surtout dans la territoriale.</dd>
+      <dt>SIASP</dt>
+      <dd>Système d'information sur les agents des services publics, géré par l'Insee à partir des déclarations sociales des employeurs. C'est la source de référence depuis 2009.</dd>
+    </dl>
+
+    <h2 id="carte-methode" style="margin-top:2.5rem">Comment la carte est construite</h2>
+    <ul class="liste-lecture">
+      <li><strong>Données.</strong> Effectifs des agents civils (personnes physiques, emplois principaux au 31 décembre, hors contrats aidés) par département de travail, publiés par la DGAFP : rapport annuel 2026 (2019-2024), séries longues 2021 (2010-2018) et complément du rapport 2010-2011 (2005-2009, métropole seulement). Pour chaque année, nous retenons la version la plus récente publiée.</li>
+      <li><strong>Militaires.</strong> Ils ne sont pas localisés par département dans la statistique publique ; la carte porte donc sur les agents civils (France 80,8 pour 1&nbsp;000 habitants en 2024, contre 85,3 militaires compris).</li>
+      <li><strong>Mayotte.</strong> Le département n'est pas couvert par la source (Siasp). L'Insee estime l'emploi public à environ 22&nbsp;000 personnes en 2024 par une enquête différente, non comparable : Mayotte apparaît donc hachuré.</li>
+      <li><strong>Classes de couleur.</strong> Six classes aux limites arrondies, calculées une fois pour toutes sur l'ensemble des départements et des années 2010-2024 (quantiles), puis appliquées à chaque année : une même couleur signifie la même valeur quelle que soit l'année. La palette (du safran pâle au bleu pétrole) reste lisible par les personnes daltoniennes.</li>
+      <li><strong>Nombre d'agents.</strong> Représenté par des cercles dont la surface est proportionnelle à l'effectif, à la même échelle dans tous les cadres : une quantité absolue ne doit pas être représentée par des aplats de couleur.</li>
+      <li><strong>Fond de carte.</strong> Limites départementales de l'IGN (ADMIN EXPRESS) généralisées par Etalab, projetées en Lambert-93 pour la métropole et en UTM pour l'outre-mer, avec un zoom sur Paris et la petite couronne. Les encarts n'ont pas la même échelle que la métropole : chacun a sa propre échelle graphique.</li>
+      <li><strong>Avertissements.</strong> Les ruptures propres à un département (changement de rattachement, valeurs inhabituelles signalées) sont indiquées dans sa fiche. En 2009, les effectifs hospitaliers des Alpes-de-Haute-Provence et des Alpes-Maritimes semblent intervertis dans le fichier source : ils ne sont pas affichés.</li>
+    </ul>
+
+    <h2 id="limites" style="margin-top:2.5rem">Limites à garder en tête</h2>
+    <ul class="liste-lecture">
+      <li><strong>Fonction publique ≠ emploi public.</strong> Ne sont pas comptés : les salariés des organismes de Sécurité sociale, des entreprises publiques (SNCF, EDF, RATP…), de La Poste, ni les emplois privés financés par des fonds publics (cliniques, associations…).</li>
+      <li><strong>Personnes et non volume de travail.</strong> Le nombre d'agents ne dit rien du temps de travail ni de la masse salariale.</li>
+      <li><strong>Lieu de travail.</strong> Les agents sont localisés là où ils travaillent, pas là où ils habitent ; les administrations centrales des ministères gonflent mécaniquement les chiffres de Paris et de l'Île-de-France.</li>
+      <li><strong>Services publics délégués.</strong> Une même mission (eau, transports, ramassage des ordures, crèches, Ehpad…) peut être assurée par des agents publics dans un territoire et par des salariés d'entreprises ou d'associations dans un autre : un taux d'administration plus faible ne signifie pas forcément moins de services publics.</li>
+      <li><strong>Révisions.</strong> L'Insee et la DGAFP révisent parfois les chiffres des années récentes ; nous utilisons la dernière version publiée.</li>
+    </ul>
+
+    <h2 id="telecharger" style="margin-top:2.5rem">Télécharger les données</h2>
+    <p>Toutes les données utilisées par le site sont téléchargeables au format CSV (séparateur point-virgule, encodage UTF-8), avec la source de chaque ligne.</p>
+    <ul class="telechargements">
+      <li><a href="donnees/csv/effectifs_par_versant.csv" download>effectifs_par_versant.csv</a> <span>Effectifs par versant, séries actuelle (1996-2024) et historique (1980-1997)</span> <small>3 ko</small></li>
+      <li><a href="donnees/csv/statuts_par_versant.csv" download>statuts_par_versant.csv</a> <span>Fonctionnaires, contractuels, militaires et autres statuts par versant, 2002-2024</span> <small>6 ko</small></li>
+      <li><a href="donnees/csv/categories_par_versant.csv" download>categories_par_versant.csv</a> <span>Catégories A (dont A+), B, C et indéterminée par versant, 2010-2024</span> <small>5 ko</small></li>
+      <li><a href="donnees/csv/categories_reperes_avant_2010.csv" download>categories_reperes_avant_2010.csv</a> <span>Repères anciens de répartition par catégorie (1996-2010)</span> <small>1 ko</small></li>
+      <li><a href="donnees/csv/departements_effectifs.csv" download>departements_effectifs.csv</a> <span>Agents civils par département et par versant, 2005-2024, avec avertissements</span> <small>220 ko</small></li>
+      <li><a href="donnees/csv/departements_population.csv" download>departements_population.csv</a> <span>Population des départements au 1er janvier, 2005-2026 (Insee)</span> <small>113 ko</small></li>
+      <li><a href="donnees/csv/population_france.csv" download>population_france.csv</a> <span>Population de la France au 1er janvier, 1975-2026 (Insee)</span> <small>2 ko</small></li>
+      <li><a href="donnees/csv/taux_administration_officiel.csv" download>taux_administration_officiel.csv</a> <span>Taux d&#x27;administration officiel de la DGAFP (ETP civils pour 1 000 habitants), 2011-2024</span> <small>1 ko</small></li>
+      <li><a href="donnees/csv/emploi_public_au_sens_large_2024.csv" download>emploi_public_au_sens_large_2024.csv</a> <span>Emploi dans la sphère publique au sens large, 2024</span> <small>1 ko</small></li>
+      <li><a href="donnees/csv/mayotte_emploi_public.csv" download>mayotte_emploi_public.csv</a> <span>Mayotte : emploi public selon l&#x27;enquête Emploi de l&#x27;Insee (non comparable)</span> <small>3 ko</small></li>
+      <li><a href="donnees/csv/effectifs_par_employeur_2024.csv" download>effectifs_par_employeur_2024.csv</a> <span>Effectifs par type d&#x27;employeur et par ministère, 2024 (Insee)</span> <small>1 ko</small></li>
+      <li><a href="donnees/csv/sources.csv" download>sources.csv</a> <span>Catalogue des sources (adresses des fichiers officiels)</span> <small>9 ko</small></li>
+    </ul>
+    <p class="figure__note">Le fond de carte (<a href="donnees/geo/fond_de_carte.json" download>fond_de_carte.json</a>) et les scripts qui produisent ces fichiers sont dans le dossier <code>outils/</code> du dépôt.</p>
+
+    <h2 id="accessibilite" style="margin-top:2.5rem">Accessibilité</h2>
+    <p>Ce site vise le respect du <abbr title="Référentiel général d'amélioration de l'accessibilité">RGAA</abbr> 4.1, qui reprend les critères <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 de niveau AA. <strong>État de conformité : partiellement conforme</strong> — il n'a pas encore fait l'objet d'un audit par un organisme indépendant.</p>
+    <ul>
+      <li>Navigation entièrement possible au clavier, liens d'évitement, ordre de lecture logique.</li>
+      <li>Chaque graphique est accompagné d'un tableau de données et d'un texte de lecture ; les valeurs sont annoncées aux lecteurs d'écran quand on parcourt un graphique avec les flèches.</li>
+      <li>La carte se parcourt au clavier (flèches pour passer d'un département à son voisin) ; une liste de choix et un tableau triable donnent les mêmes informations.</li>
+      <li>Couleurs choisies pour rester distinguables par les personnes daltoniennes ; contrastes conformes au niveau AA ; l'information n'est jamais portée par la couleur seule.</li>
+      <li>Bouton « Affichage » : fond clair ou sombre, texte agrandi, police très lisible (Atkinson Hyperlegible), espacement aéré. Le réglage « réduire les animations » de l'appareil est respecté.</li>
+      <li>Aucune ressource externe : le site fonctionne sans connexion à des services tiers.</li>
+    </ul>
+    <p>Vous rencontrez une difficulté&nbsp;? Signalez-la au Parti Libéral Français via <a href="https://partiliberalfrancais.fr/">son site</a> (rubrique « Nous contacter ») : nous vous apporterons l'information sous une autre forme.</p>
+
+    <h2 id="credits" style="margin-top:2.5rem">Crédits et mentions</h2>
+    <ul>
+      <li>Données : Insee et DGAFP (ministère de la Transformation et de la Fonction publiques), réutilisées dans les conditions de la Licence Ouverte / Open Licence 2.0.</li>
+      <li>Fond de carte : IGN – ADMIN EXPRESS, contours généralisés par Etalab (Licence Ouverte 2.0) ; pays voisins : Natural Earth (domaine public).</li>
+      <li>Polices de caractères : Jost (Owen Earl) et Atkinson Hyperlegible (Braille Institute), sous licence SIL Open Font License 1.1.</li>
+      <li>Conception et réalisation : Parti Libéral Français. Les chiffres sont présentés tels que publiés ; les éventuels calculs (taux, évolutions, parts) sont expliqués sur cette page.</li>
+      <li>Vie privée : ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience ni aucun service tiers. Vos réglages d'affichage restent dans votre navigateur.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied" id="pied">
+  <div class="conteneur">
+    <div class="pied__grille">
+      <div>
+        <h2>Fonction publique : les chiffres</h2>
+        <p>Un site d'information du <a href="https://partiliberalfrancais.fr/">Parti Libéral Français</a>. Tous les chiffres proviennent de la statistique publique (Insee, DGAFP) ; les sources et les limites sont détaillées dans la page <a href="methode.html">Sources et méthode</a>.</p>
+      </div>
+      <div>
+        <h2>Ce site</h2>
+        <ul>
+          <li><a href="index.html">L'essentiel</a></li>
+          <li><a href="evolution.html">L'évolution</a></li>
+          <li><a href="carte.html">La carte</a></li>
+          <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
+          <li><a href="methode.html">Sources et méthode</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Données ouvertes</h2>
+        <ul>
+          <li><a href="methode.html#telecharger">Télécharger toutes les données (CSV)</a></li>
+          <li><a href="https://www.insee.fr/fr/statistiques/2493501">Insee – effectifs de la fonction publique</a></li>
+          <li><a href="https://www.fonction-publique.gouv.fr/collection-etudes-et-statistiques/rapport-annuel">DGAFP – rapport annuel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>Données mises à jour le 4 novembre 2026. Contenus réutilisables en citant la source.</span>
+      <span><a href="methode.html#accessibilite">Accessibilité : partiellement conforme</a> · Aucun cookie, aucun traceur</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="options" id="options-affichage" aria-labelledby="options-titre">
+  <div class="options__contenu">
+    <div class="options__entete">
+      <h2 id="options-titre">Paramètres d'affichage</h2>
+      <button type="button" class="bouton bouton--secondaire" data-fermer>Fermer</button>
+    </div>
+    <fieldset>
+      <legend>Couleurs</legend>
+      <div class="choix">
+        <label><input type="radio" name="theme" value="clair">Fond clair</label>
+        <label><input type="radio" name="theme" value="sombre">Fond sombre (couleurs du PLF)</label>
+        <label><input type="radio" name="theme" value="auto">Comme mon appareil</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Taille du texte</legend>
+      <div class="choix">
+        <label><input type="radio" name="taille" value="normal">Normale</label>
+        <label><input type="radio" name="taille" value="grand">Grande</label>
+        <label><input type="radio" name="taille" value="tres-grand">Très grande</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Police de caractères</legend>
+      <div class="choix">
+        <label><input type="radio" name="police" value="standard">Standard</label>
+        <label><input type="radio" name="police" value="lisible">Très lisible (Atkinson Hyperlegible)</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Espacement du texte</legend>
+      <div class="choix">
+        <label><input type="radio" name="interligne" value="normal">Normal</label>
+        <label><input type="radio" name="interligne" value="large">Aéré</label>
+      </div>
+    </fieldset>
+    <p style="margin-top:1.2rem"><button type="button" class="bouton bouton--secondaire" data-reinitialiser>Rétablir les réglages par défaut</button></p>
+    <p class="figure__note">Ces choix sont enregistrés uniquement dans votre navigateur (aucun cookie, aucun envoi de données).</p>
+  </div>
+</dialog>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/graphiques.js"></script>
+</body>
+</html>
