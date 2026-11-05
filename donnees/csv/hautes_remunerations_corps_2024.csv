@@ -1,0 +1,19 @@
+annee;niveau;corps_ou_emploi;salaire_net_moyen;part_des_agents_dans_le_dernier_centile_pct;part_du_dernier_centile_pct;source_id
+2024;0;Catégorie A+;5264.76;10.755;24.279;DGAFP_RA2026_REMU
+2024;1;FPE;5138.1;9.664;18.947;DGAFP_RA2026_REMU
+2024;2;Encadrement supérieur et emplois de direction dont :;7025.97;35.395;9.29;DGAFP_RA2026_REMU
+2024;2;Corps et emplois à la décision du Gouvernement (décret de 1985 et assimilés);11647.16;93.973;0.865;DGAFP_RA2026_REMU
+2024;2;Autres corps de direction et encadrement supérieur de la FPE;6858.04;33.266;8.425;DGAFP_RA2026_REMU
+2024;2;Inspection, contrôle et expertise;6772.26;30.653;8.499;DGAFP_RA2026_REMU
+2024;2;Enseignement supérieur, recherche et assimilés;4470.47;0.815;1.157;DGAFP_RA2026_REMU
+2024;1;FPT;5823.24;13.417;2.542;DGAFP_RA2026_REMU
+2024;2;Emplois de direction;7414.28;42.661;1.331;DGAFP_RA2026_REMU
+2024;2;Encadrement supérieur;5583.99;8.365;0.754;DGAFP_RA2026_REMU
+2024;2;Médecins territoriaux;5410.68;6.7;0.456;DGAFP_RA2026_REMU
+2024;1;FPH;6592.4;25.996;2.791;DGAFP_RA2026_REMU
+2024;2;Emplois de direction;6829.3;30.902;2.628;DGAFP_RA2026_REMU
+2024;2;Encadrement supérieur;5689.6;7.299;0.163;DGAFP_RA2026_REMU
+2024;0;Hors A+;2683.64;0.775;75.721;DGAFP_RA2026_REMU
+2024;1;Ingénieurs et cadres de l’aviation civile de la FPE;7228.61;47.176;5.84;DGAFP_RA2026_REMU
+2024;1;Praticiens hospitaliers de la FPH;6932.62;34.924;57.383;DGAFP_RA2026_REMU
+2024;1;Non ventilé;2605.03;0.13;12.498;DGAFP_RA2026_REMU

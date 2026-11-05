@@ -161,12 +161,16 @@
       const gx = el("g", { class: "axe" }, svg);
       el("line", { x1: m.gauche, x2: L - m.droite, y1: y(yMin), y2: y(yMin) }, gx);
       const pas = pasAnnees(cfg.annees.length, L - m.gauche - m.droite);
+      let precedente = null; // dernière étiquette dessinée
       cfg.annees.forEach((a, i) => {
         const dernier = i === cfg.annees.length - 1;
         if (a % pas !== 0 && !(dernier && pas <= 2)) return;
+        // La dernière année prime sur l'étiquette voisine si elles se chevaucheraient.
+        if (dernier && precedente && x(a) - precedente.x < 38) precedente.tx.remove();
         el("line", { x1: x(a), x2: x(a), y1: y(yMin), y2: y(yMin) + 5 }, gx);
         const tx = el("text", { x: x(a), y: H - m.bas + 20, "text-anchor": "middle" }, gx);
-        tx.textContent = a;
+        tx.textContent = cfg.formatX ? cfg.formatX(a) : a;
+        precedente = { x: x(a), tx };
       });
 
       // Ruptures de série
@@ -340,8 +344,9 @@
       conteneur.querySelectorAll(":scope > svg").forEach((s) => s.remove());
       const L = Math.max(280, conteneur.clientWidth);
       const petit = L < 560;
-      const hauteurBarre = petit ? 34 : 40;
-      const ecart = petit ? 36 : 22;
+      // Barres fines possibles (longues listes) ; sur petit écran, le libellé passe au-dessus de la barre.
+      const hauteurBarre = cfg.hauteurBarre || (petit ? 34 : 40);
+      const ecart = petit ? (cfg.hauteurBarre ? 26 : 36) : (cfg.ecart != null ? cfg.ecart : 22);
       const largeurLib = petit ? 0 : Math.min(190, Math.max(...cfg.categories.map((c) => c.length)) * 8 + 16);
       const m = { haut: 6, bas: 28, gauche: largeurLib, droite: 12 };
       const H = m.haut + m.bas + cfg.categories.length * (hauteurBarre + ecart) - ecart + (petit ? 22 : 0);
@@ -392,10 +397,14 @@
         actif = [seg.i, seg.k];
         const s = cfg.series[seg.k];
         const part = (100 * seg.brut) / totaux[seg.i];
-        ib.innerHTML = `<span class="infobulle__titre">${cfg.categories[seg.i]}</span><div class="infobulle__ligne"><span><i class="infobulle__pastille" style="background:${PLF.couleur(s.couleur)}"></i>${s.libelle}</span><b>${PLF.fmt.pourcent(part, 1)}</b></div>${cfg.valeursAbsolues !== false && !cfg.sansNombre ? `<div class="infobulle__ligne"><span>Effectif</span><b>${fmtVal(seg.brut)}</b></div>` : ""}`;
+        // sansPart : barres à une seule série (la part vaut toujours 100 %).
+        const lignePart = cfg.sansPart ? "" : `<div class="infobulle__ligne"><span><i class="infobulle__pastille" style="background:${PLF.couleur(s.couleur)}"></i>${s.libelle}</span><b>${PLF.fmt.pourcent(part, 1)}</b></div>`;
+        const ligneValeur = cfg.valeursAbsolues !== false && !cfg.sansNombre ? `<div class="infobulle__ligne"><span>${cfg.sansPart ? `<i class="infobulle__pastille" style="background:${PLF.couleur(s.couleur)}"></i>` : ""}${cfg.libelleValeur || "Effectif"}</span><b>${fmtVal(seg.brut)}</b></div>` : "";
+        const total = cfg.ligneTotal && cfg.series.length > 1 ? `<div class="infobulle__ligne" style="border-top:1px solid rgba(255,255,255,.25);margin-top:.25rem;padding-top:.25rem"><span>${cfg.ligneTotal}</span><b>${fmtVal(totaux[seg.i])}</b></div>` : "";
+        ib.innerHTML = `<span class="infobulle__titre">${cfg.categories[seg.i]}</span>${lignePart}${ligneValeur}${total}`;
         const rr = svg.getBoundingClientRect();
         placerInfobulle(ib, conteneur, (((seg.x0 + seg.x1) / 2) / L) * rr.width, (seg.y0 / H) * rr.height);
-        if (annonce) PLF.annoncer(`${cfg.categories[seg.i]}, ${s.libelle} : ${PLF.fmt.pourcent(part, 1)}${cfg.sansNombre ? "" : `, soit ${fmtVal(seg.brut)}`}.`);
+        if (annonce) PLF.annoncer(`${cfg.categories[seg.i]}, ${s.libelle} : ${cfg.sansPart ? fmtVal(seg.brut) : PLF.fmt.pourcent(part, 1) + (cfg.sansNombre ? "" : `, soit ${fmtVal(seg.brut)}`)}${total ? `. ${cfg.ligneTotal} : ${fmtVal(totaux[seg.i])}` : ""}.`);
       }
       function cacher() {
         segments.forEach((sg) => sg.r.setAttribute("stroke", PLF.couleur("--surface")));

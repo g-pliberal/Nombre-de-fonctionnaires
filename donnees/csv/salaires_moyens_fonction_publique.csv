@@ -1,0 +1,1737 @@
+annee;version;champ;population;indicateur;euros_mensuels;source_id
+2015;;fpe;30_39;brut;2652.36;DGAFP_RA2026_REMU
+2016;;fpe;30_39;brut;2665;DGAFP_RA2026_REMU
+2017;;fpe;30_39;brut;2716;DGAFP_RA2026_REMU
+2018;;fpe;30_39;brut;2740.13;DGAFP_RA2026_REMU
+2019;;fpe;30_39;brut;2756;DGAFP_RA2026_REMU
+2020;;fpe;30_39;brut;2790.24;DGAFP_RA2026_REMU
+2021;Classique;fpe;30_39;brut;2840;DGAFP_RA2026_REMU
+2021;Moderne;fpe;30_39;brut;2820.73;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;30_39;brut;2894.92;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;30_39;brut;2916.02;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;30_39;brut;3060.99;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;30_39;brut;3056.84;DGAFP_RA2026_REMU
+2024;;fpe;30_39;brut;3219.05;DGAFP_RA2026_REMU
+2015;;fpe;30_39;net;2179;DGAFP_RA2026_REMU
+2016;;fpe;30_39;net;2182;DGAFP_RA2026_REMU
+2017;;fpe;30_39;net;2218;DGAFP_RA2026_REMU
+2018;;fpe;30_39;net;2213;DGAFP_RA2026_REMU
+2019;;fpe;30_39;net;2227;DGAFP_RA2026_REMU
+2020;;fpe;30_39;net;2252.37;DGAFP_RA2026_REMU
+2021;Classique;fpe;30_39;net;2295;DGAFP_RA2026_REMU
+2021;Moderne;fpe;30_39;net;2271.83;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;30_39;net;2334.74;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;30_39;net;2351.17;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;30_39;net;2472.45;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;30_39;net;2468.95;DGAFP_RA2026_REMU
+2024;;fpe;30_39;net;2605.64;DGAFP_RA2026_REMU
+2015;;fpe;40_49;brut;3085.74;DGAFP_RA2026_REMU
+2016;;fpe;40_49;brut;3110;DGAFP_RA2026_REMU
+2017;;fpe;40_49;brut;3183;DGAFP_RA2026_REMU
+2018;;fpe;40_49;brut;3234.92;DGAFP_RA2026_REMU
+2019;;fpe;40_49;brut;3266;DGAFP_RA2026_REMU
+2020;;fpe;40_49;brut;3306.87;DGAFP_RA2026_REMU
+2021;Classique;fpe;40_49;brut;3354;DGAFP_RA2026_REMU
+2021;Moderne;fpe;40_49;brut;3340.16;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;40_49;brut;3433.53;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;40_49;brut;3453.33;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;40_49;brut;3590.47;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;40_49;brut;3588.1;DGAFP_RA2026_REMU
+2024;;fpe;40_49;brut;3750.53;DGAFP_RA2026_REMU
+2015;;fpe;40_49;net;2535.89;DGAFP_RA2026_REMU
+2016;;fpe;40_49;net;2547;DGAFP_RA2026_REMU
+2017;;fpe;40_49;net;2598;DGAFP_RA2026_REMU
+2018;;fpe;40_49;net;2611.92;DGAFP_RA2026_REMU
+2019;;fpe;40_49;net;2637;DGAFP_RA2026_REMU
+2020;;fpe;40_49;net;2666.08;DGAFP_RA2026_REMU
+2021;Classique;fpe;40_49;net;2706;DGAFP_RA2026_REMU
+2021;Moderne;fpe;40_49;net;2690.26;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;40_49;net;2768.56;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;40_49;net;2784.09;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;40_49;net;2898;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;40_49;net;2895.78;DGAFP_RA2026_REMU
+2024;;fpe;40_49;net;3032.54;DGAFP_RA2026_REMU
+2015;;fpe;50_59;brut;3442.34;DGAFP_RA2026_REMU
+2016;;fpe;50_59;brut;3464;DGAFP_RA2026_REMU
+2017;;fpe;50_59;brut;3538;DGAFP_RA2026_REMU
+2018;;fpe;50_59;brut;3606.33;DGAFP_RA2026_REMU
+2019;;fpe;50_59;brut;3647;DGAFP_RA2026_REMU
+2020;;fpe;50_59;brut;3697.53;DGAFP_RA2026_REMU
+2021;Classique;fpe;50_59;brut;3758;DGAFP_RA2026_REMU
+2021;Moderne;fpe;50_59;brut;3737.57;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;50_59;brut;3851.26;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;50_59;brut;3878.06;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;50_59;brut;4021.95;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;50_59;brut;4019.57;DGAFP_RA2026_REMU
+2024;;fpe;50_59;brut;4184.7;DGAFP_RA2026_REMU
+2015;;fpe;50_59;net;2831.11;DGAFP_RA2026_REMU
+2016;;fpe;50_59;net;2838;DGAFP_RA2026_REMU
+2017;;fpe;50_59;net;2889;DGAFP_RA2026_REMU
+2018;;fpe;50_59;net;2910.98;DGAFP_RA2026_REMU
+2019;;fpe;50_59;net;2941;DGAFP_RA2026_REMU
+2020;;fpe;50_59;net;2976.71;DGAFP_RA2026_REMU
+2021;Classique;fpe;50_59;net;3027;DGAFP_RA2026_REMU
+2021;Moderne;fpe;50_59;net;3006.35;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;50_59;net;3101.97;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;50_59;net;3123.32;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;50_59;net;3240.23;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;50_59;net;3237.86;DGAFP_RA2026_REMU
+2024;;fpe;50_59;net;3374.59;DGAFP_RA2026_REMU
+2015;;fpe;60_plus;brut;3967.97;DGAFP_RA2026_REMU
+2016;;fpe;60_plus;brut;3954;DGAFP_RA2026_REMU
+2017;;fpe;60_plus;brut;3992;DGAFP_RA2026_REMU
+2018;;fpe;60_plus;brut;4060.69;DGAFP_RA2026_REMU
+2019;;fpe;60_plus;brut;4083;DGAFP_RA2026_REMU
+2020;;fpe;60_plus;brut;4126.31;DGAFP_RA2026_REMU
+2021;Classique;fpe;60_plus;brut;4180;DGAFP_RA2026_REMU
+2021;Moderne;fpe;60_plus;brut;4141.16;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;60_plus;brut;4205.95;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;60_plus;brut;4279.6;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;60_plus;brut;4417.65;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;60_plus;brut;4402.4;DGAFP_RA2026_REMU
+2024;;fpe;60_plus;brut;4528.2;DGAFP_RA2026_REMU
+2015;;fpe;60_plus;net;3275.61;DGAFP_RA2026_REMU
+2016;;fpe;60_plus;net;3251;DGAFP_RA2026_REMU
+2017;;fpe;60_plus;net;3272;DGAFP_RA2026_REMU
+2018;;fpe;60_plus;net;3289.85;DGAFP_RA2026_REMU
+2019;;fpe;60_plus;net;3302;DGAFP_RA2026_REMU
+2020;;fpe;60_plus;net;3330.95;DGAFP_RA2026_REMU
+2021;Classique;fpe;60_plus;net;3378;DGAFP_RA2026_REMU
+2021;Moderne;fpe;60_plus;net;3339.88;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;60_plus;net;3396.97;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;60_plus;net;3456.4;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;60_plus;net;3568.96;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;60_plus;net;3555.32;DGAFP_RA2026_REMU
+2024;;fpe;60_plus;net;3657.43;DGAFP_RA2026_REMU
+2015;;fpe;autres_statuts;brut;2860.05;DGAFP_RA2026_REMU
+2016;;fpe;autres_statuts;brut;2847;DGAFP_RA2026_REMU
+2017;;fpe;autres_statuts;brut;2978;DGAFP_RA2026_REMU
+2018;;fpe;autres_statuts;brut;3018.62;DGAFP_RA2026_REMU
+2019;;fpe;autres_statuts;brut;3054;DGAFP_RA2026_REMU
+2020;;fpe;autres_statuts;brut;3095.97;DGAFP_RA2026_REMU
+2021;Classique;fpe;autres_statuts;brut;3168;DGAFP_RA2026_REMU
+2021;Moderne;fpe;autres_statuts;brut;3203.77;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;autres_statuts;brut;3360.94;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;autres_statuts;brut;3378.51;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;autres_statuts;brut;3491.68;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;autres_statuts;brut;3515.92;DGAFP_RA2026_REMU
+2024;;fpe;autres_statuts;brut;3737.82;DGAFP_RA2026_REMU
+2015;;fpe;autres_statuts;net;2268.52;DGAFP_RA2026_REMU
+2016;;fpe;autres_statuts;net;2256;DGAFP_RA2026_REMU
+2017;;fpe;autres_statuts;net;2349;DGAFP_RA2026_REMU
+2018;;fpe;autres_statuts;net;2360.12;DGAFP_RA2026_REMU
+2019;;fpe;autres_statuts;net;2398;DGAFP_RA2026_REMU
+2020;;fpe;autres_statuts;net;2432.04;DGAFP_RA2026_REMU
+2021;Classique;fpe;autres_statuts;net;2490;DGAFP_RA2026_REMU
+2021;Moderne;fpe;autres_statuts;net;2513.7;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;autres_statuts;net;2648.7;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;autres_statuts;net;2663.01;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;autres_statuts;net;2753.13;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;autres_statuts;net;2771.14;DGAFP_RA2026_REMU
+2024;;fpe;autres_statuts;net;2947.83;DGAFP_RA2026_REMU
+2015;;fpe;contractuels;brut;2567.63;DGAFP_RA2026_REMU
+2016;;fpe;contractuels;brut;2579;DGAFP_RA2026_REMU
+2017;;fpe;contractuels;brut;2558;DGAFP_RA2026_REMU
+2018;;fpe;contractuels;brut;2560.34;DGAFP_RA2026_REMU
+2019;;fpe;contractuels;brut;2532;DGAFP_RA2026_REMU
+2020;;fpe;contractuels;brut;2541.2;DGAFP_RA2026_REMU
+2021;Classique;fpe;contractuels;brut;2591;DGAFP_RA2026_REMU
+2021;Moderne;fpe;contractuels;brut;2553.36;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;contractuels;brut;2608.05;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;contractuels;brut;2615.9;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;contractuels;brut;2762.03;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;contractuels;brut;2760.03;DGAFP_RA2026_REMU
+2024;;fpe;contractuels;brut;2864.76;DGAFP_RA2026_REMU
+2015;;fpe;contractuels;net;2063;DGAFP_RA2026_REMU
+2016;;fpe;contractuels;net;2068;DGAFP_RA2026_REMU
+2017;;fpe;contractuels;net;2050;DGAFP_RA2026_REMU
+2018;;fpe;contractuels;net;2040.69;DGAFP_RA2026_REMU
+2019;;fpe;contractuels;net;2020;DGAFP_RA2026_REMU
+2020;;fpe;contractuels;net;2029.59;DGAFP_RA2026_REMU
+2021;Classique;fpe;contractuels;net;2070;DGAFP_RA2026_REMU
+2021;Moderne;fpe;contractuels;net;2033.9;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;contractuels;net;2079.74;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;contractuels;net;2085.25;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;contractuels;net;2203.92;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;contractuels;net;2201.69;DGAFP_RA2026_REMU
+2024;;fpe;contractuels;net;2286.11;DGAFP_RA2026_REMU
+2015;;fpe;contrats_aides;brut;1481.7;DGAFP_RA2026_REMU
+2016;;fpe;contrats_aides;brut;1493;DGAFP_RA2026_REMU
+2017;;fpe;contrats_aides;brut;1505;DGAFP_RA2026_REMU
+2018;;fpe;contrats_aides;brut;1519.06;DGAFP_RA2026_REMU
+2019;;fpe;contrats_aides;brut;1561;DGAFP_RA2026_REMU
+2020;;fpe;contrats_aides;brut;1671.52;DGAFP_RA2026_REMU
+2021;Classique;fpe;contrats_aides;brut;1739;DGAFP_RA2026_REMU
+2021;Moderne;fpe;contrats_aides;brut;1754.11;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;contrats_aides;brut;1836.38;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;contrats_aides;brut;1835.41;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;contrats_aides;brut;1945.26;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;contrats_aides;brut;1943.76;DGAFP_RA2026_REMU
+2024;;fpe;contrats_aides;brut;1985.77;DGAFP_RA2026_REMU
+2015;;fpe;contrats_aides;net;1207.7;DGAFP_RA2026_REMU
+2016;;fpe;contrats_aides;net;1215;DGAFP_RA2026_REMU
+2017;;fpe;contrats_aides;net;1222;DGAFP_RA2026_REMU
+2018;;fpe;contrats_aides;net;1219;DGAFP_RA2026_REMU
+2019;;fpe;contrats_aides;net;1254;DGAFP_RA2026_REMU
+2020;;fpe;contrats_aides;net;1334.01;DGAFP_RA2026_REMU
+2021;Classique;fpe;contrats_aides;net;1394;DGAFP_RA2026_REMU
+2021;Moderne;fpe;contrats_aides;net;1405.47;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;contrats_aides;net;1470.13;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;contrats_aides;net;1467.79;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;contrats_aides;net;1555.9;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;contrats_aides;net;1554.5;DGAFP_RA2026_REMU
+2024;;fpe;contrats_aides;net;1587.24;DGAFP_RA2026_REMU
+2015;;fpe;dom;brut;3902.88;DGAFP_RA2026_REMU
+2016;;fpe;dom;brut;3946;DGAFP_RA2026_REMU
+2017;;fpe;dom;brut;4048;DGAFP_RA2026_REMU
+2018;;fpe;dom;brut;4122.87;DGAFP_RA2026_REMU
+2019;;fpe;dom;brut;4167;DGAFP_RA2026_REMU
+2020;;fpe;dom;brut;4242.71;DGAFP_RA2026_REMU
+2021;Classique;fpe;dom;brut;4310;DGAFP_RA2026_REMU
+2021;Moderne;fpe;dom;brut;4306.94;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;dom;brut;4378.35;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;dom;brut;4372.93;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;dom;brut;4567.03;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;dom;brut;4579.43;DGAFP_RA2026_REMU
+2024;;fpe;dom;brut;4777.59;DGAFP_RA2026_REMU
+2015;;fpe;dom;net;3277.3;DGAFP_RA2026_REMU
+2016;;fpe;dom;net;3305;DGAFP_RA2026_REMU
+2017;;fpe;dom;net;3382;DGAFP_RA2026_REMU
+2018;;fpe;dom;net;3413.21;DGAFP_RA2026_REMU
+2019;;fpe;dom;net;3446;DGAFP_RA2026_REMU
+2020;;fpe;dom;net;3504.78;DGAFP_RA2026_REMU
+2021;Classique;fpe;dom;net;3561;DGAFP_RA2026_REMU
+2021;Moderne;fpe;dom;net;3548.28;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;dom;net;3610.01;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;dom;net;3606.08;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;dom;net;3770.17;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;dom;net;3780.5;DGAFP_RA2026_REMU
+2024;;fpe;dom;net;3948.37;DGAFP_RA2026_REMU
+2009;;fpe;ensemble;brut;2787;DGAFP_RA2026_REMU
+2010;;fpe;ensemble;brut;2868;DGAFP_RA2026_REMU
+2011;;fpe;ensemble;brut;2931;DGAFP_RA2026_REMU
+2012;;fpe;ensemble;brut;2977;DGAFP_RA2026_REMU
+2013;;fpe;ensemble;brut;2991;DGAFP_RA2026_REMU
+2014;;fpe;ensemble;brut;3011;DGAFP_RA2026_REMU
+2015;;fpe;ensemble;brut;3034.93;DGAFP_RA2026_REMU
+2016;;fpe;ensemble;brut;3058;DGAFP_RA2026_REMU
+2017;;fpe;ensemble;brut;3130;DGAFP_RA2026_REMU
+2018;;fpe;ensemble;brut;3185.86;DGAFP_RA2026_REMU
+2019;;fpe;ensemble;brut;3223;DGAFP_RA2026_REMU
+2020;;fpe;ensemble;brut;3274.01;DGAFP_RA2026_REMU
+2021;Classique;fpe;ensemble;brut;3332;DGAFP_RA2026_REMU
+2021;Moderne;fpe;ensemble;brut;3312.83;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;ensemble;brut;3403.78;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;ensemble;brut;3429.53;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;ensemble;brut;3577.31;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;ensemble;brut;3575.21;DGAFP_RA2026_REMU
+2024;;fpe;ensemble;brut;3736.68;DGAFP_RA2026_REMU
+2009;;fpe;ensemble;net;2329;DGAFP_RA2026_REMU
+2010;;fpe;ensemble;net;2396;DGAFP_RA2026_REMU
+2011;;fpe;ensemble;net;2444;DGAFP_RA2026_REMU
+2012;;fpe;ensemble;net;2473;DGAFP_RA2026_REMU
+2013;;fpe;ensemble;net;2477;DGAFP_RA2026_REMU
+2014;;fpe;ensemble;net;2484;DGAFP_RA2026_REMU
+2015;;fpe;ensemble;net;2495;DGAFP_RA2026_REMU
+2016;;fpe;ensemble;net;2505;DGAFP_RA2026_REMU
+2017;;fpe;ensemble;net;2556;DGAFP_RA2026_REMU
+2018;;fpe;ensemble;net;2572.71;DGAFP_RA2026_REMU
+2019;;fpe;ensemble;net;2601;DGAFP_RA2026_REMU
+2020;;fpe;ensemble;net;2639.33;DGAFP_RA2026_REMU
+2021;Classique;fpe;ensemble;net;2688;DGAFP_RA2026_REMU
+2021;Moderne;fpe;ensemble;net;2666.73;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;ensemble;net;2743.43;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;ensemble;net;2763.79;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;ensemble;net;2885.62;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;ensemble;net;2883.54;DGAFP_RA2026_REMU
+2024;;fpe;ensemble;net;3018.06;DGAFP_RA2026_REMU
+2015;;fpe;ensemble_hors_contrats_aides;brut;3075.7;DGAFP_RA2026_REMU
+2016;;fpe;ensemble_hors_contrats_aides;brut;3098;DGAFP_RA2026_REMU
+2017;;fpe;ensemble_hors_contrats_aides;brut;3168;DGAFP_RA2026_REMU
+2018;;fpe;ensemble_hors_contrats_aides;brut;3207.58;DGAFP_RA2026_REMU
+2019;;fpe;ensemble_hors_contrats_aides;brut;3232;DGAFP_RA2026_REMU
+2020;;fpe;ensemble_hors_contrats_aides;brut;3275.51;DGAFP_RA2026_REMU
+2021;Classique;fpe;ensemble_hors_contrats_aides;brut;3333;DGAFP_RA2026_REMU
+2021;Moderne;fpe;ensemble_hors_contrats_aides;brut;3314.35;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;ensemble_hors_contrats_aides;brut;3405.55;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;ensemble_hors_contrats_aides;brut;3431.14;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;ensemble_hors_contrats_aides;brut;3578.86;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;ensemble_hors_contrats_aides;brut;3576.76;DGAFP_RA2026_REMU
+2024;;fpe;ensemble_hors_contrats_aides;brut;3738.28;DGAFP_RA2026_REMU
+2015;;fpe;ensemble_hors_contrats_aides;net;2529;DGAFP_RA2026_REMU
+2016;;fpe;ensemble_hors_contrats_aides;net;2538;DGAFP_RA2026_REMU
+2017;;fpe;ensemble_hors_contrats_aides;net;2587;DGAFP_RA2026_REMU
+2018;;fpe;ensemble_hors_contrats_aides;net;2590.35;DGAFP_RA2026_REMU
+2019;;fpe;ensemble_hors_contrats_aides;net;2609;DGAFP_RA2026_REMU
+2020;;fpe;ensemble_hors_contrats_aides;net;2640.55;DGAFP_RA2026_REMU
+2021;Classique;fpe;ensemble_hors_contrats_aides;net;2689;DGAFP_RA2026_REMU
+2021;Moderne;fpe;ensemble_hors_contrats_aides;net;2667.96;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;ensemble_hors_contrats_aides;net;2744.86;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;ensemble_hors_contrats_aides;net;2765.1;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;ensemble_hors_contrats_aides;net;2886.88;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;ensemble_hors_contrats_aides;net;2884.8;DGAFP_RA2026_REMU
+2024;;fpe;ensemble_hors_contrats_aides;net;3019.38;DGAFP_RA2026_REMU
+2015;;fpe;femmes;brut;2850.59;DGAFP_RA2026_REMU
+2016;;fpe;femmes;brut;2877;DGAFP_RA2026_REMU
+2017;;fpe;femmes;brut;2955;DGAFP_RA2026_REMU
+2018;;fpe;femmes;brut;3009.25;DGAFP_RA2026_REMU
+2019;;fpe;femmes;brut;3043;DGAFP_RA2026_REMU
+2020;;fpe;femmes;brut;3090.8;DGAFP_RA2026_REMU
+2021;Classique;fpe;femmes;brut;3152;DGAFP_RA2026_REMU
+2021;Moderne;fpe;femmes;brut;3138.67;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;femmes;brut;3224.7;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;femmes;brut;3251.88;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;femmes;brut;3404.62;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;femmes;brut;3398.8;DGAFP_RA2026_REMU
+2024;;fpe;femmes;brut;3559.27;DGAFP_RA2026_REMU
+2015;;fpe;femmes;net;2338.11;DGAFP_RA2026_REMU
+2016;;fpe;femmes;net;2351;DGAFP_RA2026_REMU
+2017;;fpe;femmes;net;2408;DGAFP_RA2026_REMU
+2018;;fpe;femmes;net;2425;DGAFP_RA2026_REMU
+2019;;fpe;femmes;net;2451;DGAFP_RA2026_REMU
+2020;;fpe;femmes;net;2485.65;DGAFP_RA2026_REMU
+2021;Classique;fpe;femmes;net;2537;DGAFP_RA2026_REMU
+2021;Moderne;fpe;femmes;net;2520.57;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;femmes;net;2593.91;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;femmes;net;2615.49;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;femmes;net;2741.56;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;femmes;net;2736.68;DGAFP_RA2026_REMU
+2024;;fpe;femmes;net;2870.29;DGAFP_RA2026_REMU
+2013;;fpe;fonctionnaires;brut;3154;DGAFP_RA2026_REMU
+2014;;fpe;fonctionnaires;brut;3187;DGAFP_RA2026_REMU
+2015;;fpe;fonctionnaires;brut;3209.26;DGAFP_RA2026_REMU
+2016;;fpe;fonctionnaires;brut;3239;DGAFP_RA2026_REMU
+2017;;fpe;fonctionnaires;brut;3324;DGAFP_RA2026_REMU
+2018;;fpe;fonctionnaires;brut;3380.03;DGAFP_RA2026_REMU
+2019;;fpe;fonctionnaires;brut;3426;DGAFP_RA2026_REMU
+2020;;fpe;fonctionnaires;brut;3488.18;DGAFP_RA2026_REMU
+2021;Classique;fpe;fonctionnaires;brut;3555;DGAFP_RA2026_REMU
+2021;Moderne;fpe;fonctionnaires;brut;3534.27;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;fonctionnaires;brut;3650.13;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;fonctionnaires;brut;3677.86;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;fonctionnaires;brut;3845.1;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;fonctionnaires;brut;3835.74;DGAFP_RA2026_REMU
+2024;;fpe;fonctionnaires;brut;4024.54;DGAFP_RA2026_REMU
+2013;;fpe;fonctionnaires;net;2632;DGAFP_RA2026_REMU
+2014;;fpe;fonctionnaires;net;2650;DGAFP_RA2026_REMU
+2015;;fpe;fonctionnaires;net;2657.99;DGAFP_RA2026_REMU
+2016;;fpe;fonctionnaires;net;2672;DGAFP_RA2026_REMU
+2017;;fpe;fonctionnaires;net;2732;DGAFP_RA2026_REMU
+2018;;fpe;fonctionnaires;net;2744.09;DGAFP_RA2026_REMU
+2019;;fpe;fonctionnaires;net;2779;DGAFP_RA2026_REMU
+2020;;fpe;fonctionnaires;net;2823.54;DGAFP_RA2026_REMU
+2021;Classique;fpe;fonctionnaires;net;2880;DGAFP_RA2026_REMU
+2021;Moderne;fpe;fonctionnaires;net;2857.47;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;fonctionnaires;net;2954.91;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;fonctionnaires;net;2976.9;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;fonctionnaires;net;3115.92;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;fonctionnaires;net;3107.97;DGAFP_RA2026_REMU
+2024;;fpe;fonctionnaires;net;3267.04;DGAFP_RA2026_REMU
+2015;;fpe;fonctionnaires_a;brut;3497.6;DGAFP_RA2026_REMU
+2016;;fpe;fonctionnaires_a;brut;3526;DGAFP_RA2026_REMU
+2017;;fpe;fonctionnaires_a;brut;3619;DGAFP_RA2026_REMU
+2018;;fpe;fonctionnaires_a;brut;3676.64;DGAFP_RA2026_REMU
+2019;;fpe;fonctionnaires_a;brut;3708;DGAFP_RA2026_REMU
+2020;;fpe;fonctionnaires_a;brut;3766.99;DGAFP_RA2026_REMU
+2021;Classique;fpe;fonctionnaires_a;brut;3843;DGAFP_RA2026_REMU
+2021;Moderne;fpe;fonctionnaires_a;brut;3821.36;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;fonctionnaires_a;brut;3942.48;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;fonctionnaires_a;brut;3974.49;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;fonctionnaires_a;brut;4158.85;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;fonctionnaires_a;brut;4141.61;DGAFP_RA2026_REMU
+2024;;fpe;fonctionnaires_a;brut;4358.65;DGAFP_RA2026_REMU
+2015;;fpe;fonctionnaires_a;net;2896.55;DGAFP_RA2026_REMU
+2016;;fpe;fonctionnaires_a;net;2909;DGAFP_RA2026_REMU
+2017;;fpe;fonctionnaires_a;net;2975;DGAFP_RA2026_REMU
+2018;;fpe;fonctionnaires_a;net;2987.57;DGAFP_RA2026_REMU
+2019;;fpe;fonctionnaires_a;net;3010;DGAFP_RA2026_REMU
+2020;;fpe;fonctionnaires_a;net;3050.13;DGAFP_RA2026_REMU
+2021;Classique;fpe;fonctionnaires_a;net;3115;DGAFP_RA2026_REMU
+2021;Moderne;fpe;fonctionnaires_a;net;3089.62;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;fonctionnaires_a;net;3192.59;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;fonctionnaires_a;net;3218.62;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;fonctionnaires_a;net;3373.25;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;fonctionnaires_a;net;3359.04;DGAFP_RA2026_REMU
+2024;;fpe;fonctionnaires_a;net;3542.93;DGAFP_RA2026_REMU
+2015;;fpe;fonctionnaires_b;brut;2925.67;DGAFP_RA2026_REMU
+2016;;fpe;fonctionnaires_b;brut;2945;DGAFP_RA2026_REMU
+2017;;fpe;fonctionnaires_b;brut;3004;DGAFP_RA2026_REMU
+2018;;fpe;fonctionnaires_b;brut;3039.39;DGAFP_RA2026_REMU
+2019;;fpe;fonctionnaires_b;brut;3115;DGAFP_RA2026_REMU
+2020;;fpe;fonctionnaires_b;brut;3176.02;DGAFP_RA2026_REMU
+2021;Classique;fpe;fonctionnaires_b;brut;3201;DGAFP_RA2026_REMU
+2021;Moderne;fpe;fonctionnaires_b;brut;3176.82;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;fonctionnaires_b;brut;3260.95;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;fonctionnaires_b;brut;3271.13;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;fonctionnaires_b;brut;3375.64;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;fonctionnaires_b;brut;3378.79;DGAFP_RA2026_REMU
+2024;;fpe;fonctionnaires_b;brut;3515.18;DGAFP_RA2026_REMU
+2015;;fpe;fonctionnaires_b;net;2416.64;DGAFP_RA2026_REMU
+2016;;fpe;fonctionnaires_b;net;2422;DGAFP_RA2026_REMU
+2017;;fpe;fonctionnaires_b;net;2461;DGAFP_RA2026_REMU
+2018;;fpe;fonctionnaires_b;net;2456.14;DGAFP_RA2026_REMU
+2019;;fpe;fonctionnaires_b;net;2516;DGAFP_RA2026_REMU
+2020;;fpe;fonctionnaires_b;net;2563.47;DGAFP_RA2026_REMU
+2021;Classique;fpe;fonctionnaires_b;net;2586;DGAFP_RA2026_REMU
+2021;Moderne;fpe;fonctionnaires_b;net;2562.7;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;fonctionnaires_b;net;2631.66;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;fonctionnaires_b;net;2637.96;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;fonctionnaires_b;net;2720.27;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;fonctionnaires_b;net;2722.73;DGAFP_RA2026_REMU
+2024;;fpe;fonctionnaires_b;net;2836.6;DGAFP_RA2026_REMU
+2015;;fpe;fonctionnaires_c;brut;2331.62;DGAFP_RA2026_REMU
+2016;;fpe;fonctionnaires_c;brut;2355;DGAFP_RA2026_REMU
+2017;;fpe;fonctionnaires_c;brut;2412;DGAFP_RA2026_REMU
+2018;;fpe;fonctionnaires_c;brut;2459.33;DGAFP_RA2026_REMU
+2019;;fpe;fonctionnaires_c;brut;2487;DGAFP_RA2026_REMU
+2020;;fpe;fonctionnaires_c;brut;2531.29;DGAFP_RA2026_REMU
+2021;Classique;fpe;fonctionnaires_c;brut;2563;DGAFP_RA2026_REMU
+2021;Moderne;fpe;fonctionnaires_c;brut;2547.85;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;fonctionnaires_c;brut;2662.51;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;fonctionnaires_c;brut;2686.26;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;fonctionnaires_c;brut;2812.78;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;fonctionnaires_c;brut;2811.47;DGAFP_RA2026_REMU
+2024;;fpe;fonctionnaires_c;brut;2789.09;DGAFP_RA2026_REMU
+2015;;fpe;fonctionnaires_c;net;1937.99;DGAFP_RA2026_REMU
+2016;;fpe;fonctionnaires_c;net;1950;DGAFP_RA2026_REMU
+2017;;fpe;fonctionnaires_c;net;1989;DGAFP_RA2026_REMU
+2018;;fpe;fonctionnaires_c;net;1997.05;DGAFP_RA2026_REMU
+2019;;fpe;fonctionnaires_c;net;2017;DGAFP_RA2026_REMU
+2020;;fpe;fonctionnaires_c;net;2052.64;DGAFP_RA2026_REMU
+2021;Classique;fpe;fonctionnaires_c;net;2080;DGAFP_RA2026_REMU
+2021;Moderne;fpe;fonctionnaires_c;net;2066.29;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;fonctionnaires_c;net;2161.29;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;fonctionnaires_c;net;2177.31;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;fonctionnaires_c;net;2283.08;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;fonctionnaires_c;net;2281.9;DGAFP_RA2026_REMU
+2024;;fpe;fonctionnaires_c;net;2266.04;DGAFP_RA2026_REMU
+2015;;fpe;hommes;brut;3314.58;DGAFP_RA2026_REMU
+2016;;fpe;hommes;brut;3337;DGAFP_RA2026_REMU
+2017;;fpe;hommes;brut;3401;DGAFP_RA2026_REMU
+2018;;fpe;hommes;brut;3461.19;DGAFP_RA2026_REMU
+2019;;fpe;hommes;brut;3504;DGAFP_RA2026_REMU
+2020;;fpe;hommes;brut;3567.65;DGAFP_RA2026_REMU
+2021;Classique;fpe;hommes;brut;3622;DGAFP_RA2026_REMU
+2021;Moderne;fpe;hommes;brut;3591.43;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;hommes;brut;3694.63;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;hommes;brut;3717.6;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;hommes;brut;3860.96;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;hommes;brut;3866.42;DGAFP_RA2026_REMU
+2024;;fpe;hommes;brut;4030.63;DGAFP_RA2026_REMU
+2015;;fpe;hommes;net;2732.88;DGAFP_RA2026_REMU
+2016;;fpe;hommes;net;2742;DGAFP_RA2026_REMU
+2017;;fpe;hommes;net;2785;DGAFP_RA2026_REMU
+2018;;fpe;hommes;net;2803.26;DGAFP_RA2026_REMU
+2019;;fpe;hommes;net;2838;DGAFP_RA2026_REMU
+2020;;fpe;hommes;net;2885.61;DGAFP_RA2026_REMU
+2021;Classique;fpe;hommes;net;2931;DGAFP_RA2026_REMU
+2021;Moderne;fpe;hommes;net;2900.54;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;hommes;net;2986.25;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;hommes;net;3004.27;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;hommes;net;3122.24;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;hommes;net;3125.98;DGAFP_RA2026_REMU
+2024;;fpe;hommes;net;3262.91;DGAFP_RA2026_REMU
+2015;;fpe;metropole;brut;3004.11;DGAFP_RA2026_REMU
+2016;;fpe;metropole;brut;3027;DGAFP_RA2026_REMU
+2017;;fpe;metropole;brut;3098;DGAFP_RA2026_REMU
+2018;;fpe;metropole;brut;3152.56;DGAFP_RA2026_REMU
+2019;;fpe;metropole;brut;3189;DGAFP_RA2026_REMU
+2020;;fpe;metropole;brut;3239.42;DGAFP_RA2026_REMU
+2021;Classique;fpe;metropole;brut;3297;DGAFP_RA2026_REMU
+2021;Moderne;fpe;metropole;brut;3277.74;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;metropole;brut;3368.18;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;metropole;brut;3394.78;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;metropole;brut;3540.83;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;metropole;brut;3538.24;DGAFP_RA2026_REMU
+2024;;fpe;metropole;brut;3698.77;DGAFP_RA2026_REMU
+2015;;fpe;metropole;net;2467.16;DGAFP_RA2026_REMU
+2016;;fpe;metropole;net;2477;DGAFP_RA2026_REMU
+2017;;fpe;metropole;net;2527;DGAFP_RA2026_REMU
+2018;;fpe;metropole;net;2542.84;DGAFP_RA2026_REMU
+2019;;fpe;metropole;net;2571;DGAFP_RA2026_REMU
+2020;;fpe;metropole;net;2608.42;DGAFP_RA2026_REMU
+2021;Classique;fpe;metropole;net;2657;DGAFP_RA2026_REMU
+2021;Moderne;fpe;metropole;net;2635.62;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;metropole;net;2711.79;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;metropole;net;2732.76;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;metropole;net;2853.02;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;metropole;net;2850.52;DGAFP_RA2026_REMU
+2024;;fpe;metropole;net;2984.18;DGAFP_RA2026_REMU
+2015;;fpe;moins_30;brut;2115;DGAFP_RA2026_REMU
+2016;;fpe;moins_30;brut;2126;DGAFP_RA2026_REMU
+2017;;fpe;moins_30;brut;2174;DGAFP_RA2026_REMU
+2018;;fpe;moins_30;brut;2204;DGAFP_RA2026_REMU
+2019;;fpe;moins_30;brut;2223;DGAFP_RA2026_REMU
+2020;;fpe;moins_30;brut;2260.95;DGAFP_RA2026_REMU
+2021;Classique;fpe;moins_30;brut;2313;DGAFP_RA2026_REMU
+2021;Moderne;fpe;moins_30;brut;2282.17;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;moins_30;brut;2349.26;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;moins_30;brut;2356.47;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;moins_30;brut;2520.5;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;moins_30;brut;2518.57;DGAFP_RA2026_REMU
+2024;;fpe;moins_30;brut;2652.11;DGAFP_RA2026_REMU
+2015;;fpe;moins_30;net;1732.81;DGAFP_RA2026_REMU
+2016;;fpe;moins_30;net;1740;DGAFP_RA2026_REMU
+2017;;fpe;moins_30;net;1771;DGAFP_RA2026_REMU
+2018;;fpe;moins_30;net;1776.45;DGAFP_RA2026_REMU
+2019;;fpe;moins_30;net;1792;DGAFP_RA2026_REMU
+2020;;fpe;moins_30;net;1823.09;DGAFP_RA2026_REMU
+2021;Classique;fpe;moins_30;net;1866;DGAFP_RA2026_REMU
+2021;Moderne;fpe;moins_30;net;1831.12;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;moins_30;net;1887.63;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;moins_30;net;1892.76;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;moins_30;net;2029.26;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;moins_30;net;2027.71;DGAFP_RA2026_REMU
+2024;;fpe;moins_30;net;2138.79;DGAFP_RA2026_REMU
+2015;;fpe;pcs_cadres;brut;3710.98;DGAFP_RA2026_REMU
+2016;;fpe;pcs_cadres;brut;3726;DGAFP_RA2026_REMU
+2017;;fpe;pcs_cadres;brut;3834;DGAFP_RA2026_REMU
+2018;;fpe;pcs_cadres;brut;3928.49;DGAFP_RA2026_REMU
+2019;;fpe;pcs_cadres;brut;3958;DGAFP_RA2026_REMU
+2020;;fpe;pcs_cadres;brut;4004.98;DGAFP_RA2026_REMU
+2021;Classique;fpe;pcs_cadres;brut;4056;DGAFP_RA2026_REMU
+2021;Moderne;fpe;pcs_cadres;brut;4033.19;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;pcs_cadres;brut;4131.53;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;pcs_cadres;brut;4206.66;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;pcs_cadres;brut;4347.08;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;pcs_cadres;brut;4343.72;DGAFP_RA2026_REMU
+2024;;fpe;pcs_cadres;brut;4472.5;DGAFP_RA2026_REMU
+2015;;fpe;pcs_cadres;net;3055.81;DGAFP_RA2026_REMU
+2016;;fpe;pcs_cadres;net;3057;DGAFP_RA2026_REMU
+2017;;fpe;pcs_cadres;net;3138;DGAFP_RA2026_REMU
+2018;;fpe;pcs_cadres;net;3182.88;DGAFP_RA2026_REMU
+2019;;fpe;pcs_cadres;net;3206;DGAFP_RA2026_REMU
+2020;;fpe;pcs_cadres;net;3239.11;DGAFP_RA2026_REMU
+2021;Classique;fpe;pcs_cadres;net;3283;DGAFP_RA2026_REMU
+2021;Moderne;fpe;pcs_cadres;net;3259.7;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;pcs_cadres;net;3343.45;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;pcs_cadres;net;3405.98;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;pcs_cadres;net;3521.56;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;pcs_cadres;net;3518.47;DGAFP_RA2026_REMU
+2024;;fpe;pcs_cadres;net;3626.24;DGAFP_RA2026_REMU
+2015;;fpe;pcs_employes_ouvriers;brut;2439.58;DGAFP_RA2026_REMU
+2016;;fpe;pcs_employes_ouvriers;brut;2446;DGAFP_RA2026_REMU
+2017;;fpe;pcs_employes_ouvriers;brut;2503;DGAFP_RA2026_REMU
+2018;;fpe;pcs_employes_ouvriers;brut;2604.75;DGAFP_RA2026_REMU
+2019;;fpe;pcs_employes_ouvriers;brut;2653;DGAFP_RA2026_REMU
+2020;;fpe;pcs_employes_ouvriers;brut;2741.66;DGAFP_RA2026_REMU
+2021;Classique;fpe;pcs_employes_ouvriers;brut;2787;DGAFP_RA2026_REMU
+2021;Moderne;fpe;pcs_employes_ouvriers;brut;2759.76;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;pcs_employes_ouvriers;brut;2878.87;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;pcs_employes_ouvriers;brut;2723.62;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;pcs_employes_ouvriers;brut;2855.66;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;pcs_employes_ouvriers;brut;2860.72;DGAFP_RA2026_REMU
+2024;;fpe;pcs_employes_ouvriers;brut;2995.81;DGAFP_RA2026_REMU
+2015;;fpe;pcs_employes_ouvriers;net;2001.99;DGAFP_RA2026_REMU
+2016;;fpe;pcs_employes_ouvriers;net;2001;DGAFP_RA2026_REMU
+2017;;fpe;pcs_employes_ouvriers;net;2040;DGAFP_RA2026_REMU
+2018;;fpe;pcs_employes_ouvriers;net;2095;DGAFP_RA2026_REMU
+2019;;fpe;pcs_employes_ouvriers;net;2137;DGAFP_RA2026_REMU
+2020;;fpe;pcs_employes_ouvriers;net;2206.25;DGAFP_RA2026_REMU
+2021;Classique;fpe;pcs_employes_ouvriers;net;2242;DGAFP_RA2026_REMU
+2021;Moderne;fpe;pcs_employes_ouvriers;net;2217.08;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;pcs_employes_ouvriers;net;2312.23;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;pcs_employes_ouvriers;net;2188.64;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;pcs_employes_ouvriers;net;2295.29;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;pcs_employes_ouvriers;net;2298.61;DGAFP_RA2026_REMU
+2024;;fpe;pcs_employes_ouvriers;net;2409.77;DGAFP_RA2026_REMU
+2015;;fpe;pcs_intermediaires;brut;2767.06;DGAFP_RA2026_REMU
+2016;;fpe;pcs_intermediaires;brut;2801;DGAFP_RA2026_REMU
+2017;;fpe;pcs_intermediaires;brut;2870;DGAFP_RA2026_REMU
+2018;;fpe;pcs_intermediaires;brut;2872.1;DGAFP_RA2026_REMU
+2019;;fpe;pcs_intermediaires;brut;2896;DGAFP_RA2026_REMU
+2020;;fpe;pcs_intermediaires;brut;2924.73;DGAFP_RA2026_REMU
+2021;Classique;fpe;pcs_intermediaires;brut;2979;DGAFP_RA2026_REMU
+2021;Moderne;fpe;pcs_intermediaires;brut;2968.26;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;pcs_intermediaires;brut;3031.55;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;pcs_intermediaires;brut;3120.52;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;pcs_intermediaires;brut;3284.9;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;pcs_intermediaires;brut;3277.76;DGAFP_RA2026_REMU
+2024;;fpe;pcs_intermediaires;brut;3464.16;DGAFP_RA2026_REMU
+2015;;fpe;pcs_intermediaires;net;2272.1;DGAFP_RA2026_REMU
+2016;;fpe;pcs_intermediaires;net;2292;DGAFP_RA2026_REMU
+2017;;fpe;pcs_intermediaires;net;2341;DGAFP_RA2026_REMU
+2018;;fpe;pcs_intermediaires;net;2314.81;DGAFP_RA2026_REMU
+2019;;fpe;pcs_intermediaires;net;2331;DGAFP_RA2026_REMU
+2020;;fpe;pcs_intermediaires;net;2350.96;DGAFP_RA2026_REMU
+2021;Classique;fpe;pcs_intermediaires;net;2396;DGAFP_RA2026_REMU
+2021;Moderne;fpe;pcs_intermediaires;net;2380.47;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe;pcs_intermediaires;net;2435.8;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe;pcs_intermediaires;net;2503.91;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe;pcs_intermediaires;net;2640.82;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe;pcs_intermediaires;net;2634.86;DGAFP_RA2026_REMU
+2024;;fpe;pcs_intermediaires;net;2790.56;DGAFP_RA2026_REMU
+2004;;fpe_ministeres;ensemble;brut;2530;DGAFP_RA2026_REMU
+2005;;fpe_ministeres;ensemble;brut;2570;DGAFP_RA2026_REMU
+2006;;fpe_ministeres;ensemble;brut;2637;DGAFP_RA2026_REMU
+2007;;fpe_ministeres;ensemble;brut;2716;DGAFP_RA2026_REMU
+2008;;fpe_ministeres;ensemble;brut;2809;DGAFP_RA2026_REMU
+2009;;fpe_ministeres;ensemble;brut;2868;DGAFP_RA2026_REMU
+2010;;fpe_ministeres;ensemble;brut;2931;DGAFP_RA2026_REMU
+2011;;fpe_ministeres;ensemble;brut;2980;DGAFP_RA2026_REMU
+2012;;fpe_ministeres;ensemble;brut;3022;DGAFP_RA2026_REMU
+2013;;fpe_ministeres;ensemble;brut;3038;DGAFP_RA2026_REMU
+2014;;fpe_ministeres;ensemble;brut;3066;DGAFP_RA2026_REMU
+2015;;fpe_ministeres;ensemble;brut;3087;DGAFP_RA2026_REMU
+2016;;fpe_ministeres;ensemble;brut;3113;DGAFP_RA2026_REMU
+2017;;fpe_ministeres;ensemble;brut;3186;DGAFP_RA2026_REMU
+2018;;fpe_ministeres;ensemble;brut;3229;DGAFP_RA2026_REMU
+2019;;fpe_ministeres;ensemble;brut;3265;DGAFP_RA2026_REMU
+2020;;fpe_ministeres;ensemble;brut;3324;DGAFP_RA2026_REMU
+2021;Classique;fpe_ministeres;ensemble;brut;3387;DGAFP_RA2026_REMU
+2021;Moderne;fpe_ministeres;ensemble;brut;3372.2;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe_ministeres;ensemble;brut;3478.03;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe_ministeres;ensemble;brut;3505.14;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe_ministeres;ensemble;brut;3644.8;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe_ministeres;ensemble;brut;3639.96;DGAFP_RA2026_REMU
+2024;;fpe_ministeres;ensemble;brut;3797.72;DGAFP_RA2026_REMU
+2004;;fpe_ministeres;ensemble;net;2127;DGAFP_RA2026_REMU
+2005;;fpe_ministeres;ensemble;net;2146;DGAFP_RA2026_REMU
+2006;;fpe_ministeres;ensemble;net;2202;DGAFP_RA2026_REMU
+2007;;fpe_ministeres;ensemble;net;2266;DGAFP_RA2026_REMU
+2008;;fpe_ministeres;ensemble;net;2350;DGAFP_RA2026_REMU
+2009;;fpe_ministeres;ensemble;net;2399;DGAFP_RA2026_REMU
+2010;;fpe_ministeres;ensemble;net;2452;DGAFP_RA2026_REMU
+2011;;fpe_ministeres;ensemble;net;2491;DGAFP_RA2026_REMU
+2012;;fpe_ministeres;ensemble;net;2517;DGAFP_RA2026_REMU
+2013;;fpe_ministeres;ensemble;net;2521;DGAFP_RA2026_REMU
+2014;;fpe_ministeres;ensemble;net;2536;DGAFP_RA2026_REMU
+2015;;fpe_ministeres;ensemble;net;2544;DGAFP_RA2026_REMU
+2016;;fpe_ministeres;ensemble;net;2556;DGAFP_RA2026_REMU
+2017;;fpe_ministeres;ensemble;net;2607;DGAFP_RA2026_REMU
+2018;;fpe_ministeres;ensemble;net;2612;DGAFP_RA2026_REMU
+2019;;fpe_ministeres;ensemble;net;2641;DGAFP_RA2026_REMU
+2020;;fpe_ministeres;ensemble;net;2684;DGAFP_RA2026_REMU
+2021;Classique;fpe_ministeres;ensemble;net;2737;DGAFP_RA2026_REMU
+2021;Moderne;fpe_ministeres;ensemble;net;2717.98;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe_ministeres;ensemble;net;2807.52;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe_ministeres;ensemble;net;2829.44;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe_ministeres;ensemble;net;2944.38;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe_ministeres;ensemble;net;2940.24;DGAFP_RA2026_REMU
+2024;;fpe_ministeres;ensemble;net;3073.52;DGAFP_RA2026_REMU
+2011;;fpe_ministeres;fonctionnaires;brut;3053;DGAFP_RA2026_REMU
+2012;;fpe_ministeres;fonctionnaires;brut;3096;DGAFP_RA2026_REMU
+2013;;fpe_ministeres;fonctionnaires;brut;3114;DGAFP_RA2026_REMU
+2014;;fpe_ministeres;fonctionnaires;brut;3148;DGAFP_RA2026_REMU
+2015;;fpe_ministeres;fonctionnaires;brut;3168;DGAFP_RA2026_REMU
+2016;;fpe_ministeres;fonctionnaires;brut;3196;DGAFP_RA2026_REMU
+2017;;fpe_ministeres;fonctionnaires;brut;3282;DGAFP_RA2026_REMU
+2018;;fpe_ministeres;fonctionnaires;brut;3336;DGAFP_RA2026_REMU
+2019;;fpe_ministeres;fonctionnaires;brut;3382;DGAFP_RA2026_REMU
+2020;;fpe_ministeres;fonctionnaires;brut;3443;DGAFP_RA2026_REMU
+2021;Classique;fpe_ministeres;fonctionnaires;brut;3506;DGAFP_RA2026_REMU
+2021;Moderne;fpe_ministeres;fonctionnaires;brut;3483.19;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe_ministeres;fonctionnaires;brut;3593.76;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe_ministeres;fonctionnaires;brut;3625.88;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe_ministeres;fonctionnaires;brut;3788.39;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe_ministeres;fonctionnaires;brut;3777;DGAFP_RA2026_REMU
+2024;;fpe_ministeres;fonctionnaires;brut;3977.58;DGAFP_RA2026_REMU
+2011;;fpe_ministeres;fonctionnaires;net;2565;DGAFP_RA2026_REMU
+2012;;fpe_ministeres;fonctionnaires;net;2593;DGAFP_RA2026_REMU
+2013;;fpe_ministeres;fonctionnaires;net;2598;DGAFP_RA2026_REMU
+2014;;fpe_ministeres;fonctionnaires;net;2616;DGAFP_RA2026_REMU
+2015;;fpe_ministeres;fonctionnaires;net;2623;DGAFP_RA2026_REMU
+2016;;fpe_ministeres;fonctionnaires;net;2637;DGAFP_RA2026_REMU
+2017;;fpe_ministeres;fonctionnaires;net;2697;DGAFP_RA2026_REMU
+2018;;fpe_ministeres;fonctionnaires;net;2708;DGAFP_RA2026_REMU
+2019;;fpe_ministeres;fonctionnaires;net;2744;DGAFP_RA2026_REMU
+2020;;fpe_ministeres;fonctionnaires;net;2788;DGAFP_RA2026_REMU
+2021;Classique;fpe_ministeres;fonctionnaires;net;2841;DGAFP_RA2026_REMU
+2021;Moderne;fpe_ministeres;fonctionnaires;net;2815.4;DGAFP_RA2026_REMU
+2022;millésime 2022;fpe_ministeres;fonctionnaires;net;2908.98;DGAFP_RA2026_REMU
+2022;millésime 2023;fpe_ministeres;fonctionnaires;net;2935.02;DGAFP_RA2026_REMU
+2023;millésime 2023;fpe_ministeres;fonctionnaires;net;3069.23;DGAFP_RA2026_REMU
+2023;millésime 2024;fpe_ministeres;fonctionnaires;net;3059.82;DGAFP_RA2026_REMU
+2024;;fpe_ministeres;fonctionnaires;net;3229.58;DGAFP_RA2026_REMU
+2015;;fph;30_39;brut;2494.41;DGAFP_RA2026_REMU
+2016;;fph;30_39;brut;2539;DGAFP_RA2026_REMU
+2017;;fph;30_39;brut;2590;DGAFP_RA2026_REMU
+2018;;fph;30_39;brut;2644;DGAFP_RA2026_REMU
+2019;;fph;30_39;brut;2654;DGAFP_RA2026_REMU
+2020;;fph;30_39;brut;2860;DGAFP_RA2026_REMU
+2021;Classique;fph;30_39;brut;3038;DGAFP_RA2026_REMU
+2021;Moderne;fph;30_39;brut;3060.6;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;30_39;brut;3247.7;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;30_39;brut;3267.98;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;30_39;brut;3423.41;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;30_39;brut;3391.41;DGAFP_RA2026_REMU
+2024;;fph;30_39;brut;3497.91;DGAFP_RA2026_REMU
+2015;;fph;30_39;net;2066;DGAFP_RA2026_REMU
+2016;;fph;30_39;net;2096;DGAFP_RA2026_REMU
+2017;;fph;30_39;net;2130;DGAFP_RA2026_REMU
+2018;;fph;30_39;net;2151;DGAFP_RA2026_REMU
+2019;;fph;30_39;net;2163;DGAFP_RA2026_REMU
+2020;;fph;30_39;net;2346;DGAFP_RA2026_REMU
+2021;Classique;fph;30_39;net;2479;DGAFP_RA2026_REMU
+2021;Moderne;fph;30_39;net;2491.83;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;30_39;net;2643.94;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;30_39;net;2655.73;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;30_39;net;2788.14;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;30_39;net;2762.06;DGAFP_RA2026_REMU
+2024;;fph;30_39;net;2850.84;DGAFP_RA2026_REMU
+2015;;fph;40_49;brut;2720.29;DGAFP_RA2026_REMU
+2016;;fph;40_49;brut;2756;DGAFP_RA2026_REMU
+2017;;fph;40_49;brut;2801;DGAFP_RA2026_REMU
+2018;;fph;40_49;brut;2857;DGAFP_RA2026_REMU
+2019;;fph;40_49;brut;2866;DGAFP_RA2026_REMU
+2020;;fph;40_49;brut;3051;DGAFP_RA2026_REMU
+2021;Classique;fph;40_49;brut;3203;DGAFP_RA2026_REMU
+2021;Moderne;fph;40_49;brut;3245.73;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;40_49;brut;3402.59;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;40_49;brut;3397.24;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;40_49;brut;3524.99;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;40_49;brut;3493.31;DGAFP_RA2026_REMU
+2024;;fph;40_49;brut;3590.87;DGAFP_RA2026_REMU
+2015;;fph;40_49;net;2256;DGAFP_RA2026_REMU
+2016;;fph;40_49;net;2278;DGAFP_RA2026_REMU
+2017;;fph;40_49;net;2307;DGAFP_RA2026_REMU
+2018;;fph;40_49;net;2328;DGAFP_RA2026_REMU
+2019;;fph;40_49;net;2335;DGAFP_RA2026_REMU
+2020;;fph;40_49;net;2502;DGAFP_RA2026_REMU
+2021;Classique;fph;40_49;net;2614;DGAFP_RA2026_REMU
+2021;Moderne;fph;40_49;net;2639.77;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;40_49;net;2772.23;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;40_49;net;2761.34;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;40_49;net;2869.43;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;40_49;net;2843.59;DGAFP_RA2026_REMU
+2024;;fph;40_49;net;2924.57;DGAFP_RA2026_REMU
+2015;;fph;50_59;brut;3067.8;DGAFP_RA2026_REMU
+2016;;fph;50_59;brut;3072;DGAFP_RA2026_REMU
+2017;;fph;50_59;brut;3094;DGAFP_RA2026_REMU
+2018;;fph;50_59;brut;3130;DGAFP_RA2026_REMU
+2019;;fph;50_59;brut;3116;DGAFP_RA2026_REMU
+2020;;fph;50_59;brut;3271;DGAFP_RA2026_REMU
+2021;Classique;fph;50_59;brut;3392;DGAFP_RA2026_REMU
+2021;Moderne;fph;50_59;brut;3439.23;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;50_59;brut;3543.22;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;50_59;brut;3547.15;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;50_59;brut;3644.33;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;50_59;brut;3613.31;DGAFP_RA2026_REMU
+2024;;fph;50_59;brut;3684.07;DGAFP_RA2026_REMU
+2015;;fph;50_59;net;2541;DGAFP_RA2026_REMU
+2016;;fph;50_59;net;2535;DGAFP_RA2026_REMU
+2017;;fph;50_59;net;2544;DGAFP_RA2026_REMU
+2018;;fph;50_59;net;2549;DGAFP_RA2026_REMU
+2019;;fph;50_59;net;2536;DGAFP_RA2026_REMU
+2020;;fph;50_59;net;2676;DGAFP_RA2026_REMU
+2021;Classique;fph;50_59;net;2764;DGAFP_RA2026_REMU
+2021;Moderne;fph;50_59;net;2789.47;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;50_59;net;2881.22;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;50_59;net;2879.11;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;50_59;net;2961.17;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;50_59;net;2935.81;DGAFP_RA2026_REMU
+2024;;fph;50_59;net;2994.2;DGAFP_RA2026_REMU
+2015;;fph;60_plus;brut;4175;DGAFP_RA2026_REMU
+2016;;fph;60_plus;brut;4166;DGAFP_RA2026_REMU
+2017;;fph;60_plus;brut;4170;DGAFP_RA2026_REMU
+2018;;fph;60_plus;brut;4213;DGAFP_RA2026_REMU
+2019;;fph;60_plus;brut;4160;DGAFP_RA2026_REMU
+2020;;fph;60_plus;brut;4302;DGAFP_RA2026_REMU
+2021;Classique;fph;60_plus;brut;4419;DGAFP_RA2026_REMU
+2021;Moderne;fph;60_plus;brut;4495.82;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;60_plus;brut;4460.08;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;60_plus;brut;4560.87;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;60_plus;brut;4641.88;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;60_plus;brut;4618.49;DGAFP_RA2026_REMU
+2024;;fph;60_plus;brut;4631.5;DGAFP_RA2026_REMU
+2015;;fph;60_plus;net;3470.68;DGAFP_RA2026_REMU
+2016;;fph;60_plus;net;3452;DGAFP_RA2026_REMU
+2017;;fph;60_plus;net;3445;DGAFP_RA2026_REMU
+2018;;fph;60_plus;net;3456;DGAFP_RA2026_REMU
+2019;;fph;60_plus;net;3416;DGAFP_RA2026_REMU
+2020;;fph;60_plus;net;3550;DGAFP_RA2026_REMU
+2021;Classique;fph;60_plus;net;3631;DGAFP_RA2026_REMU
+2021;Moderne;fph;60_plus;net;3664.43;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;60_plus;net;3650.5;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;60_plus;net;3729.06;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;60_plus;net;3801.29;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;60_plus;net;3781.85;DGAFP_RA2026_REMU
+2024;;fph;60_plus;net;3789.05;DGAFP_RA2026_REMU
+2015;;fph;autres_statuts;brut;6523.84;DGAFP_RA2026_REMU
+2016;;fph;autres_statuts;brut;6619;DGAFP_RA2026_REMU
+2017;;fph;autres_statuts;brut;6720;DGAFP_RA2026_REMU
+2018;;fph;autres_statuts;brut;6849;DGAFP_RA2026_REMU
+2019;;fph;autres_statuts;brut;6822;DGAFP_RA2026_REMU
+2020;;fph;autres_statuts;brut;7082;DGAFP_RA2026_REMU
+2021;Classique;fph;autres_statuts;brut;7480;DGAFP_RA2026_REMU
+2021;Moderne;fph;autres_statuts;brut;7658.11;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;autres_statuts;brut;7886.5;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;autres_statuts;brut;7870.2;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;autres_statuts;brut;8207.3;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;autres_statuts;brut;8205.25;DGAFP_RA2026_REMU
+2024;;fph;autres_statuts;brut;8345.64;DGAFP_RA2026_REMU
+2015;;fph;autres_statuts;net;5417.46;DGAFP_RA2026_REMU
+2016;;fph;autres_statuts;net;5481;DGAFP_RA2026_REMU
+2017;;fph;autres_statuts;net;5557;DGAFP_RA2026_REMU
+2018;;fph;autres_statuts;net;5654;DGAFP_RA2026_REMU
+2019;;fph;autres_statuts;net;5694;DGAFP_RA2026_REMU
+2020;;fph;autres_statuts;net;5933;DGAFP_RA2026_REMU
+2021;Classique;fph;autres_statuts;net;6217;DGAFP_RA2026_REMU
+2021;Moderne;fph;autres_statuts;net;6287.84;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;autres_statuts;net;6501.3;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;autres_statuts;net;6488.47;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;autres_statuts;net;6811.81;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;autres_statuts;net;6810.09;DGAFP_RA2026_REMU
+2024;;fph;autres_statuts;net;6926.11;DGAFP_RA2026_REMU
+2015;;fph;contractuels;brut;2015.49;DGAFP_RA2026_REMU
+2016;;fph;contractuels;brut;1984;DGAFP_RA2026_REMU
+2017;;fph;contractuels;brut;2056;DGAFP_RA2026_REMU
+2018;;fph;contractuels;brut;2076;DGAFP_RA2026_REMU
+2019;;fph;contractuels;brut;2082;DGAFP_RA2026_REMU
+2020;;fph;contractuels;brut;2246;DGAFP_RA2026_REMU
+2021;Classique;fph;contractuels;brut;2373;DGAFP_RA2026_REMU
+2021;Moderne;fph;contractuels;brut;2418.17;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;contractuels;brut;2525.36;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;contractuels;brut;2503.11;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;contractuels;brut;2651.26;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;contractuels;brut;2651.73;DGAFP_RA2026_REMU
+2024;;fph;contractuels;brut;2725.05;DGAFP_RA2026_REMU
+2015;;fph;contractuels;net;1640.87;DGAFP_RA2026_REMU
+2016;;fph;contractuels;net;1611;DGAFP_RA2026_REMU
+2017;;fph;contractuels;net;1667;DGAFP_RA2026_REMU
+2018;;fph;contractuels;net;1670;DGAFP_RA2026_REMU
+2019;;fph;contractuels;net;1679;DGAFP_RA2026_REMU
+2020;;fph;contractuels;net;1835;DGAFP_RA2026_REMU
+2021;Classique;fph;contractuels;net;1923;DGAFP_RA2026_REMU
+2021;Moderne;fph;contractuels;net;1945.03;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;contractuels;net;2034.88;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;contractuels;net;2013.01;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;contractuels;net;2134.67;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;contractuels;net;2134.9;DGAFP_RA2026_REMU
+2024;;fph;contractuels;net;2194.38;DGAFP_RA2026_REMU
+2015;;fph;contrats_aides;brut;1526.44;DGAFP_RA2026_REMU
+2016;;fph;contrats_aides;brut;1536;DGAFP_RA2026_REMU
+2017;;fph;contrats_aides;brut;1571;DGAFP_RA2026_REMU
+2018;;fph;contrats_aides;brut;1620;DGAFP_RA2026_REMU
+2019;;fph;contrats_aides;brut;1654;DGAFP_RA2026_REMU
+2020;;fph;contrats_aides;brut;1645;DGAFP_RA2026_REMU
+2021;Classique;fph;contrats_aides;brut;1715;DGAFP_RA2026_REMU
+2021;Moderne;fph;contrats_aides;brut;1696.25;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;contrats_aides;brut;1780.19;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;contrats_aides;brut;1816.97;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;contrats_aides;brut;1915.74;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;contrats_aides;brut;1907.8;DGAFP_RA2026_REMU
+2024;;fph;contrats_aides;brut;1934.19;DGAFP_RA2026_REMU
+2015;;fph;contrats_aides;net;1245.48;DGAFP_RA2026_REMU
+2016;;fph;contrats_aides;net;1251;DGAFP_RA2026_REMU
+2017;;fph;contrats_aides;net;1277;DGAFP_RA2026_REMU
+2018;;fph;contrats_aides;net;1303;DGAFP_RA2026_REMU
+2019;;fph;contrats_aides;net;1332;DGAFP_RA2026_REMU
+2020;;fph;contrats_aides;net;1330;DGAFP_RA2026_REMU
+2021;Classique;fph;contrats_aides;net;1384;DGAFP_RA2026_REMU
+2021;Moderne;fph;contrats_aides;net;1366.16;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;contrats_aides;net;1433.5;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;contrats_aides;net;1460.29;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;contrats_aides;net;1542.01;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;contrats_aides;net;1535.67;DGAFP_RA2026_REMU
+2024;;fph;contrats_aides;net;1558.45;DGAFP_RA2026_REMU
+2015;;fph;dom;brut;3672.31;DGAFP_RA2026_REMU
+2016;;fph;dom;brut;3709;DGAFP_RA2026_REMU
+2017;;fph;dom;brut;3774;DGAFP_RA2026_REMU
+2018;;fph;dom;brut;3836;DGAFP_RA2026_REMU
+2019;;fph;dom;brut;3850;DGAFP_RA2026_REMU
+2020;;fph;dom;brut;4003;DGAFP_RA2026_REMU
+2021;Classique;fph;dom;brut;4146;DGAFP_RA2026_REMU
+2021;Moderne;fph;dom;brut;4141.4;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;dom;brut;4322.44;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;dom;brut;4299.81;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;dom;brut;4510.97;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;dom;brut;4502.65;DGAFP_RA2026_REMU
+2024;;fph;dom;brut;4569.03;DGAFP_RA2026_REMU
+2015;;fph;dom;net;3098.07;DGAFP_RA2026_REMU
+2016;;fph;dom;net;3125;DGAFP_RA2026_REMU
+2017;;fph;dom;net;3169;DGAFP_RA2026_REMU
+2018;;fph;dom;net;3197;DGAFP_RA2026_REMU
+2019;;fph;dom;net;3206;DGAFP_RA2026_REMU
+2020;;fph;dom;net;3341;DGAFP_RA2026_REMU
+2021;Classique;fph;dom;net;3442;DGAFP_RA2026_REMU
+2021;Moderne;fph;dom;net;3426.09;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;dom;net;3585.47;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;dom;net;3566.81;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;dom;net;3743.46;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;dom;net;3736.57;DGAFP_RA2026_REMU
+2024;;fph;dom;net;3792.52;DGAFP_RA2026_REMU
+2015;;fph;ensemble;brut;2703.99;DGAFP_RA2026_REMU
+2016;;fph;ensemble;brut;2736;DGAFP_RA2026_REMU
+2017;;fph;ensemble;brut;2783;DGAFP_RA2026_REMU
+2018;;fph;ensemble;brut;2835;DGAFP_RA2026_REMU
+2019;;fph;ensemble;brut;2842;DGAFP_RA2026_REMU
+2020;;fph;ensemble;brut;3023;DGAFP_RA2026_REMU
+2021;Classique;fph;ensemble;brut;3174;DGAFP_RA2026_REMU
+2021;Moderne;fph;ensemble;brut;3208.56;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;ensemble;brut;3358.3;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;ensemble;brut;3366.6;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;ensemble;brut;3493.49;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;ensemble;brut;3467.17;DGAFP_RA2026_REMU
+2024;;fph;ensemble;brut;3558.37;DGAFP_RA2026_REMU
+2015;;fph;ensemble;net;2239;DGAFP_RA2026_REMU
+2016;;fph;ensemble;net;2258;DGAFP_RA2026_REMU
+2017;;fph;ensemble;net;2288;DGAFP_RA2026_REMU
+2018;;fph;ensemble;net;2308;DGAFP_RA2026_REMU
+2019;;fph;ensemble;net;2315;DGAFP_RA2026_REMU
+2020;;fph;ensemble;net;2478;DGAFP_RA2026_REMU
+2021;Classique;fph;ensemble;net;2590;DGAFP_RA2026_REMU
+2021;Moderne;fph;ensemble;net;2609.8;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;ensemble;net;2733.69;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;ensemble;net;2735.23;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;ensemble;net;2842.43;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;ensemble;net;2820.92;DGAFP_RA2026_REMU
+2024;;fph;ensemble;net;2896.43;DGAFP_RA2026_REMU
+2015;;fph;ensemble_hors_contrats_aides;brut;2724.49;DGAFP_RA2026_REMU
+2016;;fph;ensemble_hors_contrats_aides;brut;2756;DGAFP_RA2026_REMU
+2017;;fph;ensemble_hors_contrats_aides;brut;2800;DGAFP_RA2026_REMU
+2018;;fph;ensemble_hors_contrats_aides;brut;2842;DGAFP_RA2026_REMU
+2019;;fph;ensemble_hors_contrats_aides;brut;2847;DGAFP_RA2026_REMU
+2020;;fph;ensemble_hors_contrats_aides;brut;3027;DGAFP_RA2026_REMU
+2021;Classique;fph;ensemble_hors_contrats_aides;brut;3178;DGAFP_RA2026_REMU
+2021;Moderne;fph;ensemble_hors_contrats_aides;brut;3212.3;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;ensemble_hors_contrats_aides;brut;3361.46;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;ensemble_hors_contrats_aides;brut;3369.52;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;ensemble_hors_contrats_aides;brut;3494.95;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;ensemble_hors_contrats_aides;brut;3468.57;DGAFP_RA2026_REMU
+2024;;fph;ensemble_hors_contrats_aides;brut;3559.79;DGAFP_RA2026_REMU
+2015;;fph;ensemble_hors_contrats_aides;net;2257;DGAFP_RA2026_REMU
+2016;;fph;ensemble_hors_contrats_aides;net;2275;DGAFP_RA2026_REMU
+2017;;fph;ensemble_hors_contrats_aides;net;2303;DGAFP_RA2026_REMU
+2018;;fph;ensemble_hors_contrats_aides;net;2314;DGAFP_RA2026_REMU
+2019;;fph;ensemble_hors_contrats_aides;net;2319;DGAFP_RA2026_REMU
+2020;;fph;ensemble_hors_contrats_aides;net;2481;DGAFP_RA2026_REMU
+2021;Classique;fph;ensemble_hors_contrats_aides;net;2593;DGAFP_RA2026_REMU
+2021;Moderne;fph;ensemble_hors_contrats_aides;net;2612.87;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;ensemble_hors_contrats_aides;net;2736.29;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;ensemble_hors_contrats_aides;net;2737.63;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;ensemble_hors_contrats_aides;net;2843.63;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;ensemble_hors_contrats_aides;net;2822.07;DGAFP_RA2026_REMU
+2024;;fph;ensemble_hors_contrats_aides;net;2897.6;DGAFP_RA2026_REMU
+2015;;fph;femmes;brut;2555.65;DGAFP_RA2026_REMU
+2016;;fph;femmes;brut;2589;DGAFP_RA2026_REMU
+2017;;fph;femmes;brut;2636;DGAFP_RA2026_REMU
+2018;;fph;femmes;brut;2685;DGAFP_RA2026_REMU
+2019;;fph;femmes;brut;2698;DGAFP_RA2026_REMU
+2020;;fph;femmes;brut;2876;DGAFP_RA2026_REMU
+2021;Classique;fph;femmes;brut;3022;DGAFP_RA2026_REMU
+2021;Moderne;fph;femmes;brut;3051.81;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;femmes;brut;3209.53;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;femmes;brut;3201.95;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;femmes;brut;3331.93;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;femmes;brut;3302.14;DGAFP_RA2026_REMU
+2024;;fph;femmes;brut;3395.6;DGAFP_RA2026_REMU
+2015;;fph;femmes;net;2114.27;DGAFP_RA2026_REMU
+2016;;fph;femmes;net;2134;DGAFP_RA2026_REMU
+2017;;fph;femmes;net;2164;DGAFP_RA2026_REMU
+2018;;fph;femmes;net;2181;DGAFP_RA2026_REMU
+2019;;fph;femmes;net;2191;DGAFP_RA2026_REMU
+2020;;fph;femmes;net;2351;DGAFP_RA2026_REMU
+2021;Classique;fph;femmes;net;2459;DGAFP_RA2026_REMU
+2021;Moderne;fph;femmes;net;2479.52;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;femmes;net;2608.21;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;femmes;net;2595.99;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;femmes;net;2704.16;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;femmes;net;2679.89;DGAFP_RA2026_REMU
+2024;;fph;femmes;net;2757.39;DGAFP_RA2026_REMU
+2015;;fph;fonctionnaires;brut;2529;DGAFP_RA2026_REMU
+2016;;fph;fonctionnaires;brut;2559;DGAFP_RA2026_REMU
+2017;;fph;fonctionnaires;brut;2604;DGAFP_RA2026_REMU
+2018;;fph;fonctionnaires;brut;2653;DGAFP_RA2026_REMU
+2019;;fph;fonctionnaires;brut;2669;DGAFP_RA2026_REMU
+2020;;fph;fonctionnaires;brut;2845;DGAFP_RA2026_REMU
+2021;Classique;fph;fonctionnaires;brut;2983;DGAFP_RA2026_REMU
+2021;Moderne;fph;fonctionnaires;brut;3017.24;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;fonctionnaires;brut;3172.27;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;fonctionnaires;brut;3147.62;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;fonctionnaires;brut;3255.92;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;fonctionnaires;brut;3220.13;DGAFP_RA2026_REMU
+2024;;fph;fonctionnaires;brut;3313.86;DGAFP_RA2026_REMU
+2015;;fph;fonctionnaires;net;2100;DGAFP_RA2026_REMU
+2016;;fph;fonctionnaires;net;2117;DGAFP_RA2026_REMU
+2017;;fph;fonctionnaires;net;2145;DGAFP_RA2026_REMU
+2018;;fph;fonctionnaires;net;2158;DGAFP_RA2026_REMU
+2019;;fph;fonctionnaires;net;2165;DGAFP_RA2026_REMU
+2020;;fph;fonctionnaires;net;2321;DGAFP_RA2026_REMU
+2021;Classique;fph;fonctionnaires;net;2426;DGAFP_RA2026_REMU
+2021;Moderne;fph;fonctionnaires;net;2455.32;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;fonctionnaires;net;2580.7;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;fonctionnaires;net;2553.5;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;fonctionnaires;net;2641.88;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;fonctionnaires;net;2612.73;DGAFP_RA2026_REMU
+2024;;fph;fonctionnaires;net;2690.76;DGAFP_RA2026_REMU
+2015;;fph;fonctionnaires_a;brut;3021.1;DGAFP_RA2026_REMU
+2016;;fph;fonctionnaires_a;brut;3100;DGAFP_RA2026_REMU
+2017;;fph;fonctionnaires_a;brut;3144;DGAFP_RA2026_REMU
+2018;;fph;fonctionnaires_a;brut;3179;DGAFP_RA2026_REMU
+2019;;fph;fonctionnaires_a;brut;3139;DGAFP_RA2026_REMU
+2020;;fph;fonctionnaires_a;brut;3317;DGAFP_RA2026_REMU
+2021;Classique;fph;fonctionnaires_a;brut;3472;DGAFP_RA2026_REMU
+2021;Moderne;fph;fonctionnaires_a;brut;3497.52;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;fonctionnaires_a;brut;3676.66;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;fonctionnaires_a;brut;3654.14;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;fonctionnaires_a;brut;3734.69;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;fonctionnaires_a;brut;3725.57;DGAFP_RA2026_REMU
+2024;;fph;fonctionnaires_a;brut;3839.69;DGAFP_RA2026_REMU
+2015;;fph;fonctionnaires_a;net;2512;DGAFP_RA2026_REMU
+2016;;fph;fonctionnaires_a;net;2569;DGAFP_RA2026_REMU
+2017;;fph;fonctionnaires_a;net;2595;DGAFP_RA2026_REMU
+2018;;fph;fonctionnaires_a;net;2597;DGAFP_RA2026_REMU
+2019;;fph;fonctionnaires_a;net;2556;DGAFP_RA2026_REMU
+2020;;fph;fonctionnaires_a;net;2712;DGAFP_RA2026_REMU
+2021;Classique;fph;fonctionnaires_a;net;2836;DGAFP_RA2026_REMU
+2021;Moderne;fph;fonctionnaires_a;net;2851.48;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;fonctionnaires_a;net;3000.85;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;fonctionnaires_a;net;2975.57;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;fonctionnaires_a;net;3037.86;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;fonctionnaires_a;net;3030.44;DGAFP_RA2026_REMU
+2024;;fph;fonctionnaires_a;net;3127.33;DGAFP_RA2026_REMU
+2015;;fph;fonctionnaires_b;brut;2819.41;DGAFP_RA2026_REMU
+2016;;fph;fonctionnaires_b;brut;2841;DGAFP_RA2026_REMU
+2017;;fph;fonctionnaires_b;brut;2880;DGAFP_RA2026_REMU
+2018;;fph;fonctionnaires_b;brut;2919;DGAFP_RA2026_REMU
+2019;;fph;fonctionnaires_b;brut;2973;DGAFP_RA2026_REMU
+2020;;fph;fonctionnaires_b;brut;3118;DGAFP_RA2026_REMU
+2021;Classique;fph;fonctionnaires_b;brut;3213;DGAFP_RA2026_REMU
+2021;Moderne;fph;fonctionnaires_b;brut;3255.81;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;fonctionnaires_b;brut;3045.39;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;fonctionnaires_b;brut;3022.51;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;fonctionnaires_b;brut;3113.88;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;fonctionnaires_b;brut;3045.11;DGAFP_RA2026_REMU
+2024;;fph;fonctionnaires_b;brut;3114.5;DGAFP_RA2026_REMU
+2015;;fph;fonctionnaires_b;net;2333.58;DGAFP_RA2026_REMU
+2016;;fph;fonctionnaires_b;net;2341;DGAFP_RA2026_REMU
+2017;;fph;fonctionnaires_b;net;2365;DGAFP_RA2026_REMU
+2018;;fph;fonctionnaires_b;net;2371;DGAFP_RA2026_REMU
+2019;;fph;fonctionnaires_b;net;2408;DGAFP_RA2026_REMU
+2020;;fph;fonctionnaires_b;net;2538;DGAFP_RA2026_REMU
+2021;Classique;fph;fonctionnaires_b;net;2609;DGAFP_RA2026_REMU
+2021;Moderne;fph;fonctionnaires_b;net;2638.58;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;fonctionnaires_b;net;2474.23;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;fonctionnaires_b;net;2447.96;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;fonctionnaires_b;net;2523.91;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;fonctionnaires_b;net;2468.11;DGAFP_RA2026_REMU
+2024;;fph;fonctionnaires_b;net;2525.97;DGAFP_RA2026_REMU
+2015;;fph;fonctionnaires_c;brut;2159;DGAFP_RA2026_REMU
+2016;;fph;fonctionnaires_c;brut;2169;DGAFP_RA2026_REMU
+2017;;fph;fonctionnaires_c;brut;2210;DGAFP_RA2026_REMU
+2018;;fph;fonctionnaires_c;brut;2257;DGAFP_RA2026_REMU
+2019;;fph;fonctionnaires_c;brut;2270;DGAFP_RA2026_REMU
+2020;;fph;fonctionnaires_c;brut;2446;DGAFP_RA2026_REMU
+2021;Classique;fph;fonctionnaires_c;brut;2579;DGAFP_RA2026_REMU
+2021;Moderne;fph;fonctionnaires_c;brut;2611.81;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;fonctionnaires_c;brut;2529.61;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;fonctionnaires_c;brut;2495.41;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;fonctionnaires_c;brut;2635.3;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;fonctionnaires_c;brut;2612.91;DGAFP_RA2026_REMU
+2024;;fph;fonctionnaires_c;brut;2661.03;DGAFP_RA2026_REMU
+2015;;fph;fonctionnaires_c;net;1794.76;DGAFP_RA2026_REMU
+2016;;fph;fonctionnaires_c;net;1796;DGAFP_RA2026_REMU
+2017;;fph;fonctionnaires_c;net;1821;DGAFP_RA2026_REMU
+2018;;fph;fonctionnaires_c;net;1830;DGAFP_RA2026_REMU
+2019;;fph;fonctionnaires_c;net;1836;DGAFP_RA2026_REMU
+2020;;fph;fonctionnaires_c;net;1993;DGAFP_RA2026_REMU
+2021;Classique;fph;fonctionnaires_c;net;2090;DGAFP_RA2026_REMU
+2021;Moderne;fph;fonctionnaires_c;net;2124.81;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;fonctionnaires_c;net;2046.57;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;fonctionnaires_c;net;2012.07;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;fonctionnaires_c;net;2129.34;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;fonctionnaires_c;net;2110.83;DGAFP_RA2026_REMU
+2024;;fph;fonctionnaires_c;net;2147.64;DGAFP_RA2026_REMU
+2015;;fph;hommes;brut;3218.18;DGAFP_RA2026_REMU
+2016;;fph;hommes;brut;3247;DGAFP_RA2026_REMU
+2017;;fph;hommes;brut;3297;DGAFP_RA2026_REMU
+2018;;fph;hommes;brut;3364;DGAFP_RA2026_REMU
+2019;;fph;hommes;brut;3356;DGAFP_RA2026_REMU
+2020;;fph;hommes;brut;3549;DGAFP_RA2026_REMU
+2021;Classique;fph;hommes;brut;3721;DGAFP_RA2026_REMU
+2021;Moderne;fph;hommes;brut;3775.33;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;hommes;brut;3900.58;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;hommes;brut;3960.06;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;hommes;brut;4080;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;hommes;brut;4070.42;DGAFP_RA2026_REMU
+2024;;fph;hommes;brut;4156.02;DGAFP_RA2026_REMU
+2015;;fph;hommes;net;2673.45;DGAFP_RA2026_REMU
+2016;;fph;hommes;net;2689;DGAFP_RA2026_REMU
+2017;;fph;hommes;net;2722;DGAFP_RA2026_REMU
+2018;;fph;hommes;net;2756;DGAFP_RA2026_REMU
+2019;;fph;hommes;net;2758;DGAFP_RA2026_REMU
+2020;;fph;hommes;net;2934;DGAFP_RA2026_REMU
+2021;Classique;fph;hommes;net;3058;DGAFP_RA2026_REMU
+2021;Moderne;fph;hommes;net;3080.83;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;hommes;net;3191.03;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;hommes;net;3237.11;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;hommes;net;3344.36;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;hommes;net;3336.41;DGAFP_RA2026_REMU
+2024;;fph;hommes;net;3406.94;DGAFP_RA2026_REMU
+2015;;fph;metropole;brut;2679.36;DGAFP_RA2026_REMU
+2016;;fph;metropole;brut;2711;DGAFP_RA2026_REMU
+2017;;fph;metropole;brut;2757;DGAFP_RA2026_REMU
+2018;;fph;metropole;brut;2808;DGAFP_RA2026_REMU
+2019;;fph;metropole;brut;2815;DGAFP_RA2026_REMU
+2020;;fph;metropole;brut;2996;DGAFP_RA2026_REMU
+2021;Classique;fph;metropole;brut;3146;DGAFP_RA2026_REMU
+2021;Moderne;fph;metropole;brut;3181.61;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;metropole;brut;3330.13;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;metropole;brut;3338.91;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;metropole;brut;3463.02;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;metropole;brut;3436.29;DGAFP_RA2026_REMU
+2024;;fph;metropole;brut;3527.98;DGAFP_RA2026_REMU
+2015;;fph;metropole;net;2217.63;DGAFP_RA2026_REMU
+2016;;fph;metropole;net;2236;DGAFP_RA2026_REMU
+2017;;fph;metropole;net;2266;DGAFP_RA2026_REMU
+2018;;fph;metropole;net;2284;DGAFP_RA2026_REMU
+2019;;fph;metropole;net;2290;DGAFP_RA2026_REMU
+2020;;fph;metropole;net;2454;DGAFP_RA2026_REMU
+2021;Classique;fph;metropole;net;2565;DGAFP_RA2026_REMU
+2021;Moderne;fph;metropole;net;2586.21;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;metropole;net;2708.8;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;metropole;net;2710.56;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;metropole;net;2815.44;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;metropole;net;2793.61;DGAFP_RA2026_REMU
+2024;;fph;metropole;net;2869.48;DGAFP_RA2026_REMU
+2015;;fph;moins_30;brut;2014.29;DGAFP_RA2026_REMU
+2016;;fph;moins_30;brut;2028;DGAFP_RA2026_REMU
+2017;;fph;moins_30;brut;2070;DGAFP_RA2026_REMU
+2018;;fph;moins_30;brut;2106;DGAFP_RA2026_REMU
+2019;;fph;moins_30;brut;2125;DGAFP_RA2026_REMU
+2020;;fph;moins_30;brut;2295;DGAFP_RA2026_REMU
+2021;Classique;fph;moins_30;brut;2427;DGAFP_RA2026_REMU
+2021;Moderne;fph;moins_30;brut;2421.44;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;moins_30;brut;2611.58;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;moins_30;brut;2590.24;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;moins_30;brut;2721.68;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;moins_30;brut;2717.24;DGAFP_RA2026_REMU
+2024;;fph;moins_30;brut;2806.68;DGAFP_RA2026_REMU
+2015;;fph;moins_30;net;1658.82;DGAFP_RA2026_REMU
+2016;;fph;moins_30;net;1663;DGAFP_RA2026_REMU
+2017;;fph;moins_30;net;1692;DGAFP_RA2026_REMU
+2018;;fph;moins_30;net;1703;DGAFP_RA2026_REMU
+2019;;fph;moins_30;net;1720;DGAFP_RA2026_REMU
+2020;;fph;moins_30;net;1877;DGAFP_RA2026_REMU
+2021;Classique;fph;moins_30;net;1974;DGAFP_RA2026_REMU
+2021;Moderne;fph;moins_30;net;1976.83;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;moins_30;net;2117.06;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;moins_30;net;2095.32;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;moins_30;net;2202.82;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;moins_30;net;2199.14;DGAFP_RA2026_REMU
+2024;;fph;moins_30;net;2273.77;DGAFP_RA2026_REMU
+2015;;fph;pcs_cadres;brut;5748.84;DGAFP_RA2026_REMU
+2016;;fph;pcs_cadres;brut;5822;DGAFP_RA2026_REMU
+2017;;fph;pcs_cadres;brut;5896;DGAFP_RA2026_REMU
+2018;;fph;pcs_cadres;brut;6007;DGAFP_RA2026_REMU
+2019;;fph;pcs_cadres;brut;5975;DGAFP_RA2026_REMU
+2020;;fph;pcs_cadres;brut;6214;DGAFP_RA2026_REMU
+2021;Classique;fph;pcs_cadres;brut;6520;DGAFP_RA2026_REMU
+2021;Moderne;fph;pcs_cadres;brut;6608.7;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;pcs_cadres;brut;6762.08;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;pcs_cadres;brut;6807.6;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;pcs_cadres;brut;7036.81;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;pcs_cadres;brut;7032.85;DGAFP_RA2026_REMU
+2024;;fph;pcs_cadres;brut;7120.74;DGAFP_RA2026_REMU
+2015;;fph;pcs_cadres;net;4775;DGAFP_RA2026_REMU
+2016;;fph;pcs_cadres;net;4823;DGAFP_RA2026_REMU
+2017;;fph;pcs_cadres;net;4876;DGAFP_RA2026_REMU
+2018;;fph;pcs_cadres;net;4953;DGAFP_RA2026_REMU
+2019;;fph;pcs_cadres;net;4969;DGAFP_RA2026_REMU
+2020;;fph;pcs_cadres;net;5187;DGAFP_RA2026_REMU
+2021;Classique;fph;pcs_cadres;net;5402;DGAFP_RA2026_REMU
+2021;Moderne;fph;pcs_cadres;net;5417.66;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;pcs_cadres;net;5564.42;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;pcs_cadres;net;5602.26;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;pcs_cadres;net;5821.47;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;pcs_cadres;net;5818.19;DGAFP_RA2026_REMU
+2024;;fph;pcs_cadres;net;5889.73;DGAFP_RA2026_REMU
+2015;;fph;pcs_employes_ouvriers;brut;2074.56;DGAFP_RA2026_REMU
+2016;;fph;pcs_employes_ouvriers;brut;2083;DGAFP_RA2026_REMU
+2017;;fph;pcs_employes_ouvriers;brut;2118;DGAFP_RA2026_REMU
+2018;;fph;pcs_employes_ouvriers;brut;2161;DGAFP_RA2026_REMU
+2019;;fph;pcs_employes_ouvriers;brut;2168;DGAFP_RA2026_REMU
+2020;;fph;pcs_employes_ouvriers;brut;2334;DGAFP_RA2026_REMU
+2021;Classique;fph;pcs_employes_ouvriers;brut;2459;DGAFP_RA2026_REMU
+2021;Moderne;fph;pcs_employes_ouvriers;brut;2487.32;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;pcs_employes_ouvriers;brut;2630.14;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;pcs_employes_ouvriers;brut;2592.79;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;pcs_employes_ouvriers;brut;2731.23;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;pcs_employes_ouvriers;brut;2693.95;DGAFP_RA2026_REMU
+2024;;fph;pcs_employes_ouvriers;brut;2767.71;DGAFP_RA2026_REMU
+2015;;fph;pcs_employes_ouvriers;net;1717.74;DGAFP_RA2026_REMU
+2016;;fph;pcs_employes_ouvriers;net;1719;DGAFP_RA2026_REMU
+2017;;fph;pcs_employes_ouvriers;net;1740;DGAFP_RA2026_REMU
+2018;;fph;pcs_employes_ouvriers;net;1749;DGAFP_RA2026_REMU
+2019;;fph;pcs_employes_ouvriers;net;1752;DGAFP_RA2026_REMU
+2020;;fph;pcs_employes_ouvriers;net;1903;DGAFP_RA2026_REMU
+2021;Classique;fph;pcs_employes_ouvriers;net;1992;DGAFP_RA2026_REMU
+2021;Moderne;fph;pcs_employes_ouvriers;net;2017.65;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;pcs_employes_ouvriers;net;2129.14;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;pcs_employes_ouvriers;net;2092.57;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;pcs_employes_ouvriers;net;2207.55;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;pcs_employes_ouvriers;net;2177.24;DGAFP_RA2026_REMU
+2024;;fph;pcs_employes_ouvriers;net;2237.08;DGAFP_RA2026_REMU
+2015;;fph;pcs_intermediaires;brut;2760.94;DGAFP_RA2026_REMU
+2016;;fph;pcs_intermediaires;brut;2803;DGAFP_RA2026_REMU
+2017;;fph;pcs_intermediaires;brut;2840;DGAFP_RA2026_REMU
+2018;;fph;pcs_intermediaires;brut;2877;DGAFP_RA2026_REMU
+2019;;fph;pcs_intermediaires;brut;2892;DGAFP_RA2026_REMU
+2020;;fph;pcs_intermediaires;brut;3056;DGAFP_RA2026_REMU
+2021;Classique;fph;pcs_intermediaires;brut;3190;DGAFP_RA2026_REMU
+2021;Moderne;fph;pcs_intermediaires;brut;3217.59;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;pcs_intermediaires;brut;3402.73;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;pcs_intermediaires;brut;3376.17;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;pcs_intermediaires;brut;3469.45;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;pcs_intermediaires;brut;3462.34;DGAFP_RA2026_REMU
+2024;;fph;pcs_intermediaires;brut;3559.43;DGAFP_RA2026_REMU
+2015;;fph;pcs_intermediaires;net;2283.85;DGAFP_RA2026_REMU
+2016;;fph;pcs_intermediaires;net;2310;DGAFP_RA2026_REMU
+2017;;fph;pcs_intermediaires;net;2332;DGAFP_RA2026_REMU
+2018;;fph;pcs_intermediaires;net;2339;DGAFP_RA2026_REMU
+2019;;fph;pcs_intermediaires;net;2346;DGAFP_RA2026_REMU
+2020;;fph;pcs_intermediaires;net;2494;DGAFP_RA2026_REMU
+2021;Classique;fph;pcs_intermediaires;net;2598;DGAFP_RA2026_REMU
+2021;Moderne;fph;pcs_intermediaires;net;2612.99;DGAFP_RA2026_REMU
+2022;millésime 2022;fph;pcs_intermediaires;net;2769.4;DGAFP_RA2026_REMU
+2022;millésime 2023;fph;pcs_intermediaires;net;2740.71;DGAFP_RA2026_REMU
+2023;millésime 2023;fph;pcs_intermediaires;net;2815;DGAFP_RA2026_REMU
+2023;millésime 2024;fph;pcs_intermediaires;net;2809.21;DGAFP_RA2026_REMU
+2024;;fph;pcs_intermediaires;net;2891.33;DGAFP_RA2026_REMU
+2015;;fpt;30_39;brut;2181;DGAFP_RA2026_REMU
+2016;;fpt;30_39;brut;2194;DGAFP_RA2026_REMU
+2017;;fpt;30_39;brut;2232;DGAFP_RA2026_REMU
+2018;;fpt;30_39;brut;2265;DGAFP_RA2026_REMU
+2019;;fpt;30_39;brut;2283;DGAFP_RA2026_REMU
+2020;;fpt;30_39;brut;2298;DGAFP_RA2026_REMU
+2021;Classique;fpt;30_39;brut;2319;DGAFP_RA2026_REMU
+2021;Moderne;fpt;30_39;brut;2338.92;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;30_39;brut;2448.54;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;30_39;brut;2470.01;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;30_39;brut;2578.3;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;30_39;brut;2562.59;DGAFP_RA2026_REMU
+2024;;fpt;30_39;brut;2650.29;DGAFP_RA2026_REMU
+2015;;fpt;30_39;net;1809.46;DGAFP_RA2026_REMU
+2016;;fpt;30_39;net;1814;DGAFP_RA2026_REMU
+2017;;fpt;30_39;net;1838;DGAFP_RA2026_REMU
+2018;;fpt;30_39;net;1839;DGAFP_RA2026_REMU
+2019;;fpt;30_39;net;1853;DGAFP_RA2026_REMU
+2020;;fpt;30_39;net;1863;DGAFP_RA2026_REMU
+2021;Classique;fpt;30_39;net;1881;DGAFP_RA2026_REMU
+2021;Moderne;fpt;30_39;net;1899.8;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;30_39;net;1988.78;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;30_39;net;2005.9;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;30_39;net;2092.38;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;30_39;net;2079.51;DGAFP_RA2026_REMU
+2024;;fpt;30_39;net;2152.84;DGAFP_RA2026_REMU
+2015;;fpt;40_49;brut;2312.56;DGAFP_RA2026_REMU
+2016;;fpt;40_49;brut;2344;DGAFP_RA2026_REMU
+2017;;fpt;40_49;brut;2409;DGAFP_RA2026_REMU
+2018;;fpt;40_49;brut;2472;DGAFP_RA2026_REMU
+2019;;fpt;40_49;brut;2522;DGAFP_RA2026_REMU
+2020;;fpt;40_49;brut;2562;DGAFP_RA2026_REMU
+2021;Classique;fpt;40_49;brut;2597;DGAFP_RA2026_REMU
+2021;Moderne;fpt;40_49;brut;2620.37;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;40_49;brut;2723.14;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;40_49;brut;2746;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;40_49;brut;2850.48;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;40_49;brut;2835.12;DGAFP_RA2026_REMU
+2024;;fpt;40_49;brut;2923.36;DGAFP_RA2026_REMU
+2015;;fpt;40_49;net;1919.51;DGAFP_RA2026_REMU
+2016;;fpt;40_49;net;1939;DGAFP_RA2026_REMU
+2017;;fpt;40_49;net;1986;DGAFP_RA2026_REMU
+2018;;fpt;40_49;net;2011;DGAFP_RA2026_REMU
+2019;;fpt;40_49;net;2050;DGAFP_RA2026_REMU
+2020;;fpt;40_49;net;2080;DGAFP_RA2026_REMU
+2021;Classique;fpt;40_49;net;2110;DGAFP_RA2026_REMU
+2021;Moderne;fpt;40_49;net;2130.41;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;40_49;net;2216.18;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;40_49;net;2234.48;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;40_49;net;2317.86;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;40_49;net;2305.19;DGAFP_RA2026_REMU
+2024;;fpt;40_49;net;2380.05;DGAFP_RA2026_REMU
+2015;;fpt;50_59;brut;2423;DGAFP_RA2026_REMU
+2016;;fpt;50_59;brut;2434;DGAFP_RA2026_REMU
+2017;;fpt;50_59;brut;2482;DGAFP_RA2026_REMU
+2018;;fpt;50_59;brut;2528;DGAFP_RA2026_REMU
+2019;;fpt;50_59;brut;2565;DGAFP_RA2026_REMU
+2020;;fpt;50_59;brut;2594;DGAFP_RA2026_REMU
+2021;Classique;fpt;50_59;brut;2625;DGAFP_RA2026_REMU
+2021;Moderne;fpt;50_59;brut;2645.43;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;50_59;brut;2740.46;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;50_59;brut;2768.77;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;50_59;brut;2874.87;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;50_59;brut;2861.05;DGAFP_RA2026_REMU
+2024;;fpt;50_59;brut;2955.16;DGAFP_RA2026_REMU
+2015;;fpt;50_59;net;2006.06;DGAFP_RA2026_REMU
+2016;;fpt;50_59;net;2008;DGAFP_RA2026_REMU
+2017;;fpt;50_59;net;2040;DGAFP_RA2026_REMU
+2018;;fpt;50_59;net;2052;DGAFP_RA2026_REMU
+2019;;fpt;50_59;net;2080;DGAFP_RA2026_REMU
+2020;;fpt;50_59;net;2100;DGAFP_RA2026_REMU
+2021;Classique;fpt;50_59;net;2128;DGAFP_RA2026_REMU
+2021;Moderne;fpt;50_59;net;2144.52;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;50_59;net;2224.77;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;50_59;net;2247.52;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;50_59;net;2332.91;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;50_59;net;2321.41;DGAFP_RA2026_REMU
+2024;;fpt;50_59;net;2401.37;DGAFP_RA2026_REMU
+2015;;fpt;60_plus;brut;2644.11;DGAFP_RA2026_REMU
+2016;;fpt;60_plus;brut;2655;DGAFP_RA2026_REMU
+2017;;fpt;60_plus;brut;2705;DGAFP_RA2026_REMU
+2018;;fpt;60_plus;brut;2749;DGAFP_RA2026_REMU
+2019;;fpt;60_plus;brut;2783;DGAFP_RA2026_REMU
+2020;;fpt;60_plus;brut;2793;DGAFP_RA2026_REMU
+2021;Classique;fpt;60_plus;brut;2809;DGAFP_RA2026_REMU
+2021;Moderne;fpt;60_plus;brut;2822.47;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;60_plus;brut;2887.5;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;60_plus;brut;2935.06;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;60_plus;brut;3016.02;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;60_plus;brut;2998.79;DGAFP_RA2026_REMU
+2024;;fpt;60_plus;brut;3062.27;DGAFP_RA2026_REMU
+2015;;fpt;60_plus;net;2189;DGAFP_RA2026_REMU
+2016;;fpt;60_plus;net;2190;DGAFP_RA2026_REMU
+2017;;fpt;60_plus;net;2223;DGAFP_RA2026_REMU
+2018;;fpt;60_plus;net;2233;DGAFP_RA2026_REMU
+2019;;fpt;60_plus;net;2259;DGAFP_RA2026_REMU
+2020;;fpt;60_plus;net;2263;DGAFP_RA2026_REMU
+2021;Classique;fpt;60_plus;net;2278;DGAFP_RA2026_REMU
+2021;Moderne;fpt;60_plus;net;2288.87;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;60_plus;net;2345.5;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;60_plus;net;2384.01;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;60_plus;net;2448.38;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;60_plus;net;2433.91;DGAFP_RA2026_REMU
+2024;;fpt;60_plus;net;2488.05;DGAFP_RA2026_REMU
+2015;;fpt;autres_statuts;brut;1987.1;DGAFP_RA2026_REMU
+2016;;fpt;autres_statuts;brut;2016;DGAFP_RA2026_REMU
+2017;;fpt;autres_statuts;brut;4495;DGAFP_RA2026_REMU
+2018;;fpt;autres_statuts;brut;4483;DGAFP_RA2026_REMU
+2019;;fpt;autres_statuts;brut;4381;DGAFP_RA2026_REMU
+2020;;fpt;autres_statuts;brut;4262;DGAFP_RA2026_REMU
+2021;Classique;fpt;autres_statuts;brut;4307;DGAFP_RA2026_REMU
+2021;Moderne;fpt;autres_statuts;brut;4307.92;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;autres_statuts;brut;4295.46;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;autres_statuts;brut;4349.53;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;autres_statuts;brut;4503.07;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;autres_statuts;brut;4489.02;DGAFP_RA2026_REMU
+2024;;fpt;autres_statuts;brut;4715.63;DGAFP_RA2026_REMU
+2015;;fpt;autres_statuts;net;1725.62;DGAFP_RA2026_REMU
+2016;;fpt;autres_statuts;net;1745;DGAFP_RA2026_REMU
+2017;;fpt;autres_statuts;net;3669;DGAFP_RA2026_REMU
+2018;;fpt;autres_statuts;net;3652;DGAFP_RA2026_REMU
+2019;;fpt;autres_statuts;net;3568;DGAFP_RA2026_REMU
+2020;;fpt;autres_statuts;net;3469;DGAFP_RA2026_REMU
+2021;Classique;fpt;autres_statuts;net;3525;DGAFP_RA2026_REMU
+2021;Moderne;fpt;autres_statuts;net;3525.71;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;autres_statuts;net;3519.33;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;autres_statuts;net;3564.05;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;autres_statuts;net;3686.47;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;autres_statuts;net;3675.33;DGAFP_RA2026_REMU
+2024;;fpt;autres_statuts;net;3862.73;DGAFP_RA2026_REMU
+2015;;fpt;contractuels;brut;2059.16;DGAFP_RA2026_REMU
+2016;;fpt;contractuels;brut;2071;DGAFP_RA2026_REMU
+2017;;fpt;contractuels;brut;2110;DGAFP_RA2026_REMU
+2018;;fpt;contractuels;brut;2109;DGAFP_RA2026_REMU
+2019;;fpt;contractuels;brut;2132;DGAFP_RA2026_REMU
+2020;;fpt;contractuels;brut;2164;DGAFP_RA2026_REMU
+2021;Classique;fpt;contractuels;brut;2199;DGAFP_RA2026_REMU
+2021;Moderne;fpt;contractuels;brut;2237.41;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;contractuels;brut;2377.64;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;contractuels;brut;2440.29;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;contractuels;brut;2561.14;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;contractuels;brut;2535.06;DGAFP_RA2026_REMU
+2024;;fpt;contractuels;brut;2624.55;DGAFP_RA2026_REMU
+2015;;fpt;contractuels;net;1676.64;DGAFP_RA2026_REMU
+2016;;fpt;contractuels;net;1682;DGAFP_RA2026_REMU
+2017;;fpt;contractuels;net;1711;DGAFP_RA2026_REMU
+2018;;fpt;contractuels;net;1696;DGAFP_RA2026_REMU
+2019;;fpt;contractuels;net;1717;DGAFP_RA2026_REMU
+2020;;fpt;contractuels;net;1747;DGAFP_RA2026_REMU
+2021;Classique;fpt;contractuels;net;1778;DGAFP_RA2026_REMU
+2021;Moderne;fpt;contractuels;net;1806.87;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;contractuels;net;1922.57;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;contractuels;net;1972.2;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;contractuels;net;2068.77;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;contractuels;net;2046.67;DGAFP_RA2026_REMU
+2024;;fpt;contractuels;net;2119.71;DGAFP_RA2026_REMU
+2015;;fpt;contrats_aides;brut;1486.95;DGAFP_RA2026_REMU
+2016;;fpt;contrats_aides;brut;1494;DGAFP_RA2026_REMU
+2017;;fpt;contrats_aides;brut;1510;DGAFP_RA2026_REMU
+2018;;fpt;contrats_aides;brut;1532;DGAFP_RA2026_REMU
+2019;;fpt;contrats_aides;brut;1551;DGAFP_RA2026_REMU
+2020;;fpt;contrats_aides;brut;1569;DGAFP_RA2026_REMU
+2021;Classique;fpt;contrats_aides;brut;1614;DGAFP_RA2026_REMU
+2021;Moderne;fpt;contrats_aides;brut;1662.72;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;contrats_aides;brut;1732.3;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;contrats_aides;brut;1739.65;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;contrats_aides;brut;1824.08;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;contrats_aides;brut;1823.5;DGAFP_RA2026_REMU
+2024;;fpt;contrats_aides;brut;1858.91;DGAFP_RA2026_REMU
+2015;;fpt;contrats_aides;net;1212;DGAFP_RA2026_REMU
+2016;;fpt;contrats_aides;net;1215;DGAFP_RA2026_REMU
+2017;;fpt;contrats_aides;net;1226;DGAFP_RA2026_REMU
+2018;;fpt;contrats_aides;net;1230;DGAFP_RA2026_REMU
+2019;;fpt;contrats_aides;net;1248;DGAFP_RA2026_REMU
+2020;;fpt;contrats_aides;net;1263;DGAFP_RA2026_REMU
+2021;Classique;fpt;contrats_aides;net;1299;DGAFP_RA2026_REMU
+2021;Moderne;fpt;contrats_aides;net;1339.16;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;contrats_aides;net;1394.44;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;contrats_aides;net;1399.6;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;contrats_aides;net;1466.71;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;contrats_aides;net;1466.43;DGAFP_RA2026_REMU
+2024;;fpt;contrats_aides;net;1496.38;DGAFP_RA2026_REMU
+2015;;fpt;dom;brut;2414;DGAFP_RA2026_REMU
+2016;;fpt;dom;brut;2450;DGAFP_RA2026_REMU
+2017;;fpt;dom;brut;2543;DGAFP_RA2026_REMU
+2018;;fpt;dom;brut;2637;DGAFP_RA2026_REMU
+2019;;fpt;dom;brut;2674;DGAFP_RA2026_REMU
+2020;;fpt;dom;brut;2721;DGAFP_RA2026_REMU
+2021;Classique;fpt;dom;brut;2780;DGAFP_RA2026_REMU
+2021;Moderne;fpt;dom;brut;2819.16;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;dom;brut;3021.5;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;dom;brut;3034.14;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;dom;brut;3074.87;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;dom;brut;3074.32;DGAFP_RA2026_REMU
+2024;;fpt;dom;brut;3154.86;DGAFP_RA2026_REMU
+2015;;fpt;dom;net;2023.1;DGAFP_RA2026_REMU
+2016;;fpt;dom;net;2048;DGAFP_RA2026_REMU
+2017;;fpt;dom;net;2116;DGAFP_RA2026_REMU
+2018;;fpt;dom;net;2178;DGAFP_RA2026_REMU
+2019;;fpt;dom;net;2202;DGAFP_RA2026_REMU
+2020;;fpt;dom;net;2236;DGAFP_RA2026_REMU
+2021;Classique;fpt;dom;net;2289;DGAFP_RA2026_REMU
+2021;Moderne;fpt;dom;net;2321.48;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;dom;net;2500.19;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;dom;net;2509.93;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;dom;net;2540.25;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;dom;net;2540.11;DGAFP_RA2026_REMU
+2024;;fpt;dom;net;2611.76;DGAFP_RA2026_REMU
+2015;;fpt;ensemble;brut;2280.69;DGAFP_RA2026_REMU
+2016;;fpt;ensemble;brut;2303;DGAFP_RA2026_REMU
+2017;;fpt;ensemble;brut;2363;DGAFP_RA2026_REMU
+2018;;fpt;ensemble;brut;2417;DGAFP_RA2026_REMU
+2019;;fpt;ensemble;brut;2456;DGAFP_RA2026_REMU
+2020;;fpt;ensemble;brut;2488;DGAFP_RA2026_REMU
+2021;Classique;fpt;ensemble;brut;2514;DGAFP_RA2026_REMU
+2021;Moderne;fpt;ensemble;brut;2538.75;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;ensemble;brut;2640.3;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;ensemble;brut;2670.79;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;ensemble;brut;2776.8;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;ensemble;brut;2762.54;DGAFP_RA2026_REMU
+2024;;fpt;ensemble;brut;2850.63;DGAFP_RA2026_REMU
+2015;;fpt;ensemble;net;1889.78;DGAFP_RA2026_REMU
+2016;;fpt;ensemble;net;1902;DGAFP_RA2026_REMU
+2017;;fpt;ensemble;net;1944;DGAFP_RA2026_REMU
+2018;;fpt;ensemble;net;1963;DGAFP_RA2026_REMU
+2019;;fpt;ensemble;net;1993;DGAFP_RA2026_REMU
+2020;;fpt;ensemble;net;2016;DGAFP_RA2026_REMU
+2021;Classique;fpt;ensemble;net;2039;DGAFP_RA2026_REMU
+2021;Moderne;fpt;ensemble;net;2060.78;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;ensemble;net;2145.18;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;ensemble;net;2169.59;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;ensemble;net;2254.45;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;ensemble;net;2242.52;DGAFP_RA2026_REMU
+2024;;fpt;ensemble;net;2316.96;DGAFP_RA2026_REMU
+2015;;fpt;ensemble_hors_contrats_aides;brut;2315.38;DGAFP_RA2026_REMU
+2016;;fpt;ensemble_hors_contrats_aides;brut;2339;DGAFP_RA2026_REMU
+2017;;fpt;ensemble_hors_contrats_aides;brut;2397;DGAFP_RA2026_REMU
+2018;;fpt;ensemble_hors_contrats_aides;brut;2435;DGAFP_RA2026_REMU
+2019;;fpt;ensemble_hors_contrats_aides;brut;2470;DGAFP_RA2026_REMU
+2020;;fpt;ensemble_hors_contrats_aides;brut;2499;DGAFP_RA2026_REMU
+2021;Classique;fpt;ensemble_hors_contrats_aides;brut;2526;DGAFP_RA2026_REMU
+2021;Moderne;fpt;ensemble_hors_contrats_aides;brut;2548.17;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;ensemble_hors_contrats_aides;brut;2650.94;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;ensemble_hors_contrats_aides;brut;2681.52;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;ensemble_hors_contrats_aides;brut;2784.22;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;ensemble_hors_contrats_aides;brut;2769.49;DGAFP_RA2026_REMU
+2024;;fpt;ensemble_hors_contrats_aides;brut;2857.75;DGAFP_RA2026_REMU
+2015;;fpt;ensemble_hors_contrats_aides;net;1919.39;DGAFP_RA2026_REMU
+2016;;fpt;ensemble_hors_contrats_aides;net;1932;DGAFP_RA2026_REMU
+2017;;fpt;ensemble_hors_contrats_aides;net;1972;DGAFP_RA2026_REMU
+2018;;fpt;ensemble_hors_contrats_aides;net;1978;DGAFP_RA2026_REMU
+2019;;fpt;ensemble_hors_contrats_aides;net;2004;DGAFP_RA2026_REMU
+2020;;fpt;ensemble_hors_contrats_aides;net;2025;DGAFP_RA2026_REMU
+2021;Classique;fpt;ensemble_hors_contrats_aides;net;2049;DGAFP_RA2026_REMU
+2021;Moderne;fpt;ensemble_hors_contrats_aides;net;2068.54;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;ensemble_hors_contrats_aides;net;2153.98;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;ensemble_hors_contrats_aides;net;2178.46;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;ensemble_hors_contrats_aides;net;2260.58;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;ensemble_hors_contrats_aides;net;2248.26;DGAFP_RA2026_REMU
+2024;;fpt;ensemble_hors_contrats_aides;net;2322.85;DGAFP_RA2026_REMU
+2015;;fpt;femmes;brut;2189.48;DGAFP_RA2026_REMU
+2016;;fpt;femmes;brut;2213;DGAFP_RA2026_REMU
+2017;;fpt;femmes;brut;2272;DGAFP_RA2026_REMU
+2018;;fpt;femmes;brut;2324;DGAFP_RA2026_REMU
+2019;;fpt;femmes;brut;2363;DGAFP_RA2026_REMU
+2020;;fpt;femmes;brut;2398;DGAFP_RA2026_REMU
+2021;Classique;fpt;femmes;brut;2427;DGAFP_RA2026_REMU
+2021;Moderne;fpt;femmes;brut;2453.86;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;femmes;brut;2555.95;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;femmes;brut;2593.46;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;femmes;brut;2701.48;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;femmes;brut;2685.32;DGAFP_RA2026_REMU
+2024;;fpt;femmes;brut;2770.58;DGAFP_RA2026_REMU
+2015;;fpt;femmes;net;1812.52;DGAFP_RA2026_REMU
+2016;;fpt;femmes;net;1826;DGAFP_RA2026_REMU
+2017;;fpt;femmes;net;1867;DGAFP_RA2026_REMU
+2018;;fpt;femmes;net;1885;DGAFP_RA2026_REMU
+2019;;fpt;femmes;net;1916;DGAFP_RA2026_REMU
+2020;;fpt;femmes;net;1942;DGAFP_RA2026_REMU
+2021;Classique;fpt;femmes;net;1967;DGAFP_RA2026_REMU
+2021;Moderne;fpt;femmes;net;1990.05;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;femmes;net;2073.42;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;femmes;net;2103.4;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;femmes;net;2189.63;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;femmes;net;2176.11;DGAFP_RA2026_REMU
+2024;;fpt;femmes;net;2247.51;DGAFP_RA2026_REMU
+2015;;fpt;fonctionnaires;brut;2370.6;DGAFP_RA2026_REMU
+2016;;fpt;fonctionnaires;brut;2397;DGAFP_RA2026_REMU
+2017;;fpt;fonctionnaires;brut;2456;DGAFP_RA2026_REMU
+2018;;fpt;fonctionnaires;brut;2507;DGAFP_RA2026_REMU
+2019;;fpt;fonctionnaires;brut;2548;DGAFP_RA2026_REMU
+2020;;fpt;fonctionnaires;brut;2579;DGAFP_RA2026_REMU
+2021;Classique;fpt;fonctionnaires;brut;2612;DGAFP_RA2026_REMU
+2021;Moderne;fpt;fonctionnaires;brut;2627.81;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;fonctionnaires;brut;2724.46;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;fonctionnaires;brut;2744.56;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;fonctionnaires;brut;2846.16;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;fonctionnaires;brut;2833.91;DGAFP_RA2026_REMU
+2024;;fpt;fonctionnaires;brut;2926.31;DGAFP_RA2026_REMU
+2015;;fpt;fonctionnaires;net;1970.91;DGAFP_RA2026_REMU
+2016;;fpt;fonctionnaires;net;1985;DGAFP_RA2026_REMU
+2017;;fpt;fonctionnaires;net;2026;DGAFP_RA2026_REMU
+2018;;fpt;fonctionnaires;net;2040;DGAFP_RA2026_REMU
+2019;;fpt;fonctionnaires;net;2071;DGAFP_RA2026_REMU
+2020;;fpt;fonctionnaires;net;2092;DGAFP_RA2026_REMU
+2021;Classique;fpt;fonctionnaires;net;2121;DGAFP_RA2026_REMU
+2021;Moderne;fpt;fonctionnaires;net;2135.65;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;fonctionnaires;net;2216.29;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;fonctionnaires;net;2232.45;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;fonctionnaires;net;2313.95;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;fonctionnaires;net;2303.77;DGAFP_RA2026_REMU
+2024;;fpt;fonctionnaires;net;2382.74;DGAFP_RA2026_REMU
+2015;;fpt;fonctionnaires_a;brut;3921.54;DGAFP_RA2026_REMU
+2016;;fpt;fonctionnaires_a;brut;3961;DGAFP_RA2026_REMU
+2017;;fpt;fonctionnaires_a;brut;4079;DGAFP_RA2026_REMU
+2018;;fpt;fonctionnaires_a;brut;4152;DGAFP_RA2026_REMU
+2019;;fpt;fonctionnaires_a;brut;3912;DGAFP_RA2026_REMU
+2020;;fpt;fonctionnaires_a;brut;3973;DGAFP_RA2026_REMU
+2021;Classique;fpt;fonctionnaires_a;brut;4027;DGAFP_RA2026_REMU
+2021;Moderne;fpt;fonctionnaires_a;brut;4110.85;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;fonctionnaires_a;brut;4195.93;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;fonctionnaires_a;brut;4169.87;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;fonctionnaires_a;brut;4324.19;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;fonctionnaires_a;brut;4312.45;DGAFP_RA2026_REMU
+2024;;fpt;fonctionnaires_a;brut;4403.45;DGAFP_RA2026_REMU
+2015;;fpt;fonctionnaires_a;net;3275.36;DGAFP_RA2026_REMU
+2016;;fpt;fonctionnaires_a;net;3297;DGAFP_RA2026_REMU
+2017;;fpt;fonctionnaires_a;net;3385;DGAFP_RA2026_REMU
+2018;;fpt;fonctionnaires_a;net;3410;DGAFP_RA2026_REMU
+2019;;fpt;fonctionnaires_a;net;3202;DGAFP_RA2026_REMU
+2020;;fpt;fonctionnaires_a;net;3241;DGAFP_RA2026_REMU
+2021;Classique;fpt;fonctionnaires_a;net;3290;DGAFP_RA2026_REMU
+2021;Moderne;fpt;fonctionnaires_a;net;3359.18;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;fonctionnaires_a;net;3434.2;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;fonctionnaires_a;net;3412.71;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;fonctionnaires_a;net;3534.21;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;fonctionnaires_a;net;3524.44;DGAFP_RA2026_REMU
+2024;;fpt;fonctionnaires_a;net;3603.57;DGAFP_RA2026_REMU
+2015;;fpt;fonctionnaires_b;brut;2775.18;DGAFP_RA2026_REMU
+2016;;fpt;fonctionnaires_b;brut;2805;DGAFP_RA2026_REMU
+2017;;fpt;fonctionnaires_b;brut;2861;DGAFP_RA2026_REMU
+2018;;fpt;fonctionnaires_b;brut;2907;DGAFP_RA2026_REMU
+2019;;fpt;fonctionnaires_b;brut;2959;DGAFP_RA2026_REMU
+2020;;fpt;fonctionnaires_b;brut;2939;DGAFP_RA2026_REMU
+2021;Classique;fpt;fonctionnaires_b;brut;2970;DGAFP_RA2026_REMU
+2021;Moderne;fpt;fonctionnaires_b;brut;2990.39;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;fonctionnaires_b;brut;2972.23;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;fonctionnaires_b;brut;2967.89;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;fonctionnaires_b;brut;3060.02;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;fonctionnaires_b;brut;3051.26;DGAFP_RA2026_REMU
+2024;;fpt;fonctionnaires_b;brut;3140.39;DGAFP_RA2026_REMU
+2015;;fpt;fonctionnaires_b;net;2304;DGAFP_RA2026_REMU
+2016;;fpt;fonctionnaires_b;net;2319;DGAFP_RA2026_REMU
+2017;;fpt;fonctionnaires_b;net;2358;DGAFP_RA2026_REMU
+2018;;fpt;fonctionnaires_b;net;2369;DGAFP_RA2026_REMU
+2019;;fpt;fonctionnaires_b;net;2410;DGAFP_RA2026_REMU
+2020;;fpt;fonctionnaires_b;net;2389;DGAFP_RA2026_REMU
+2021;Classique;fpt;fonctionnaires_b;net;2416;DGAFP_RA2026_REMU
+2021;Moderne;fpt;fonctionnaires_b;net;2433.4;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;fonctionnaires_b;net;2422.19;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;fonctionnaires_b;net;2418.38;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;fonctionnaires_b;net;2492.59;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;fonctionnaires_b;net;2485.35;DGAFP_RA2026_REMU
+2024;;fpt;fonctionnaires_b;net;2562.19;DGAFP_RA2026_REMU
+2015;;fpt;fonctionnaires_c;brut;2098.04;DGAFP_RA2026_REMU
+2016;;fpt;fonctionnaires_c;brut;2117;DGAFP_RA2026_REMU
+2017;;fpt;fonctionnaires_c;brut;2170;DGAFP_RA2026_REMU
+2018;;fpt;fonctionnaires_c;brut;2218;DGAFP_RA2026_REMU
+2019;;fpt;fonctionnaires_c;brut;2255;DGAFP_RA2026_REMU
+2020;;fpt;fonctionnaires_c;brut;2287;DGAFP_RA2026_REMU
+2021;Classique;fpt;fonctionnaires_c;brut;2320;DGAFP_RA2026_REMU
+2021;Moderne;fpt;fonctionnaires_c;brut;2325.43;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;fonctionnaires_c;brut;2421.2;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;fonctionnaires_c;brut;2446.66;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;fonctionnaires_c;brut;2538.75;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;fonctionnaires_c;brut;2526.62;DGAFP_RA2026_REMU
+2024;;fpt;fonctionnaires_c;brut;2615.2;DGAFP_RA2026_REMU
+2015;;fpt;fonctionnaires_c;net;1742.97;DGAFP_RA2026_REMU
+2016;;fpt;fonctionnaires_c;net;1752;DGAFP_RA2026_REMU
+2017;;fpt;fonctionnaires_c;net;1789;DGAFP_RA2026_REMU
+2018;;fpt;fonctionnaires_c;net;1801;DGAFP_RA2026_REMU
+2019;;fpt;fonctionnaires_c;net;1828;DGAFP_RA2026_REMU
+2020;;fpt;fonctionnaires_c;net;1852;DGAFP_RA2026_REMU
+2021;Classique;fpt;fonctionnaires_c;net;1880;DGAFP_RA2026_REMU
+2021;Moderne;fpt;fonctionnaires_c;net;1886.57;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;fonctionnaires_c;net;1965.04;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;fonctionnaires_c;net;1985.49;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;fonctionnaires_c;net;2059.65;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;fonctionnaires_c;net;2049.63;DGAFP_RA2026_REMU
+2024;;fpt;fonctionnaires_c;net;2125.09;DGAFP_RA2026_REMU
+2015;;fpt;hommes;brut;2408;DGAFP_RA2026_REMU
+2016;;fpt;hommes;brut;2429;DGAFP_RA2026_REMU
+2017;;fpt;hommes;brut;2493;DGAFP_RA2026_REMU
+2018;;fpt;hommes;brut;2550;DGAFP_RA2026_REMU
+2019;;fpt;hommes;brut;2589;DGAFP_RA2026_REMU
+2020;;fpt;hommes;brut;2617;DGAFP_RA2026_REMU
+2021;Classique;fpt;hommes;brut;2641;DGAFP_RA2026_REMU
+2021;Moderne;fpt;hommes;brut;2661.43;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;hommes;brut;2762.97;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;hommes;brut;2781.93;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;hommes;brut;2885.81;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;hommes;brut;2874.24;DGAFP_RA2026_REMU
+2024;;fpt;hommes;brut;2966.71;DGAFP_RA2026_REMU
+2015;;fpt;hommes;net;1997.4;DGAFP_RA2026_REMU
+2016;;fpt;hommes;net;2008;DGAFP_RA2026_REMU
+2017;;fpt;hommes;net;2053;DGAFP_RA2026_REMU
+2018;;fpt;hommes;net;2074;DGAFP_RA2026_REMU
+2019;;fpt;hommes;net;2103;DGAFP_RA2026_REMU
+2020;;fpt;hommes;net;2123;DGAFP_RA2026_REMU
+2021;Classique;fpt;hommes;net;2145;DGAFP_RA2026_REMU
+2021;Moderne;fpt;hommes;net;2163.01;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;hommes;net;2249.54;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;hommes;net;2264.7;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;hommes;net;2348.25;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;hommes;net;2338.57;DGAFP_RA2026_REMU
+2024;;fpt;hommes;net;2417.66;DGAFP_RA2026_REMU
+2015;;fpt;metropole;brut;2274.62;DGAFP_RA2026_REMU
+2016;;fpt;metropole;brut;2296;DGAFP_RA2026_REMU
+2017;;fpt;metropole;brut;2355;DGAFP_RA2026_REMU
+2018;;fpt;metropole;brut;2407;DGAFP_RA2026_REMU
+2019;;fpt;metropole;brut;2446;DGAFP_RA2026_REMU
+2020;;fpt;metropole;brut;2478;DGAFP_RA2026_REMU
+2021;Classique;fpt;metropole;brut;2502;DGAFP_RA2026_REMU
+2021;Moderne;fpt;metropole;brut;2526.89;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;metropole;brut;2624.7;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;metropole;brut;2655.43;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;metropole;brut;2764.21;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;metropole;brut;2749.43;DGAFP_RA2026_REMU
+2024;;fpt;metropole;brut;2837.95;DGAFP_RA2026_REMU
+2015;;fpt;metropole;net;1883.7;DGAFP_RA2026_REMU
+2016;;fpt;metropole;net;1895;DGAFP_RA2026_REMU
+2017;;fpt;metropole;net;1936;DGAFP_RA2026_REMU
+2018;;fpt;metropole;net;1953;DGAFP_RA2026_REMU
+2019;;fpt;metropole;net;1984;DGAFP_RA2026_REMU
+2020;;fpt;metropole;net;2007;DGAFP_RA2026_REMU
+2021;Classique;fpt;metropole;net;2029;DGAFP_RA2026_REMU
+2021;Moderne;fpt;metropole;net;2049.75;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;metropole;net;2130.65;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;metropole;net;2155.2;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;metropole;net;2242.38;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;metropole;net;2230;DGAFP_RA2026_REMU
+2024;;fpt;metropole;net;2304.68;DGAFP_RA2026_REMU
+2015;;fpt;moins_30;brut;1771.69;DGAFP_RA2026_REMU
+2016;;fpt;moins_30;brut;1777;DGAFP_RA2026_REMU
+2017;;fpt;moins_30;brut;1839;DGAFP_RA2026_REMU
+2018;;fpt;moins_30;brut;1884;DGAFP_RA2026_REMU
+2019;;fpt;moins_30;brut;1909;DGAFP_RA2026_REMU
+2020;;fpt;moins_30;brut;1942;DGAFP_RA2026_REMU
+2021;Classique;fpt;moins_30;brut;1959;DGAFP_RA2026_REMU
+2021;Moderne;fpt;moins_30;brut;2001.33;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;moins_30;brut;2133.48;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;moins_30;brut;2186.01;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;moins_30;brut;2308.21;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;moins_30;brut;2292.12;DGAFP_RA2026_REMU
+2024;;fpt;moins_30;brut;2381.78;DGAFP_RA2026_REMU
+2015;;fpt;moins_30;net;1460.73;DGAFP_RA2026_REMU
+2016;;fpt;moins_30;net;1461;DGAFP_RA2026_REMU
+2017;;fpt;moins_30;net;1503;DGAFP_RA2026_REMU
+2018;;fpt;moins_30;net;1520;DGAFP_RA2026_REMU
+2019;;fpt;moins_30;net;1541;DGAFP_RA2026_REMU
+2020;;fpt;moins_30;net;1569;DGAFP_RA2026_REMU
+2021;Classique;fpt;moins_30;net;1589;DGAFP_RA2026_REMU
+2021;Moderne;fpt;moins_30;net;1624.7;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;moins_30;net;1730.9;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;moins_30;net;1772.02;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;moins_30;net;1869.99;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;moins_30;net;1855.44;DGAFP_RA2026_REMU
+2024;;fpt;moins_30;net;1930.28;DGAFP_RA2026_REMU
+2015;;fpt;pcs_cadres;brut;3939.31;DGAFP_RA2026_REMU
+2016;;fpt;pcs_cadres;brut;3976;DGAFP_RA2026_REMU
+2017;;fpt;pcs_cadres;brut;4071;DGAFP_RA2026_REMU
+2018;;fpt;pcs_cadres;brut;4126;DGAFP_RA2026_REMU
+2019;;fpt;pcs_cadres;brut;4166;DGAFP_RA2026_REMU
+2020;;fpt;pcs_cadres;brut;4215;DGAFP_RA2026_REMU
+2021;Classique;fpt;pcs_cadres;brut;4241;DGAFP_RA2026_REMU
+2021;Moderne;fpt;pcs_cadres;brut;4337.38;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;pcs_cadres;brut;4360.33;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;pcs_cadres;brut;4332.05;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;pcs_cadres;brut;4443.68;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;pcs_cadres;brut;4422.44;DGAFP_RA2026_REMU
+2024;;fpt;pcs_cadres;brut;4501.24;DGAFP_RA2026_REMU
+2015;;fpt;pcs_cadres;net;3275.3;DGAFP_RA2026_REMU
+2016;;fpt;pcs_cadres;net;3296;DGAFP_RA2026_REMU
+2017;;fpt;pcs_cadres;net;3365;DGAFP_RA2026_REMU
+2018;;fpt;pcs_cadres;net;3381;DGAFP_RA2026_REMU
+2019;;fpt;pcs_cadres;net;3410;DGAFP_RA2026_REMU
+2020;;fpt;pcs_cadres;net;3439;DGAFP_RA2026_REMU
+2021;Classique;fpt;pcs_cadres;net;3465;DGAFP_RA2026_REMU
+2021;Moderne;fpt;pcs_cadres;net;3543.43;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;pcs_cadres;net;3565.89;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;pcs_cadres;net;3542.97;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;pcs_cadres;net;3630.15;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;pcs_cadres;net;3612.75;DGAFP_RA2026_REMU
+2024;;fpt;pcs_cadres;net;3679.4;DGAFP_RA2026_REMU
+2015;;fpt;pcs_employes_ouvriers;brut;2017.94;DGAFP_RA2026_REMU
+2016;;fpt;pcs_employes_ouvriers;brut;2034;DGAFP_RA2026_REMU
+2017;;fpt;pcs_employes_ouvriers;brut;2084;DGAFP_RA2026_REMU
+2018;;fpt;pcs_employes_ouvriers;brut;2135;DGAFP_RA2026_REMU
+2019;;fpt;pcs_employes_ouvriers;brut;2168;DGAFP_RA2026_REMU
+2020;;fpt;pcs_employes_ouvriers;brut;2200;DGAFP_RA2026_REMU
+2021;Classique;fpt;pcs_employes_ouvriers;brut;2224;DGAFP_RA2026_REMU
+2021;Moderne;fpt;pcs_employes_ouvriers;brut;2239.4;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;pcs_employes_ouvriers;brut;2343.93;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;pcs_employes_ouvriers;brut;2376.92;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;pcs_employes_ouvriers;brut;2471.15;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;pcs_employes_ouvriers;brut;2460.88;DGAFP_RA2026_REMU
+2024;;fpt;pcs_employes_ouvriers;brut;2545.02;DGAFP_RA2026_REMU
+2015;;fpt;pcs_employes_ouvriers;net;1670.98;DGAFP_RA2026_REMU
+2016;;fpt;pcs_employes_ouvriers;net;1678;DGAFP_RA2026_REMU
+2017;;fpt;pcs_employes_ouvriers;net;1713;DGAFP_RA2026_REMU
+2018;;fpt;pcs_employes_ouvriers;net;1730;DGAFP_RA2026_REMU
+2019;;fpt;pcs_employes_ouvriers;net;1755;DGAFP_RA2026_REMU
+2020;;fpt;pcs_employes_ouvriers;net;1780;DGAFP_RA2026_REMU
+2021;Classique;fpt;pcs_employes_ouvriers;net;1801;DGAFP_RA2026_REMU
+2021;Moderne;fpt;pcs_employes_ouvriers;net;1815.34;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;pcs_employes_ouvriers;net;1901.16;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;pcs_employes_ouvriers;net;1927.42;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;pcs_employes_ouvriers;net;2003.2;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;pcs_employes_ouvriers;net;1994.53;DGAFP_RA2026_REMU
+2024;;fpt;pcs_employes_ouvriers;net;2065.78;DGAFP_RA2026_REMU
+2015;;fpt;pcs_intermediaires;brut;2696.08;DGAFP_RA2026_REMU
+2016;;fpt;pcs_intermediaires;brut;2727;DGAFP_RA2026_REMU
+2017;;fpt;pcs_intermediaires;brut;2786;DGAFP_RA2026_REMU
+2018;;fpt;pcs_intermediaires;brut;2823;DGAFP_RA2026_REMU
+2019;;fpt;pcs_intermediaires;brut;2863;DGAFP_RA2026_REMU
+2020;;fpt;pcs_intermediaires;brut;2854;DGAFP_RA2026_REMU
+2021;Classique;fpt;pcs_intermediaires;brut;2896;DGAFP_RA2026_REMU
+2021;Moderne;fpt;pcs_intermediaires;brut;2916.8;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;pcs_intermediaires;brut;2998.65;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;pcs_intermediaires;brut;3026.42;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;pcs_intermediaires;brut;3143.05;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;pcs_intermediaires;brut;3112.13;DGAFP_RA2026_REMU
+2024;;fpt;pcs_intermediaires;brut;3181.1;DGAFP_RA2026_REMU
+2015;;fpt;pcs_intermediaires;net;2231.46;DGAFP_RA2026_REMU
+2016;;fpt;pcs_intermediaires;net;2248;DGAFP_RA2026_REMU
+2017;;fpt;pcs_intermediaires;net;2290;DGAFP_RA2026_REMU
+2018;;fpt;pcs_intermediaires;net;2294;DGAFP_RA2026_REMU
+2019;;fpt;pcs_intermediaires;net;2325;DGAFP_RA2026_REMU
+2020;;fpt;pcs_intermediaires;net;2314;DGAFP_RA2026_REMU
+2021;Classique;fpt;pcs_intermediaires;net;2350;DGAFP_RA2026_REMU
+2021;Moderne;fpt;pcs_intermediaires;net;2366.44;DGAFP_RA2026_REMU
+2022;millésime 2022;fpt;pcs_intermediaires;net;2437.65;DGAFP_RA2026_REMU
+2022;millésime 2023;fpt;pcs_intermediaires;net;2460.22;DGAFP_RA2026_REMU
+2023;millésime 2023;fpt;pcs_intermediaires;net;2552.44;DGAFP_RA2026_REMU
+2023;millésime 2024;fpt;pcs_intermediaires;net;2526.82;DGAFP_RA2026_REMU
+2024;;fpt;pcs_intermediaires;net;2585.38;DGAFP_RA2026_REMU

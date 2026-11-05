@@ -1,0 +1,547 @@
+annee;indicateur;valeur;unite;source_id
+1959;depenses_publiques;15.3755;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1960;depenses_publiques;16.6931;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1961;depenses_publiques;18.7974;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1962;depenses_publiques;21.7347;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1963;depenses_publiques;24.8776;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1964;depenses_publiques;27.901;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1965;depenses_publiques;30.6828;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1966;depenses_publiques;33.3917;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1967;depenses_publiques;36.6991;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1968;depenses_publiques;42.082;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1969;depenses_publiques;47.1088;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1970;depenses_publiques;51.7718;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1971;depenses_publiques;57.2415;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1972;depenses_publiques;63.6202;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1973;depenses_publiques;72.7587;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1974;depenses_publiques;85.7034;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1975;depenses_publiques;107.902;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1976;depenses_publiques;126.0347;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1977;depenses_publiques;139.4008;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1978;depenses_publiques;161.4724;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1979;depenses_publiques;185.6388;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1980;depenses_publiques;214.9636;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1981;depenses_publiques;255.6971;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1982;depenses_publiques;301.4338;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1983;depenses_publiques;338.0497;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1984;depenses_publiques;374.7335;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1985;depenses_publiques;406.1487;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1986;depenses_publiques;431.3257;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1987;depenses_publiques;448.1263;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1988;depenses_publiques;477.6125;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1989;depenses_publiques;503.152;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1990;depenses_publiques;538.8227;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1991;depenses_publiques;570.8968;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1992;depenses_publiques;605.6859;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1993;depenses_publiques;641.6271;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1994;depenses_publiques;655.4354;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1995;depenses_publiques;680.3704;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1996;depenses_publiques;698.5235;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1997;depenses_publiques;716.6467;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1998;depenses_publiques;726.7161;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1999;depenses_publiques;748.589;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2000;depenses_publiques;775.3487;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2001;depenses_publiques;808.2256;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2002;depenses_publiques;851.1074;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2003;depenses_publiques;881.7856;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2004;depenses_publiques;915.9064;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2005;depenses_publiques;956.1425;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2006;depenses_publiques;992.2408;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2007;depenses_publiques;1039.2876;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2008;depenses_publiques;1080.2205;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2009;depenses_publiques;1122.6072;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2010;depenses_publiques;1151.9618;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2011;depenses_publiques;1175.7047;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2012;depenses_publiques;1208.9531;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2013;depenses_publiques;1242.3578;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2014;depenses_publiques;1257.6492;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2015;depenses_publiques;1268.0078;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2016;depenses_publiques;1280.6482;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2017;depenses_publiques;1321.4446;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2018;depenses_publiques;1327.6324;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2019;depenses_publiques;1346.1547;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2020;depenses_publiques;1430.357;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2021;depenses_publiques;1491.4241;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2022;depenses_publiques;1550.3314;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2023;depenses_publiques;1608.2708;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2024;depenses_publiques;1672.5892;milliards d'euros courants;INSEE_CN2025_DEPENSES
+2025;depenses_publiques;1714.1117;milliards d'euros courants;INSEE_CN2025_DEPENSES
+1978;emploi_S13;4366.6;milliers de personnes;INSEE_CN2025_PIB
+1979;emploi_S13;4471.3;milliers de personnes;INSEE_CN2025_PIB
+1980;emploi_S13;4550.2;milliers de personnes;INSEE_CN2025_PIB
+1981;emploi_S13;4678;milliers de personnes;INSEE_CN2025_PIB
+1982;emploi_S13;4787.2;milliers de personnes;INSEE_CN2025_PIB
+1983;emploi_S13;4888.8;milliers de personnes;INSEE_CN2025_PIB
+1984;emploi_S13;5018.6;milliers de personnes;INSEE_CN2025_PIB
+1985;emploi_S13;5171.4;milliers de personnes;INSEE_CN2025_PIB
+1986;emploi_S13;5271.4;milliers de personnes;INSEE_CN2025_PIB
+1987;emploi_S13;5365.6;milliers de personnes;INSEE_CN2025_PIB
+1988;emploi_S13;5375.1;milliers de personnes;INSEE_CN2025_PIB
+1989;emploi_S13;5446.4;milliers de personnes;INSEE_CN2025_PIB
+1990;emploi_S13;5487;milliers de personnes;INSEE_CN2025_PIB
+1991;emploi_S13;5561;milliers de personnes;INSEE_CN2025_PIB
+1992;emploi_S13;5658.8;milliers de personnes;INSEE_CN2025_PIB
+1993;emploi_S13;5744.8;milliers de personnes;INSEE_CN2025_PIB
+1994;emploi_S13;5816.7;milliers de personnes;INSEE_CN2025_PIB
+1995;emploi_S13;5845.9;milliers de personnes;INSEE_CN2025_PIB
+1996;emploi_S13;5873.1;milliers de personnes;INSEE_CN2025_PIB
+1997;emploi_S13;5828.1;milliers de personnes;INSEE_CN2025_PIB
+1998;emploi_S13;5823.2;milliers de personnes;INSEE_CN2025_PIB
+1999;emploi_S13;5855.3;milliers de personnes;INSEE_CN2025_PIB
+2000;emploi_S13;5900.6;milliers de personnes;INSEE_CN2025_PIB
+2001;emploi_S13;5953.1;milliers de personnes;INSEE_CN2025_PIB
+2002;emploi_S13;6017.6;milliers de personnes;INSEE_CN2025_PIB
+2003;emploi_S13;6110.9;milliers de personnes;INSEE_CN2025_PIB
+2004;emploi_S13;6114;milliers de personnes;INSEE_CN2025_PIB
+2005;emploi_S13;6099.5;milliers de personnes;INSEE_CN2025_PIB
+2006;emploi_S13;6120.4;milliers de personnes;INSEE_CN2025_PIB
+2007;emploi_S13;6162.8;milliers de personnes;INSEE_CN2025_PIB
+2008;emploi_S13;6168.8;milliers de personnes;INSEE_CN2025_PIB
+2009;emploi_S13;6187.8;milliers de personnes;INSEE_CN2025_PIB
+2010;emploi_S13;6195.9;milliers de personnes;INSEE_CN2025_PIB
+2011;emploi_S13;6124.3;milliers de personnes;INSEE_CN2025_PIB
+2012;emploi_S13;6081;milliers de personnes;INSEE_CN2025_PIB
+2013;emploi_S13;6116.3;milliers de personnes;INSEE_CN2025_PIB
+2014;emploi_S13;6173.6;milliers de personnes;INSEE_CN2025_PIB
+2015;emploi_S13;6196.7;milliers de personnes;INSEE_CN2025_PIB
+2016;emploi_S13;6223.8;milliers de personnes;INSEE_CN2025_PIB
+2017;emploi_S13;6227.2;milliers de personnes;INSEE_CN2025_PIB
+2018;emploi_S13;6203.4;milliers de personnes;INSEE_CN2025_PIB
+2019;emploi_S13;6209.1;milliers de personnes;INSEE_CN2025_PIB
+2020;emploi_S13;6217.1;milliers de personnes;INSEE_CN2025_PIB
+2021;emploi_S13;6278.6;milliers de personnes;INSEE_CN2025_PIB
+2022;emploi_S13;6297.1;milliers de personnes;INSEE_CN2025_PIB
+2023;emploi_S13;6340.7;milliers de personnes;INSEE_CN2025_PIB
+2024;emploi_S13;6415.8;milliers de personnes;INSEE_CN2025_PIB
+2025;emploi_S13;6429.4;milliers de personnes;INSEE_CN2025_PIB
+2006;emploi_S13111;2410.3;milliers de personnes;INSEE_CN2025_PIB
+2007;emploi_S13111;2349.4;milliers de personnes;INSEE_CN2025_PIB
+2008;emploi_S13111;2265.3;milliers de personnes;INSEE_CN2025_PIB
+2009;emploi_S13111;2181.4;milliers de personnes;INSEE_CN2025_PIB
+2010;emploi_S13111;2090.3;milliers de personnes;INSEE_CN2025_PIB
+2011;emploi_S13111;2005.6;milliers de personnes;INSEE_CN2025_PIB
+2012;emploi_S13111;1954.6;milliers de personnes;INSEE_CN2025_PIB
+2013;emploi_S13111;1932.7;milliers de personnes;INSEE_CN2025_PIB
+2014;emploi_S13111;1920.1;milliers de personnes;INSEE_CN2025_PIB
+2015;emploi_S13111;1912.7;milliers de personnes;INSEE_CN2025_PIB
+2016;emploi_S13111;1930.5;milliers de personnes;INSEE_CN2025_PIB
+2017;emploi_S13111;1956.3;milliers de personnes;INSEE_CN2025_PIB
+2018;emploi_S13111;1974.5;milliers de personnes;INSEE_CN2025_PIB
+2019;emploi_S13111;1990.2;milliers de personnes;INSEE_CN2025_PIB
+2020;emploi_S13111;1978.4;milliers de personnes;INSEE_CN2025_PIB
+2021;emploi_S13111;1984.2;milliers de personnes;INSEE_CN2025_PIB
+2022;emploi_S13111;1991.2;milliers de personnes;INSEE_CN2025_PIB
+2023;emploi_S13111;2018;milliers de personnes;INSEE_CN2025_PIB
+2024;emploi_S13111;2070.2;milliers de personnes;INSEE_CN2025_PIB
+2006;emploi_S13112;275.7;milliers de personnes;INSEE_CN2025_PIB
+2007;emploi_S13112;280.2;milliers de personnes;INSEE_CN2025_PIB
+2008;emploi_S13112;284;milliers de personnes;INSEE_CN2025_PIB
+2009;emploi_S13112;302;milliers de personnes;INSEE_CN2025_PIB
+2010;emploi_S13112;381.8;milliers de personnes;INSEE_CN2025_PIB
+2011;emploi_S13112;392;milliers de personnes;INSEE_CN2025_PIB
+2012;emploi_S13112;400.4;milliers de personnes;INSEE_CN2025_PIB
+2013;emploi_S13112;404.9;milliers de personnes;INSEE_CN2025_PIB
+2014;emploi_S13112;410;milliers de personnes;INSEE_CN2025_PIB
+2015;emploi_S13112;424.8;milliers de personnes;INSEE_CN2025_PIB
+2016;emploi_S13112;450.4;milliers de personnes;INSEE_CN2025_PIB
+2017;emploi_S13112;463.5;milliers de personnes;INSEE_CN2025_PIB
+2018;emploi_S13112;472.5;milliers de personnes;INSEE_CN2025_PIB
+2019;emploi_S13112;475;milliers de personnes;INSEE_CN2025_PIB
+2020;emploi_S13112;474.6;milliers de personnes;INSEE_CN2025_PIB
+2021;emploi_S13112;478;milliers de personnes;INSEE_CN2025_PIB
+2022;emploi_S13112;478.3;milliers de personnes;INSEE_CN2025_PIB
+2023;emploi_S13112;485.5;milliers de personnes;INSEE_CN2025_PIB
+2024;emploi_S13112;497.7;milliers de personnes;INSEE_CN2025_PIB
+2006;emploi_S1313;1981.8;milliers de personnes;INSEE_CN2025_PIB
+2007;emploi_S1313;2075.6;milliers de personnes;INSEE_CN2025_PIB
+2008;emploi_S1313;2164.3;milliers de personnes;INSEE_CN2025_PIB
+2009;emploi_S1313;2204.2;milliers de personnes;INSEE_CN2025_PIB
+2010;emploi_S1313;2220.2;milliers de personnes;INSEE_CN2025_PIB
+2011;emploi_S1313;2217.7;milliers de personnes;INSEE_CN2025_PIB
+2012;emploi_S1313;2214.1;milliers de personnes;INSEE_CN2025_PIB
+2013;emploi_S1313;2256.7;milliers de personnes;INSEE_CN2025_PIB
+2014;emploi_S1313;2310;milliers de personnes;INSEE_CN2025_PIB
+2015;emploi_S1313;2325.3;milliers de personnes;INSEE_CN2025_PIB
+2016;emploi_S1313;2307.3;milliers de personnes;INSEE_CN2025_PIB
+2017;emploi_S1313;2276.9;milliers de personnes;INSEE_CN2025_PIB
+2018;emploi_S1313;2235.8;milliers de personnes;INSEE_CN2025_PIB
+2019;emploi_S1313;2221.4;milliers de personnes;INSEE_CN2025_PIB
+2020;emploi_S1313;2224.1;milliers de personnes;INSEE_CN2025_PIB
+2021;emploi_S1313;2243.9;milliers de personnes;INSEE_CN2025_PIB
+2022;emploi_S1313;2246.2;milliers de personnes;INSEE_CN2025_PIB
+2023;emploi_S1313;2251.2;milliers de personnes;INSEE_CN2025_PIB
+2024;emploi_S1313;2243.5;milliers de personnes;INSEE_CN2025_PIB
+2006;emploi_S1314;1452.7;milliers de personnes;INSEE_CN2025_PIB
+2007;emploi_S1314;1457.5;milliers de personnes;INSEE_CN2025_PIB
+2008;emploi_S1314;1455.2;milliers de personnes;INSEE_CN2025_PIB
+2009;emploi_S1314;1500.2;milliers de personnes;INSEE_CN2025_PIB
+2010;emploi_S1314;1503.6;milliers de personnes;INSEE_CN2025_PIB
+2011;emploi_S1314;1509;milliers de personnes;INSEE_CN2025_PIB
+2012;emploi_S1314;1512;milliers de personnes;INSEE_CN2025_PIB
+2013;emploi_S1314;1522;milliers de personnes;INSEE_CN2025_PIB
+2014;emploi_S1314;1533.5;milliers de personnes;INSEE_CN2025_PIB
+2015;emploi_S1314;1534;milliers de personnes;INSEE_CN2025_PIB
+2016;emploi_S1314;1535.6;milliers de personnes;INSEE_CN2025_PIB
+2017;emploi_S1314;1530.5;milliers de personnes;INSEE_CN2025_PIB
+2018;emploi_S1314;1520.6;milliers de personnes;INSEE_CN2025_PIB
+2019;emploi_S1314;1522.6;milliers de personnes;INSEE_CN2025_PIB
+2020;emploi_S1314;1539.9;milliers de personnes;INSEE_CN2025_PIB
+2021;emploi_S1314;1572.6;milliers de personnes;INSEE_CN2025_PIB
+2022;emploi_S1314;1581.4;milliers de personnes;INSEE_CN2025_PIB
+2023;emploi_S1314;1585.9;milliers de personnes;INSEE_CN2025_PIB
+2024;emploi_S1314;1604.4;milliers de personnes;INSEE_CN2025_PIB
+1978;emploi_etp_S13;4304.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1979;emploi_etp_S13;4402.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1980;emploi_etp_S13;4484;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1981;emploi_etp_S13;4615.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1982;emploi_etp_S13;4713;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1983;emploi_etp_S13;4804.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1984;emploi_etp_S13;4915.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1985;emploi_etp_S13;5032.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1986;emploi_etp_S13;5124;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1987;emploi_etp_S13;5208.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1988;emploi_etp_S13;5221.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1989;emploi_etp_S13;5290.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1990;emploi_etp_S13;5338.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1991;emploi_etp_S13;5408.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1992;emploi_etp_S13;5501.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1993;emploi_etp_S13;5582;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1994;emploi_etp_S13;5649.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1995;emploi_etp_S13;5666.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1996;emploi_etp_S13;5680.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1997;emploi_etp_S13;5644.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1998;emploi_etp_S13;5636;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1999;emploi_etp_S13;5647.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2000;emploi_etp_S13;5690.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2001;emploi_etp_S13;5739.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2002;emploi_etp_S13;5785.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2003;emploi_etp_S13;5866.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2004;emploi_etp_S13;5882.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2005;emploi_etp_S13;5877.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2006;emploi_etp_S13;5891.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2007;emploi_etp_S13;5924.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2008;emploi_etp_S13;5927.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2009;emploi_etp_S13;5948.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2010;emploi_etp_S13;5937.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2011;emploi_etp_S13;5849.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2012;emploi_etp_S13;5809.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2013;emploi_etp_S13;5841;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2014;emploi_etp_S13;5893.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2015;emploi_etp_S13;5923.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2016;emploi_etp_S13;5927.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2017;emploi_etp_S13;5925;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2018;emploi_etp_S13;5872.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2019;emploi_etp_S13;5878.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2020;emploi_etp_S13;5897.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2021;emploi_etp_S13;6011.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2022;emploi_etp_S13;6087.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2023;emploi_etp_S13;6111.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2024;emploi_etp_S13;6189.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2025;emploi_etp_S13;6201.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2006;emploi_etp_S13111;2398.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2007;emploi_etp_S13111;2342.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2008;emploi_etp_S13111;2263.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2009;emploi_etp_S13111;2183;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2010;emploi_etp_S13111;2087.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2011;emploi_etp_S13111;1996.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2012;emploi_etp_S13111;1945.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2013;emploi_etp_S13111;1924;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2014;emploi_etp_S13111;1915.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2015;emploi_etp_S13111;1910.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2016;emploi_etp_S13111;1923.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2017;emploi_etp_S13111;1932.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2018;emploi_etp_S13111;1929.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2019;emploi_etp_S13111;1944.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2020;emploi_etp_S13111;1929.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2021;emploi_etp_S13111;1943.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2022;emploi_etp_S13111;1960.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2023;emploi_etp_S13111;1964.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2024;emploi_etp_S13111;2002.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2006;emploi_etp_S13112;272.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2007;emploi_etp_S13112;277.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2008;emploi_etp_S13112;281.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2009;emploi_etp_S13112;299.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2010;emploi_etp_S13112;376.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2011;emploi_etp_S13112;386.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2012;emploi_etp_S13112;395.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2013;emploi_etp_S13112;400.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2014;emploi_etp_S13112;407.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2015;emploi_etp_S13112;421.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2016;emploi_etp_S13112;449.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2017;emploi_etp_S13112;457.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2018;emploi_etp_S13112;461.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2019;emploi_etp_S13112;463.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2020;emploi_etp_S13112;462.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2021;emploi_etp_S13112;472.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2022;emploi_etp_S13112;473.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2023;emploi_etp_S13112;479.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2024;emploi_etp_S13112;493.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2006;emploi_etp_S1313;1859.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2007;emploi_etp_S1313;1944.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2008;emploi_etp_S1313;2030.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2009;emploi_etp_S1313;2070.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2010;emploi_etp_S1313;2065.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2011;emploi_etp_S1313;2051.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2012;emploi_etp_S1313;2051.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2013;emploi_etp_S1313;2085.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2014;emploi_etp_S1313;2129.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2015;emploi_etp_S1313;2149.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2016;emploi_etp_S1313;2110.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2017;emploi_etp_S1313;2096.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2018;emploi_etp_S1313;2056.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2019;emploi_etp_S1313;2043.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2020;emploi_etp_S1313;2063.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2021;emploi_etp_S1313;2110.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2022;emploi_etp_S1313;2152.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2023;emploi_etp_S1313;2161.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2024;emploi_etp_S1313;2167.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2006;emploi_etp_S1314;1360.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2007;emploi_etp_S1314;1360.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2008;emploi_etp_S1314;1352.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2009;emploi_etp_S1314;1396.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2010;emploi_etp_S1314;1407.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2011;emploi_etp_S1314;1414.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2012;emploi_etp_S1314;1416.4;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2013;emploi_etp_S1314;1430.7;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2014;emploi_etp_S1314;1442.2;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2015;emploi_etp_S1314;1442.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2016;emploi_etp_S1314;1443.9;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2017;emploi_etp_S1314;1439.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2018;emploi_etp_S1314;1425.5;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2019;emploi_etp_S1314;1427.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2020;emploi_etp_S1314;1442.6;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2021;emploi_etp_S1314;1484.3;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2022;emploi_etp_S1314;1501.1;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2023;emploi_etp_S1314;1507;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+2024;emploi_etp_S1314;1526.8;milliers d'équivalents temps plein;INSEE_CN2025_PIB
+1949;pib;13.142;milliards d'euros courants;INSEE_CN2025_PIB
+1950;pib;15.406;milliards d'euros courants;INSEE_CN2025_PIB
+1951;pib;19.403;milliards d'euros courants;INSEE_CN2025_PIB
+1952;pib;22.627;milliards d'euros courants;INSEE_CN2025_PIB
+1953;pib;23.445;milliards d'euros courants;INSEE_CN2025_PIB
+1954;pib;24.921;milliards d'euros courants;INSEE_CN2025_PIB
+1955;pib;26.803;milliards d'euros courants;INSEE_CN2025_PIB
+1956;pib;29.55;milliards d'euros courants;INSEE_CN2025_PIB
+1957;pib;33.391;milliards d'euros courants;INSEE_CN2025_PIB
+1958;pib;38.537;milliards d'euros courants;INSEE_CN2025_PIB
+1959;pib;42.104;milliards d'euros courants;INSEE_CN2025_PIB
+1960;pib;46.634;milliards d'euros courants;INSEE_CN2025_PIB
+1961;pib;50.547;milliards d'euros courants;INSEE_CN2025_PIB
+1962;pib;56.597;milliards d'euros courants;INSEE_CN2025_PIB
+1963;pib;63.394;milliards d'euros courants;INSEE_CN2025_PIB
+1964;pib;70.316;milliards d'euros courants;INSEE_CN2025_PIB
+1965;pib;75.963;milliards d'euros courants;INSEE_CN2025_PIB
+1966;pib;82.27;milliards d'euros courants;INSEE_CN2025_PIB
+1967;pib;88.879;milliards d'euros courants;INSEE_CN2025_PIB
+1968;pib;96.874;milliards d'euros courants;INSEE_CN2025_PIB
+1969;pib;111.382;milliards d'euros courants;INSEE_CN2025_PIB
+1970;pib;124.73;milliards d'euros courants;INSEE_CN2025_PIB
+1971;pib;139.117;milliards d'euros courants;INSEE_CN2025_PIB
+1972;pib;155.137;milliards d'euros courants;INSEE_CN2025_PIB
+1973;pib;177.826;milliards d'euros courants;INSEE_CN2025_PIB
+1974;pib;207.304;milliards d'euros courants;INSEE_CN2025_PIB
+1975;pib;233.583;milliards d'euros courants;INSEE_CN2025_PIB
+1976;pib;269.716;milliards d'euros courants;INSEE_CN2025_PIB
+1977;pib;303.907;milliards d'euros courants;INSEE_CN2025_PIB
+1978;pib;345.186;milliards d'euros courants;INSEE_CN2025_PIB
+1979;pib;394.491;milliards d'euros courants;INSEE_CN2025_PIB
+1980;pib;447.416;milliards d'euros courants;INSEE_CN2025_PIB
+1981;pib;504.71;milliards d'euros courants;INSEE_CN2025_PIB
+1982;pib;579.251;milliards d'euros courants;INSEE_CN2025_PIB
+1983;pib;642.945;milliards d'euros courants;INSEE_CN2025_PIB
+1984;pib;699.502;milliards d'euros courants;INSEE_CN2025_PIB
+1985;pib;749.583;milliards d'euros courants;INSEE_CN2025_PIB
+1986;pib;807.707;milliards d'euros courants;INSEE_CN2025_PIB
+1987;pib;848.788;milliards d'euros courants;INSEE_CN2025_PIB
+1988;pib;917.933;milliards d'euros courants;INSEE_CN2025_PIB
+1989;pib;988.884;milliards d'euros courants;INSEE_CN2025_PIB
+1990;pib;1043.975;milliards d'euros courants;INSEE_CN2025_PIB
+1991;pib;1082.833;milliards d'euros courants;INSEE_CN2025_PIB
+1992;pib;1121.458;milliards d'euros courants;INSEE_CN2025_PIB
+1993;pib;1134.839;milliards d'euros courants;INSEE_CN2025_PIB
+1994;pib;1172.96;milliards d'euros courants;INSEE_CN2025_PIB
+1995;pib;1213.802;milliards d'euros courants;INSEE_CN2025_PIB
+1996;pib;1246.974;milliards d'euros courants;INSEE_CN2025_PIB
+1997;pib;1289.669;milliards d'euros courants;INSEE_CN2025_PIB
+1998;pib;1346.318;milliards d'euros courants;INSEE_CN2025_PIB
+1999;pib;1395.148;milliards d'euros courants;INSEE_CN2025_PIB
+2000;pib;1473.517;milliards d'euros courants;INSEE_CN2025_PIB
+2001;pib;1530.071;milliards d'euros courants;INSEE_CN2025_PIB
+2002;pib;1578.33;milliards d'euros courants;INSEE_CN2025_PIB
+2003;pib;1622.313;milliards d'euros courants;INSEE_CN2025_PIB
+2004;pib;1696.108;milliards d'euros courants;INSEE_CN2025_PIB
+2005;pib;1762.048;milliards d'euros courants;INSEE_CN2025_PIB
+2006;pib;1846.021;milliards d'euros courants;INSEE_CN2025_PIB
+2007;pib;1937.876;milliards d'euros courants;INSEE_CN2025_PIB
+2008;pib;1990;milliards d'euros courants;INSEE_CN2025_PIB
+2009;pib;1935.84;milliards d'euros courants;INSEE_CN2025_PIB
+2010;pib;1996.075;milliards d'euros courants;INSEE_CN2025_PIB
+2011;pib;2062.141;milliards d'euros courants;INSEE_CN2025_PIB
+2012;pib;2088.287;milliards d'euros courants;INSEE_CN2025_PIB
+2013;pib;2120.352;milliards d'euros courants;INSEE_CN2025_PIB
+2014;pib;2153.733;milliards d'euros courants;INSEE_CN2025_PIB
+2015;pib;2201.402;milliards d'euros courants;INSEE_CN2025_PIB
+2016;pib;2231.819;milliards d'euros courants;INSEE_CN2025_PIB
+2017;pib;2291.681;milliards d'euros courants;INSEE_CN2025_PIB
+2018;pib;2355.363;milliards d'euros courants;INSEE_CN2025_PIB
+2019;pib;2432.207;milliards d'euros courants;INSEE_CN2025_PIB
+2020;pib;2318.276;milliards d'euros courants;INSEE_CN2025_PIB
+2021;pib;2508.102;milliards d'euros courants;INSEE_CN2025_PIB
+2022;pib;2653.997;milliards d'euros courants;INSEE_CN2025_PIB
+2023;pib;2833.826;milliards d'euros courants;INSEE_CN2025_PIB
+2024;pib;2935.236;milliards d'euros courants;INSEE_CN2025_PIB
+2025;pib;2991.056;milliards d'euros courants;INSEE_CN2025_PIB
+1949;population;42233.8;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1950;population;42587.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1951;population;42920.6;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1952;population;43230.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1953;population;43529;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1954;population;43849.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1955;population;44247.2;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1956;population;44689.4;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1957;population;45184.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1958;population;45691.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1959;population;46172.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1960;population;46648;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1961;population;47153.4;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1962;population;48010.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1963;population;48852.1;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1964;population;49369.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1965;population;49841;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1966;population;50270.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1967;population;50673.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1968;population;51051.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1969;population;51466.4;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1970;population;51933.1;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1971;population;52424.6;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1972;population;52887.2;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1973;population;53317.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1974;population;53669.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1975;population;53915.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1976;population;54132.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1977;population;54376.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1978;population;54614.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1979;population;54852.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1980;population;55134.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1981;population;55446;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1982;population;55771.4;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1983;population;56068.8;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1984;population;56339;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1985;population;56616.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1986;population;56901.4;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1987;population;57205;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1988;population;57529.8;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1989;population;57866.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1990;population;58175.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1991;population;58459;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1992;population;58739.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1993;population;58985.6;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1994;population;59199.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1995;population;59407.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1996;population;59611.8;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1997;population;59817;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1998;population;60032.1;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1999;population;60336.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2000;population;60745.8;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2001;population;61184.4;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2002;population;61623.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2003;population;62052.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2004;population;62501.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2005;population;62963.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2006;population;63393.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2007;population;63775.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2008;population;64121.2;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2009;population;64440.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2010;population;64748.2;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2011;population;65054.6;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2012;population;65361.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2013;population;65684.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2014;population;66020.6;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2015;population;66313.9;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2016;population;66563.4;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2017;population;66830.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2018;population;67134.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2019;population;67396.3;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2020;population;67717.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2021;population;67957.8;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2022;population;68279.2;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2023;population;68552.7;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2024;population;68776;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+2025;population;68997.5;milliers de personnes (moyenne annuelle, France);INSEE_CN2025_PIB
+1949;prix_consommation;4.11;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1950;prix_consommation;4.52;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1951;prix_consommation;5.25;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1952;prix_consommation;5.88;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1953;prix_consommation;5.78;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1954;prix_consommation;5.8;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1955;prix_consommation;5.86;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1956;prix_consommation;6.1;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1957;prix_consommation;6.29;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1958;prix_consommation;7.23;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1959;prix_consommation;7.68;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1960;prix_consommation;7.96;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1961;prix_consommation;8.23;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1962;prix_consommation;8.62;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1963;prix_consommation;9.03;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1964;prix_consommation;9.34;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1965;prix_consommation;9.57;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1966;prix_consommation;9.83;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1967;prix_consommation;10.1;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1968;prix_consommation;10.56;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1969;prix_consommation;11.24;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1970;prix_consommation;11.82;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1971;prix_consommation;12.49;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1972;prix_consommation;13.26;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1973;prix_consommation;14.49;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1974;prix_consommation;16.48;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1975;prix_consommation;18.41;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1976;prix_consommation;20.19;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1977;prix_consommation;22.08;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1978;prix_consommation;24.08;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1979;prix_consommation;26.67;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1980;prix_consommation;30.28;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1981;prix_consommation;34.34;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1982;prix_consommation;38.4;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1983;prix_consommation;42.1;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1984;prix_consommation;45.22;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1985;prix_consommation;47.85;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1986;prix_consommation;49.12;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1987;prix_consommation;50.67;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1988;prix_consommation;52.03;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1989;prix_consommation;53.91;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1990;prix_consommation;55.72;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1991;prix_consommation;57.54;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1992;prix_consommation;58.87;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1993;prix_consommation;60.11;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1994;prix_consommation;61.1;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1995;prix_consommation;62.26;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1996;prix_consommation;63.46;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1997;prix_consommation;64.23;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1998;prix_consommation;64.65;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+1999;prix_consommation;65;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2000;prix_consommation;66.08;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2001;prix_consommation;67.16;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2002;prix_consommation;68.46;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2003;prix_consommation;69.89;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2004;prix_consommation;71.39;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2005;prix_consommation;72.64;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2006;prix_consommation;73.85;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2007;prix_consommation;74.95;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2008;prix_consommation;77.06;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2009;prix_consommation;77.13;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2010;prix_consommation;78.31;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2011;prix_consommation;79.96;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2012;prix_consommation;81.52;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2013;prix_consommation;82.23;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2014;prix_consommation;82.65;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2015;prix_consommation;82.68;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2016;prix_consommation;82.83;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2017;prix_consommation;83.68;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2018;prix_consommation;85.23;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2019;prix_consommation;86.18;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2020;prix_consommation;86.59;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2021;prix_consommation;88.01;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2022;prix_consommation;92.61;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2023;prix_consommation;97.12;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2024;prix_consommation;99.07;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
+2025;prix_consommation;100;indice base 100 en 2025;INSEE_IPC_CONVERTISSEUR
