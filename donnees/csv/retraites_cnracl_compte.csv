@@ -1,0 +1,310 @@
+annee;sens;poste;libelle;millions_euros;source_id
+2006;charge;prestations;Prestations sociales;10713.2;DGAFP_RA2026_RETRAITES
+2007;charge;prestations;Prestations sociales;11509.2;DGAFP_RA2026_RETRAITES
+2008;charge;prestations;Prestations sociales;12433.8;DGAFP_RA2026_RETRAITES
+2009;charge;prestations;Prestations sociales;13206.1;DGAFP_RA2026_RETRAITES
+2010;charge;prestations;Prestations sociales;13927.6;DGAFP_RA2026_RETRAITES
+2011;charge;prestations;Prestations sociales;14982.1;DGAFP_RA2026_RETRAITES
+2012;charge;prestations;Prestations sociales;15902.7;DGAFP_RA2026_RETRAITES
+2013;charge;prestations;Prestations sociales;16700.9;DGAFP_RA2026_RETRAITES
+2014;charge;prestations;Prestations sociales;17355.1;DGAFP_RA2026_RETRAITES
+2015;charge;prestations;Prestations sociales;17966.7;DGAFP_RA2026_RETRAITES
+2016;charge;prestations;Prestations sociales;18677.9;DGAFP_RA2026_RETRAITES
+2017;charge;prestations;Prestations sociales;19436;DGAFP_RA2026_RETRAITES
+2018;charge;prestations;Prestations sociales;20393;DGAFP_RA2026_RETRAITES
+2019;charge;prestations;Prestations sociales;21253.5;DGAFP_RA2026_RETRAITES
+2020;charge;prestations;Prestations sociales;22164;DGAFP_RA2026_RETRAITES
+2021;charge;prestations;Prestations sociales;22953.1;DGAFP_RA2026_RETRAITES
+2022;charge;prestations;Prestations sociales;24515.999;DGAFP_RA2026_RETRAITES
+2023;charge;prestations;Prestations sociales;26118.266;DGAFP_RA2026_RETRAITES
+2024;charge;prestations;Prestations sociales;28151.431;DGAFP_RA2026_RETRAITES
+2025;charge;prestations;Prestations sociales;29465.6;DGAFP_RA2026_RETRAITES
+2006;charge;compensations;Compensations;2449.2;DGAFP_RA2026_RETRAITES
+2007;charge;compensations;Compensations;2453.6;DGAFP_RA2026_RETRAITES
+2008;charge;compensations;Compensations;2453.7;DGAFP_RA2026_RETRAITES
+2009;charge;compensations;Compensations;2554.4;DGAFP_RA2026_RETRAITES
+2010;charge;compensations;Compensations;2190.2;DGAFP_RA2026_RETRAITES
+2011;charge;compensations;Compensations;1690;DGAFP_RA2026_RETRAITES
+2012;charge;compensations;Compensations;1375.6;DGAFP_RA2026_RETRAITES
+2013;charge;compensations;Compensations;1423.4;DGAFP_RA2026_RETRAITES
+2014;charge;compensations;Compensations;1362.8;DGAFP_RA2026_RETRAITES
+2015;charge;compensations;Compensations;1462;DGAFP_RA2026_RETRAITES
+2016;charge;compensations;Compensations;1371;DGAFP_RA2026_RETRAITES
+2017;charge;compensations;Compensations;1393.1;DGAFP_RA2026_RETRAITES
+2018;charge;compensations;Compensations;1235;DGAFP_RA2026_RETRAITES
+2019;charge;compensations;Compensations;1130;DGAFP_RA2026_RETRAITES
+2020;charge;compensations;Compensations;1248;DGAFP_RA2026_RETRAITES
+2021;charge;compensations;Compensations;959;DGAFP_RA2026_RETRAITES
+2022;charge;compensations;Compensations;817;DGAFP_RA2026_RETRAITES
+2023;charge;compensations;Compensations;635;DGAFP_RA2026_RETRAITES
+2024;charge;compensations;Compensations;475;DGAFP_RA2026_RETRAITES
+2025;charge;compensations;Compensations;420.6;DGAFP_RA2026_RETRAITES
+2010;charge;transferts_article_59;Transferts CNRACL - article 59;615;DGAFP_RA2026_RETRAITES
+2011;charge;transferts_article_59;Transferts CNRACL - article 59;670;DGAFP_RA2026_RETRAITES
+2012;charge;transferts_article_59;Transferts CNRACL - article 59;514.3;DGAFP_RA2026_RETRAITES
+2013;charge;transferts_article_59;Transferts CNRACL - article 59;533.7;DGAFP_RA2026_RETRAITES
+2014;charge;transferts_article_59;Transferts CNRACL - article 59;578.2;DGAFP_RA2026_RETRAITES
+2015;charge;transferts_article_59;Transferts CNRACL - article 59;572.1;DGAFP_RA2026_RETRAITES
+2016;charge;transferts_article_59;Transferts CNRACL - article 59;581.9;DGAFP_RA2026_RETRAITES
+2017;charge;transferts_article_59;Transferts CNRACL - article 59;570.3;DGAFP_RA2026_RETRAITES
+2018;charge;transferts_article_59;Transferts CNRACL - article 59;567.3;DGAFP_RA2026_RETRAITES
+2019;charge;transferts_article_59;Transferts CNRACL - article 59;540.1;DGAFP_RA2026_RETRAITES
+2020;charge;transferts_article_59;Transferts CNRACL - article 59;512;DGAFP_RA2026_RETRAITES
+2021;charge;transferts_article_59;Transferts CNRACL - article 59;482.8;DGAFP_RA2026_RETRAITES
+2022;charge;transferts_article_59;Transferts CNRACL - article 59;463.726;DGAFP_RA2026_RETRAITES
+2023;charge;transferts_article_59;Transferts CNRACL - article 59;440.345;DGAFP_RA2026_RETRAITES
+2024;charge;transferts_article_59;Transferts CNRACL - article 59;418.348;DGAFP_RA2026_RETRAITES
+2025;charge;transferts_article_59;Transferts CNRACL - article 59;445;DGAFP_RA2026_RETRAITES
+2006;charge;autres;Autres charges;181.3;DGAFP_RA2026_RETRAITES
+2007;charge;autres;Autres charges;170.7;DGAFP_RA2026_RETRAITES
+2008;charge;autres;Autres charges;163;DGAFP_RA2026_RETRAITES
+2009;charge;autres;Autres charges;189.5;DGAFP_RA2026_RETRAITES
+2010;charge;autres;Autres charges;209.2;DGAFP_RA2026_RETRAITES
+2011;charge;autres;Autres charges;116.1;DGAFP_RA2026_RETRAITES
+2012;charge;autres;Autres charges;95.4;DGAFP_RA2026_RETRAITES
+2013;charge;autres;Autres charges;106.8;DGAFP_RA2026_RETRAITES
+2014;charge;autres;Autres charges;153.5;DGAFP_RA2026_RETRAITES
+2015;charge;autres;Autres charges;184.9;DGAFP_RA2026_RETRAITES
+2016;charge;autres;Autres charges;164.4;DGAFP_RA2026_RETRAITES
+2017;charge;autres;Autres charges;194.3;DGAFP_RA2026_RETRAITES
+2018;charge;autres;Autres charges;217.6;DGAFP_RA2026_RETRAITES
+2019;charge;autres;Autres charges;195.7;DGAFP_RA2026_RETRAITES
+2020;charge;autres;Autres charges;114.5;DGAFP_RA2026_RETRAITES
+2021;charge;autres;Autres charges;154.5;DGAFP_RA2026_RETRAITES
+2022;charge;autres;Autres charges;145.796;DGAFP_RA2026_RETRAITES
+2023;charge;autres;Autres charges;212.046;DGAFP_RA2026_RETRAITES
+2024;charge;autres;Autres charges;175.604;DGAFP_RA2026_RETRAITES
+2025;charge;autres;Autres charges;298;DGAFP_RA2026_RETRAITES
+2006;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);83.4;DGAFP_RA2026_RETRAITES
+2007;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);83.8;DGAFP_RA2026_RETRAITES
+2008;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);87.9;DGAFP_RA2026_RETRAITES
+2009;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);90.4;DGAFP_RA2026_RETRAITES
+2010;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);93.7;DGAFP_RA2026_RETRAITES
+2011;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);98;DGAFP_RA2026_RETRAITES
+2012;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);99.5;DGAFP_RA2026_RETRAITES
+2013;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);103.1;DGAFP_RA2026_RETRAITES
+2014;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);106.3;DGAFP_RA2026_RETRAITES
+2015;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);100.2;DGAFP_RA2026_RETRAITES
+2016;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);98.2;DGAFP_RA2026_RETRAITES
+2017;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);99.9;DGAFP_RA2026_RETRAITES
+2018;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);84.9;DGAFP_RA2026_RETRAITES
+2019;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);94.5;DGAFP_RA2026_RETRAITES
+2020;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);98.5;DGAFP_RA2026_RETRAITES
+2021;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);103.7;DGAFP_RA2026_RETRAITES
+2022;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);95.842;DGAFP_RA2026_RETRAITES
+2023;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);97.059;DGAFP_RA2026_RETRAITES
+2024;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);97.624;DGAFP_RA2026_RETRAITES
+2025;charge;gestion_courante;Charges de gestion courante (dont frais de gestion);98.8;DGAFP_RA2026_RETRAITES
+2006;charge;financieres;Charges financières;0.4;DGAFP_RA2026_RETRAITES
+2007;charge;financieres;Charges financières;0.2;DGAFP_RA2026_RETRAITES
+2008;charge;financieres;Charges financières;0.1;DGAFP_RA2026_RETRAITES
+2009;charge;financieres;Charges financières;0;DGAFP_RA2026_RETRAITES
+2010;charge;financieres;Charges financières;0;DGAFP_RA2026_RETRAITES
+2011;charge;financieres;Charges financières;0.2;DGAFP_RA2026_RETRAITES
+2012;charge;financieres;Charges financières;1.5;DGAFP_RA2026_RETRAITES
+2013;charge;financieres;Charges financières;1.3;DGAFP_RA2026_RETRAITES
+2014;charge;financieres;Charges financières;0.1;DGAFP_RA2026_RETRAITES
+2015;charge;financieres;Charges financières;0;DGAFP_RA2026_RETRAITES
+2016;charge;financieres;Charges financières;0.1;DGAFP_RA2026_RETRAITES
+2017;charge;financieres;Charges financières;2.3;DGAFP_RA2026_RETRAITES
+2018;charge;financieres;Charges financières;3.8;DGAFP_RA2026_RETRAITES
+2019;charge;financieres;Charges financières;1.3;DGAFP_RA2026_RETRAITES
+2020;charge;financieres;Charges financières;0.3;DGAFP_RA2026_RETRAITES
+2021;charge;financieres;Charges financières;0.6;DGAFP_RA2026_RETRAITES
+2022;charge;financieres;Charges financières;8.566;DGAFP_RA2026_RETRAITES
+2023;charge;financieres;Charges financières;139.229;DGAFP_RA2026_RETRAITES
+2024;charge;financieres;Charges financières;269.032;DGAFP_RA2026_RETRAITES
+2025;charge;financieres;Charges financières;230.9;DGAFP_RA2026_RETRAITES
+2006;charge;exceptionnelles;Charges exceptionnelles;0.3;DGAFP_RA2026_RETRAITES
+2007;charge;exceptionnelles;Charges exceptionnelles;0.3;DGAFP_RA2026_RETRAITES
+2008;charge;exceptionnelles;Charges exceptionnelles;0.5;DGAFP_RA2026_RETRAITES
+2009;charge;exceptionnelles;Charges exceptionnelles;0.3;DGAFP_RA2026_RETRAITES
+2010;charge;exceptionnelles;Charges exceptionnelles;0.3;DGAFP_RA2026_RETRAITES
+2011;charge;exceptionnelles;Charges exceptionnelles;0.5;DGAFP_RA2026_RETRAITES
+2012;charge;exceptionnelles;Charges exceptionnelles;0.2;DGAFP_RA2026_RETRAITES
+2013;charge;exceptionnelles;Charges exceptionnelles;0;DGAFP_RA2026_RETRAITES
+2014;charge;exceptionnelles;Charges exceptionnelles;0.1;DGAFP_RA2026_RETRAITES
+2015;charge;exceptionnelles;Charges exceptionnelles;0.1;DGAFP_RA2026_RETRAITES
+2016;charge;exceptionnelles;Charges exceptionnelles;0.1;DGAFP_RA2026_RETRAITES
+2017;charge;exceptionnelles;Charges exceptionnelles;0.1;DGAFP_RA2026_RETRAITES
+2018;charge;exceptionnelles;Charges exceptionnelles;0;DGAFP_RA2026_RETRAITES
+2019;charge;exceptionnelles;Charges exceptionnelles;0;DGAFP_RA2026_RETRAITES
+2020;charge;exceptionnelles;Charges exceptionnelles;0;DGAFP_RA2026_RETRAITES
+2021;charge;exceptionnelles;Charges exceptionnelles;0;DGAFP_RA2026_RETRAITES
+2022;charge;exceptionnelles;Charges exceptionnelles;-0;DGAFP_RA2026_RETRAITES
+2023;charge;exceptionnelles;Charges exceptionnelles;-0.005;DGAFP_RA2026_RETRAITES
+2024;charge;exceptionnelles;Charges exceptionnelles;-0.048;DGAFP_RA2026_RETRAITES
+2025;charge;exceptionnelles;Charges exceptionnelles;0;DGAFP_RA2026_RETRAITES
+2006;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;13507.9;DGAFP_RA2026_RETRAITES
+2007;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;14537.5;DGAFP_RA2026_RETRAITES
+2008;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;15101.8;DGAFP_RA2026_RETRAITES
+2009;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;15617.9;DGAFP_RA2026_RETRAITES
+2010;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;15969.9;DGAFP_RA2026_RETRAITES
+2011;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;16387.1;DGAFP_RA2026_RETRAITES
+2012;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;16804.2;DGAFP_RA2026_RETRAITES
+2013;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;18006.3;DGAFP_RA2026_RETRAITES
+2014;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;19393.7;DGAFP_RA2026_RETRAITES
+2015;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;19985.9;DGAFP_RA2026_RETRAITES
+2016;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;20522.2;DGAFP_RA2026_RETRAITES
+2017;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;21123.3;DGAFP_RA2026_RETRAITES
+2018;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;21255.6;DGAFP_RA2026_RETRAITES
+2019;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;21705.8;DGAFP_RA2026_RETRAITES
+2020;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;21979.5;DGAFP_RA2026_RETRAITES
+2021;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;22706.4;DGAFP_RA2026_RETRAITES
+2022;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;23554.733;DGAFP_RA2026_RETRAITES
+2023;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;24391.586;DGAFP_RA2026_RETRAITES
+2024;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;25757.34;DGAFP_RA2026_RETRAITES
+2025;produit;cotisations_et_produits_affectes;Cotisations et produits affectés;27582.2;DGAFP_RA2026_RETRAITES
+2009;produit;compensations;Compensations;108.6;DGAFP_RA2026_RETRAITES
+2010;produit;compensations;Compensations;63.4;DGAFP_RA2026_RETRAITES
+2011;produit;compensations;Compensations;49.5;DGAFP_RA2026_RETRAITES
+2012;produit;compensations;Compensations;0.5;DGAFP_RA2026_RETRAITES
+2013;produit;compensations;Compensations;0;DGAFP_RA2026_RETRAITES
+2014;produit;compensations;Compensations;31.1;DGAFP_RA2026_RETRAITES
+2015;produit;compensations;Compensations;0;DGAFP_RA2026_RETRAITES
+2016;produit;compensations;Compensations;16.4;DGAFP_RA2026_RETRAITES
+2017;produit;compensations;Compensations;0;DGAFP_RA2026_RETRAITES
+2018;produit;compensations;Compensations;6.1;DGAFP_RA2026_RETRAITES
+2019;produit;compensations;Compensations;25.6;DGAFP_RA2026_RETRAITES
+2020;produit;compensations;Compensations;64.6;DGAFP_RA2026_RETRAITES
+2021;produit;compensations;Compensations;128.2;DGAFP_RA2026_RETRAITES
+2022;produit;compensations;Compensations;13.976;DGAFP_RA2026_RETRAITES
+2023;produit;compensations;Compensations;35.485;DGAFP_RA2026_RETRAITES
+2024;produit;compensations;Compensations;19.003;DGAFP_RA2026_RETRAITES
+2025;produit;compensations;Compensations;0;DGAFP_RA2026_RETRAITES
+2010;produit;transferts_article_59;Transferts CNRACL - article 59;181;DGAFP_RA2026_RETRAITES
+2011;produit;transferts_article_59;Transferts CNRACL - article 59;386.9;DGAFP_RA2026_RETRAITES
+2012;produit;transferts_article_59;Transferts CNRACL - article 59;150.3;DGAFP_RA2026_RETRAITES
+2013;produit;transferts_article_59;Transferts CNRACL - article 59;200.5;DGAFP_RA2026_RETRAITES
+2014;produit;transferts_article_59;Transferts CNRACL - article 59;228.4;DGAFP_RA2026_RETRAITES
+2015;produit;transferts_article_59;Transferts CNRACL - article 59;258.1;DGAFP_RA2026_RETRAITES
+2016;produit;transferts_article_59;Transferts CNRACL - article 59;281.2;DGAFP_RA2026_RETRAITES
+2017;produit;transferts_article_59;Transferts CNRACL - article 59;329.5;DGAFP_RA2026_RETRAITES
+2018;produit;transferts_article_59;Transferts CNRACL - article 59;362.8;DGAFP_RA2026_RETRAITES
+2019;produit;transferts_article_59;Transferts CNRACL - article 59;408.4;DGAFP_RA2026_RETRAITES
+2020;produit;transferts_article_59;Transferts CNRACL - article 59;454.5;DGAFP_RA2026_RETRAITES
+2021;produit;transferts_article_59;Transferts CNRACL - article 59;492.6;DGAFP_RA2026_RETRAITES
+2022;produit;transferts_article_59;Transferts CNRACL - article 59;510.39;DGAFP_RA2026_RETRAITES
+2023;produit;transferts_article_59;Transferts CNRACL - article 59;559.27;DGAFP_RA2026_RETRAITES
+2024;produit;transferts_article_59;Transferts CNRACL - article 59;666.09;DGAFP_RA2026_RETRAITES
+2025;produit;transferts_article_59;Transferts CNRACL - article 59;715.8;DGAFP_RA2026_RETRAITES
+2006;produit;autres;Autres produits;275.9;DGAFP_RA2026_RETRAITES
+2007;produit;autres;Autres produits;117.6;DGAFP_RA2026_RETRAITES
+2008;produit;autres;Autres produits;311.3;DGAFP_RA2026_RETRAITES
+2009;produit;autres;Autres produits;329;DGAFP_RA2026_RETRAITES
+2010;produit;autres;Autres produits;323.7;DGAFP_RA2026_RETRAITES
+2011;produit;autres;Autres produits;351.9;DGAFP_RA2026_RETRAITES
+2012;produit;autres;Autres produits;328.3;DGAFP_RA2026_RETRAITES
+2013;produit;autres;Autres produits;356.2;DGAFP_RA2026_RETRAITES
+2014;produit;autres;Autres produits;333.4;DGAFP_RA2026_RETRAITES
+2015;produit;autres;Autres produits;337;DGAFP_RA2026_RETRAITES
+2016;produit;autres;Autres produits;347;DGAFP_RA2026_RETRAITES
+2017;produit;autres;Autres produits;258;DGAFP_RA2026_RETRAITES
+2018;produit;autres;Autres produits;304.8;DGAFP_RA2026_RETRAITES
+2019;produit;autres;Autres produits;352.8;DGAFP_RA2026_RETRAITES
+2020;produit;autres;Autres produits;165.8;DGAFP_RA2026_RETRAITES
+2021;produit;autres;Autres produits;106.4;DGAFP_RA2026_RETRAITES
+2022;produit;autres;Autres produits;129.127;DGAFP_RA2026_RETRAITES
+2023;produit;autres;Autres produits;127.396;DGAFP_RA2026_RETRAITES
+2024;produit;autres;Autres produits;117.138;DGAFP_RA2026_RETRAITES
+2025;produit;autres;Autres produits;315.3;DGAFP_RA2026_RETRAITES
+2006;produit;financiers;Produits financiers;12.5;DGAFP_RA2026_RETRAITES
+2007;produit;financiers;Produits financiers;27.5;DGAFP_RA2026_RETRAITES
+2008;produit;financiers;Produits financiers;46;DGAFP_RA2026_RETRAITES
+2009;produit;financiers;Produits financiers;11.3;DGAFP_RA2026_RETRAITES
+2010;produit;financiers;Produits financiers;7.2;DGAFP_RA2026_RETRAITES
+2011;produit;financiers;Produits financiers;6.5;DGAFP_RA2026_RETRAITES
+2012;produit;financiers;Produits financiers;1.6;DGAFP_RA2026_RETRAITES
+2013;produit;financiers;Produits financiers;1.2;DGAFP_RA2026_RETRAITES
+2014;produit;financiers;Produits financiers;1.9;DGAFP_RA2026_RETRAITES
+2015;produit;financiers;Produits financiers;1.3;DGAFP_RA2026_RETRAITES
+2016;produit;financiers;Produits financiers;1;DGAFP_RA2026_RETRAITES
+2017;produit;financiers;Produits financiers;0.4;DGAFP_RA2026_RETRAITES
+2018;produit;financiers;Produits financiers;0.4;DGAFP_RA2026_RETRAITES
+2019;produit;financiers;Produits financiers;0.2;DGAFP_RA2026_RETRAITES
+2020;produit;financiers;Produits financiers;0.2;DGAFP_RA2026_RETRAITES
+2021;produit;financiers;Produits financiers;0.1;DGAFP_RA2026_RETRAITES
+2022;produit;financiers;Produits financiers;0.555;DGAFP_RA2026_RETRAITES
+2023;produit;financiers;Produits financiers;4.888;DGAFP_RA2026_RETRAITES
+2024;produit;financiers;Produits financiers;5.887;DGAFP_RA2026_RETRAITES
+2025;produit;financiers;Produits financiers;3.9;DGAFP_RA2026_RETRAITES
+2006;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2007;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2008;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2009;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2010;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2011;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2012;produit;exceptionnels;Produits exceptionnels;690;DGAFP_RA2026_RETRAITES
+2013;produit;exceptionnels;Produits exceptionnels;200;DGAFP_RA2026_RETRAITES
+2014;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2015;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2016;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2017;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2018;produit;exceptionnels;Produits exceptionnels;0.1;DGAFP_RA2026_RETRAITES
+2019;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2020;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2021;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2022;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2023;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2024;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2025;produit;exceptionnels;Produits exceptionnels;0;DGAFP_RA2026_RETRAITES
+2006;charge;total;Total charges;13427.8;DGAFP_RA2026_RETRAITES
+2007;charge;total;Total charges;14217.8;DGAFP_RA2026_RETRAITES
+2008;charge;total;Total charges;15138.9;DGAFP_RA2026_RETRAITES
+2009;charge;total;Total charges;16040.7;DGAFP_RA2026_RETRAITES
+2010;charge;total;Total charges;17036;DGAFP_RA2026_RETRAITES
+2011;charge;total;Total charges;17556.9;DGAFP_RA2026_RETRAITES
+2012;charge;total;Total charges;17989.2;DGAFP_RA2026_RETRAITES
+2013;charge;total;Total charges;18869.2;DGAFP_RA2026_RETRAITES
+2014;charge;total;Total charges;19556.1;DGAFP_RA2026_RETRAITES
+2015;charge;total;Total charges;20286;DGAFP_RA2026_RETRAITES
+2016;charge;total;Total charges;20893.7;DGAFP_RA2026_RETRAITES
+2017;charge;total;Total charges;21695.8;DGAFP_RA2026_RETRAITES
+2018;charge;total;Total charges;22501.6;DGAFP_RA2026_RETRAITES
+2019;charge;total;Total charges;23215.1;DGAFP_RA2026_RETRAITES
+2020;charge;total;Total charges;24137.3;DGAFP_RA2026_RETRAITES
+2021;charge;total;Total charges;24653.7;DGAFP_RA2026_RETRAITES
+2022;charge;total;Total charges;26046.93;DGAFP_RA2026_RETRAITES
+2023;charge;total;Total charges;27641.941;DGAFP_RA2026_RETRAITES
+2024;charge;total;Total charges;29586.991;DGAFP_RA2026_RETRAITES
+2025;charge;total;Total charges;30958.9;DGAFP_RA2026_RETRAITES
+2006;produit;total;Total produits;13796.2;DGAFP_RA2026_RETRAITES
+2007;produit;total;Total produits;14682.6;DGAFP_RA2026_RETRAITES
+2008;produit;total;Total produits;15459.1;DGAFP_RA2026_RETRAITES
+2009;produit;total;Total produits;16066.8;DGAFP_RA2026_RETRAITES
+2010;produit;total;Total produits;16545.2;DGAFP_RA2026_RETRAITES
+2011;produit;total;Total produits;17181.9;DGAFP_RA2026_RETRAITES
+2012;produit;total;Total produits;17974.9;DGAFP_RA2026_RETRAITES
+2013;produit;total;Total produits;18764.2;DGAFP_RA2026_RETRAITES
+2014;produit;total;Total produits;19988.5;DGAFP_RA2026_RETRAITES
+2015;produit;total;Total produits;20582.3;DGAFP_RA2026_RETRAITES
+2016;produit;total;Total produits;21167.8;DGAFP_RA2026_RETRAITES
+2017;produit;total;Total produits;21711.2;DGAFP_RA2026_RETRAITES
+2018;produit;total;Total produits;21929.8;DGAFP_RA2026_RETRAITES
+2019;produit;total;Total produits;22492.8;DGAFP_RA2026_RETRAITES
+2020;produit;total;Total produits;22664.5;DGAFP_RA2026_RETRAITES
+2021;produit;total;Total produits;23433.8;DGAFP_RA2026_RETRAITES
+2022;produit;total;Total produits;24208.781;DGAFP_RA2026_RETRAITES
+2023;produit;total;Total produits;25118.626;DGAFP_RA2026_RETRAITES
+2024;produit;total;Total produits;26565.458;DGAFP_RA2026_RETRAITES
+2025;produit;total;Total produits;28617.2;DGAFP_RA2026_RETRAITES
+2006;resultat;resultat;Résultat de l'exercice;368.4;DGAFP_RA2026_RETRAITES
+2007;resultat;resultat;Résultat de l'exercice;464.8;DGAFP_RA2026_RETRAITES
+2008;resultat;resultat;Résultat de l'exercice;320.2;DGAFP_RA2026_RETRAITES
+2009;resultat;resultat;Résultat de l'exercice;26.1;DGAFP_RA2026_RETRAITES
+2010;resultat;resultat;Résultat de l'exercice;-490.8;DGAFP_RA2026_RETRAITES
+2011;resultat;resultat;Résultat de l'exercice;-375.1;DGAFP_RA2026_RETRAITES
+2012;resultat;resultat;Résultat de l'exercice;-14.3;DGAFP_RA2026_RETRAITES
+2013;resultat;resultat;Résultat de l'exercice;-105;DGAFP_RA2026_RETRAITES
+2014;resultat;resultat;Résultat de l'exercice;432.4;DGAFP_RA2026_RETRAITES
+2015;resultat;resultat;Résultat de l'exercice;296.3;DGAFP_RA2026_RETRAITES
+2016;resultat;resultat;Résultat de l'exercice;274.1;DGAFP_RA2026_RETRAITES
+2017;resultat;resultat;Résultat de l'exercice;15.3;DGAFP_RA2026_RETRAITES
+2018;resultat;resultat;Résultat de l'exercice;-571.8;DGAFP_RA2026_RETRAITES
+2019;resultat;resultat;Résultat de l'exercice;-722.3;DGAFP_RA2026_RETRAITES
+2020;resultat;resultat;Résultat de l'exercice;-1472.8;DGAFP_RA2026_RETRAITES
+2021;resultat;resultat;Résultat de l'exercice;-1219.9;DGAFP_RA2026_RETRAITES
+2022;resultat;resultat;Résultat de l'exercice;-1838.149;DGAFP_RA2026_RETRAITES
+2023;resultat;resultat;Résultat de l'exercice;-2523.315;DGAFP_RA2026_RETRAITES
+2024;resultat;resultat;Résultat de l'exercice;-3021.533;DGAFP_RA2026_RETRAITES
+2025;resultat;resultat;Résultat de l'exercice;-2341.6;DGAFP_RA2026_RETRAITES

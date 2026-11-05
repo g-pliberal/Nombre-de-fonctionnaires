@@ -373,10 +373,35 @@ img, svg { max-width: 100%; }
   background: rgb(0 36 46 / 0.55);
 }
 .navigation a:hover { background: rgb(0 36 46 / 0.9); color: var(--safran); }
-.navigation a[aria-current="page"] {
+.navigation a[aria-current="page"],
+.navigation a[aria-current="true"] {
   background: var(--safran);
   color: #00242e;
 }
+
+/* Sous-navigation de la rubrique « La masse salariale » (coût, salaires, retraites) */
+.sous-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.sous-navigation li { margin: 0; }
+.sous-navigation a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid rgb(255 255 255 / 0.4);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.sous-navigation a:hover { border-color: var(--safran); color: var(--safran); }
+.sous-navigation a[aria-current="page"] { background: #fff; border-color: #fff; color: #00242e; }
 .navigation__bouton { display: none; }
 
 .marque__parti, .marque__site { white-space: nowrap; }
@@ -931,6 +956,7 @@ input[type="search"] { min-width: min(100%, 18rem); }
 select { max-width: 100%; }
 .selecteur-dep label { font-weight: 700; display: block; margin-bottom: 0.3rem; font-size: 0.95em; }
 .selecteur-dep select { max-width: 100%; }
+.figure__controles > .selecteur-dep, .carte-panneau .selecteur-dep { min-width: 0; max-width: 100%; }
 
 /* Pied de page */
 .pied {
@@ -1065,3 +1091,7 @@ details.employeurs b { font-variant-numeric: tabular-nums; white-space: nowrap; 
 .decomposition-legende small { color: var(--texte-doux); }
 .accueil-ms__lien { margin-top: 1.25rem; }
 tr.total th, tr.total td { font-weight: 700; }
+
+/* Carte des frais de personnel des collectivités (page « La masse salariale ») */
+.liste-palmares { margin: 0 0 0.8rem; padding-left: 1.3rem; font-size: 0.92em; }
+.liste-palmares li { margin: 0.1rem 0; }

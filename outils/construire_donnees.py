@@ -524,6 +524,8 @@ def construire_masse_salariale(cat: dict) -> dict:
         "ms_point_annee_max": str(pt_max_a),
         "ms_point_perte": fr(pt_perte, 0) + " %",
     }
+    detail, carte, hautes, cles_detail = construire_detail(cat)
+    cles.update(cles_detail)
 
     return {
         "maj": date.today().isoformat(),
@@ -600,6 +602,338 @@ def construire_masse_salariale(cat: dict) -> dict:
         },
         "point": {"annees": sorted(point), "valeurs": [point[a] for a in sorted(point)],
                   "source": f"{libelle_source(cat, 'DGAFP_SL2021_POINT')} ; {libelle_source(cat, 'DGAFP_RA2026_EVOL')}"},
+        "detail": detail,
+        "carte": carte,
+        "hautes": hautes,
+        "cles": cles,
+    }
+
+
+# Libellés courts (graphiques) des ministères, employeurs territoriaux et filières
+COURT = {
+    "Éducation nationale et Jeunesse, et Enseignement supérieur et Recherche": "Éducation, recherche",
+    "Éducation nationale, Jeunesse, Sports, Enseignement supérieur, Recherche et Innovation": "Éducation, recherche",
+    "Intérieur et Outre-mer": "Intérieur, outre-mer", "Intérieur et Outre-Mer": "Intérieur, outre-mer",
+    "Ministères économiques et financiers": "Économie et finances",
+    "Transition écologique et Cohésion des territoires": "Écologie, territoires",
+    "Transition écologique et Cohésion des territoires (hors DGAC*)": "Écologie (hors DGAC)",
+    "Agriculture et Souveraineté alimentaire": "Agriculture", "Agriculture et alimentation": "Agriculture",
+    "Services du Premier ministre": "Premier ministre", "Services du Premier Ministre": "Premier ministre",
+    "Europe et Affaires étrangères": "Affaires étrangères",
+    "Solidarités et santé": "dont solidarités, santé", "Travail": "dont travail",
+    "Établissements communaux (CCAS, CDE, etc.)": "Établissements communaux",
+    "EPCI à fiscalité propre": "Intercommunalités",
+    "Autres structures intercommunales (Sivom, Sivu, syndicats mixtes)": "Syndicats intercommunaux",
+    "Services départementaux d’incendie et de secours": "Incendie (SDIS)",
+    "Centres de gestion et CNFPT": "Centres de gestion, CNFPT",
+    "Autres collectivités locales": "Autres (régies…)",
+    "Personnels de direction et personnels administratifs": "Direction, administration",
+    "Personnels des services de soins": "Services de soins",
+    "Personnels médico-techniques": "Médico-techniques",
+    "Personnels éducatifs et sociaux": "Éducatifs et sociaux",
+    "Personnels techniques et ouvriers": "Techniques et ouvriers",
+    "Personnels médicaux": "Médecins",
+}
+
+
+def court(lib: str) -> str:
+    return COURT.get(lib, lib)
+
+
+def construire_detail(cat: dict) -> tuple[dict, dict, dict, dict]:
+    """Détail par employeur et filière (salaires DGAFP 2024), effectifs par ministère, hautes
+    rémunérations et frais de personnel des collectivités par département (OFGL 2024)."""
+    src_remu = libelle_source(cat, "DGAFP_RA2026_REMU")
+    groupes = defaultdict(list)
+    for l in lire("salaires_par_employeur_et_filiere_2024.csv"):
+        groupes[(l["versant"], l["dimension"])].append(l)
+    an = int(next(iter(groupes.values()))[0]["annee"])
+
+    def bloc(cle):
+        lignes_ = groupes[cle]
+        ens = next(l for l in lignes_ if l["categorie"] == "Ensemble")
+        cats = [l for l in lignes_ if l["categorie"] != "Ensemble"]
+        return {"categories": [l["categorie"] for l in cats], "courts": [court(l["categorie"]) for l in cats],
+                "partEqtp": [nombre(l["part_eqtp_pct"]) for l in cats], "salaire": [nombre(l["salaire_net_moyen"]) for l in cats],
+                "salaireEnsemble": nombre(ens["salaire_net_moyen"])}
+
+    eff = lire("effectifs_par_ministere_2024.csv")
+    an_eff = int(eff[0]["annee"])
+    col_prec = next(c for c in eff[0] if c.startswith("total_") and c != "total_milliers")
+    detail = {
+        "annee": an,
+        "ministeres": bloc(("fpe", "ministeres")), "epa": bloc(("fpe", "epa")),
+        "fptEmployeurs": bloc(("fpt", "employeur")), "fptFilieres": bloc(("fpt", "filiere")),
+        "fphHopitaux": bloc(("fph", "filiere_hopitaux")), "fphMedicoSocial": bloc(("fph", "filiere_medico_social")),
+        "fphFilieres": bloc(("fph", "filiere")),
+        "effectifs": {
+            "annee": an_eff, "anneePrecedente": int(col_prec.split("_")[1]),
+            "lignes": [{"libelle": l["ministere"], "court": court(l["ministere"]), "niveau": int(l["niveau"]),
+                        **{k: nombre(l[f"{k}_milliers"]) for k in ["fonctionnaires", "contractuels", "militaires", "autres", "total"]},
+                        "precedent": nombre(l[col_prec])} for l in eff],
+            "source": libelle_source(cat, "DGAFP_RA2026_POSTES"),
+        },
+        "source": src_remu,
+    }
+    for k in ("ministeres", "epa", "fptEmployeurs", "fphHopitaux", "fphMedicoSocial", "fphFilieres"):
+        b = detail[k]
+        verifier(abs(sum(b["partEqtp"]) - 100) < 0.01, f"détail {k} : parts ≠ 100")
+
+    # Hautes rémunérations
+    centile = {l["versant"]: {c: nombre(l[c]) for c in ["seuil_net_mensuel", "net_moyen", "net_median"]}
+               for l in lire("hautes_remunerations_dernier_centile_2024.csv")}
+    profil = [{"groupe": l["groupe"], "modalite": l["modalite"], "ensemble": nombre(l["ensemble_fp_pct"]),
+               "top10": nombre(l["dix_pour_cent_mieux_payes_pct"]), "top1": nombre(l["un_pour_cent_mieux_payes_pct"])}
+              for l in lire("hautes_remunerations_profil_2024.csv")]
+    corps = [{"niveau": int(l["niveau"]), "libelle": l["corps_ou_emploi"].replace(" dont :", ""),
+              "net": nombre(l["salaire_net_moyen"]), "partAuDessus": nombre(l["part_des_agents_dans_le_dernier_centile_pct"]),
+              "partCentile": nombre(l["part_du_dernier_centile_pct"])} for l in lire("hautes_remunerations_corps_2024.csv")]
+    aplus = [{"niveau": int(l["niveau"]), "libelle": l["corps_ou_emploi"], "brut": nombre(l["brut_moyen"]),
+              "primes": nombre(l["part_primes_pct"]), "net": nombre(l["net_moyen"]), "median": nombre(l["net_median"])}
+             for l in lire("salaires_a_plus_2024.csv")]
+    dix = lire("dix_plus_hautes_remunerations_2025.csv")
+    synth = {l["versant"]: l for l in lire("dix_plus_hautes_remunerations_synthese_2025.csv")}
+    an_dix = int(dix[0]["annee"])
+    hautes = {
+        "annee": an, "centile": centile, "profil": profil, "corps": corps, "aplus": aplus,
+        "dix": {
+            "annee": an_dix,
+            "employeurs": [{"versant": l["versant"], "siren": l["siren"], "libelle": l["employeur"], "court": court(l["employeur"]),
+                            "somme": nombre(l["somme_dix_plus_hautes_brutes_euros"]), "femmes": int(l["femmes"]),
+                            "hommes": int(l["hommes"])} for l in dix],
+            "synthese": {v: {"champ": s["champ"], "moyenne": nombre(s["moyenne_somme_dix_plus_hautes_euros"]),
+                             "mensuel": nombre(s["brut_mensuel_moyen_euros"]), "femmes": nombre(s["part_femmes_pct"])}
+                         for v, s in synth.items()},
+        },
+        "source": src_remu,
+    }
+
+    # Carte : frais de personnel des collectivités locales par département (OFGL, 2024)
+    loc = lire("depenses_personnel_locales_departements_2024.csv")
+    an_loc = int(loc[0]["annee"])
+    popd = defaultdict(dict)
+    for l in lire("departements_population.csv"):
+        popd[l["code"]][int(l["annee_1er_janvier"])] = int(l["population"])
+    pop_moy = {c: (p[an_loc] + p[an_loc + 1]) / 2 for c, p in popd.items()}
+    verifier(len(loc) == 101 and all(l["code"] in pop_moy for l in loc), "carte : départements manquants")
+    carte = {
+        "annee": an_loc,
+        "codes": [l["code"] for l in loc], "noms": [l["departement"] for l in loc],
+        "communes": [round(nombre(l["communes_euros"])) for l in loc],
+        "groupements": [round(nombre(l["groupements_fiscalite_propre_euros"])) for l in loc],
+        "departement": [None if l["departement_euros"] == "" else round(nombre(l["departement_euros"])) for l in loc],
+        "total": [round(nombre(l["total_euros"])) for l in loc],
+        "population": [round(pop_moy[l["code"]]) for l in loc],
+        "notes": {l["code"]: l["note"] for l in loc if l["note"]},
+        "source": libelle_source(cat, "OFGL_COMPTES_2024"),
+        "sourcePopulation": "Insee, estimations de population au 1er janvier (moyenne des 1er janvier "
+                            f"{an_loc} et {an_loc + 1})",
+    }
+    tot = sum(carte["total"])
+    hab = sum(carte["population"])
+    s = centile["ensemble"]
+    ph = next(c for c in corps if c["libelle"].startswith("Praticiens hospitaliers"))
+    sexe = {p["modalite"]: p for p in profil if p["groupe"] == "Sexe"}
+    gouv = next(a for a in aplus if a["libelle"].startswith("Corps et emplois à la décision"))
+    def part_masse(b, i):  # part des salaires nets versés = effectifs EQTP x salaire moyen
+        return 100 * b["partEqtp"][i] * b["salaire"][i] / sum(p * s for p, s in zip(b["partEqtp"], b["salaire"]))
+
+    mi = detail["ministeres"]
+    i_ed = next(i for i, c in enumerate(mi["categories"]) if c.startswith("Éducation"))
+    fe = detail["fptEmployeurs"]
+    i_co = fe["categories"].index("Communes")
+    ff = detail["fptFilieres"]
+    i_te = ff["categories"].index("Technique")
+    fh = detail["fphHopitaux"]
+    i_med = fh["categories"].index("Personnels médicaux")
+    i_soi = fh["categories"].index("Personnels des services de soins")
+    cles = {
+        "ms_min_annee": str(an),
+        "ms_min_educ_eqtp": pct(mi["partEqtp"][i_ed], 0),
+        "ms_min_educ_masse": pct(part_masse(mi, i_ed), 0),
+        "ms_min_educ_sal": fr(mi["salaire"][i_ed]) + " €",
+        "ms_min_ens_sal": fr(mi["salaireEnsemble"]) + " €",
+        "ms_fpt_communes_eqtp": pct(fe["partEqtp"][i_co], 0),
+        "ms_fpt_communes_sal": fr(fe["salaire"][i_co]) + " €",
+        "ms_fpt_tech_eqtp": pct(ff["partEqtp"][i_te], 0),
+        "ms_fpt_tech_sal": fr(ff["salaire"][i_te]) + " €",
+        "ms_fph_med_eqtp": pct(fh["partEqtp"][i_med], 0),
+        "ms_fph_med": fr(fh["salaire"][i_med]) + " €",
+        "ms_fph_soins": fr(fh["salaire"][i_soi]) + " €",
+        "ms_eff_min_annee": str(an_eff),
+        "ms_loc_annee": str(an_loc),
+        "ms_loc_total": milliards(tot / 1e9, 1),
+        "ms_loc_hab": fr(tot / hab) + " €",
+        "ms_centile_annee": str(an),
+        "ms_centile_seuil": fr(s["seuil_net_mensuel"]) + " €",
+        "ms_centile_moyen": fr(s["net_moyen"]) + " €",
+        "ms_centile_median": fr(s["net_median"]) + " €",
+        "ms_centile_ph": pct(ph["partCentile"], 0),
+        "ms_centile_hommes": pct(sexe["Hommes"]["top1"], 0),
+        "ms_centile_hommes_ens": pct(sexe["Hommes"]["ensemble"], 0),
+        "ms_dix_annee": str(an_dix),
+        "ms_dix_fpe_mensuel": fr(nombre(synth["fpe"]["brut_mensuel_moyen_euros"])) + " €",
+        "ms_dix_fpt_mensuel": fr(nombre(synth["fpt"]["brut_mensuel_moyen_euros"])) + " €",
+        "ms_dix_fph_mensuel": fr(nombre(synth["fph"]["brut_mensuel_moyen_euros"])) + " €",
+        "ms_gouv_net": fr(gouv["net"]) + " €",
+        "ms_gouv_brut": fr(gouv["brut"]) + " €",
+    }
+    return detail, carte, hautes, cles
+
+
+# --------------------------------------------------------------------------
+# Retraites des fonctionnaires (DGAFP, rapport annuel 2026)
+# --------------------------------------------------------------------------
+LIB_REGIMES = {
+    "fpe_civils": ("Fonctionnaires civils de l'État", "Civils de l'État"),
+    "fpe_civils_et_ati": ("Fonctionnaires civils de l'État (y c. allocations temporaires d'invalidité)", "Civils de l'État"),
+    "fpe_militaires": ("Militaires", "Militaires"),
+    "ouvriers_etat": ("Ouvriers d'État", "Ouvriers d'État"),
+    "cnracl": ("Fonctionnaires territoriaux et hospitaliers (CNRACL)", "Territoriaux et hospitaliers"),
+    "cnracl_fpt": ("Fonctionnaires territoriaux (CNRACL)", "Territoriaux"),
+    "cnracl_fph": ("Fonctionnaires hospitaliers (CNRACL)", "Hospitaliers"),
+    "ircantec": ("Contractuels (Ircantec, retraite complémentaire)", "Contractuels (Ircantec)"),
+}
+
+
+def construire_retraites(cat: dict) -> dict:
+    src = libelle_source(cat, "DGAFP_RA2026_RETRAITES")
+    agr = defaultdict(dict)
+    for l in lire("agregats_comptes_nationaux.csv"):
+        agr[l["indicateur"]][int(l["annee"])] = nombre(l["valeur"])
+
+    def tableau(nom, cle_val, *dims):
+        """{(dim1, dim2…): {annee: valeur}}"""
+        t = defaultdict(dict)
+        for l in lire(nom):
+            t[tuple(l[d] for d in dims)][int(l["annee"])] = nombre(l[cle_val])
+        return t
+
+    dep = tableau("retraites_depenses_pensions.csv", "millions_euros", "regime")
+    an_dep = sorted(next(iter(dep.values())))
+    fin = an_dep[-1]
+    regs_dep = ["fpe_civils_et_ati", "fpe_militaires", "ouvriers_etat", "cnracl"]
+    verifier(all(set(dep[(r,)]) == set(an_dep) for r in regs_dep), "retraites : années de dépenses incomplètes")
+    verifier(all(a in agr["pib"] and a in agr["prix_consommation"] for a in an_dep), "retraites : PIB ou prix manquants")
+    total_dep = {a: sum(dep[(r,)][a] for r in regs_dep) for a in an_dep}
+
+    stocks = tableau("retraites_pensions_en_paiement.csv", "milliers", "regime", "droit")
+    an_st = sorted(stocks[("fpe_civils", "total")])
+    regs5 = ["fpe_civils", "fpe_militaires", "ouvriers_etat", "cnracl_fpt", "cnracl_fph"]
+    ratio = defaultdict(dict)
+    for l in lire("retraites_ratio_demographique.csv"):
+        ratio[l["regime"]][int(l["annee"])] = (nombre(l["cotisants_milliers"]), nombre(l["pensionnes_milliers"]),
+                                               nombre(l["ratio_publie"]))
+    an_ra = sorted({a for r in ratio.values() for a in r})
+    moy = tableau("retraites_pension_moyenne.csv", "euros_par_mois", "regime", "droit")
+    an_moy = sorted(moy[("fpe_civils", "ensemble")])
+    car = defaultdict(lambda: defaultdict(dict))
+    an_car = None
+    for l in lire("retraites_caracteristiques_2025.csv"):
+        car[l["regime"]][l["droit"]][l["indicateur"]] = nombre(l["valeur"])
+        an_car = int(l["annee"])
+    taux = tableau("retraites_taux_cotisation.csv", "taux_pct", "regime", "taux")
+    an_tx = sorted(taux[("pcmr", "salarie")])
+    cas = defaultdict(dict)
+    lib_cas = {}
+    for l in lire("retraites_cas_pensions.csv"):
+        cas[(l["sens"], l["poste"])][int(l["annee"])] = nombre(l["millions_euros"])
+        lib_cas[(l["sens"], l["poste"])] = l["libelle"]
+    an_cas = sorted(cas[("depense", "total")])
+    cn = defaultdict(dict)
+    lib_cn = {}
+    for l in lire("retraites_cnracl_compte.csv"):
+        cn[(l["sens"], l["poste"])][int(l["annee"])] = nombre(l["millions_euros"])
+        lib_cn[(l["sens"], l["poste"])] = l["libelle"]
+    an_cn = sorted(cn[("resultat", "resultat")])
+    flux = tableau("retraites_nouvelles_pensions.csv", "milliers", "regime", "droit")
+    an_fl = sorted(flux[("fpe_civils", "direct")])
+    age = tableau("retraites_age_depart.csv", "age_moyen", "motif")
+    an_age = sorted(age[("ensemble",)])
+
+    def suite(d, annees):
+        return [d.get(a) for a in annees]
+
+    prix = agr["prix_consommation"]
+    cst = lambda v, a: v * prix[fin] / prix[a]
+    a0 = an_dep[0]
+    etat_fin = dep[("fpe_civils_et_ati",)][fin] + dep[("fpe_militaires",)][fin]
+    tot_st = sum(stocks[(r, "total")][fin] for r in regs5)
+    tot_dd = sum(stocks[(r, "direct")][fin] for r in regs5)
+    r_ = lambda reg, a: ratio[reg][a][0] / ratio[reg][a][1]
+    cnracl_ratio = lambda a: ((ratio["cnracl_fpt"][a][0] + ratio["cnracl_fph"][a][0])
+                              / (ratio["cnracl_fpt"][a][1] + ratio["cnracl_fph"][a][1]))
+    a_civ0 = min(a for a in an_ra if ratio["fpe_civils"].get(a, (None,))[0] is not None)
+    nouveaux = sum(flux[(r, "direct")][fin] for r in regs5)
+    cles = {
+        "rt_annee": str(fin),
+        "rt_depenses": milliards(total_dep[fin] / 1000, 1),
+        "rt_depenses_etat": milliards(etat_fin / 1000, 1),
+        "rt_depenses_civils": milliards(dep[("fpe_civils_et_ati",)][fin] / 1000, 1),
+        "rt_depenses_militaires": milliards(dep[("fpe_militaires",)][fin] / 1000, 1),
+        "rt_depenses_ouvriers": milliards(dep[("ouvriers_etat",)][fin] / 1000, 1),
+        "rt_depenses_cnracl": milliards(dep[("cnracl",)][fin] / 1000, 1),
+        "rt_pct_pib": pct(100 * total_dep[fin] / 1000 / agr["pib"][fin]),
+        "rt_pct_pib_debut": pct(100 * total_dep[a0] / 1000 / agr["pib"][a0]),
+        "rt_annee_debut": str(a0),
+        "rt_multiplie": fr(total_dep[fin] / cst(total_dep[a0], a0), 1),
+        "rt_pensions": millions(1000 * tot_st),
+        "rt_pensions_direct": millions(1000 * tot_dd),
+        "rt_ratio_civils": fr(r_("fpe_civils", fin), 2),
+        "rt_ratio_civils_debut": fr(r_("fpe_civils", a_civ0), 2),
+        "rt_annee_ratio_civils": str(a_civ0),
+        "rt_ratio_cnracl": fr(cnracl_ratio(fin), 2),
+        "rt_ratio_cnracl_debut": fr(cnracl_ratio(a0), 2),
+        "rt_ratio_fpt": fr(r_("cnracl_fpt", fin), 2),
+        "rt_ratio_fph": fr(r_("cnracl_fph", fin), 2),
+        "rt_annee_car": str(an_car),
+        **{f"rt_pension_{k}": fr(car[r]["direct"]["pension_mensuelle_moyenne_euros"]) + " €"
+           for k, r in [("civils", "fpe_civils"), ("militaires", "fpe_militaires"), ("ouvriers", "ouvriers_etat"),
+                        ("fpt", "cnracl_fpt"), ("fph", "cnracl_fph")]},
+        "rt_age_civils": fr(car["fpe_civils"]["direct"]["age_premiere_mise_en_paiement"], 1) + " ans",
+        "rt_taux_etat": pct(taux[("pcmr", "employeur_civils_ministeres")][fin], 2),
+        "rt_taux_militaires": pct(taux[("pcmr", "employeur_militaires")][fin], 2),
+        "rt_taux_cnracl": pct(taux[("cnracl", "employeur")][fin], 2),
+        "rt_taux_ouvriers": pct(taux[("ouvriers_etat", "employeur")][fin], 2),
+        "rt_taux_salarie": pct(taux[("pcmr", "salarie")][fin], 2),
+        "rt_taux_salarie_debut": pct(taux[("pcmr", "salarie")][an_tx[0]], 2),
+        "rt_cas_depenses": milliards(cas[("depense", "total")][an_cas[-1]] / 1000, 1),
+        "rt_cas_recettes": milliards(cas[("recette", "total")][an_cas[-1]] / 1000, 1),
+        "rt_cas_etat": milliards(cas[("recette", "contribution_etat_employeur")][an_cas[-1]] / 1000, 1),
+        "rt_cas_salaries": milliards(cas[("recette", "cotisations_salariales")][an_cas[-1]] / 1000, 1),
+        "rt_cnracl_resultat": fr(cn[("resultat", "resultat")][an_cn[-1]] / 1000, 1).replace("-", "−") + " milliards",
+        "rt_cnracl_prestations": milliards(cn[("charge", "prestations")][an_cn[-1]] / 1000, 1),
+        "rt_cnracl_cotisations": milliards(cn[("produit", "cotisations_et_produits_affectes")][an_cn[-1]] / 1000, 1),
+        "rt_nouveaux": fr(round(1000 * nouveaux, -2)),
+        "rt_ircantec": fr(round(1000 * flux[("ircantec", "direct")][fin], -2)),
+        "rt_age_depart": fr(age[("ensemble",)][an_age[-1]], 1) + " ans",
+        "rt_age_depart_debut": fr(age[("ensemble",)][an_age[0]], 1) + " ans",
+        "rt_annee_age_debut": str(an_age[0]),
+    }
+    return {
+        "maj": date.today().isoformat(),
+        "annees": an_dep, "pib": suite(agr["pib"], an_dep), "prix": suite(prix, an_dep),
+        "regimes": {k: {"libelle": v[0], "court": v[1]} for k, v in LIB_REGIMES.items()},
+        "depenses": {"annees": an_dep, "series": {r: suite(dep[(r,)], an_dep) for r in regs_dep}},
+        "stocks": {"annees": an_st, "series": {r: {d: suite(stocks[(r, d)], an_st) for d in ("total", "direct", "derive")}
+                                               for r in regs5}},
+        "ratio": {"annees": an_ra, "series": {r: {"cotisants": [ratio[r].get(a, (None,) * 3)[0] for a in an_ra],
+                                                  "pensionnes": [ratio[r].get(a, (None,) * 3)[1] for a in an_ra],
+                                                  "publie": [ratio[r].get(a, (None,) * 3)[2] for a in an_ra]} for r in regs5}},
+        "pensionMoyenne": {"annees": an_moy, "series": {r: {d: suite(moy[(r, d)], an_moy) for d in ("ensemble", "direct", "derive")}
+                                                         for r in regs5}},
+        "caracteristiques": {"annee": an_car, "regimes": {r: {d: dict(v) for d, v in car[r].items()} for r in regs5}},
+        "taux": {"annees": an_tx, "series": [{"regime": k[0], "taux": k[1], "valeurs": suite(v, an_tx)} for k, v in taux.items()]},
+        "cas": {"annees": an_cas, "postes": [{"sens": k[0], "poste": k[1], "libelle": lib_cas[k], "valeurs": suite(v, an_cas)}
+                                             for k, v in cas.items()]},
+        "cnracl": {"annees": an_cn, "postes": [{"sens": k[0], "poste": k[1], "libelle": lib_cn[k], "valeurs": suite(v, an_cn)}
+                                              for k, v in cn.items()]},
+        "flux": {"annees": an_fl, "series": {r: {d: suite(flux[(r, d)], an_fl) for d in ("total", "direct", "derive")}
+                                             for r in regs5},
+                 "ircantec": suite(flux[("ircantec", "direct")], an_fl)},
+        "age": {"annees": an_age, "series": {m: suite(age[(m,)], an_age) for m in ("sedentaire", "actif", "carriere_longue", "ensemble")}},
+        "source": src,
+        "sourcePib": libelle_source(cat, "INSEE_CN2025_PIB"),
         "cles": cles,
     }
 
@@ -613,6 +947,8 @@ def main() -> int:
         ecrire_js("national", national)
         if (CSV / "masse_salariale_comptes_nationaux.csv").exists():
             ecrire_js("masse_salariale", construire_masse_salariale(cat))
+        if (CSV / "retraites_depenses_pensions.csv").exists():
+            ecrire_js("retraites", construire_retraites(cat))
         if (CSV / "departements_effectifs.csv").exists():
             dep = construire_departements(cat, geo)
             ecrire_js("departements", dep)

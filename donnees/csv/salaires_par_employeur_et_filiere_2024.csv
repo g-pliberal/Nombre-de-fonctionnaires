@@ -1,0 +1,69 @@
+annee;versant;dimension;categorie;part_eqtp_pct;salaire_net_moyen;source_id
+2024;fpe;ministeres;Éducation nationale et Jeunesse, et Enseignement supérieur et Recherche;64.3427;3010.08;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Intérieur et Outre-mer;12.0855;2993.48;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Ministères économiques et financiers;7.6692;3224.12;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Ministères sociaux;0.8022;3413.64;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Justice;5.3416;3150.27;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Transition écologique et Cohésion des territoires;2.7102;3896.68;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Armées;3.9078;2980.33;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Agriculture et Souveraineté alimentaire;1.7288;3205.22;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Culture;0.5316;3341.47;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Services du Premier ministre;0.6582;4328.97;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Europe et Affaires étrangères;0.2222;3741;DGAFP_RA2026_REMU
+2024;fpe;ministeres;Ensemble;100;3073.52;DGAFP_RA2026_REMU
+2024;fpe;epa;Éducation nationale et Jeunesse, et Enseignement supérieur et Recherche;69.1612;2720.56;DGAFP_RA2026_REMU
+2024;fpe;epa;Intérieur et Outre-mer;0.7126;2731.24;DGAFP_RA2026_REMU
+2024;fpe;epa;Ministères économiques et financiers;2.6131;4188.25;DGAFP_RA2026_REMU
+2024;fpe;epa;Ministères sociaux;15.436;3039.41;DGAFP_RA2026_REMU
+2024;fpe;epa;Justice;0.8054;2544.37;DGAFP_RA2026_REMU
+2024;fpe;epa;Transition écologique et Cohésion des territoires;4.2184;3328.95;DGAFP_RA2026_REMU
+2024;fpe;epa;Armées;1.2326;2821.22;DGAFP_RA2026_REMU
+2024;fpe;epa;Agriculture et Souveraineté alimentaire;2.7508;2433.85;DGAFP_RA2026_REMU
+2024;fpe;epa;Culture;2.8817;2833.76;DGAFP_RA2026_REMU
+2024;fpe;epa;Services du Premier ministre;0.1394;3373.17;DGAFP_RA2026_REMU
+2024;fpe;epa;Europe et Affaires étrangères;0.0487;3709.46;DGAFP_RA2026_REMU
+2024;fpe;epa;Ensemble;100;2830.46;DGAFP_RA2026_REMU
+2024;fpt;employeur;Communes;51.3606;2186.38;DGAFP_RA2026_REMU
+2024;fpt;employeur;Établissements communaux (CCAS, CDE, etc.);5.1381;2228.83;DGAFP_RA2026_REMU
+2024;fpt;employeur;EPCI à fiscalité propre;15.7261;2356.03;DGAFP_RA2026_REMU
+2024;fpt;employeur;Autres structures intercommunales (Sivom, Sivu, syndicats mixtes);4.4866;2301.46;DGAFP_RA2026_REMU
+2024;fpt;employeur;Départements;13.6228;2528.13;DGAFP_RA2026_REMU
+2024;fpt;employeur;Services départementaux d’incendie et de secours;3.103;3156.47;DGAFP_RA2026_REMU
+2024;fpt;employeur;Centres de gestion et CNFPT;0.7431;2602.7;DGAFP_RA2026_REMU
+2024;fpt;employeur;Régions;5.2328;2451.06;DGAFP_RA2026_REMU
+2024;fpt;employeur;Autres collectivités locales;0.5869;2689.82;DGAFP_RA2026_REMU
+2024;fpt;employeur;Ensemble;100;2316.96;DGAFP_RA2026_REMU
+2024;fpt;filiere;Administrative;24.1137;2533.32;DGAFP_RA2026_REMU
+2024;fpt;filiere;Technique;45.5094;2166.92;DGAFP_RA2026_REMU
+2024;fpt;filiere;Culturelle;3.9545;2338.08;DGAFP_RA2026_REMU
+2024;fpt;filiere;Sportive;0.9713;2349.13;DGAFP_RA2026_REMU
+2024;fpt;filiere;Sociale;8.5616;2250.12;DGAFP_RA2026_REMU
+2024;fpt;filiere;Médico-sociale;4.5216;2589.56;DGAFP_RA2026_REMU
+2024;fpt;filiere;Médico-technique;0.1117;2824.48;DGAFP_RA2026_REMU
+2024;fpt;filiere;Police municipale;1.5728;2857.11;DGAFP_RA2026_REMU
+2024;fpt;filiere;Incendie et secours;2.4765;3308.56;DGAFP_RA2026_REMU
+2024;fpt;filiere;Ensemble;100;2316.96;DGAFP_RA2026_REMU
+2024;fph;filiere_hopitaux;Personnels de direction et personnels administratifs;10.9228;2413.96;DGAFP_RA2026_REMU
+2024;fph;filiere_hopitaux;Personnels des services de soins;63.3402;2675.83;DGAFP_RA2026_REMU
+2024;fph;filiere_hopitaux;Personnels médico-techniques;4.6513;2826.66;DGAFP_RA2026_REMU
+2024;fph;filiere_hopitaux;Personnels éducatifs et sociaux;1.7041;2406.95;DGAFP_RA2026_REMU
+2024;fph;filiere_hopitaux;Personnels techniques et ouvriers;10.4396;2393.44;DGAFP_RA2026_REMU
+2024;fph;filiere_hopitaux;Personnels médicaux;8.4423;6945.83;DGAFP_RA2026_REMU
+2024;fph;filiere_hopitaux;Non ventilé;0.4998;2428.69;DGAFP_RA2026_REMU
+2024;fph;filiere_hopitaux;Ensemble;100;2979.43;DGAFP_RA2026_REMU
+2024;fph;filiere_medico_social;Personnels de direction et personnels administratifs;5.4228;2765.53;DGAFP_RA2026_REMU
+2024;fph;filiere_medico_social;Personnels des services de soins;73.5903;2321.51;DGAFP_RA2026_REMU
+2024;fph;filiere_medico_social;Personnels médico-techniques;0.2052;2601.89;DGAFP_RA2026_REMU
+2024;fph;filiere_medico_social;Personnels éducatifs et sociaux;8.2993;2406.92;DGAFP_RA2026_REMU
+2024;fph;filiere_medico_social;Personnels techniques et ouvriers;11.0021;2101.46;DGAFP_RA2026_REMU
+2024;fph;filiere_medico_social;Personnels médicaux;0.7818;5526.54;DGAFP_RA2026_REMU
+2024;fph;filiere_medico_social;Non ventilé;0.6986;1735.87;DGAFP_RA2026_REMU
+2024;fph;filiere_medico_social;Ensemble;100;2350.01;DGAFP_RA2026_REMU
+2024;fph;filiere;Personnels de direction et personnels administratifs;10.1975;2438.61;DGAFP_RA2026_REMU
+2024;fph;filiere;Personnels des services de soins;64.6919;2622.68;DGAFP_RA2026_REMU
+2024;fph;filiere;Personnels médico-techniques;4.065;2825.16;DGAFP_RA2026_REMU
+2024;fph;filiere;Personnels éducatifs et sociaux;2.5738;2406.94;DGAFP_RA2026_REMU
+2024;fph;filiere;Personnels techniques et ouvriers;10.5138;2353.15;DGAFP_RA2026_REMU
+2024;fph;filiere;Personnels médicaux;7.4321;6926.15;DGAFP_RA2026_REMU
+2024;fph;filiere;Non ventilé;0.526;2307.34;DGAFP_RA2026_REMU
+2024;fph;filiere;Ensemble;100;2896.43;DGAFP_RA2026_REMU

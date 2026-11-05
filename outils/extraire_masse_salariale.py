@@ -11,7 +11,13 @@ Sources (toutes publiques, Licence Ouverte / réutilisation libre) :
     personnel (État, collectivités, hôpitaux), salaires bruts et nets, point d'indice ;
   - DGAFP, séries longues de l'édition 2021 : valeur du point d'indice depuis 1970 ;
   - Eurostat : rémunération des salariés des administrations publiques par fonction
-    (France) et en % du PIB (pays européens).
+    (France) et en % du PIB (pays européens) ;
+  - DGAFP, rapport annuel 2026 : retraites des fonctionnaires (dépenses de pensions, pensions
+    en paiement, ratio démographique, CAS Pensions, CNRACL, taux de cotisation, départs),
+    salaires par ministère, par type de collectivité et par filière, hautes rémunérations,
+    effectifs par ministère ;
+  - OFGL (Observatoire des finances et de la gestion publique locales) : frais de personnel
+    2024 des communes, groupements à fiscalité propre et départements, par département.
 
 Le script ne fait que lire des cellules publiées, convertir des unités et, quand c'est
 signalé, des calculs simples (sommes, moyennes annuelles de valeurs publiées). Il
@@ -29,12 +35,16 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import http.client
 import io
 import json
 import re
 import sys
+import time
+import urllib.parse
 import urllib.request
 import zipfile
+from collections import defaultdict
 from datetime import date
 from pathlib import Path
 
@@ -50,6 +60,9 @@ DGAFP = "https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapp
 DGAFP_SL = ("https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/"
             "files/files/statistiques/series_longues/series-longues-2021")
 EUROSTAT = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data"
+OFGL = "https://data.ofgl.fr/api/explore/v2.1/catalog/datasets"
+# agrégat « Frais de personnel », exercice 2024 (le champ exer est une date)
+OFGL_FILTRE = urllib.parse.quote('agregat="Frais de personnel" and year(exer)=2024')
 
 # nom local -> adresse officielle
 FICHIERS = {
@@ -71,7 +84,20 @@ FICHIERS = {
         f"{EUROSTAT}/gov_10a_exp?format=JSON&lang=fr&geo=FR&sector=S13&na_item=D1&unit=MIO_EUR",
     "eurostat/gov_10a_main_S13_D1PAY_PC_GDP.json":
         f"{EUROSTAT}/gov_10a_main?format=JSON&lang=fr&sector=S13&na_item=D1PAY&unit=PC_GDP",
+    "dgafp/ra_2026_retraite.zip": f"{DGAFP}/ra_2026_retraite.zip",
+    "dgafp/ra_2026_postes.zip": f"{DGAFP}/ra_2026_postes.zip",
+    "ofgl/communes_frais_personnel_2024_par_departement.json":
+        f"{OFGL}/ofgl-base-communes-consolidee/records?select=dep_code%2C%20sum(montant_bp)%20as%20bp%2C"
+        f"%20count(*)%20as%20n&where={OFGL_FILTRE}&group_by=dep_code&limit=200",
+    "ofgl/departements_frais_personnel_2024.csv":
+        f"{OFGL}/ofgl-base-departements-consolidee/exports/csv?select=dep_code%2Cdep_name%2Clbudg%2Csiren"
+        f"%2Cmontant_bp&where={OFGL_FILTRE}&delimiter=%3B",
+    "ofgl/groupements_frais_personnel_2024.csv":
+        f"{OFGL}/ofgl-base-gfp-consolidee/exports/csv?select=siren%2Cepci_name%2Cnat_juridique%2Cdep_code"
+        f"%2Cmontant_bp%2Cptot&where={OFGL_FILTRE}&delimiter=%3B",
 }
+# Adresses calculées pendant l'exécution (composition des groupements à cheval sur plusieurs départements)
+URLS_CALCULEES: dict[str, str] = {}
 
 
 class Anomalie(Exception):
@@ -86,16 +112,36 @@ def verifier(condition: bool, message: str) -> None:
 # --------------------------------------------------------------------------
 # Téléchargement et lecture
 # --------------------------------------------------------------------------
-def chemin(nom: str, hors_ligne: bool) -> Path:
+def telecharger(url: str, p: Path) -> None:
+    """Téléchargement avec reprises (le service de l'OFGL coupe parfois les connexions)."""
+    derniere = None
+    for essai in range(1, 9):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "fonction-publique-les-chiffres/1.0"})
+            with urllib.request.urlopen(req, timeout=240) as r:
+                octets = r.read()
+            verifier(len(octets) > 0, f"réponse vide : {url}")
+            verifier(b'"error_code"' not in octets[:500], f"erreur renvoyée par le service : {octets[:300]!r}")
+            p.write_bytes(octets)
+            return
+        except (OSError, http.client.HTTPException) as e:
+            derniere = e
+            print(f"    essai {essai} échoué ({e}) ; nouvel essai dans {2 * essai} s")
+            time.sleep(2 * essai)
+    raise Anomalie(f"téléchargement impossible : {url} ({derniere})")
+
+
+def chemin(nom: str, hors_ligne: bool, url: str | None = None) -> Path:
+    if url:
+        URLS_CALCULEES[nom] = url
     p = CACHE / nom
     if p.exists() and p.stat().st_size > 0:
         return p
     verifier(not hors_ligne, f"{nom} absent du cache (relancer sans --hors-ligne)")
     p.parent.mkdir(parents=True, exist_ok=True)
-    print(f"  téléchargement de {FICHIERS[nom]}")
-    req = urllib.request.Request(FICHIERS[nom], headers={"User-Agent": "fonction-publique-les-chiffres/1.0"})
-    with urllib.request.urlopen(req, timeout=180) as r:
-        p.write_bytes(r.read())
+    url = url or FICHIERS[nom]
+    print(f"  téléchargement de {url}")
+    telecharger(url, p)
     return p
 
 
@@ -720,6 +766,729 @@ def extraire_eurostat(hl: bool, comptes: dict) -> None:
 
 
 # --------------------------------------------------------------------------
+# Outils pour les tableaux « une ligne par série, une colonne par année »
+# --------------------------------------------------------------------------
+def sans_renvoi(lib: str) -> str:
+    """Retire les appels de note : « Pensions civiles (1) », « Non ventilé2 », « FPH1 »."""
+    s = re.sub(r"\s*\(\d\)\s*", " ", lib)
+    return re.sub(r"(?<=[A-Za-zÀ-ÿ\)])\d$", "", " ".join(s.split())).strip()
+
+
+def series_annuelles(L: list[list], ncol: int) -> tuple[list[int], list[tuple[str, dict]]]:
+    """Renvoie les années et, pour chaque ligne chiffrée, le chemin de libellés des colonnes
+    0 à ncol-1 (cellules fusionnées reportées vers le bas, joint par « | ») et les valeurs."""
+    i_ent = next((i for i, l in enumerate(L) if len(colonnes_annees(l)) >= 5), None)
+    verifier(i_ent is not None, "ligne des années introuvable")
+    cols = colonnes_annees(L[i_ent])
+    courant = [""] * ncol
+    out = []
+    for l in L[i_ent + 1:]:
+        libs = [texte(l[k]) if k < len(l) else "" for k in range(ncol)]
+        if libs[0].startswith(("Source", "Champ", "Lecture", "Note", "NB")):
+            break
+        for k, lib in enumerate(libs):
+            if lib:
+                courant[k] = lib
+                courant[k + 1:] = [""] * (ncol - k - 1)
+        vals = {a: num(l[j]) for j, (a, _) in cols.items() if j < len(l)}
+        if any(v is not None for v in vals.values()):
+            out.append((" | ".join(c for c in courant if c), vals))
+    return sorted({a for a, _ in cols.values()}), out
+
+
+def serie(S: list[tuple[str, dict]], *motifs: str) -> dict:
+    res = [v for lib, v in S if all(re.search(m, lib, re.I) for m in motifs)]
+    verifier(len(res) == 1, f"série {motifs} : {len(res)} lignes correspondantes au lieu d'une")
+    return res[0]
+
+
+def annee_titre(L: list[list]) -> int:
+    for l in L[:4]:
+        for c in l:
+            ans = re.findall(r"\b(20\d\d)\b", texte(c))
+            if ans:
+                return int(ans[-1])
+    raise Anomalie("année du tableau introuvable dans le titre")
+
+
+# --------------------------------------------------------------------------
+# 7. Retraites des fonctionnaires (DGAFP, rapport annuel 2026, « Retraites »)
+# --------------------------------------------------------------------------
+SRC_RET = "DGAFP_RA2026_RETRAITES"
+
+
+def extraire_retraites(hl: bool) -> None:
+    z = chemin("dgafp/ra_2026_retraite.zip", hl)
+    fin = classeur(z, "RA2026_Retraites_donnees_comp_situation_financiere.xlsx")
+
+    # F1 : dépenses de pensions par régime, 1990-2025 (millions d'euros)
+    annees, S = series_annuelles(lignes(fin, "F1"), 2)
+    verifier(annees[0] == 1990, "retraites F1 : début attendu en 1990")
+    depenses = {
+        "fpe_civils_et_ati": serie(S, r"PCMR", r"civiles et ATI"),
+        "fpe_militaires": serie(S, r"PCMR", r"militaires"),
+        "ouvriers_etat": serie(S, r"ouvriers"),
+        "cnracl": serie(S, r"CNRACL", r"FPT et de la FPH"),
+    }
+    out = []
+    for cle, v in depenses.items():
+        for a in annees:
+            verifier(v.get(a) is not None, f"retraites F1 : {cle} {a} manquant")
+            out.append([a, cle, arrondi(v[a], 3), SRC_RET])
+    ecrire_csv("retraites_depenses_pensions.csv", ["annee", "regime", "millions_euros", "source_id"], out)
+
+    # F2 (CAS Pensions de l'État) et F3 (compte de résultat de la CNRACL), 2006-2025
+    def compte(feuille: str, entetes: tuple[str, ...]):
+        L = lignes(fin, feuille)
+        i_ent = next(i for i, l in enumerate(L) if len(colonnes_annees(l)) >= 5)
+        cols = colonnes_annees(L[i_ent])
+        sens, postes, totaux, resultat = None, [], {}, None
+        for l in L[i_ent + 1:]:
+            lib = texte(l[0])
+            if not lib:
+                continue
+            if lib.startswith("Source"):
+                break
+            vals = {a: num(l[j]) for j, (a, _) in cols.items() if j < len(l)}
+            if all(v is None for v in vals.values()):
+                sens = next((s for s in entetes if lib.lower().startswith(s)), sens)
+                continue
+            if lib.lower().startswith("total"):
+                totaux[sens] = vals
+            elif lib.lower().startswith("résultat"):
+                resultat = vals
+            else:
+                postes.append((sens, sans_renvoi(lib), vals))
+        return sorted(a for a, _ in cols.values()), postes, totaux, resultat
+
+    def ecrire_compte(nom, an, postes, totaux, resultat, regles, sens_csv, tol):
+        out = []
+        for sens, lib, vals in postes:
+            cles = [c for s, m, c in regles if s == sens and re.search(m, lib)]
+            verifier(len(cles) == 1, f"{nom} : ligne « {lib} » non reconnue")
+            for a in an:
+                if vals.get(a) is not None:
+                    out.append([a, sens_csv[sens], cles[0], lib, arrondi(vals[a], 3), SRC_RET])
+        for sens in sens_csv:
+            verifier(sens in totaux, f"{nom} : total « {sens} » introuvable")
+            for a in an:
+                s = sum(v.get(a) or 0 for s_, _, v in postes if s_ == sens)
+                verifier(abs(s - totaux[sens][a]) <= tol, f"{nom} {sens} {a} : somme {s:.1f} ≠ total {totaux[sens][a]:.1f}")
+                out.append([a, sens_csv[sens], "total", f"Total {sens}", arrondi(totaux[sens][a], 3), SRC_RET])
+        if resultat:
+            s1, s2 = list(sens_csv)
+            for a in an:
+                verifier(abs(totaux[s2][a] - totaux[s1][a] - resultat[a]) <= 1.5, f"{nom} {a} : résultat incohérent")
+                out.append([a, "resultat", "resultat", "Résultat de l'exercice", arrondi(resultat[a], 3), SRC_RET])
+        return out
+
+    an2, postes, totaux, _ = compte("F2", ("dépenses", "recettes"))
+    regles_cas = [
+        ("dépenses", r"^Pensions civiles", "pensions_civiles"),
+        ("dépenses", r"^Pensions militaires", "pensions_militaires"),
+        ("dépenses", r"invalidité", "allocations_temporaires_invalidite"),
+        ("dépenses", r"compensation démographique", "compensation_demographique"),
+        ("dépenses", r"Cnav", "transferts_cnav_ircantec"),
+        ("dépenses", r"vers la CNRACL", "transfert_cnracl_decentralisation"),
+        ("dépenses", r"^Autres", "autres"),
+        ("recettes", r"^Cotisations salariales", "cotisations_salariales"),
+        ("recettes", r"État employeur", "contribution_etat_employeur"),
+        ("recettes", r"La Poste", "la_poste_orange"),
+        ("recettes", r"établissements publics", "etablissements_publics_autres_employeurs"),
+        ("recettes", r"validations", "validations_services_auxiliaires"),
+        ("recettes", r"compensation démographique", "compensation_demographique"),
+        ("recettes", r"reçu de la CNRACL", "transfert_cnracl_decentralisation"),
+        ("recettes", r"^Autres recettes", "autres"),
+    ]
+    out = ecrire_compte("retraites F2", an2, postes, totaux, None, regles_cas,
+                        {"dépenses": "depense", "recettes": "recette"}, 3)
+    # Recoupement : pensions civiles + ATI et pensions militaires du CAS = dépenses de la F1
+    # (écarts publiés : -20 M€ en 2013 pour les civils, +10 M€ en 2012 pour les militaires)
+    ecarts = []
+    for a in an2:
+        civ = sum(v[a] for s, lib, v in postes if s == "dépenses" and re.search(r"^Pensions civiles|invalidité", lib))
+        mil = next(v[a] for s, lib, v in postes if s == "dépenses" and lib.startswith("Pensions militaires"))
+        for nom, x, y in (("civils", civ, depenses["fpe_civils_et_ati"][a]), ("militaires", mil, depenses["fpe_militaires"][a])):
+            verifier(abs(x - y) <= 25, f"retraites {a} : CAS {nom} ≠ F1 ({x:.0f} / {y:.0f})")
+            if abs(x - y) > 1.5:
+                ecarts.append(f"{a} {nom} {x - y:+.0f} M€")
+    if ecarts:
+        print("  écarts entre le CAS Pensions (F2) et les dépenses de pensions (F1) : " + " ; ".join(ecarts))
+    ecrire_csv("retraites_cas_pensions.csv", ["annee", "sens", "poste", "libelle", "millions_euros", "source_id"], out)
+
+    an3, postes, totaux, resultat = compte("F3", ("charges", "produits"))
+    verifier(resultat is not None, "retraites F3 : résultat introuvable")
+    regles_cnracl = [
+        ("charges", r"^Prestations", "prestations"), ("charges", r"^Compensations", "compensations"),
+        ("charges", r"article 59", "transferts_article_59"), ("charges", r"^Autres charges", "autres"),
+        ("charges", r"gestion courante", "gestion_courante"), ("charges", r"financières", "financieres"),
+        ("charges", r"exceptionnelles", "exceptionnelles"),
+        ("produits", r"^Cotisations", "cotisations_et_produits_affectes"), ("produits", r"^Compensations", "compensations"),
+        ("produits", r"article 59", "transferts_article_59"), ("produits", r"^Autres produits", "autres"),
+        ("produits", r"financiers", "financiers"), ("produits", r"exceptionnels", "exceptionnels"),
+    ]
+    out = ecrire_compte("retraites F3", an3, postes, totaux, resultat, regles_cnracl,
+                        {"charges": "charge", "produits": "produit"}, 1.5)
+    ecrire_csv("retraites_cnracl_compte.csv", ["annee", "sens", "poste", "libelle", "millions_euros", "source_id"], out)
+
+    # F4 : taux de cotisation, 2000-2025 (%)
+    an4, S = series_annuelles(lignes(fin, "F4"), 2)
+    taux = {
+        ("pcmr", "salarie"): serie(S, r"PCMR", r"cotisation salarié"),
+        ("pcmr", "employeur_civils_ministeres"): serie(S, r"PCMR", r"civiles.*ministères"),
+        ("pcmr", "employeur_civils_etablissements"): serie(S, r"PCMR", r"opérateurs"),
+        ("pcmr", "employeur_militaires"): serie(S, r"PCMR", r"pensions militaires"),
+        ("pcmr", "employeur_ati"): serie(S, r"PCMR", r"invalidité"),
+        ("ouvriers_etat", "salarie"): serie(S, r"ouvriers", r"salarié"),
+        ("ouvriers_etat", "employeur"): serie(S, r"ouvriers", r"employeur"),
+        ("cnracl", "salarie"): serie(S, r"CNRACL", r"salarié"),
+        ("cnracl", "employeur"): serie(S, r"CNRACL", r"employeur"),
+    }
+    out = []
+    for a in an4:
+        p, c, o = taux[("pcmr", "salarie")][a], taux[("cnracl", "salarie")][a], taux[("ouvriers_etat", "salarie")][a]
+        verifier(abs(p - c) < 0.001 and abs(p - o) < 0.01, f"retraites F4 {a} : taux salariés différents")
+        for (reg, t), v in taux.items():
+            if v.get(a) is not None:
+                out.append([a, reg, t, arrondi(v[a], 4), SRC_RET])
+    ecrire_csv("retraites_taux_cotisation.csv", ["annee", "regime", "taux", "taux_pct", "source_id"], out)
+
+    # F5 : ratio démographique (cotisants / pensionnés de droit direct et dérivé), 1990-2025
+    an5, S = series_annuelles(lignes(fin, "F5"), 3)
+    regs = [("fpe_civils", (r"PCMR", r"Pensions civiles")), ("fpe_militaires", (r"PCMR", r"Pensions militaires")),
+            ("ouvriers_etat", (r"ouvriers",)), ("cnracl_fpt", (r"CNRACL", r"\| FPT \|")),
+            ("cnracl_fph", (r"CNRACL", r"\| FPH \|"))]
+    out, ecarts = [], []
+    for cle, m in regs:
+        cot, pen, rat = serie(S, *m, r"cotisants"), serie(S, *m, r"pensionnés"), serie(S, *m, r"ratio")
+        for a in an5:
+            c, p, r = cot.get(a), pen.get(a), rat.get(a)
+            if c is None and p is None:
+                continue
+            if None not in (c, p, r):  # ratios anciens publiés à 0,1 près
+                verifier(abs(r - c / p) <= 0.07, f"retraites F5 {cle} {a} : ratio {r} ≠ {c}/{p}")
+                if abs(r - c / p) > 0.051:
+                    ecarts.append(f"{cle} {a} : publié {r}, calculé {c / p:.3f}")
+            out.append([a, cle, arrondi(c, 3), arrondi(p, 3), arrondi(r, 4), SRC_RET])
+    if ecarts:
+        print("  ratios démographiques publiés différents du calcul cotisants / pensionnés : " + " ; ".join(ecarts))
+    ecrire_csv("retraites_ratio_demographique.csv",
+               ["annee", "regime", "cotisants_milliers", "pensionnes_milliers", "ratio_publie", "source_id"], out)
+
+    # Stocks : pensions en paiement au 31 décembre (F3, 2000-2025) et caractéristiques (F1)
+    st = classeur(z, "RA2026_Retraites_donnees_com_stocks.xlsx")
+    an_s, S = series_annuelles(lignes(st, "F3"), 3)
+    regs = [("fpe_civils", (r"PCMR", r"civiles")), ("fpe_militaires", (r"militaires",)), ("ouvriers_etat", (r"ouvriers",)),
+            ("cnracl_fpt", (r"CNRACL", r"territoriale")), ("cnracl_fph", (r"CNRACL", r"hospitalière"))]
+    out, stock = [], {}
+    for cle, m in regs:
+        tot, dd, de = serie(S, *m, r"\| Total$"), serie(S, *m, r"\| Droit direct$"), serie(S, *m, r"\| Droit dérivé$")
+        stock[cle] = {"direct": dd, "derive": de}
+        for a in an_s:
+            verifier(abs(tot[a] - dd[a] - de[a]) <= 0.15, f"retraites stocks {cle} {a} : direct + dérivé ≠ total")
+            out += [[a, cle, "total", arrondi(tot[a], 3), SRC_RET], [a, cle, "direct", arrondi(dd[a], 3), SRC_RET],
+                    [a, cle, "derive", arrondi(de[a], 3), SRC_RET]]
+    ecrire_csv("retraites_pensions_en_paiement.csv", ["annee", "regime", "droit", "milliers", "source_id"], out)
+
+    L = lignes(st, "F1")
+    an_c = annee_titre(L)
+    i_reg = next(i for i, l in enumerate(L) if texte(l[1]).startswith("Pensions civiles"))
+    attendus = ["civiles", "militaires", None, "territoriale", "hospitalière"]
+    for k, mot in enumerate(attendus):
+        if mot:
+            verifier(mot in texte(L[i_reg][1 + k]).lower(), f"retraites stocks F1 : colonne {k + 2} inattendue")
+    verifier("ouvriers" in texte(L[i_reg - 1][3]).lower(), "retraites stocks F1 : colonne des ouvriers d'État introuvable")
+    ordre = ["fpe_civils", "fpe_militaires", "ouvriers_etat", "cnracl_fpt", "cnracl_fph"]
+    indicateurs = [(r"^Effectifs", "effectif_milliers"), (r"^Âge moyen des bénéficiaires", "age_moyen"),
+                   (r"^Âge moyen de première", "age_premiere_mise_en_paiement"),
+                   (r"^Durée moyenne", "duree_services_trimestres"), (r"^Taux moyen", "taux_liquidation_pct"),
+                   (r"^Indice moyen", "indice_liquidation"), (r"retraite totale", "pension_mensuelle_moyenne_euros")]
+    out, droit = [], None
+    for l in L[i_reg + 1:]:
+        lib = texte(l[0])
+        if lib.startswith("Sources"):
+            break
+        if lib.startswith("Pensions de droit"):
+            droit = "direct" if "direct" in lib else "derive"
+            continue
+        vals = [num(l[1 + k]) if 1 + k < len(l) else None for k in range(5)]
+        if all(v is None for v in vals):
+            continue
+        ind = [c for m, c in indicateurs if re.search(m, lib)]
+        verifier(len(ind) == 1 and droit, f"retraites stocks F1 : ligne « {lib} » non reconnue")
+        for cle, v in zip(ordre, vals):
+            if v is not None:
+                out.append([an_c, cle, droit, ind[0], arrondi(v, 4), SRC_RET])
+                if ind[0] == "effectif_milliers":
+                    verifier(abs(v - stock[cle][droit][an_c]) < 0.002, f"retraites {cle} {droit} : effectif F1 ≠ F3")
+    ecrire_csv(f"retraites_caracteristiques_{an_c}.csv", ["annee", "regime", "droit", "indicateur", "valeur", "source_id"], out)
+
+    # Montants : pension mensuelle moyenne (stocks, y compris accessoires), 2000-2025
+    mt = classeur(z, "RA2026_Retraite_donnees_comp_montants_pensions.xlsx")
+    L = lignes(mt, "F6")
+    i_ent = next(i for i, l in enumerate(L) if len(colonnes_annees(l)) >= 5)
+    cols = colonnes_annees(L[i_ent])
+    regs = [(r"civiles", "fpe_civils"), (r"militaires", "fpe_militaires"), (r"ouvriers", "ouvriers_etat"),
+            (r"FPT", "cnracl_fpt"), (r"FPH", "cnracl_fph")]
+    out, reg, montants = [], None, {}
+    for l in L[i_ent + 1:]:
+        if texte(l[0]).startswith("Source"):
+            break
+        b = texte(l[1]) if len(l) > 1 else ""
+        if not b:
+            continue
+        if b.lower().startswith("droit"):
+            droit = "direct" if "direct" in b else "derive"
+        else:
+            r_ = [c for m, c in regs if re.search(m, b)]
+            verifier(len(r_) == 1, f"retraites montants F6 : « {b} » non reconnu")
+            reg, droit = r_[0], "ensemble"
+        for j, (a, _) in cols.items():
+            v = num(l[j]) if j < len(l) else None
+            if v is not None:
+                out.append([a, reg, droit, arrondi(v, 2), SRC_RET])
+                montants[(reg, droit, a)] = v
+    verifier(len({r[1] for r in out}) == 5, "retraites montants F6 : régimes manquants")
+    ecrire_csv("retraites_pension_moyenne.csv", ["annee", "regime", "droit", "euros_par_mois", "source_id"], out)
+    for cle in ordre:  # recoupement avec les caractéristiques (stocks F1)
+        car = next(float(r[4]) for r in csv.reader(open(CSV / f"retraites_caracteristiques_{an_c}.csv", encoding="utf-8"), delimiter=";")
+                   if r[1] == cle and r[2] == "direct" and r[3] == "pension_mensuelle_moyenne_euros")
+        verifier(abs(car - montants[(cle, "direct", an_c)]) < 0.01, f"retraites {cle} : pension moyenne F1 ≠ F6")
+
+    # Flux : nouvelles pensions (F4, 2000-2025), contractuels (Ircantec) et âge de départ (vue)
+    fl = classeur(z, "RA2026_Retraites_donnees_comp_flux.xlsx")
+    L = lignes(fl, "F4")
+    i_ent = next(i for i, l in enumerate(L) if len(colonnes_annees(l)) >= 5)
+    cols = colonnes_annees(L[i_ent])
+    regs = [(r"^Pensions civiles", "fpe_civils"), (r"^Pensions militaires", "fpe_militaires"),
+            (r"^Ouvriers", "ouvriers_etat"), (r"territoriale", "cnracl_fpt"), (r"hospitalière", "cnracl_fph")]
+    out, flux, reg = [], defaultdict(dict), None
+    for l in L[i_ent + 1:]:
+        if texte(l[0]).startswith("Source"):
+            break
+        b = texte(l[1]) if len(l) > 1 else ""
+        if not b:
+            continue
+        if b.startswith("Effectifs"):
+            droit = "direct" if "direct" in b else "derive"
+        else:
+            r_ = [c for m, c in regs if re.search(m, b)]
+            verifier(len(r_) == 1, f"retraites flux F4 : « {b} » non reconnu")
+            reg, droit = r_[0], "total"
+        for j, (a, _) in cols.items():
+            v = num(l[j]) if j < len(l) else None
+            if v is not None:
+                flux[(reg, droit)][a] = v
+                out.append([a, reg, droit, arrondi(v, 3), SRC_RET])
+    for reg in ordre:
+        for a, t in flux[(reg, "total")].items():
+            verifier(abs(t - flux[(reg, "direct")][a] - flux[(reg, "derive")][a]) <= 0.11,
+                     f"retraites flux {reg} {a} : direct + dérivé ≠ total")
+    vue = classeur(z, "ra_2026_vue_flux_de_personnels_retraites.xlsx")
+    L = lignes(vue, "Figure 2")
+    i_ent = next(i for i, l in enumerate(L) if len(colonnes_annees(l)) >= 5)
+    cols = colonnes_annees(L[i_ent])
+    regs = [(r"civils", "fpe_civils"), (r"Militaires", "fpe_militaires"), (r"Ouvriers", "ouvriers_etat"),
+            (r"^FPT", "cnracl_fpt"), (r"^FPH", "cnracl_fph"), (r"Ircantec", "ircantec")]
+    vus = set()
+    for l in L[i_ent + 1:]:
+        b = texte(l[1]) if len(l) > 1 else ""
+        if b.startswith("Source"):
+            break
+        if not b:
+            continue
+        r_ = [c for m, c in regs if re.search(m, b)]
+        verifier(len(r_) == 1, f"retraites vue figure 2 : « {b} » non reconnu")
+        vus.add(r_[0])
+        for j, (a, _) in cols.items():
+            v = num(l[j]) if j < len(l) else None
+            if v is None:
+                continue
+            if r_[0] == "ircantec":
+                out.append([a, "ircantec", "direct", arrondi(v, 3), SRC_RET])
+            else:
+                verifier(abs(v - flux[(r_[0], "direct")][a]) <= 0.06, f"retraites {r_[0]} {a} : vue ≠ données complémentaires")
+    verifier(len(vus) == 6, "retraites vue figure 2 : lignes manquantes")
+    ecrire_csv("retraites_nouvelles_pensions.csv", ["annee", "regime", "droit", "milliers", "source_id"], out)
+
+    L = lignes(vue, "Figure 7")
+    i_ent = next(i for i, l in enumerate(L) if len(colonnes_annees(l)) >= 5)
+    cols = colonnes_annees(L[i_ent])
+    motifs = [(r"^Sédentaire", "sedentaire"), (r"^Actif", "actif"), (r"^Carrière longue", "carriere_longue"),
+              (r"^Ens", "ensemble")]
+    out = []
+    for l in L[i_ent + 1:]:
+        b = texte(l[1]) if len(l) > 1 else ""
+        if b.startswith("Source"):
+            break
+        if not b:
+            continue
+        m_ = [c for m, c in motifs if re.search(m, b)]
+        verifier(len(m_) == 1, f"retraites vue figure 7 : « {b} » non reconnu")
+        for j, (a, _) in cols.items():
+            v = num(l[j]) if j < len(l) else None
+            if v is not None:
+                out.append([a, m_[0], arrondi(v, 3), SRC_RET])
+    verifier(len({r[1] for r in out}) == 4, "retraites vue figure 7 : motifs manquants")
+    ecrire_csv("retraites_age_depart.csv", ["annee", "motif", "age_moyen", "source_id"], out)
+
+
+# --------------------------------------------------------------------------
+# 8. Salaires par ministère, type de collectivité et filière ; hautes rémunérations ;
+#    effectifs par ministère (DGAFP, rapport annuel 2026)
+# --------------------------------------------------------------------------
+def moyenne_ponderee_ok(parts: list[float], salaires: list[float], ensemble: float, nom: str) -> None:
+    verifier(abs(sum(parts) - 100) <= 0.01, f"{nom} : les parts d'effectifs ne totalisent pas 100 ({sum(parts):.3f})")
+    m = sum(p * s for p, s in zip(parts, salaires)) / 100
+    verifier(abs(m - ensemble) <= 0.5, f"{nom} : moyenne pondérée {m:.2f} ≠ ensemble publié {ensemble:.2f}")
+
+
+def extraire_detail_salaires(hl: bool) -> None:
+    zn = chemin("dgafp/ra_2026_remu_niveaux.zip", hl)
+    vue = classeur(zn, "ra_2026_vue_renumerations_niveaux.xlsx")
+    SRC = "DGAFP_RA2026_REMU"
+
+    # Figure 6 : ministères et EPA de l'État
+    L = lignes(vue, "Figure 6")
+    an = annee_titre(L)
+    i0 = next(i for i, l in enumerate(L) if texte(l[1]).startswith("Départements ministériels"))
+    i_ens = next(i for i, l in enumerate(L) if i > i0 and texte(l[1]) == "Ensemble")
+    verifier(texte(L[i0][2]) == "Ministères" and "EPA" in texte(L[i0][4]), "salaires figure 6 : colonnes inattendues")
+    verifier("EQTP" in texte(L[i0 + 1][2]) and "net" in texte(L[i0 + 1][3]), "salaires figure 6 : indicateurs inattendus")
+    out = []
+    for per, jp, js in (("ministeres", 2, 3), ("epa", 4, 5)):
+        parts, sal = [], []
+        for l in L[i0 + 2:i_ens]:
+            lib = sans_renvoi(texte(l[1]))
+            if lib:
+                parts.append(num(l[jp]))
+                sal.append(num(l[js]))
+                out.append([an, "fpe", per, lib, arrondi(parts[-1], 4), arrondi(sal[-1], 2), SRC])
+        moyenne_ponderee_ok(parts, sal, num(L[i_ens][js]), f"figure 6 {per}")
+        out.append([an, "fpe", per, "Ensemble", 100, arrondi(num(L[i_ens][js]), 2), SRC])
+
+    # Figure 8 : FPT par type d'employeur et par filière
+    L = lignes(vue, "Figure 8")
+    verifier(annee_titre(L) == an, "salaires figure 8 : année différente")
+    i_ens = next(i for i, l in enumerate(L) if texte(l[1]) == "Ensemble")
+    for dim, jl, jp, js in (("employeur", 1, 2, 3), ("filiere", 5, 6, 7)):
+        verifier(num(L[i_ens][jp]) == 100, f"salaires figure 8 {dim} : ligne Ensemble attendue")
+        parts, sal = [], []
+        for l in L[i_ens + 1:]:
+            lib = sans_renvoi(texte(l[jl])) if jl < len(l) else ""
+            if not lib or num(l[jp]) is None:
+                break
+            parts.append(num(l[jp]))
+            sal.append(num(l[js]))
+            out.append([an, "fpt", dim, lib, arrondi(parts[-1], 4), arrondi(sal[-1], 2), SRC])
+        if dim == "employeur":
+            moyenne_ponderee_ok(parts, sal, num(L[i_ens][js]), "figure 8 employeurs")
+        else:  # la DGAFP ne publie pas toutes les filières (animation, hors filière…)
+            verifier(80 < sum(parts) < 100, "figure 8 filières : total inattendu")
+        out.append([an, "fpt", dim, "Ensemble", 100, arrondi(num(L[i_ens][js]), 2), SRC])
+
+    # Figure 9 : FPH par filière, hôpitaux / établissements médico-sociaux / ensemble
+    L = lignes(vue, "Figure 9")
+    verifier(annee_titre(L) == an, "salaires figure 9 : année différente")
+    i_sect = next(i for i, l in enumerate(L) if texte(l[2]) == "Hôpitaux publics")
+    i_ens = next(i for i, l in enumerate(L) if texte(l[1]) == "Ensemble")
+    for sect, jp, js in (("filiere_hopitaux", 2, 3), ("filiere_medico_social", 4, 5), ("filiere", 6, 7)):
+        verifier(texte(L[i_sect][jp]) in ("Hôpitaux publics", "Établissements médico-sociaux", "FPH"), "figure 9 : colonnes")
+        parts, sal = [], []
+        for l in L[i_ens + 1:]:
+            lib = sans_renvoi(texte(l[1]))
+            if not lib or num(l[jp]) is None:
+                break
+            parts.append(num(l[jp]))
+            sal.append(num(l[js]))
+            out.append([an, "fph", sect, lib, arrondi(parts[-1], 4), arrondi(sal[-1], 2), SRC])
+        moyenne_ponderee_ok(parts, sal, num(L[i_ens][js]), f"figure 9 {sect}")
+        out.append([an, "fph", sect, "Ensemble", 100, arrondi(num(L[i_ens][js]), 2), SRC])
+    ecrire_csv(f"salaires_par_employeur_et_filiere_{an}.csv",
+               ["annee", "versant", "dimension", "categorie", "part_eqtp_pct", "salaire_net_moyen", "source_id"], out)
+
+    # Encadré 2 : le dernier centile (1 % des postes les mieux rémunérés)
+    L = lignes(vue, "E2 - FigA")
+    i0 = next(i for i, l in enumerate(L) if texte(l[2]).startswith("Limite inférieure"))
+    out = []
+    for l in L[i0 + 1:]:
+        lib = texte(l[1])
+        if lib.startswith("Source"):
+            break
+        if lib in ("FPE", "FPT", "FPH", "Ensemble FP"):
+            out.append([an, {"Ensemble FP": "ensemble"}.get(lib, lib.lower()), arrondi(num(l[2]), 2),
+                        arrondi(num(l[3]), 2), arrondi(num(l[4]), 2), SRC])
+    verifier(len(out) == 4, "encadré 2 figure A : 4 lignes attendues")
+    ecrire_csv(f"hautes_remunerations_dernier_centile_{an}.csv",
+               ["annee", "versant", "seuil_net_mensuel", "net_moyen", "net_median", "source_id"], out)
+
+    L = lignes(vue, "E2 - FigB")
+    i0 = next(i for i, l in enumerate(L) if texte(l[2]).startswith("Ensemble de la fonction publique"))
+    out, groupe, sommes = [], None, defaultdict(lambda: [0.0, 0.0, 0.0])
+    for l in L[i0 + 1:]:
+        lib = sans_renvoi(texte(l[1]))
+        if lib.startswith("Source"):
+            break
+        if not lib:
+            continue
+        v = [num(l[j]) for j in (2, 3, 4)]
+        if all(x is None for x in v):
+            groupe = lib
+            continue
+        out.append([an, groupe, lib] + [arrondi(x, 3) for x in v] + [SRC])
+        for k in range(3):
+            sommes[groupe][k] += v[k]
+    verifier(set(sommes) == {"Sexe", "Statut", "Âge"}, "encadré 2 figure B : groupes inattendus")
+    for g, s in sommes.items():
+        verifier(all(abs(x - 100) <= 0.01 for x in s), f"encadré 2 figure B {g} : total ≠ 100")
+    ecrire_csv(f"hautes_remunerations_profil_{an}.csv",
+               ["annee", "groupe", "modalite", "ensemble_fp_pct", "dix_pour_cent_mieux_payes_pct",
+                "un_pour_cent_mieux_payes_pct", "source_id"], out)
+
+    L = lignes(vue, "E2 - FigC")
+    i0 = next(i for i, l in enumerate(L) if texte(l[2]).startswith("Salaire net moyen"))
+    out, parent = [], None
+    for l in L[i0 + 1:]:
+        lib = sans_renvoi(texte(l[1]))
+        if lib.startswith("Source"):
+            break
+        if not lib:
+            continue
+        if lib in ("Catégorie A+", "Hors A+"):
+            niveau, parent = 0, lib
+        elif parent == "Catégorie A+" and lib in ("FPE", "FPT", "FPH"):
+            niveau = 1
+        else:
+            niveau = 2 if parent == "Catégorie A+" else 1
+        out.append([an, niveau, lib, arrondi(num(l[2]), 2), arrondi(num(l[3]), 3), arrondi(num(l[4]), 3), SRC])
+    part = {r[2]: float(r[5]) for r in out if r[1] <= 1}
+    verifier(abs(part["Catégorie A+"] + part["Hors A+"] - 100) <= 0.01, "encadré 2 figure C : A+ + hors A+ ≠ 100")
+    verifier(abs(part["FPE"] + part["FPT"] + part["FPH"] - part["Catégorie A+"]) <= 0.01, "encadré 2 figure C : A+")
+    ecrire_csv(f"hautes_remunerations_corps_{an}.csv",
+               ["annee", "niveau", "corps_ou_emploi", "salaire_net_moyen", "part_des_agents_dans_le_dernier_centile_pct",
+                "part_du_dernier_centile_pct", "source_id"], out)
+
+    # Salaires des emplois et corps A+ (données complémentaires, figure 10)
+    wb = classeur(zn, "ra_2026_remu_niveaux_donnees_comp.xlsx")
+    L = lignes(wb, "Figure 10")
+    verifier(annee_titre(L) == an, "figure 10 : année différente")
+    i0 = next(i for i, l in enumerate(L) if texte(l[1]) == "Salaire brut moyen")
+    verifier(texte(L[i0][3]) == "Salaire net moyen" and texte(L[i0][4]) == "Salaire net médian", "figure 10 : colonnes")
+    out = []
+    for l in L[i0 + 1:]:
+        lib = sans_renvoi(texte(l[0]))
+        if lib.startswith("Source"):
+            break
+        if not lib or num(l[1]) is None:
+            continue
+        niveau = (0 if lib.startswith("Total") else 1 if lib.startswith("Catégorie A+") else
+                  2 if re.match(r"Encadrement supérieur et emplois de di|Enseignement supérieur|Médecins territoriaux", lib) else 3)
+        out.append([an, niveau, lib, arrondi(num(l[1]), 2), arrondi(num(l[2]), 3), arrondi(num(l[3]), 2),
+                    arrondi(num(l[4]), 2), SRC])
+    verifier(len(out) >= 15, "figure 10 : lignes manquantes")
+    ecrire_csv(f"salaires_a_plus_{an}.csv",
+               ["annee", "niveau", "corps_ou_emploi", "brut_moyen", "part_primes_pct", "net_moyen", "net_median", "source_id"],
+               out)
+
+    # Les dix plus hautes rémunérations publiées par les employeurs (2025)
+    L = lignes(vue, "E2 - FigD")
+    an_d = annee_titre(L)
+    i0 = next(i for i, l in enumerate(L) if texte(l[2]).startswith("Moyenne de la somme"))
+    synth = {}
+    for l in L[i0 + 1:]:
+        lib = texte(l[1])
+        if lib.startswith("Source"):
+            break
+        m = re.match(r"(FPE|FPT|FPH)\s*:", lib)
+        if m:
+            synth[m.group(1)] = (num(l[2]), num(l[3]), num(l[4]), sans_renvoi(lib))
+    verifier(set(synth) == {"FPE", "FPT", "FPH"}, "encadré 2 figure D : versants manquants")
+    for v, (moy, mens, _, _) in synth.items():
+        verifier(abs(moy / 120 - mens) <= 0.5, f"encadré 2 figure D {v} : mensuel ≠ somme / 120")
+    wb = classeur(zn, "ra_2026_remu_niveaux_donnees_comp_hautes_remu.xlsx")
+    verifier(annee_titre(lignes(wb, "FPE")) == an_d, "dix plus hautes rémunérations : année différente")
+    out = []
+    L = lignes(wb, "FPE")
+    i0 = next(i for i, l in enumerate(L) if texte(l[0]) == "Département ministériel")
+    sommes = []
+    for l in L[i0 + 1:]:
+        lib = texte(l[0])
+        if not lib or lib.startswith(("*", "Source")):
+            break
+        s, f, h = num(l[1]), num(l[2]), num(l[3])
+        if lib == "Ensemble":
+            verifier(abs(s - sum(sommes) / len(sommes)) <= 1, "dix plus hautes rémunérations FPE : moyenne")
+            verifier(abs(s - synth["FPE"][0]) <= 1, "dix plus hautes rémunérations FPE : ≠ figure D")
+            continue
+        verifier(f + h == 10, f"dix plus hautes rémunérations {lib} : {f} + {h} ≠ 10")
+        sommes.append(s)
+        out.append([an_d, "fpe", "", lib, arrondi(s, 2), int(f), int(h), SRC])
+    L = lignes(wb, "FPH")
+    i0 = next(i for i, l in enumerate(L) if texte(l[0]).startswith("SIREN"))
+    for l in L[i0 + 1:]:
+        if not texte(l[0]) or texte(l[0]).startswith("Source"):
+            break
+        f, h = num(l[3]), num(l[4])
+        verifier(f + h == 10, f"dix plus hautes rémunérations {texte(l[1])} : {f} + {h} ≠ 10")
+        out.append([an_d, "fph", texte(l[0]), texte(l[1]), arrondi(num(l[2]), 2), int(f), int(h), SRC])
+    verifier(sum(1 for r in out if r[1] == "fph") >= 100, "dix plus hautes rémunérations FPH : lignes manquantes")
+    ecrire_csv(f"dix_plus_hautes_remunerations_{an_d}.csv",
+               ["annee", "versant", "siren", "employeur", "somme_dix_plus_hautes_brutes_euros", "femmes", "hommes",
+                "source_id"], out)
+    ecrire_csv(f"dix_plus_hautes_remunerations_synthese_{an_d}.csv",
+               ["annee", "versant", "champ", "moyenne_somme_dix_plus_hautes_euros", "brut_mensuel_moyen_euros",
+                "part_femmes_pct", "source_id"],
+               [[an_d, v.lower(), synth[v][3], arrondi(synth[v][0], 2), arrondi(synth[v][1], 2), arrondi(synth[v][2], 1), SRC]
+                for v in ("FPE", "FPT", "FPH")])
+
+    # Effectifs des départements ministériels par statut (postes, figure 2 « statut »)
+    zp = chemin("dgafp/ra_2026_postes.zip", hl)
+    wb = classeur(zp, "ra2026_caracteristiques_postes_donnees_comp_FPE.xlsx")
+    L = lignes(wb, "Figure 2 statut")
+    i_ent = next(i for i, l in enumerate(L) if texte(l[1]) == "Fonctionnaires")
+    an_e, an_p = annee_entete(L[i_ent - 1][1])[0], annee_entete(L[i_ent - 1][6])[0]
+    verifier(texte(L[i_ent][2]) == "Contractuels" and texte(L[i_ent][3]).startswith("Militaires")
+             and texte(L[i_ent][5]) == "Total", "effectifs par ministère : colonnes inattendues")
+    out, total = [], None
+    for l in L[i_ent + 1:]:
+        lib = sans_renvoi(texte(l[0]))
+        if not lib or lib.startswith("Source"):
+            break
+        v = [num(l[j]) for j in range(1, 7)]
+        verifier(abs(sum(v[:4]) - v[4]) <= 0.003, f"effectifs par ministère {lib} : somme des statuts ≠ total")
+        if lib == "Total":
+            total = v
+            continue
+        if lib.startswith("Total hors enseignants"):
+            out.append([an_e, lib, 0] + [arrondi(x, 3) for x in v] + ["DGAFP_RA2026_POSTES"])
+            continue
+        niveau = 1 if re.match(r"Solidarités|Travail", lib) else 0
+        out.append([an_e, lib, niveau] + [arrondi(x, 3) for x in v] + ["DGAFP_RA2026_POSTES"])
+    verifier(total is not None, "effectifs par ministère : ligne Total introuvable")
+    s0 = sum(float(r[7]) for r in out if r[2] == 0 and not r[1].startswith("Total"))
+    verifier(abs(s0 - total[4]) <= 0.01, f"effectifs par ministère : somme {s0:.3f} ≠ total {total[4]:.3f}")
+    soc = next(float(r[7]) for r in out if r[1] == "Ministères sociaux")
+    verifier(abs(sum(float(r[7]) for r in out if r[2] == 1) - soc) <= 0.002, "effectifs : ministères sociaux ≠ somme")
+    out.append([an_e, "Total", 0] + [arrondi(x, 3) for x in total] + ["DGAFP_RA2026_POSTES"])
+    ecrire_csv(f"effectifs_par_ministere_{an_e}.csv",
+               ["annee", "ministere", "niveau", "fonctionnaires_milliers", "contractuels_milliers", "militaires_milliers",
+                "autres_milliers", "total_milliers", f"total_{an_p}_milliers", "source_id"], out)
+
+
+# --------------------------------------------------------------------------
+# 9. Frais de personnel des collectivités locales par département (OFGL, 2024)
+# --------------------------------------------------------------------------
+def departement_de_commune(insee: str) -> str:
+    return insee[:3] if insee.startswith("97") else insee[:2]
+
+
+def lire_csv_ofgl(p: Path) -> list[dict]:
+    return list(csv.DictReader(io.StringIO(p.read_text(encoding="utf-8-sig")), delimiter=";"))
+
+
+def extraire_ofgl(hl: bool) -> None:
+    SRC = "OFGL_COMPTES_2024"
+    an = 2024
+    noms, pop = {}, {}
+    with open(CSV / "departements_population.csv", encoding="utf-8") as f:
+        for r in csv.DictReader(f, delimiter=";"):
+            noms[r["code"]] = r["departement"]
+            if r["annee_1er_janvier"] == str(an):
+                pop[r["code"]] = int(r["population"])
+    verifier(len(noms) == 101 and len(pop) == 101, "departements_population.csv : 101 départements attendus")
+
+    # Communes (agrégées par département par le service de l'OFGL)
+    d = json.loads(chemin("ofgl/communes_frais_personnel_2024_par_departement.json", hl).read_text(encoding="utf-8"))
+    communes = {r["dep_code"]: float(r["bp"] or 0) for r in d["results"]}
+    verifier(set(communes) == set(noms), "OFGL communes : départements manquants ou inconnus")
+
+    # Départements : la Ville de Paris (75, déjà comptée parmi les communes) et la Métropole de Lyon
+    # (691, déjà comptée parmi les groupements) sont écartées pour ne pas les compter deux fois.
+    departements, ecartes, alsace = {}, [], None
+    for r in lire_csv_ofgl(chemin("ofgl/departements_frais_personnel_2024.csv", hl)):
+        code, m = r["dep_code"], float(r["montant_bp"] or 0)
+        if code in ("75", "691"):
+            ecartes.append((code, r["lbudg"], m))
+            continue
+        if code == "67A":  # Collectivité européenne d'Alsace : Bas-Rhin et Haut-Rhin réunis depuis 2021
+            alsace = m
+            continue
+        verifier(code in noms and code not in departements, f"OFGL départements : code {code} inattendu")
+        departements[code] = m
+    verifier(alsace is not None and "67" not in departements and "68" not in departements,
+             "OFGL départements : Collectivité européenne d'Alsace attendue (67A)")
+    for code in ("67", "68"):  # répartie au prorata de la population au 1er janvier 2024
+        departements[code] = alsace * pop[code] / (pop["67"] + pop["68"])
+    verifier(len(ecartes) == 2, "OFGL départements : Ville de Paris et Métropole de Lyon attendues")
+    verifier(abs(communes["75"] - next(m for c, _, m in ecartes if c == "75")) < 1, "Ville de Paris : montants différents")
+    sans_dep = sorted(set(noms) - set(departements) - {"75"})
+    verifier(sans_dep == ["2A", "2B", "972", "973"], f"OFGL départements : absents inattendus {sans_dep}")
+
+    # Groupements à fiscalité propre (y compris Métropole du Grand Paris et établissements publics territoriaux)
+    gfp = lire_csv_ofgl(chemin("ofgl/groupements_frais_personnel_2024.csv", hl))
+    verifier(len({r["siren"] for r in gfp}) == len(gfp), "OFGL groupements : doublons")
+    lyon = [r for r in gfp if r["epci_name"] == "Métropole de Lyon"]
+    verifier(len(lyon) == 1 and abs(float(lyon[0]["montant_bp"]) - next(m for c, _, m in ecartes if c == "691")) < 1,
+             "Métropole de Lyon : montants différents entre les bases")
+    multi = [r for r in gfp if "," in r["dep_code"]]
+    liste = ",".join(f'"{r["siren"]}"' for r in multi)
+    where = urllib.parse.quote(f"year(annee)=2024 and siren_epci in ({liste})")
+    url = (f"{OFGL}/detail_compositions_intercommunales_2012_2025/exports/csv?select=siren_epci%2Cinsee%2Cptot"
+           f"&where={where}&delimiter=%3B")
+    compo = lire_csv_ofgl(chemin("ofgl/composition_groupements_multidepartementaux_2024.csv", hl, url))
+    pops = defaultdict(lambda: defaultdict(int))
+    for r in compo:
+        pops[r["siren_epci"]][departement_de_commune(r["insee"])] += int(float(r["ptot"] or 0))
+    groupements = defaultdict(float)
+    detail = []
+    for r in gfp:
+        m = float(r["montant_bp"] or 0)
+        codes = r["dep_code"].split(",")
+        if len(codes) == 1:
+            verifier(codes[0] in noms, f"OFGL groupements : département {codes[0]} inconnu")
+            groupements[codes[0]] += m
+            continue
+        p = pops.get(r["siren"])
+        verifier(p and set(p) == set(codes), f"composition de {r['epci_name']} ({r['siren']}) incohérente : {dict(p or {})}")
+        tot = sum(p.values())
+        for c in sorted(p):
+            groupements[c] += m * p[c] / tot
+            detail.append([an, r["siren"], r["epci_name"], c, p[c], arrondi(p[c] / tot, 6), arrondi(m * p[c] / tot, 2), SRC])
+    tot_gfp = sum(float(r["montant_bp"] or 0) for r in gfp)
+    verifier(abs(sum(groupements.values()) - tot_gfp) < 1, "OFGL groupements : la répartition ne redonne pas le total")
+
+    # Recoupement avec les totaux nationaux de la DGCL repris par la DGAFP (milliards, arrondis à 0,1)
+    with open(CSV / "depenses_personnel_collectivites.csv", encoding="utf-8") as f:
+        dgcl = next(r for r in csv.DictReader(f, delimiter=";") if r["annee"] == str(an))
+    for nom, val, cle in (("communes", sum(communes.values()), "communes"), ("groupements", tot_gfp, "groupements"),
+                          ("départements", sum(departements.values()), "departements")):
+        verifier(abs(val / 1e9 - float(dgcl[cle])) <= 0.06, f"OFGL {nom} : {val / 1e9:.3f} Md€ ≠ DGCL {dgcl[cle]}")
+
+    notes = {
+        "75": "Ville de Paris : commune et département réunis, comptés une seule fois (communes)",
+        "69": "Métropole de Lyon comptée avec les groupements ; le département du Rhône hors métropole avec les départements",
+        "2A": "pas de conseil départemental : la collectivité de Corse est comptée avec les régions (non incluses)",
+        "2B": "pas de conseil départemental : la collectivité de Corse est comptée avec les régions (non incluses)",
+        "972": "pas de conseil départemental : la collectivité territoriale de Martinique est comptée avec les régions (non incluses)",
+        "973": "pas de conseil départemental : la collectivité territoriale de Guyane est comptée avec les régions (non incluses)",
+        "976": "le Département de Mayotte exerce aussi les compétences d'une région",
+        "67": "Collectivité européenne d'Alsace (Bas-Rhin et Haut-Rhin réunis) répartie au prorata de la population",
+        "68": "Collectivité européenne d'Alsace (Bas-Rhin et Haut-Rhin réunis) répartie au prorata de la population",
+    }
+    out = []
+    for code in sorted(noms, key=lambda c: (len(c) > 2 and c.startswith("97"), c)):
+        c_, g_, d_ = communes.get(code, 0.0), groupements.get(code, 0.0), departements.get(code)
+        out.append([an, code, noms[code], arrondi(c_, 2), arrondi(g_, 2), "" if d_ is None else arrondi(d_, 2),
+                    arrondi(c_ + g_ + (d_ or 0), 2), notes.get(code, ""), SRC])
+    ecrire_csv("depenses_personnel_locales_departements_2024.csv",
+               ["annee", "code", "departement", "communes_euros", "groupements_fiscalite_propre_euros", "departement_euros",
+                "total_euros", "note", "source_id"], out)
+    ecrire_csv("groupements_multidepartementaux_2024.csv",
+               ["annee", "siren", "groupement", "code_departement", "population_communes_membres", "part",
+                "frais_personnel_affectes_euros", "source_id"], detail)
+
+
+# --------------------------------------------------------------------------
 def main() -> int:
     hl = "--hors-ligne" in sys.argv
     try:
@@ -730,12 +1499,15 @@ def main() -> int:
         extraire_salaires(hl)
         extraire_point(hl, max(comptes["S13"]["D1"]))
         extraire_eurostat(hl, comptes)
+        extraire_retraites(hl)
+        extraire_detail_salaires(hl)
+        extraire_ofgl(hl)
         lignes_ = [f"# Empreintes SHA-256 des fichiers officiels utilisés pour la masse salariale "
                    f"(téléchargés le {date.today().isoformat()} ; outils/extraire_masse_salariale.py)."]
-        for nom in FICHIERS:
+        for nom, url in list(FICHIERS.items()) + list(URLS_CALCULEES.items()):
             p = CACHE / nom
             if p.exists():
-                lignes_.append(f"  {sha256(p)}  {nom}  <{FICHIERS[nom]}>")
+                lignes_.append(f"  {sha256(p)}  {nom}  <{url}>")
         EMPREINTES.write_text("\n".join(lignes_) + "\n", encoding="utf-8")
         print(f"  {EMPREINTES.relative_to(RACINE)}")
         print("Terminé. Lancer ensuite : python3 outils/construire_donnees.py")

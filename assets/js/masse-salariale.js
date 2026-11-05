@@ -1,9 +1,13 @@
 /* ==========================================================================
-   Page « La masse salariale » (et encadré de la page d'accueil), à partir de
-   donnees/site/masse_salariale.js (comptes nationaux de l'Insee, DGAFP, Eurostat).
+   Pages « Coût et évolution » (masse-salariale.html) et « Salaires »
+   (salaires.html), et encadré de la page d'accueil, à partir de
+   donnees/site/masse_salariale.js (comptes nationaux de l'Insee, DGAFP, OFGL,
+   Eurostat) et du fond de carte des départements.
    Les seuls calculs sont des sommes, des parts, des divisions (par habitant,
    par emploi), des conversions en euros constants (indice des prix à la
-   consommation de l'Insee) et l'estimation du salaire net signalée comme telle.
+   consommation de l'Insee), la part de chaque employeur dans les salaires nets
+   (effectifs x salaire moyen) et l'estimation du salaire net global, signalées
+   comme telles.
    ========================================================================== */
 (function () {
   "use strict";
@@ -835,6 +839,446 @@
   }
 
   /* ======================================================================
+     Détail par ministère, type de collectivité et filière (DGAFP)
+     ====================================================================== */
+  const lireChoix = (form, nom) => { const c = form && form.querySelector(`input[name="${nom}"]:checked`); return c ? c.value : null; };
+  const GROUPES_EMPLOYEURS = {
+    ministeres: { chaque: "de chaque ministère", par: "par ministère (agents civils)", entete: "Ministère" },
+    epa: { chaque: "des établissements publics de chaque ministère", par: "dans les établissements publics de l'État, par ministère de rattachement", entete: "Ministère de rattachement" },
+    fptEmployeurs: { chaque: "de chaque type d'employeur territorial", par: "dans la fonction publique territoriale, par employeur", entete: "Employeur" },
+    fptFilieres: { chaque: "de chaque filière territoriale", par: "dans la fonction publique territoriale, par filière", entete: "Filière" },
+    fphHopitaux: { chaque: "de chaque filière des hôpitaux publics", par: "dans les hôpitaux publics, par filière", entete: "Filière" },
+    fphMedicoSocial: { chaque: "de chaque filière des établissements médico-sociaux", par: "dans les établissements médico-sociaux publics, par filière", entete: "Filière" },
+    fphFilieres: { chaque: "de chaque filière hospitalière", par: "dans la fonction publique hospitalière, par filière", entete: "Filière" },
+  };
+  function sectionEmployeurs(M, id) {
+    const D = M.detail;
+    const fig = $(`figure-${id}`);
+    if (!fig || !D) return;
+    const form = fig.querySelector("form");
+    const select = form.querySelector("select");
+    const zone = $(`graphique-${id}`);
+    function lignesDe(g) {
+      const b = D[g];
+      const complet = Math.abs(b.partEqtp.reduce((a, p) => a + p, 0) - 100) < 0.05;
+      const sm = b.partEqtp.reduce((a, p, i) => a + p * b.salaire[i], 0);
+      return { b, complet, lignes: b.categories.map((c, i) => ({ cat: c, court: b.courts[i], eqtp: b.partEqtp[i], salaire: b.salaire[i], masse: complet ? (100 * b.partEqtp[i] * b.salaire[i]) / sm : null })) };
+    }
+    let graph, bloc;
+    function etat() {
+      const g = select ? select.value : lireChoix(form, `${id}-groupe`) || "ministeres";
+      let m = lireChoix(form, `${id}-mesure`) || "salaire";
+      const { complet } = lignesDe(g);
+      if (m === "masse" && !complet) m = "eqtp";
+      return { g, m };
+    }
+    function cfg() {
+      const { g, m } = etat();
+      const { b, complet, lignes } = lignesDe(g);
+      const G_ = GROUPES_EMPLOYEURS[g];
+      const tri = lignes.slice().sort((x, y) => y[m] - x[m]);
+      const mes = {
+        masse: { libelle: "Part des salaires nets versés", fmt: (v) => fmtPct(v, 1), axe: fmtAxePct, titre: `Part ${G_.chaque} dans les salaires nets versés, ${D.annee}` },
+        eqtp: { libelle: "Part des effectifs", fmt: (v) => fmtPct(v, 1), axe: fmtAxePct, titre: `Part ${G_.chaque} dans les effectifs en équivalent temps plein, ${D.annee}` },
+        salaire: { libelle: "Salaire net mensuel moyen", fmt: fmtEuro, axe: fmtAxeEuro, titre: `Salaire net mensuel moyen ${G_.par}, ${D.annee}` },
+      }[m];
+      $(`titre-fig-${id}`).textContent = mes.titre;
+      const ss = $(`sous-titre-${id}`);
+      if (ss) {
+        ss.textContent = m === "salaire" ? `Moyenne de l'ensemble : ${fmtEuro(b.salaireEnsemble)} nets par mois, en équivalent temps plein.`
+          : m === "masse" ? "Effectifs en équivalent temps plein multipliés par le salaire net moyen : la part de chacun dans les salaires nets versés (hors cotisations des employeurs)."
+            : complet ? "Effectifs en équivalent temps plein (un mi-temps compte pour un demi)." : "Effectifs en équivalent temps plein ; les filières « animation » et les agents hors filière ne sont pas détaillés par la DGAFP.";
+      }
+      form.querySelectorAll(`input[name="${id}-mesure"][value="masse"]`).forEach((i) => { i.disabled = !complet; i.closest("label").title = complet ? "" : "Non calculable : toutes les filières ne sont pas publiées"; });
+      $(`note-${id}`).textContent = `${g.startsWith("fph") ? "Champ : agents de la fonction publique hospitalière, hors internes et externes des hôpitaux." : g.startsWith("fpt") ? "Champ : agents de la fonction publique territoriale, hors assistants maternels et familiaux et apprentis." : "Champ : agents civils de la fonction publique de l'État (hors militaires, apprentis et internes), y compris contrats aidés."} France hors Mayotte, salaires nets de prélèvements sociaux, avant impôt sur le revenu, en équivalent temps plein, primes comprises.${m === "masse" ? " La part dans les salaires nets versés est notre calcul : part des effectifs × salaire moyen, rapporté au total." : ""} Source : ${D.source}.`;
+      // Tableau
+      const t = PLF.tableau({
+        legende: `${G_.entete} : effectifs et salaires, ${D.annee}`,
+        colonnes: [{ titre: G_.entete, cle: "cat", texte: true }, { titre: "Part des effectifs (EQTP)", cle: "eqtp", format: (v) => fmtPct(v, 1) },
+          { titre: "Salaire net mensuel moyen", cle: "salaire", format: fmtEuro }].concat(complet ? [{ titre: "Part des salaires nets versés (calcul)", cle: "masse", format: (v) => fmtPct(v, 1) }] : []),
+        lignes: lignes.slice().sort((x, y) => y.eqtp - x.eqtp).concat([{ cat: "Ensemble", eqtp: complet ? 100 : lignes.reduce((a, l) => a + l.eqtp, 0), salaire: b.salaireEnsemble, masse: complet ? 100 : null, _classe: "total" }]),
+        triable: false,
+      });
+      const cont = $(`donnees-${id}`);
+      cont.innerHTML = "";
+      bloc = PLF.blocDonnees(cont, {
+        table: t, csvNom: `salaires-${g}-${D.annee}.csv`,
+        csvEntetes: ["categorie", "part_effectifs_eqtp_pct", "salaire_net_mensuel_moyen", "part_salaires_nets_pct"],
+        csvLignes: lignes.map((l) => [l.cat, arr(l.eqtp, 3), arr(l.salaire, 2), arr(l.masse, 3)]),
+      });
+      return {
+        categories: tri.map((l) => l.court), series: [{ id: m, libelle: mes.libelle, couleur: "--ms-1", valeurs: tri.map((l) => l[m]) }],
+        formatValeur: mes.fmt, formatAxe: mes.axe, libelleValeur: mes.libelle, sansPart: true, hauteurBarre: 24, ecart: 12,
+        titreAccessible: mes.titre,
+      };
+    }
+    graph = G.barres(zone, cfg());
+    form.addEventListener("change", () => graph.maj(cfg()));
+  }
+
+  function sectionEffectifsMinisteres(M) {
+    const zone = $("graphique-eff-min");
+    if (!zone || !M.detail) return;
+    const E = M.detail.effectifs;
+    const lignes = E.lignes.filter((l) => l.niveau === 0 && !l.libelle.startsWith("Total")).sort((a, b) => b.total - a.total);
+    const statuts = [
+      { cle: "fonctionnaires", libelle: "Fonctionnaires", couleur: "--ms-1" },
+      { cle: "contractuels", libelle: "Contractuels", couleur: "--ms-3" },
+      { cle: "militaires", libelle: "Militaires", couleur: "--ms-4" },
+      { cle: "autres", libelle: "Autres (enseignants du privé sous contrat, ouvriers d'État, apprentis…)", couleur: "--ms-2" },
+    ];
+    const series = statuts.map((s) => ({ id: s.cle, libelle: s.libelle, couleur: s.couleur, valeurs: lignes.map((l) => l[s.cle] * 1000) }));
+    G.barres(zone, {
+      categories: lignes.map((l) => l.court), series, formatValeur: (v) => nf(0).format(Math.round(v)), formatAxe: (v) => (v === 0 ? "0" : nf(0).format(v)),
+      libelleValeur: "Agents", ligneTotal: "Total", hauteurBarre: 24, ecart: 12, titreAccessible: `Effectifs des ministères par statut, ${E.annee}`,
+    });
+    legende($("legende-eff-min"), series.map((s) => ({ libelle: s.libelle, couleur: s.couleur })));
+    const tot = E.lignes.find((l) => l.libelle === "Total");
+    const hors = E.lignes.find((l) => l.libelle.startsWith("Total hors"));
+    $("note-eff-min").textContent = `Emplois principaux au 31 décembre ${E.annee}, tous statuts, y compris les établissements publics rattachés à chaque ministère ; France hors Mayotte, hors contrats aidés. Total : ${nf(0).format(Math.round(tot.total * 1000))} agents, dont ${nf(0).format(Math.round(hors.total * 1000))} hors enseignants. Ministères sociaux : santé, solidarités et travail. Une partie des agents des Affaires étrangères travaille à l'étranger et n'est pas comptée. Source : ${E.source}.`;
+    const t = PLF.tableau({
+      legende: `Effectifs des ministères par statut au 31 décembre ${E.annee}`,
+      colonnes: [{ titre: "Ministère", cle: "libelle", texte: true }].concat(statuts.map((s) => ({ titre: s.libelle.split(" (")[0], cle: s.cle, format: (v) => nf(0).format(Math.round(v * 1000)) })),
+        [{ titre: "Total", cle: "total", format: (v) => nf(0).format(Math.round(v * 1000)) }, { titre: `Évolution depuis ${E.anneePrecedente}`, cle: "evol", format: (v) => fmtVar(v) }]),
+      lignes: E.lignes.map((l) => ({ ...l, libelle: (l.niveau ? "\u00a0\u00a0\u00a0" : "") + l.libelle, evol: l.precedent ? 100 * (l.total / l.precedent - 1) : null, _classe: l.libelle.startsWith("Total") ? "total" : "" })),
+    });
+    PLF.blocDonnees($("donnees-eff-min"), {
+      table: t, csvNom: `effectifs-ministeres-statuts-${E.annee}.csv`,
+      csvEntetes: ["ministere", "niveau", "fonctionnaires", "contractuels", "militaires", "autres", "total", `total_${E.anneePrecedente}`],
+      csvLignes: E.lignes.map((l) => [l.libelle, l.niveau].concat(["fonctionnaires", "contractuels", "militaires", "autres", "total", "precedent"].map((k) => Math.round(l[k] * 1000)))),
+    });
+  }
+
+  /* ======================================================================
+     Carte : frais de personnel des collectivités par département (OFGL)
+     ====================================================================== */
+  const SEQUENTIELLE = ["#fdf6d8", "#dce5ac", "#97d6a4", "#50baa1", "#21968b", "#006e73", "#014855"];
+  function sectionCarte(M) {
+    const C = M.carte;
+    const fig = $("figure-carte-ms");
+    if (!fig || !C) return;
+    let geo;
+    try { geo = PLF.donnees("fond_de_carte"); } catch (e) { return; }
+    const form = fig.querySelector("form");
+    const cadres = $("carte-ms");
+    const panneau = $("fiche-carte-ms");
+    const idx = Object.fromEntries(C.codes.map((c, i) => [c, i]));
+    const SANS_DEP = ["2A", "2B", "972", "973"];
+    const NIVEAUX = {
+      total: { libelle: "Ensemble", long: "communes, intercommunalités et département", valeurs: C.total, exclus: SANS_DEP },
+      communes: { libelle: "Communes", long: "communes", valeurs: C.communes, exclus: ["75"] },
+      groupements: { libelle: "Intercommunalités", long: "intercommunalités à fiscalité propre", valeurs: C.groupements, exclus: ["69"] },
+      departement: { libelle: "Département", long: "conseil départemental", valeurs: C.departement, exclus: SANS_DEP.concat(["75", "69"]) },
+    };
+    const parHab = (niv, i) => {
+      const N = NIVEAUX[niv];
+      const v = N.valeurs[i];
+      return v == null || N.exclus.includes(C.codes[i]) ? null : v / C.population[i];
+    };
+    const fmtHab = (v) => (v == null ? "non comparable" : nf(0).format(Math.round(v)) + " €");
+    const fmtM = (v) => (v == null ? "–" : nf(1).format(v / 1e6) + " M€");
+    let niveau = "total";
+    let selection = null;
+
+    // Cadres SVG (métropole, Paris et petite couronne, outre-mer)
+    const el = G.el;
+    if (!document.getElementById("hachures-sans-donnee")) { // motif « non comparable » (partagé par les cadres)
+      const defs = el("svg", { width: 0, height: 0, "aria-hidden": "true", style: "position:absolute" }, document.body);
+      const motif = el("pattern", { id: "hachures-sans-donnee", patternUnits: "userSpaceOnUse", width: 6, height: 6, patternTransform: "rotate(45)" }, el("defs", {}, defs));
+      el("rect", { width: 6, height: 6, fill: "var(--sans-donnee)" }, motif);
+      el("line", { x1: 0, y1: 0, x2: 0, y2: 6, stroke: "var(--texte-doux)", "stroke-width": 1.4, "stroke-opacity": 0.6 }, motif);
+    }
+    const chemins = {};
+    const encarts = document.createElement("div");
+    encarts.className = "carte-encarts";
+    const metro = document.createElement("div");
+    cadres.appendChild(encarts);
+    cadres.appendChild(metro);
+    ["idf", "971", "972", "973", "974", "976"].concat(["metro"]).forEach((cle) => {
+      const c = geo.cadres[cle];
+      const estMetro = cle === "metro";
+      const figc = document.createElement(estMetro ? "div" : "figure");
+      if (!estMetro) {
+        figc.className = "encart";
+        const cap = document.createElement("figcaption");
+        cap.textContent = c.nom;
+        figc.appendChild(cap);
+      }
+      const svg = el("svg", { viewBox: `0 0 ${c.largeur} ${c.hauteur}`, class: "cadre-svg" + (estMetro ? " cadre-svg--metro" : ""), "aria-hidden": "true", focusable: "false", preserveAspectRatio: "xMidYMid meet" });
+      const fond = el("g", {}, svg);
+      (c.contexte || []).forEach((p) => el("path", { d: p.d, class: p.departement ? "dep-contexte" : "pays-voisin" }, fond));
+      const g = el("g", {}, svg);
+      Object.keys(geo.departements).forEach((code) => {
+        const d = geo.departements[code];
+        const forme = cle === "idf" ? d.zoom : d.cadre === cle ? d : null;
+        if (!forme || idx[code] == null) return;
+        const p = el("path", { d: forme.d, class: "dep", "data-code": code }, g);
+        (chemins[code] = chemins[code] || []).push(p);
+      });
+      if (c.limites_regions) el("path", { d: c.limites_regions, class: "limites-regions" }, svg);
+      if (c.rappel_zoom_idf) { const [x, y, w, h] = c.rappel_zoom_idf; el("rect", { x, y, width: w, height: h, class: "rappel-zoom" }, svg); }
+      figc.appendChild(svg);
+      (estMetro ? metro : encarts).appendChild(figc);
+    });
+    const ib = document.createElement("div");
+    ib.className = "infobulle";
+    ib.hidden = true;
+    ib.setAttribute("aria-hidden", "true");
+    cadres.style.position = "relative";
+    cadres.appendChild(ib);
+
+    function seuils(vals) {
+      const t = vals.filter((v) => v != null).sort((a, b) => a - b);
+      const etendue = t[t.length - 1] - t[0];
+      const pas = etendue > 800 ? 50 : etendue > 300 ? 25 : 10;
+      const s = [];
+      [1, 2, 3, 4, 5, 6].forEach((k) => {
+        const q = Math.round(t[Math.floor((k / 7) * (t.length - 1))] / pas) * pas;
+        if (!s.length || q > s[s.length - 1]) s.push(q);
+      });
+      return s;
+    }
+    const classe = (v, s) => s.filter((x) => v >= x).length;
+    let S = [];
+    let couleurs = SEQUENTIELLE;
+    function rendu() {
+      const vals = C.codes.map((_, i) => parHab(niveau, i));
+      S = seuils(vals);
+      couleurs = SEQUENTIELLE.slice(SEQUENTIELLE.length - (S.length + 1));
+      C.codes.forEach((code, i) => {
+        const v = vals[i];
+        (chemins[code] || []).forEach((p) => {
+          p.classList.toggle("sans-donnee", v == null);
+          p.style.fill = v == null ? "" : couleurs[classe(v, S)];
+          p.classList.toggle("selection", code === selection);
+        });
+      });
+      // Légende
+      const ul = $("legende-carte-ms");
+      $("legende-titre-ms").textContent = `${NIVEAUX[niveau].libelle} : euros par habitant, ${C.annee}`;
+      const nb = couleurs.map(() => 0);
+      vals.forEach((v) => { if (v != null) nb[classe(v, S)]++; });
+      const bornes = couleurs.map((_, k) => (k === 0 ? `moins de ${nf(0).format(S[0])} €` : k === couleurs.length - 1 ? `${nf(0).format(S[k - 1])} € et plus` : `${nf(0).format(S[k - 1])} à ${nf(0).format(S[k])} €`));
+      const nbSans = vals.filter((v) => v == null).length;
+      ul.innerHTML = couleurs.map((c, k) => `<li><span class="legende-carte__case" style="background:${c}"></span><span>${bornes[k]}</span><span class="legende-carte__nb">${nb[k]} dép.</span></li>`).reverse().join("")
+        + (nbSans ? `<li><span class="legende-carte__case" style="background:repeating-linear-gradient(45deg,var(--sans-donnee) 0 3px,var(--texte-doux) 3px 4px)"></span><span>Non comparable</span><span class="legende-carte__nb">${nbSans} dép.</span></li>` : "");
+      fiche(selection);
+    }
+    function ligneFiche(lib, v, montant) {
+      return `<dt>${lib}</dt><dd>${v == null ? "non comparable" : fmtHab(v) + " / hab."}${montant != null ? `<br><span style="font-weight:400;color:var(--texte-doux)">${fmtM(montant)}</span>` : ""}</dd>`;
+    }
+    function fiche(code) {
+      if (!panneau) return;
+      const vals = C.codes.map((_, i) => parHab(niveau, i));
+      if (code == null) {
+        const ok = C.codes.map((c, i) => [c, vals[i]]).filter((x) => x[1] != null).sort((a, b) => b[1] - a[1]);
+        const totFr = NIVEAUX[niveau].valeurs.reduce((a, v) => a + (v || 0), 0);
+        const popFr = C.population.reduce((a, v) => a + v, 0);
+        const li = (x) => `<li>${C.noms[idx[x[0]]]} (${x[0]}) : <b>${fmtHab(x[1])}</b></li>`;
+        panneau.innerHTML = `<h3>France entière</h3><p class="fiche-dep__valeur" style="margin:0">${fmtHab(totFr / popFr)}</p><p style="margin:.2rem 0 .6rem">par habitant pour les ${NIVEAUX[niveau].long}, soit ${nf(1).format(totFr / 1e9)} milliards d'euros en ${C.annee}.</p>
+          <p class="legende-titre">Les plus élevés</p><ol class="liste-palmares">${ok.slice(0, 5).map(li).join("")}</ol>
+          <p class="legende-titre">Les plus bas</p><ol class="liste-palmares">${ok.slice(-5).reverse().map(li).join("")}</ol>`;
+        return;
+      }
+      const i = idx[code];
+      const note = C.notes[code];
+      panneau.innerHTML = `<h3>${C.noms[i]} (${code})</h3><p class="fiche-dep__valeur" style="margin:0">${fmtHab(vals[i])}</p><p style="margin:.2rem 0 .4rem">par habitant (${NIVEAUX[niveau].long}), ${C.annee}</p>
+        <dl>${ligneFiche("Communes", parHab("communes", i), C.communes[i])}${ligneFiche("Intercommunalités", parHab("groupements", i), C.groupements[i])}${ligneFiche("Département", parHab("departement", i), C.departement[i])}
+        <dt>Total</dt><dd>${fmtM(C.total[i])}</dd><dt>Population</dt><dd>${nf(0).format(C.population[i])}</dd></dl>
+        ${note ? `<p class="encadre encadre--attention" style="font-size:.9em;margin-top:.6rem"><strong>À noter :</strong> ${note}.</p>` : ""}`;
+    }
+    function survol(evt) {
+      const p = evt.target.closest(".dep");
+      if (!p) { ib.hidden = true; return; }
+      const code = p.dataset.code;
+      const i = idx[code];
+      ib.innerHTML = `<span class="infobulle__titre">${C.noms[i]} (${code})</span><div class="infobulle__ligne"><span>${NIVEAUX[niveau].libelle}</span><b>${fmtHab(parHab(niveau, i))} / hab.</b></div><div class="infobulle__ligne"><span>Montant total</span><b>${fmtM(C.total[i])}</b></div>`;
+      const r = cadres.getBoundingClientRect();
+      ib.hidden = false;
+      const x = evt.clientX - r.left, y = evt.clientY - r.top;
+      let gauche = x + 14;
+      if (gauche + ib.offsetWidth > cadres.clientWidth) gauche = Math.max(0, x - ib.offsetWidth - 14);
+      ib.style.left = gauche + "px";
+      ib.style.top = Math.max(0, y - ib.offsetHeight - 12) + "px";
+    }
+    cadres.addEventListener("pointermove", survol);
+    cadres.addEventListener("pointerleave", () => { ib.hidden = true; });
+    cadres.addEventListener("click", (evt) => {
+      const p = evt.target.closest(".dep");
+      selection = p && p.dataset.code !== selection ? p.dataset.code : null;
+      if (choix) choix.value = selection || "";
+      rendu();
+    });
+    // Choix d'un département au clavier
+    const choix = $("choix-dep-carte-ms");
+    if (choix) {
+      C.codes.map((c, i) => [c, C.noms[i]]).sort((a, b) => a[1].localeCompare(b[1], "fr")).forEach(([c, n]) => {
+        const o = document.createElement("option");
+        o.value = c;
+        o.textContent = `${n} (${c})`;
+        choix.appendChild(o);
+      });
+      choix.addEventListener("change", () => { selection = choix.value || null; rendu(); });
+    }
+    form.addEventListener("change", (evt) => {
+      if (evt.target.name !== "carte-ms-niveau") return;
+      niveau = evt.target.value;
+      rendu();
+      PLF.annoncer(`Carte : ${NIVEAUX[niveau].libelle}, euros par habitant.`);
+    });
+    document.addEventListener("plf:affichage", rendu);
+    rendu();
+
+    $("note-carte-ms").textContent = `Frais de personnel (rémunérations, cotisations et autres charges de personnel) des budgets principaux en ${C.annee}, d'après les comptes de gestion. Intercommunalités : groupements à fiscalité propre (communautés, métropoles, Métropole du Grand Paris et établissements publics territoriaux) ; ceux qui s'étendent sur plusieurs départements sont répartis au prorata de la population de leurs communes. Collectivité européenne d'Alsace répartie entre Bas-Rhin et Haut-Rhin au prorata de la population. Non comptés : régions, syndicats intercommunaux, CCAS, services d'incendie et de secours, budgets annexes. « Non comparable » : Corse, Martinique et Guyane n'ont pas de conseil départemental (ses dépenses sont dans celles de la collectivité unique) ; à Paris, commune et département ne font qu'un ; dans le Rhône, la Métropole de Lyon exerce aussi les compétences du département. Population : ${C.sourcePopulation}. Source : ${C.source}.`;
+    const lignes = C.codes.map((c, i) => ({ code: c, nom: C.noms[i], pop: C.population[i], com: C.communes[i], grp: C.groupements[i], dep: C.departement[i], tot: C.total[i], hab: parHab("total", i), habc: parHab("communes", i), habg: parHab("groupements", i), habd: parHab("departement", i) }));
+    const t = PLF.tableau({
+      legende: `Frais de personnel des collectivités locales par département, ${C.annee}`,
+      colonnes: [
+        { titre: "Département", cle: "nom", texte: true, format: (v, l) => `${v} (${l.code})` },
+        { titre: "Population", cle: "pop", format: (v) => nf(0).format(v) },
+        { titre: "Communes (M€)", cle: "com", format: (v) => nf(1).format(v / 1e6) },
+        { titre: "Intercommunalités (M€)", cle: "grp", format: (v) => nf(1).format(v / 1e6) },
+        { titre: "Département (M€)", cle: "dep", format: (v) => (v == null ? "–" : nf(1).format(v / 1e6)) },
+        { titre: "Total (M€)", cle: "tot", format: (v) => nf(1).format(v / 1e6) },
+        { titre: "Total par habitant", cle: "hab", format: fmtHab },
+        { titre: "Communes par hab.", cle: "habc", format: fmtHab },
+        { titre: "Intercommunalités par hab.", cle: "habg", format: fmtHab },
+        { titre: "Département par hab.", cle: "habd", format: fmtHab },
+      ],
+      lignes, triable: true,
+    });
+    PLF.blocDonnees($("donnees-carte-ms"), {
+      resume: "Afficher le tableau des 101 départements (triable)", table: t, csvNom: `frais-personnel-collectivites-departements-${C.annee}.csv`,
+      csvEntetes: ["code", "departement", "population", "communes_euros", "intercommunalites_euros", "departement_euros", "total_euros", "total_euros_par_habitant", "note"],
+      csvLignes: lignes.map((l) => [l.code, l.nom, l.pop, l.com, l.grp, l.dep, l.tot, arr(l.hab, 1), C.notes[l.code] || ""]),
+    });
+  }
+
+  /* ======================================================================
+     Hautes rémunérations (DGAFP)
+     ====================================================================== */
+  function sectionHautes(M) {
+    const H = M.hautes;
+    if (!H || !$("figure-centile")) return;
+    const V = { fpe: "État", fpt: "Territoriale", fph: "Hospitalière", ensemble: "Ensemble" };
+    // Dernier centile par versant
+    const ordre = ["fph", "fpe", "fpt", "ensemble"];
+    G.barres($("graphique-centile"), {
+      categories: ordre.map((v) => V[v]),
+      series: [{ id: "moy", libelle: "Salaire net moyen du 1 % le mieux payé", couleur: "--ms-1", valeurs: ordre.map((v) => H.centile[v].net_moyen) }],
+      formatValeur: fmtEuro, formatAxe: fmtAxeEuro, libelleValeur: "Salaire net mensuel moyen", sansPart: true, hauteurBarre: 30, ecart: 16,
+      titreAccessible: `Salaire net mensuel moyen du 1 % des agents les mieux payés, par versant, ${H.annee}`,
+    });
+    $("note-centile").textContent = `Le 1 % le mieux payé de chaque versant : ${ordre.map((v) => `${V[v].toLowerCase()} à partir de ${fmtEuro(H.centile[v].seuil_net_mensuel)}`).join(", ")} nets par mois. Salaires nets en équivalent temps plein, primes comprises ; hors militaires, apprentis, assistants maternels et familiaux, internes et externes des hôpitaux. Source : ${H.source}.`;
+    const t1 = PLF.tableau({
+      legende: `Le dernier centile des salaires nets mensuels, ${H.annee}`,
+      colonnes: [{ titre: "Versant", cle: "v", texte: true }, { titre: "Seuil d'entrée", cle: "s", format: fmtEuro }, { titre: "Salaire moyen", cle: "m", format: fmtEuro }, { titre: "Salaire médian", cle: "d", format: fmtEuro }],
+      lignes: ordre.map((v) => ({ v: V[v], s: H.centile[v].seuil_net_mensuel, m: H.centile[v].net_moyen, d: H.centile[v].net_median })),
+    });
+    PLF.blocDonnees($("donnees-centile"), { table: t1, csvNom: `dernier-centile-salaires-${H.annee}.csv`, csvEntetes: ["versant", "seuil_net_mensuel", "net_moyen", "net_median"], csvLignes: ordre.map((v) => [v, H.centile[v].seuil_net_mensuel, H.centile[v].net_moyen, H.centile[v].net_median]) });
+
+    // Profil des mieux payés
+    const fp = $("figure-profil");
+    const formP = fp.querySelector("form");
+    const couleursP = ["--ms-1", "--ms-3", "--ms-4", "--ms-2", "--ms-5", "--ms-autre"];
+    const cats = ["Ensemble des agents", "Les 10 % les mieux payés", "Le 1 % le mieux payé"];
+    function cfgP() {
+      const groupe = lireChoix(formP, "profil-groupe") || "Statut";
+      const mods = H.profil.filter((p) => p.groupe === groupe);
+      const series = mods.map((p, k) => ({ id: p.modalite, libelle: p.modalite, couleur: couleursP[k], valeurs: [p.ensemble, p.top10, p.top1] }));
+      legende($("legende-profil"), series.map((s) => ({ libelle: s.libelle === "Autres statuts" ? "Autres statuts (surtout médecins hospitaliers)" : s.libelle, couleur: s.couleur })));
+      return { categories: cats, series, pourcent: true, sansNombre: true, hauteurBarre: 34, ecart: 18, titreAccessible: `Répartition par ${groupe.toLowerCase()} des agents selon leur niveau de salaire, ${H.annee}` };
+    }
+    const gp = G.barres($("graphique-profil"), cfgP());
+    formP.addEventListener("change", () => gp.maj(cfgP()));
+    $("note-profil").textContent = `« Autres statuts » : surtout les praticiens hospitaliers (médecins, pharmaciens…), qui ne sont ni fonctionnaires ni contractuels au sens habituel. Même champ que ci-dessus. Source : ${H.source}.`;
+    const t2 = PLF.tableau({
+      legende: `Profil des agents selon leur niveau de salaire, ${H.annee} (%)`,
+      colonnes: [{ titre: "Caractéristique", cle: "m", texte: true }, { titre: cats[0], cle: "e", format: (v) => fmtPct(v, 1) }, { titre: cats[1], cle: "t10", format: (v) => fmtPct(v, 1) }, { titre: cats[2], cle: "t1", format: (v) => fmtPct(v, 1) }],
+      lignes: H.profil.map((p) => ({ m: `${p.groupe} : ${p.modalite}`, e: p.ensemble, t10: p.top10, t1: p.top1 })),
+    });
+    PLF.blocDonnees($("donnees-profil"), { table: t2, csvNom: `profil-hautes-remunerations-${H.annee}.csv`, csvEntetes: ["groupe", "modalite", "ensemble_pct", "dix_pour_cent_pct", "un_pour_cent_pct"], csvLignes: H.profil.map((p) => [p.groupe, p.modalite, p.ensemble, p.top10, p.top1]) });
+
+    // Métiers du dernier centile
+    const feuilles = [];
+    H.corps.forEach((c, k) => {
+      const suivant = H.corps[k + 1];
+      if (c.niveau === 0 && c.libelle === "Catégorie A+") return;
+      if (c.niveau === 1 && ["FPE", "FPT", "FPH"].includes(c.libelle)) return;
+      if (c.libelle.startsWith("Encadrement supérieur et emplois de direction") && suivant && suivant.niveau === c.niveau) return; // ligne « dont »
+      if (c.niveau === 0) return;
+      feuilles.push(c);
+    });
+    const COURTS_CORPS = [
+      [/décision du Gouvernement/i, "Emplois du Gouvernement"], [/^Autres corps de direction/i, "Direction, encadr. (FPE)"],
+      [/^Inspection/i, "Inspection (FPE)"], [/^Enseignement supérieur/i, "Universités, recherche"],
+      [/^Emplois de direction/i, "Direction"], [/^Encadrement supérieur$/i, "Encadrement sup."],
+      [/aviation civile/i, "Aviation civile (FPE)"], [/^Praticiens hospitaliers/i, "Praticiens hospitaliers"],
+    ];
+    let versant = "";
+    const libC = [];
+    H.corps.forEach((c) => {
+      if (c.niveau === 1 && ["FPE", "FPT", "FPH"].includes(c.libelle)) versant = c.libelle;
+      if (c.niveau === 0) versant = c.libelle === "Hors A+" ? "" : versant;
+      if (!feuilles.includes(c)) return;
+      const nom = c.libelle + (versant && !/FP[ETH]/.test(c.libelle) ? ` (${versant})` : "");
+      const r = COURTS_CORPS.find(([m]) => m.test(c.libelle));
+      const courtC = r ? r[1] + (/^(Direction|Encadrement sup\.)$/.test(r[1]) && versant ? ` (${versant})` : "") : c.libelle;
+      libC.push({ ...c, nom, court: courtC });
+    });
+    const triC = libC.slice().sort((a, b) => b.partCentile - a.partCentile);
+    G.barres($("graphique-corps"), {
+      categories: triC.map((c) => c.court),
+      series: [{ id: "part", libelle: "Part du 1 % le mieux payé", couleur: "--ms-1", valeurs: triC.map((c) => c.partCentile) }],
+      formatValeur: (v) => fmtPct(v, 1), formatAxe: fmtAxePct, libelleValeur: "Part du 1 % le mieux payé", sansPart: true, hauteurBarre: 22, ecart: 10,
+      titreAccessible: `Métiers et emplois du 1 % des agents publics les mieux payés, ${H.annee}`,
+    });
+    $("note-corps").textContent = `Répartition des postes du dernier centile (salaire net supérieur à ${fmtEuro(H.centile.ensemble.seuil_net_mensuel)} par mois en équivalent temps plein) selon le corps ou l'emploi. « Non ventilé » : emplois très spécifiques occupés par peu de personnes, ou cas isolés. Source : ${H.source}.`;
+    const t3 = PLF.tableau({
+      legende: `Corps et emplois du dernier centile des salaires, ${H.annee}`,
+      colonnes: [{ titre: "Corps ou emploi", cle: "nom", texte: true }, { titre: "Salaire net moyen", cle: "net", format: fmtEuro }, { titre: "Part des agents du corps dans le 1 % le mieux payé", cle: "partAuDessus", format: (v) => fmtPct(v, 1) }, { titre: "Part du 1 % le mieux payé", cle: "partCentile", format: (v) => fmtPct(v, 1) }],
+      lignes: triC,
+    });
+    PLF.blocDonnees($("donnees-corps"), { table: t3, csvNom: `corps-dernier-centile-${H.annee}.csv`, csvEntetes: ["corps_ou_emploi", "salaire_net_moyen", "part_agents_dans_dernier_centile_pct", "part_du_dernier_centile_pct"], csvLignes: triC.map((c) => [c.nom, c.net, c.partAuDessus, c.partCentile]) });
+
+    // Emplois de direction et corps A+
+    const ta = $("tableau-aplus");
+    if (ta) {
+      const t4 = PLF.tableau({
+        legende: `Salaires mensuels des emplois de direction et des corps « A+ », ${H.annee}`,
+        colonnes: [{ titre: "Emplois et corps", cle: "lib", texte: true }, { titre: "Brut moyen", cle: "brut", format: fmtEuro }, { titre: "dont primes", cle: "primes", format: (v) => fmtPct(v, 0) }, { titre: "Net moyen", cle: "net", format: fmtEuro }, { titre: "Net médian", cle: "median", format: fmtEuro }],
+        lignes: H.aplus.map((a) => ({ ...a, lib: "\u00a0\u00a0\u00a0".repeat(Math.max(0, a.niveau - 1)) + a.libelle, _classe: a.niveau <= 1 ? "total" : "" })),
+      });
+      ta.appendChild(PLF.enveloppe(t4));
+    }
+
+    // Les dix plus hautes rémunérations publiées
+    const Dx = H.dix;
+    const min = Dx.employeurs.filter((e) => e.versant === "fpe").sort((a, b) => b.somme - a.somme);
+    G.barres($("graphique-dix"), {
+      categories: min.map((e) => e.court),
+      series: [{ id: "mensuel", libelle: "Salaire brut mensuel moyen des dix agents les mieux payés", couleur: "--ms-1", valeurs: min.map((e) => e.somme / 120) }],
+      formatValeur: fmtEuro, formatAxe: fmtAxeEuro, libelleValeur: "Brut mensuel moyen des dix", sansPart: true, hauteurBarre: 24, ecart: 12,
+      titreAccessible: `Salaire brut mensuel moyen des dix agents les mieux payés de chaque ministère, ${Dx.annee}`,
+    });
+    const syn = Dx.synthese;
+    const hop = Dx.employeurs.filter((e) => e.versant === "fph").sort((a, b) => b.somme - a.somme);
+    const med = hop[Math.floor(hop.length / 2)].somme;
+    $("note-dix").textContent = `Somme des dix plus hautes rémunérations brutes annuelles déclarées par chaque ministère pour ${Dx.annee}, divisée par 120 (dix agents, douze mois) : primes et indemnités comprises, avant cotisations et impôt. Pour comparaison : ${fmtEuro(syn.fph.mensuel)} par mois dans les ${hop.length} grands hôpitaux ayant répondu (budget de plus de 200 millions d'euros ; médiane ${fmtEuro(med / 120)}) et ${fmtEuro(syn.fpt.mensuel)} dans les collectivités de plus de 40 000 habitants. Femmes parmi les dix : ${nf(0).format(syn.fpe.femmes)} % dans les ministères, ${nf(0).format(syn.fph.femmes)} % dans les hôpitaux, ${nf(0).format(syn.fpt.femmes)} % dans les collectivités. Source : ${H.source}.`;
+    const lignes = Dx.employeurs.map((e) => ({ v: e.versant === "fpe" ? "Ministère" : "Hôpital", nom: e.libelle, somme: e.somme, mens: e.somme / 120, f: e.femmes, h: e.hommes }));
+    const t5 = PLF.tableau({
+      legende: `Somme des dix plus hautes rémunérations brutes par employeur, ${Dx.annee}`,
+      colonnes: [{ titre: "Employeur", cle: "nom", texte: true }, { titre: "Type", cle: "v", texte: true }, { titre: "Somme annuelle des dix", cle: "somme", format: fmtEuro }, { titre: "Brut mensuel moyen", cle: "mens", format: fmtEuro }, { titre: "Femmes", cle: "f" }, { titre: "Hommes", cle: "h" }],
+      lignes: lignes.sort((a, b) => b.somme - a.somme), triable: true,
+    });
+    PLF.blocDonnees($("donnees-dix"), {
+      resume: `Afficher les ${lignes.length} employeurs (ministères et hôpitaux), triables`, table: t5, csvNom: `dix-plus-hautes-remunerations-${Dx.annee}.csv`,
+      csvEntetes: ["type", "siren", "employeur", "somme_dix_plus_hautes_brutes_euros", "femmes", "hommes"],
+      csvLignes: Dx.employeurs.map((e) => [e.versant, e.siren, e.libelle, e.somme, e.femmes, e.hommes]),
+    });
+  }
+
+  /* ======================================================================
      Page d'accueil : encadré « Combien coûtent-ils ? »
      ====================================================================== */
   function accueil(M) {
@@ -854,22 +1298,30 @@
 
   function demarrer() {
     const page = document.body.dataset.page;
-    if (page !== "masse-salariale" && page !== "accueil") return;
+    if (page !== "masse-salariale" && page !== "salaires" && page !== "accueil") return;
     let M;
     try { M = PLF.donnees("masse_salariale"); } catch (e) {
       const m = document.getElementById("contenu");
-      if (m && page === "masse-salariale") m.insertAdjacentHTML("afterbegin", `<p class="conteneur erreur">${e.message}</p>`);
+      if (m && page !== "accueil") m.insertAdjacentHTML("afterbegin", `<p class="conteneur erreur">${e.message}</p>`);
       return;
     }
     if (page === "accueil") { accueil(M); return; }
     remplirCles(M.cles);
+    if (page === "salaires") {
+      sectionSalaires(M);
+      sectionEmployeurs(M, "sal-employeurs");
+      sectionHautes(M);
+      return;
+    }
     sectionCentEuros(M);
     sectionEvolution(M);
     sectionQuiPaie(M);
     sectionEtat(M);
     sectionCollectivitesHopitaux(M);
+    sectionEmployeurs(M, "employeurs");
+    sectionEffectifsMinisteres(M);
+    sectionCarte(M);
     sectionFonctions(M);
-    sectionSalaires(M);
     sectionEurope(M);
   }
   PLF.masseSalariale = { composantesCentEuros, barreCentEuros };

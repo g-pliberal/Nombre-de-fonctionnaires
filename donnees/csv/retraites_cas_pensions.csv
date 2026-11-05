@@ -1,0 +1,332 @@
+annee;sens;poste;libelle;millions_euros;source_id
+2006;depense;pensions_civiles;Pensions civiles;29390;DGAFP_RA2026_RETRAITES
+2007;depense;pensions_civiles;Pensions civiles;31171;DGAFP_RA2026_RETRAITES
+2008;depense;pensions_civiles;Pensions civiles;32966;DGAFP_RA2026_RETRAITES
+2009;depense;pensions_civiles;Pensions civiles;34577;DGAFP_RA2026_RETRAITES
+2010;depense;pensions_civiles;Pensions civiles;35903;DGAFP_RA2026_RETRAITES
+2011;depense;pensions_civiles;Pensions civiles;37747;DGAFP_RA2026_RETRAITES
+2012;depense;pensions_civiles;Pensions civiles;39328;DGAFP_RA2026_RETRAITES
+2013;depense;pensions_civiles;Pensions civiles;40501;DGAFP_RA2026_RETRAITES
+2014;depense;pensions_civiles;Pensions civiles;41268;DGAFP_RA2026_RETRAITES
+2015;depense;pensions_civiles;Pensions civiles;41835;DGAFP_RA2026_RETRAITES
+2016;depense;pensions_civiles;Pensions civiles;42404;DGAFP_RA2026_RETRAITES
+2017;depense;pensions_civiles;Pensions civiles;43016;DGAFP_RA2026_RETRAITES
+2018;depense;pensions_civiles;Pensions civiles;43942;DGAFP_RA2026_RETRAITES
+2019;depense;pensions_civiles;Pensions civiles;44657;DGAFP_RA2026_RETRAITES
+2020;depense;pensions_civiles;Pensions civiles;45287;DGAFP_RA2026_RETRAITES
+2021;depense;pensions_civiles;Pensions civiles;45924;DGAFP_RA2026_RETRAITES
+2022;depense;pensions_civiles;Pensions civiles;47846.341;DGAFP_RA2026_RETRAITES
+2023;depense;pensions_civiles;Pensions civiles;49661.871;DGAFP_RA2026_RETRAITES
+2024;depense;pensions_civiles;Pensions civiles;52551.229;DGAFP_RA2026_RETRAITES
+2025;depense;pensions_civiles;Pensions civiles;53897;DGAFP_RA2026_RETRAITES
+2006;depense;pensions_militaires;Pensions militaires;8364;DGAFP_RA2026_RETRAITES
+2007;depense;pensions_militaires;Pensions militaires;8523;DGAFP_RA2026_RETRAITES
+2008;depense;pensions_militaires;Pensions militaires;8660;DGAFP_RA2026_RETRAITES
+2009;depense;pensions_militaires;Pensions militaires;8798;DGAFP_RA2026_RETRAITES
+2010;depense;pensions_militaires;Pensions militaires;8915;DGAFP_RA2026_RETRAITES
+2011;depense;pensions_militaires;Pensions militaires;9181;DGAFP_RA2026_RETRAITES
+2012;depense;pensions_militaires;Pensions militaires;9393;DGAFP_RA2026_RETRAITES
+2013;depense;pensions_militaires;Pensions militaires;9533;DGAFP_RA2026_RETRAITES
+2014;depense;pensions_militaires;Pensions militaires;9564;DGAFP_RA2026_RETRAITES
+2015;depense;pensions_militaires;Pensions militaires;9570;DGAFP_RA2026_RETRAITES
+2016;depense;pensions_militaires;Pensions militaires;9589;DGAFP_RA2026_RETRAITES
+2017;depense;pensions_militaires;Pensions militaires;9611;DGAFP_RA2026_RETRAITES
+2018;depense;pensions_militaires;Pensions militaires;9660;DGAFP_RA2026_RETRAITES
+2019;depense;pensions_militaires;Pensions militaires;9726;DGAFP_RA2026_RETRAITES
+2020;depense;pensions_militaires;Pensions militaires;9751;DGAFP_RA2026_RETRAITES
+2021;depense;pensions_militaires;Pensions militaires;9774;DGAFP_RA2026_RETRAITES
+2022;depense;pensions_militaires;Pensions militaires;10071.509;DGAFP_RA2026_RETRAITES
+2023;depense;pensions_militaires;Pensions militaires;10369.613;DGAFP_RA2026_RETRAITES
+2024;depense;pensions_militaires;Pensions militaires;10904.639;DGAFP_RA2026_RETRAITES
+2025;depense;pensions_militaires;Pensions militaires;11108;DGAFP_RA2026_RETRAITES
+2006;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);134;DGAFP_RA2026_RETRAITES
+2007;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);137;DGAFP_RA2026_RETRAITES
+2008;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);138;DGAFP_RA2026_RETRAITES
+2009;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);140;DGAFP_RA2026_RETRAITES
+2010;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);140;DGAFP_RA2026_RETRAITES
+2011;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);141;DGAFP_RA2026_RETRAITES
+2012;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);143;DGAFP_RA2026_RETRAITES
+2013;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);143;DGAFP_RA2026_RETRAITES
+2014;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);143;DGAFP_RA2026_RETRAITES
+2015;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);141;DGAFP_RA2026_RETRAITES
+2016;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);139;DGAFP_RA2026_RETRAITES
+2017;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);139;DGAFP_RA2026_RETRAITES
+2018;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);138;DGAFP_RA2026_RETRAITES
+2019;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);137;DGAFP_RA2026_RETRAITES
+2020;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);135;DGAFP_RA2026_RETRAITES
+2021;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);134;DGAFP_RA2026_RETRAITES
+2022;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);136.361;DGAFP_RA2026_RETRAITES
+2023;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);138.136;DGAFP_RA2026_RETRAITES
+2024;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);141.695;DGAFP_RA2026_RETRAITES
+2025;depense;allocations_temporaires_invalidite;Allocations temporaires d'invalidité (ATI);141;DGAFP_RA2026_RETRAITES
+2006;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);2387;DGAFP_RA2026_RETRAITES
+2007;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);1729;DGAFP_RA2026_RETRAITES
+2008;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);1376;DGAFP_RA2026_RETRAITES
+2009;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);1125;DGAFP_RA2026_RETRAITES
+2010;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);1295;DGAFP_RA2026_RETRAITES
+2011;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);889;DGAFP_RA2026_RETRAITES
+2012;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);678;DGAFP_RA2026_RETRAITES
+2013;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);662;DGAFP_RA2026_RETRAITES
+2014;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);628;DGAFP_RA2026_RETRAITES
+2015;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);626;DGAFP_RA2026_RETRAITES
+2016;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);506;DGAFP_RA2026_RETRAITES
+2017;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);540;DGAFP_RA2026_RETRAITES
+2018;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);394;DGAFP_RA2026_RETRAITES
+2019;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);217;DGAFP_RA2026_RETRAITES
+2020;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);160;DGAFP_RA2026_RETRAITES
+2021;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);473;DGAFP_RA2026_RETRAITES
+2022;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);100;DGAFP_RA2026_RETRAITES
+2023;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);94.164;DGAFP_RA2026_RETRAITES
+2024;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);75.405;DGAFP_RA2026_RETRAITES
+2025;depense;compensation_demographique;Dépenses de compensation démographique (transferts inter-régimes);57;DGAFP_RA2026_RETRAITES
+2006;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);141;DGAFP_RA2026_RETRAITES
+2007;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);180;DGAFP_RA2026_RETRAITES
+2008;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);189;DGAFP_RA2026_RETRAITES
+2009;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);292;DGAFP_RA2026_RETRAITES
+2010;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);345;DGAFP_RA2026_RETRAITES
+2011;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);220;DGAFP_RA2026_RETRAITES
+2012;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);291;DGAFP_RA2026_RETRAITES
+2013;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);292;DGAFP_RA2026_RETRAITES
+2014;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);311;DGAFP_RA2026_RETRAITES
+2015;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);103;DGAFP_RA2026_RETRAITES
+2016;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);237;DGAFP_RA2026_RETRAITES
+2017;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);243;DGAFP_RA2026_RETRAITES
+2018;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);242;DGAFP_RA2026_RETRAITES
+2019;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);197;DGAFP_RA2026_RETRAITES
+2020;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);173;DGAFP_RA2026_RETRAITES
+2021;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);129;DGAFP_RA2026_RETRAITES
+2022;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);109.836;DGAFP_RA2026_RETRAITES
+2023;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);111.292;DGAFP_RA2026_RETRAITES
+2024;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);116;DGAFP_RA2026_RETRAITES
+2025;depense;transferts_cnav_ircantec;Transferts à la Cnav et à l'Ircantec (affiliations rétroactives);70;DGAFP_RA2026_RETRAITES
+2011;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;258;DGAFP_RA2026_RETRAITES
+2012;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;279;DGAFP_RA2026_RETRAITES
+2013;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;200;DGAFP_RA2026_RETRAITES
+2014;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;228;DGAFP_RA2026_RETRAITES
+2015;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;258;DGAFP_RA2026_RETRAITES
+2016;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;279;DGAFP_RA2026_RETRAITES
+2017;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;327;DGAFP_RA2026_RETRAITES
+2018;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;361;DGAFP_RA2026_RETRAITES
+2019;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;408;DGAFP_RA2026_RETRAITES
+2020;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;454;DGAFP_RA2026_RETRAITES
+2021;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;493;DGAFP_RA2026_RETRAITES
+2022;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;510.39;DGAFP_RA2026_RETRAITES
+2023;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;556.27;DGAFP_RA2026_RETRAITES
+2024;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;654.09;DGAFP_RA2026_RETRAITES
+2025;depense;transfert_cnracl_decentralisation;Transferts vers la CNRACL : neutralisation de la décentralisation;691.757;DGAFP_RA2026_RETRAITES
+2006;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);2;DGAFP_RA2026_RETRAITES
+2007;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);59;DGAFP_RA2026_RETRAITES
+2008;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);6;DGAFP_RA2026_RETRAITES
+2009;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);5;DGAFP_RA2026_RETRAITES
+2010;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);5;DGAFP_RA2026_RETRAITES
+2011;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);5;DGAFP_RA2026_RETRAITES
+2012;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);4;DGAFP_RA2026_RETRAITES
+2013;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);4;DGAFP_RA2026_RETRAITES
+2014;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);5;DGAFP_RA2026_RETRAITES
+2015;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);4;DGAFP_RA2026_RETRAITES
+2016;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);3;DGAFP_RA2026_RETRAITES
+2017;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);5;DGAFP_RA2026_RETRAITES
+2018;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);5;DGAFP_RA2026_RETRAITES
+2019;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);6;DGAFP_RA2026_RETRAITES
+2020;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);7;DGAFP_RA2026_RETRAITES
+2021;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);6;DGAFP_RA2026_RETRAITES
+2022;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);63.863;DGAFP_RA2026_RETRAITES
+2023;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);6.359;DGAFP_RA2026_RETRAITES
+2024;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);8.329;DGAFP_RA2026_RETRAITES
+2025;depense;autres;Autres dépenses (intérêts moratoires, remboursement trop perçu);8;DGAFP_RA2026_RETRAITES
+2006;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);4968;DGAFP_RA2026_RETRAITES
+2007;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);4749;DGAFP_RA2026_RETRAITES
+2008;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);4711;DGAFP_RA2026_RETRAITES
+2009;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);4708;DGAFP_RA2026_RETRAITES
+2010;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);4989;DGAFP_RA2026_RETRAITES
+2011;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);5096;DGAFP_RA2026_RETRAITES
+2012;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);5241;DGAFP_RA2026_RETRAITES
+2013;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);5428;DGAFP_RA2026_RETRAITES
+2014;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);5660;DGAFP_RA2026_RETRAITES
+2015;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);5930;DGAFP_RA2026_RETRAITES
+2016;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);6205;DGAFP_RA2026_RETRAITES
+2017;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);6589;DGAFP_RA2026_RETRAITES
+2018;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);6751;DGAFP_RA2026_RETRAITES
+2019;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);6883;DGAFP_RA2026_RETRAITES
+2020;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);7086;DGAFP_RA2026_RETRAITES
+2021;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);7094;DGAFP_RA2026_RETRAITES
+2022;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);7184.9;DGAFP_RA2026_RETRAITES
+2023;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);7344.098;DGAFP_RA2026_RETRAITES
+2024;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);7495.585;DGAFP_RA2026_RETRAITES
+2025;recette;cotisations_salariales;Cotisations salariales (y compris rachat d'années d'études);7525;DGAFP_RA2026_RETRAITES
+2006;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;30101;DGAFP_RA2026_RETRAITES
+2007;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;30780;DGAFP_RA2026_RETRAITES
+2008;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;32563;DGAFP_RA2026_RETRAITES
+2009;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;33245;DGAFP_RA2026_RETRAITES
+2010;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;33856;DGAFP_RA2026_RETRAITES
+2011;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;34914;DGAFP_RA2026_RETRAITES
+2012;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;36405;DGAFP_RA2026_RETRAITES
+2013;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;37688;DGAFP_RA2026_RETRAITES
+2014;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;38742;DGAFP_RA2026_RETRAITES
+2015;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;39077;DGAFP_RA2026_RETRAITES
+2016;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;39565;DGAFP_RA2026_RETRAITES
+2017;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;41067;DGAFP_RA2026_RETRAITES
+2018;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;41315;DGAFP_RA2026_RETRAITES
+2019;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;41921;DGAFP_RA2026_RETRAITES
+2020;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;42360;DGAFP_RA2026_RETRAITES
+2021;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;42552;DGAFP_RA2026_RETRAITES
+2022;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;43316.086;DGAFP_RA2026_RETRAITES
+2023;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;44438.928;DGAFP_RA2026_RETRAITES
+2024;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;45739.7;DGAFP_RA2026_RETRAITES
+2025;recette;contribution_etat_employeur;Contributions de l'État employeur (budget général et budgets annexes), et ensemble des cotisations ATI;48005.733;DGAFP_RA2026_RETRAITES
+2006;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;3883;DGAFP_RA2026_RETRAITES
+2007;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;3488;DGAFP_RA2026_RETRAITES
+2008;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;3521;DGAFP_RA2026_RETRAITES
+2009;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;3307;DGAFP_RA2026_RETRAITES
+2010;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;2130;DGAFP_RA2026_RETRAITES
+2011;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;1975;DGAFP_RA2026_RETRAITES
+2012;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;2013;DGAFP_RA2026_RETRAITES
+2013;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;2029;DGAFP_RA2026_RETRAITES
+2014;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;1901;DGAFP_RA2026_RETRAITES
+2015;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;1805;DGAFP_RA2026_RETRAITES
+2016;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;1644;DGAFP_RA2026_RETRAITES
+2017;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;1562;DGAFP_RA2026_RETRAITES
+2018;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;1373;DGAFP_RA2026_RETRAITES
+2019;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;1042;DGAFP_RA2026_RETRAITES
+2020;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;983;DGAFP_RA2026_RETRAITES
+2021;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;779;DGAFP_RA2026_RETRAITES
+2022;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;550.366;DGAFP_RA2026_RETRAITES
+2023;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;498.549;DGAFP_RA2026_RETRAITES
+2024;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;395.524;DGAFP_RA2026_RETRAITES
+2025;recette;la_poste_orange;Contributions employeurs de La Poste et Orange;260;DGAFP_RA2026_RETRAITES
+2006;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;798;DGAFP_RA2026_RETRAITES
+2007;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;993;DGAFP_RA2026_RETRAITES
+2008;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;1967;DGAFP_RA2026_RETRAITES
+2009;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;2879;DGAFP_RA2026_RETRAITES
+2010;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;4140;DGAFP_RA2026_RETRAITES
+2011;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;4735;DGAFP_RA2026_RETRAITES
+2012;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;5180;DGAFP_RA2026_RETRAITES
+2013;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;5734;DGAFP_RA2026_RETRAITES
+2014;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;5803;DGAFP_RA2026_RETRAITES
+2015;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;5803;DGAFP_RA2026_RETRAITES
+2016;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;5826;DGAFP_RA2026_RETRAITES
+2017;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;5938;DGAFP_RA2026_RETRAITES
+2018;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;5960;DGAFP_RA2026_RETRAITES
+2019;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;6019;DGAFP_RA2026_RETRAITES
+2020;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;6059;DGAFP_RA2026_RETRAITES
+2021;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;6149;DGAFP_RA2026_RETRAITES
+2022;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;6196.893;DGAFP_RA2026_RETRAITES
+2023;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;6343.568;DGAFP_RA2026_RETRAITES
+2024;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;6475.297;DGAFP_RA2026_RETRAITES
+2025;recette;etablissements_publics_autres_employeurs;Contributions établissements publics et autres employeurs de fonctionnaires;6813.645;DGAFP_RA2026_RETRAITES
+2006;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;101;DGAFP_RA2026_RETRAITES
+2007;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;267;DGAFP_RA2026_RETRAITES
+2008;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;287;DGAFP_RA2026_RETRAITES
+2009;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;282;DGAFP_RA2026_RETRAITES
+2010;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;247;DGAFP_RA2026_RETRAITES
+2011;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;184;DGAFP_RA2026_RETRAITES
+2012;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;110;DGAFP_RA2026_RETRAITES
+2013;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;92;DGAFP_RA2026_RETRAITES
+2014;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;69;DGAFP_RA2026_RETRAITES
+2015;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;61;DGAFP_RA2026_RETRAITES
+2016;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;65;DGAFP_RA2026_RETRAITES
+2017;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;102;DGAFP_RA2026_RETRAITES
+2018;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;122;DGAFP_RA2026_RETRAITES
+2019;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;138;DGAFP_RA2026_RETRAITES
+2020;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;86;DGAFP_RA2026_RETRAITES
+2021;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;49;DGAFP_RA2026_RETRAITES
+2022;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;26.581;DGAFP_RA2026_RETRAITES
+2023;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;22.173;DGAFP_RA2026_RETRAITES
+2024;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;15.89;DGAFP_RA2026_RETRAITES
+2025;recette;validations_services_auxiliaires;Transferts inter-régimes : validations de services auxiliaires;10;DGAFP_RA2026_RETRAITES
+2006;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);349;DGAFP_RA2026_RETRAITES
+2007;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);306;DGAFP_RA2026_RETRAITES
+2008;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);234;DGAFP_RA2026_RETRAITES
+2009;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);254;DGAFP_RA2026_RETRAITES
+2010;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);260;DGAFP_RA2026_RETRAITES
+2011;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);180;DGAFP_RA2026_RETRAITES
+2012;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);10;DGAFP_RA2026_RETRAITES
+2013;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);15;DGAFP_RA2026_RETRAITES
+2014;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);1;DGAFP_RA2026_RETRAITES
+2015;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);20;DGAFP_RA2026_RETRAITES
+2016;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);0;DGAFP_RA2026_RETRAITES
+2017;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);25;DGAFP_RA2026_RETRAITES
+2018;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);25;DGAFP_RA2026_RETRAITES
+2019;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);45;DGAFP_RA2026_RETRAITES
+2020;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);115;DGAFP_RA2026_RETRAITES
+2021;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);153;DGAFP_RA2026_RETRAITES
+2022;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);541.654;DGAFP_RA2026_RETRAITES
+2023;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);658.088;DGAFP_RA2026_RETRAITES
+2024;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);655.156;DGAFP_RA2026_RETRAITES
+2025;recette;compensation_demographique;Recettes de compensation démographique (transferts inter-régimes);880;DGAFP_RA2026_RETRAITES
+2010;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;434;DGAFP_RA2026_RETRAITES
+2011;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;641;DGAFP_RA2026_RETRAITES
+2012;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;543;DGAFP_RA2026_RETRAITES
+2013;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;534;DGAFP_RA2026_RETRAITES
+2014;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;581;DGAFP_RA2026_RETRAITES
+2015;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;573;DGAFP_RA2026_RETRAITES
+2016;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;580;DGAFP_RA2026_RETRAITES
+2017;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;568;DGAFP_RA2026_RETRAITES
+2018;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;566;DGAFP_RA2026_RETRAITES
+2019;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;540;DGAFP_RA2026_RETRAITES
+2020;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;512;DGAFP_RA2026_RETRAITES
+2021;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;483;DGAFP_RA2026_RETRAITES
+2022;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;463.726;DGAFP_RA2026_RETRAITES
+2023;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;437.345;DGAFP_RA2026_RETRAITES
+2024;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;406.348;DGAFP_RA2026_RETRAITES
+2025;recette;transfert_cnracl_decentralisation;Transfert reçu de la CNRACL : neutralisation de la décentralisation;421;DGAFP_RA2026_RETRAITES
+2006;recette;autres;Autres recettes (dont subventions);1372;DGAFP_RA2026_RETRAITES
+2007;recette;autres;Autres recettes (dont subventions);409;DGAFP_RA2026_RETRAITES
+2008;recette;autres;Autres recettes (dont subventions);450;DGAFP_RA2026_RETRAITES
+2009;recette;autres;Autres recettes (dont subventions);593;DGAFP_RA2026_RETRAITES
+2010;recette;autres;Autres recettes (dont subventions);657;DGAFP_RA2026_RETRAITES
+2011;recette;autres;Autres recettes (dont subventions);476;DGAFP_RA2026_RETRAITES
+2012;recette;autres;Autres recettes (dont subventions);358;DGAFP_RA2026_RETRAITES
+2013;recette;autres;Autres recettes (dont subventions);19;DGAFP_RA2026_RETRAITES
+2014;recette;autres;Autres recettes (dont subventions);28;DGAFP_RA2026_RETRAITES
+2015;recette;autres;Autres recettes (dont subventions);32;DGAFP_RA2026_RETRAITES
+2016;recette;autres;Autres recettes (dont subventions);23;DGAFP_RA2026_RETRAITES
+2017;recette;autres;Autres recettes (dont subventions);24;DGAFP_RA2026_RETRAITES
+2018;recette;autres;Autres recettes (dont subventions);28;DGAFP_RA2026_RETRAITES
+2019;recette;autres;Autres recettes (dont subventions);99;DGAFP_RA2026_RETRAITES
+2020;recette;autres;Autres recettes (dont subventions);26;DGAFP_RA2026_RETRAITES
+2021;recette;autres;Autres recettes (dont subventions);32;DGAFP_RA2026_RETRAITES
+2022;recette;autres;Autres recettes (dont subventions);34.52;DGAFP_RA2026_RETRAITES
+2023;recette;autres;Autres recettes (dont subventions);36.872;DGAFP_RA2026_RETRAITES
+2024;recette;autres;Autres recettes (dont subventions);44.663;DGAFP_RA2026_RETRAITES
+2025;recette;autres;Autres recettes (dont subventions);40;DGAFP_RA2026_RETRAITES
+2006;depense;total;Total dépenses;40418;DGAFP_RA2026_RETRAITES
+2007;depense;total;Total dépenses;41799;DGAFP_RA2026_RETRAITES
+2008;depense;total;Total dépenses;43335;DGAFP_RA2026_RETRAITES
+2009;depense;total;Total dépenses;44937;DGAFP_RA2026_RETRAITES
+2010;depense;total;Total dépenses;46603;DGAFP_RA2026_RETRAITES
+2011;depense;total;Total dépenses;48441;DGAFP_RA2026_RETRAITES
+2012;depense;total;Total dépenses;50115;DGAFP_RA2026_RETRAITES
+2013;depense;total;Total dépenses;51335;DGAFP_RA2026_RETRAITES
+2014;depense;total;Total dépenses;52147;DGAFP_RA2026_RETRAITES
+2015;depense;total;Total dépenses;52537;DGAFP_RA2026_RETRAITES
+2016;depense;total;Total dépenses;53157;DGAFP_RA2026_RETRAITES
+2017;depense;total;Total dépenses;53881;DGAFP_RA2026_RETRAITES
+2018;depense;total;Total dépenses;54743;DGAFP_RA2026_RETRAITES
+2019;depense;total;Total dépenses;55348;DGAFP_RA2026_RETRAITES
+2020;depense;total;Total dépenses;55967;DGAFP_RA2026_RETRAITES
+2021;depense;total;Total dépenses;56933;DGAFP_RA2026_RETRAITES
+2022;depense;total;Total dépenses;58838.301;DGAFP_RA2026_RETRAITES
+2023;depense;total;Total dépenses;60937.705;DGAFP_RA2026_RETRAITES
+2024;depense;total;Total dépenses;64451.04;DGAFP_RA2026_RETRAITES
+2025;depense;total;Total dépenses;65972;DGAFP_RA2026_RETRAITES
+2006;recette;total;Total recettes;41572;DGAFP_RA2026_RETRAITES
+2007;recette;total;Total recettes;40992;DGAFP_RA2026_RETRAITES
+2008;recette;total;Total recettes;43733;DGAFP_RA2026_RETRAITES
+2009;recette;total;Total recettes;45268;DGAFP_RA2026_RETRAITES
+2010;recette;total;Total recettes;46713;DGAFP_RA2026_RETRAITES
+2011;recette;total;Total recettes;48201;DGAFP_RA2026_RETRAITES
+2012;recette;total;Total recettes;49861;DGAFP_RA2026_RETRAITES
+2013;recette;total;Total recettes;51540;DGAFP_RA2026_RETRAITES
+2014;recette;total;Total recettes;52785;DGAFP_RA2026_RETRAITES
+2015;recette;total;Total recettes;53301;DGAFP_RA2026_RETRAITES
+2016;recette;total;Total recettes;53908;DGAFP_RA2026_RETRAITES
+2017;recette;total;Total recettes;55875;DGAFP_RA2026_RETRAITES
+2018;recette;total;Total recettes;56139;DGAFP_RA2026_RETRAITES
+2019;recette;total;Total recettes;56687;DGAFP_RA2026_RETRAITES
+2020;recette;total;Total recettes;57227;DGAFP_RA2026_RETRAITES
+2021;recette;total;Total recettes;57290;DGAFP_RA2026_RETRAITES
+2022;recette;total;Total recettes;58314.726;DGAFP_RA2026_RETRAITES
+2023;recette;total;Total recettes;59779.62;DGAFP_RA2026_RETRAITES
+2024;recette;total;Total recettes;61228.164;DGAFP_RA2026_RETRAITES
+2025;recette;total;Total recettes;63955.378;DGAFP_RA2026_RETRAITES

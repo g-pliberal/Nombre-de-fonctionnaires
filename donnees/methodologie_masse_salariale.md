@@ -1,6 +1,6 @@
 # Masse salariale publique : sources, extraction, contrôles et ruptures
 
-> **Document de travail : extraction des données de la page « La masse salariale ».** Toutes les
+> **Document de travail : extraction des données de la rubrique « La masse salariale » (pages Coût et évolution, Salaires, Retraites).** Toutes les
 > valeurs viennent de fichiers officiels téléchargés le 5 novembre 2026 par
 > `outils/extraire_masse_salariale.py`, qui lit les cellules publiées, écrit les CSV de
 > `donnees/csv/` et s'arrête si un contrôle échoue. Les fichiers bruts restent dans `.cache/sources/`
@@ -26,6 +26,23 @@
 | `point_indice.csv` | Valeur annuelle moyenne de l'indice 100 | 1970-2025 | `DGAFP_SL2021_POINT` (1970-2020), `DGAFP_RA2026_EVOL` (2021-2025, calcul) |
 | `remunerations_par_fonction.csv` | D1 des APU par fonction COFOG (10 fonctions, 69 sous-fonctions), millions d'euros | 1995-2024 | `EUROSTAT_COFOG` |
 | `remuneration_publique_europe.csv` | D1 des APU en % du PIB, 34 pays et agrégats | 1995-2025 | `EUROSTAT_GOV_MAIN` |
+| `salaires_par_employeur_et_filiere_2024.csv` | Salaire net moyen et part des effectifs (EQTP) par ministère (ministères, EPA), type d'employeur et filière territoriale, filière hospitalière (hôpitaux, médico-social) | 2024 | `DGAFP_RA2026_REMU` (vue, figures 6, 8, 9) |
+| `effectifs_par_ministere_2024.csv` | Effectifs physiques par ministère (EPA compris) et statut, milliers | 2024 (et total 2023) | `DGAFP_RA2026_POSTES` (FPE, figure 2 « statut ») |
+| `hautes_remunerations_dernier_centile_2024.csv`, `_profil_2024.csv`, `_corps_2024.csv` | Dernier centile des salaires nets : seuil, moyenne, médiane par versant ; profil (sexe, statut, âge) ; corps et emplois | 2024 | `DGAFP_RA2026_REMU` (vue, encadré 2, figures A à C) |
+| `salaires_a_plus_2024.csv` | Emplois de direction et corps A+ : brut, part des primes, net, médiane | 2024 | `DGAFP_RA2026_REMU` (données complémentaires, figure 10) |
+| `dix_plus_hautes_remunerations_2025.csv`, `_synthese_2025.csv` | Somme des dix plus hautes rémunérations brutes : 11 ministères, 112 hôpitaux ; moyennes par versant | 2025 | `DGAFP_RA2026_REMU` (fichier hautes_remu, vue encadré 2 figure D) |
+| `depenses_personnel_locales_departements_2024.csv` | Frais de personnel (budgets principaux) des communes, groupements à fiscalité propre et départements, par département, euros | 2024 | `OFGL_COMPTES_2024` |
+| `groupements_multidepartementaux_2024.csv` | Répartition des 91 groupements à cheval sur plusieurs départements (population des communes membres) | 2024 | `OFGL_COMPTES_2024` |
+| `retraites_depenses_pensions.csv` | Pensions versées : civils de l'État (et ATI), militaires, ouvriers d'État, CNRACL, millions d'euros | 1990-2025 | `DGAFP_RA2026_RETRAITES` (situation financière, F1) |
+| `retraites_cas_pensions.csv` | Compte d'affectation spéciale « Pensions » : dépenses et recettes par poste | 2006-2025 | idem (F2) |
+| `retraites_cnracl_compte.csv` | Compte de résultat simplifié de la CNRACL | 2006-2025 | idem (F3) |
+| `retraites_taux_cotisation.csv` | Taux de cotisation salariés et employeurs (État, ouvriers d'État, CNRACL) | 2000-2025 | idem (F4) |
+| `retraites_ratio_demographique.csv` | Cotisants, pensionnés, ratio publié, par régime | 1990-2025 | idem (F5) |
+| `retraites_pensions_en_paiement.csv` | Pensions en paiement au 31 décembre, droit direct et dérivé, par régime | 2000-2025 | `DGAFP_RA2026_RETRAITES` (stocks, F3) |
+| `retraites_caracteristiques_2025.csv` | Effectifs, âges, durée de services, taux de liquidation, indice, pension moyenne | 2025 | idem (stocks, F1) |
+| `retraites_pension_moyenne.csv` | Pension mensuelle brute moyenne (y compris accessoires), ensemble, droit direct, dérivé | 2000-2025 (direct et dérivé : 2007-) | idem (montants, F6) |
+| `retraites_nouvelles_pensions.csv` | Nouvelles pensions (droit direct, dérivé), contractuels Ircantec | 2000-2025 (Ircantec : 2008-) | idem (flux, F4 ; vue, figure 2) |
+| `retraites_age_depart.csv` | Âge moyen de départ des fonctionnaires par motif | 2015-2025 | idem (vue, figure 7) |
 
 Les adresses exactes des fichiers sont dans `donnees/csv/sources.csv` et en tête du script.
 
@@ -63,9 +80,27 @@ Les adresses exactes des fichiers sont dans `donnees/csv/sources.csv` et en têt
   pour 1999-2022 (écarts signalés pour 1995-1998 et 2024, voir ci-dessous) ; part de la France en
   2025 identique au rapport D1 / PIB de l'Insee (à 0,1 point près).
 
+- Retraites : sommes des postes = totaux publiés (compte « Pensions », CNRACL) ; résultat CNRACL =
+  produits − charges ; droit direct + dérivé = total (stocks et flux) ; pensions civiles + ATI et
+  pensions militaires du compte « Pensions » = dépenses de la F1 (écarts publiés tolérés : −20 M€ en
+  2013, +10 M€ en 2012, signalés à l'exécution) ; effectifs et pensions moyennes 2025 identiques
+  entre tableaux ; vue = données complémentaires pour les nouvelles pensions ; taux salariés
+  identiques entre régimes ; ratios publiés = cotisants / pensionnés (à 0,07 près, écarts de 1994
+  et 2001 pour les ouvriers d'État signalés).
+- Salaires par employeur : parts d'effectifs = 100 et moyenne pondérée = salaire publié pour
+  l'ensemble (à 0,5 € près) ; effectifs par ministère : somme des statuts = total, somme des
+  ministères = total, ministères sociaux = solidarités-santé + travail.
+- Hautes rémunérations : parts = 100 par groupe ; A+ + hors A+ = 100 ; FPE + FPT + FPH = A+ ;
+  femmes + hommes = 10 pour chaque employeur ; moyenne des ministères = synthèse ; mensuel = somme / 120.
+- OFGL : 101 départements ; Ville de Paris et Métropole de Lyon présentes dans deux bases avec le même
+  montant (comptées une fois) ; Collectivité européenne d'Alsace (code 67A) répartie entre 67 et 68 ;
+  composition des 91 groupements multidépartementaux cohérente avec leurs départements ; répartition
+  qui redonne le total des groupements ; totaux nationaux = DGCL/DGAFP 2024 à 0,06 Md€ près.
+
 Relecture indépendante : 28 cellules des fichiers bruts ont été relues avec une autre chaîne de
 lecture (pandas, positions de cellules saisies à la main) et comparées aux CSV : 28/28 identiques
-après prise en compte de la précision publiée.
+après prise en compte de la précision publiée. Pour les retraites, les salaires détaillés, les hautes rémunérations
+et la carte (OFGL) : 15 cellules relues de la même façon, 15/15 identiques.
 
 ## 4. Calculs
 
@@ -103,3 +138,13 @@ après prise en compte de la précision publiée.
    2024 (−0,9 Md€), le total diffère de la dernière version de l'Insee (transmission antérieure).
 8. **Comparaisons européennes** : elles dépendent de la part des services publics confiés à des
    organismes privés financés par des fonds publics (hôpitaux, écoles, crèches, maisons de retraite).
+9. **Retraites** : La Poste et Orange compris dans les dépenses et les stocks des civils de l'État,
+   exclus des flux et de l'âge de départ ; prestations de la CNRACL supérieures d'environ 0,1 Md€
+   aux pensions de la F1 de 2006 à 2016 ; pension moyenne des civils de l'État en baisse en 2021
+   (valeur publiée) ; montants bruts, y compris accessoires.
+10. **Carte OFGL** : budgets principaux seulement ; hors régions, syndicats, CCAS, SDIS ; Corse,
+   Martinique et Guyane sans niveau départemental ; Paris (commune et département réunis) et Rhône
+   (Métropole de Lyon) non comparables pour certains niveaux ; population : moyenne des 1er janvier
+   2024 et 2025 (Insee).
+11. **Parts par ministère** : part des effectifs EQTP × salaire net moyen / somme des produits =
+   part dans la masse des salaires nets (agents civils, hors cotisations des employeurs).

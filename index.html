@@ -154,7 +154,27 @@
         <p class="figure__note">Rémunération des salariés de l'ensemble des administrations publiques (comptabilité nationale). Maximum : <span data-cle="ms_pct_pib_max">13,7 %</span> en <span data-cle="ms_annee_pct_max">1996</span>. Source : Insee, comptes nationaux annuels (base 2020).</p>
       </figure>
     </div>
-    <p class="accueil-ms__lien"><a class="bouton bouton--secondaire" href="masse-salariale.html">Toute la masse salariale : par employeur, par mission, salaires, retraites de l'État, Europe</a></p>
+    <div class="grille" style="margin-top:1.25rem">
+      <article class="carte-info">
+        <h3>Les retraites des fonctionnaires</h3>
+        <p class="chiffre__valeur" style="font-size:1.9rem;margin-bottom:.35rem"><span data-cle="rt_depenses">96,7 milliards</span> €</p>
+        <p>de pensions versées en <span data-cle="rt_annee">2025</span> par les régimes de retraite des fonctionnaires, soit <span data-cle="rt_pct_pib">3,2 %</span> du PIB. L'État ne compte plus que <span data-cle="rt_ratio_civils">0,80</span> fonctionnaire civil en activité pour un pensionné.</p>
+        <p><a class="lien-fleche" href="retraites.html">Dépenses, montants, cotisations, déficit de la CNRACL</a></p>
+      </article>
+      <article class="carte-info">
+        <h3>Les agents les mieux payés</h3>
+        <p class="chiffre__valeur" style="font-size:1.9rem;margin-bottom:.35rem"><span data-cle="ms_centile_seuil">7 708 €</span> nets</p>
+        <p>par mois : à partir de ce salaire, un agent public fait partie du 1 % le mieux payé (<span data-cle="ms_centile_annee">2024</span>). Plus de la moitié de ces postes sont occupés par des médecins hospitaliers.</p>
+        <p><a class="lien-fleche" href="salaires.html#hautes-remunerations">Salaires par ministère, par métier et plus hautes rémunérations</a></p>
+      </article>
+      <article class="carte-info">
+        <h3>Département par département</h3>
+        <p class="chiffre__valeur" style="font-size:1.9rem;margin-bottom:.35rem"><span data-cle="ms_loc_hab">1 041 €</span> par habitant</p>
+        <p>de frais de personnel pour les communes, les intercommunalités et les départements en <span data-cle="ms_loc_annee">2024</span>, soit <span data-cle="ms_loc_total">71,6 milliards</span> d'euros.</p>
+        <p><a class="lien-fleche" href="masse-salariale.html#departements">La carte des 101 départements</a></p>
+      </article>
+    </div>
+    <p class="accueil-ms__lien bandeau__actions"><a class="bouton bouton--secondaire" href="masse-salariale.html">Le coût en détail : depuis 1949, par employeur, par ministère</a> <a class="bouton bouton--secondaire" href="salaires.html">Les salaires</a> <a class="bouton bouton--secondaire" href="retraites.html">Les retraites</a></p>
   </div>
 </section>
 
@@ -289,6 +309,8 @@
           <li><a href="carte.html">La carte</a></li>
           <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
           <li><a href="masse-salariale.html">La masse salariale</a></li>
+          <li><a href="salaires.html">Les salaires</a></li>
+          <li><a href="retraites.html">Les retraites</a></li>
           <li><a href="methode.html">Sources et méthode</a></li>
         </ul>
       </div>
@@ -357,5 +379,7 @@
 <script src="donnees/site/masse_salariale.js"></script>
 <script src="assets/js/pages.js"></script>
 <script src="assets/js/masse-salariale.js"></script>
+<script src="donnees/site/retraites.js"></script>
+<script src="assets/js/retraites.js"></script>
 </body>
 </html>
