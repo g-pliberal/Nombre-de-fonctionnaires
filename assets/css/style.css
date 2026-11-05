@@ -80,6 +80,14 @@
   --grille: #dfe7e8;
   --axe: #5c747b;
 
+  /* Masse salariale : palette catégorielle validée (contraste ≥ 3:1, daltonisme, ordre fixe) */
+  --ms-1: #1d6fa0;
+  --ms-2: #0f9d84;
+  --ms-3: #c98500;
+  --ms-4: #7458d6;
+  --ms-5: #d0517f;
+  --ms-autre: #5a6b70;
+
   /* Carte */
   --mer: #dcebf0;
   --pays-voisins: #e7e7e2;
@@ -138,6 +146,13 @@
   --c-ind: #7d969d;
   --grille: #134b58;
   --axe: #a9c4c8;
+
+  --ms-1: #3987e5;
+  --ms-2: #13a389;
+  --ms-3: #c98500;
+  --ms-4: #9085e9;
+  --ms-5: #d55181;
+  --ms-autre: #c9d6d8;
 
   --mer: #0a2730;
   --pays-voisins: #183a44;
@@ -1027,3 +1042,26 @@ details.employeurs ul { list-style: none; padding: 0; margin: 0.25rem 0 0; }
 details.employeurs li { display: flex; justify-content: space-between; gap: 0.75rem; margin: 0.2rem 0; }
 details.employeurs b { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .chiffre__unite { font-size: 0.55em; font-weight: 600; margin-left: 0.15em; }
+
+/* ---------- Page « La masse salariale » ---------- */
+.sommaire-page {
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 0.9rem 1.15rem 0.2rem;
+  margin: 0 0 2rem;
+  box-shadow: var(--ombre);
+}
+.sommaire-page__titre { font-weight: 700; font-family: var(--police-titres); color: var(--titre); margin: 0 0 0.4rem; }
+.sommaire-page .sommaire { margin-bottom: 0.7rem; }
+.sommaire-page a { display: inline-block; min-height: 44px; line-height: 44px; }
+.barre-repartition--haute { height: 3.4rem; }
+.barre-repartition--haute span { font-size: 1em; }
+.barre-repartition span + span { border-left: 2px solid var(--surface); }
+.decomposition-legende { margin-top: 0.9rem; }
+.decomposition-legende li { display: grid; grid-template-columns: auto 4.2rem minmax(0, 1fr); gap: 0.6rem; align-items: baseline; }
+.decomposition-legende .legende__carre { align-self: start; margin-top: 0.3rem; }
+.decomposition-legende .decomposition__part { font-family: var(--police-titres); font-weight: 700; font-size: 1.35em; color: var(--titre); text-align: right; font-variant-numeric: tabular-nums; }
+.decomposition-legende small { color: var(--texte-doux); }
+.accueil-ms__lien { margin-top: 1.25rem; }
+tr.total th, tr.total td { font-weight: 700; }

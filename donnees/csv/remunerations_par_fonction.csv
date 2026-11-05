@@ -1,0 +1,2401 @@
+annee;code_cofog;fonction;niveau;millions_euros;source_id
+1995;TOTAL;Total;0;164956.2;EUROSTAT_COFOG
+1995;GF01;Services généraux des administrations publiques;1;27782.8;EUROSTAT_COFOG
+1995;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;8234.9;EUROSTAT_COFOG
+1995;GF0102;Aide économique extérieure;2;141.8;EUROSTAT_COFOG
+1995;GF0103;Services généraux;2;15876.1;EUROSTAT_COFOG
+1995;GF0104;Recherche fondamentale;2;3187.9;EUROSTAT_COFOG
+1995;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+1995;GF0106;Services généraux des administrations publiques n.c.a.;2;342;EUROSTAT_COFOG
+1995;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+1995;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+1995;GF02;Défense;1;13268.3;EUROSTAT_COFOG
+1995;GF0201;Défense militaire;2;11291.5;EUROSTAT_COFOG
+1995;GF0202;Défense civile;2;213.4;EUROSTAT_COFOG
+1995;GF0203;Aide militaire à des pays étrangers;2;533.1;EUROSTAT_COFOG
+1995;GF0204;R & D concernant la défense;2;793.6;EUROSTAT_COFOG
+1995;GF0205;Défense n.c.a.;2;436.8;EUROSTAT_COFOG
+1995;GF03;Ordre et sécurité publics;1;12949.8;EUROSTAT_COFOG
+1995;GF0301;Services de police;2;9053.5;EUROSTAT_COFOG
+1995;GF0302;Services de protection civile;2;978;EUROSTAT_COFOG
+1995;GF0303;Tribunaux;2;1717.2;EUROSTAT_COFOG
+1995;GF0304;Administration pénitentiaire;2;979;EUROSTAT_COFOG
+1995;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+1995;GF0306;Ordre et sécurité publics n.c.a.;2;221.2;EUROSTAT_COFOG
+1995;GF04;Affaires économiques;1;10985.7;EUROSTAT_COFOG
+1995;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1533.7;EUROSTAT_COFOG
+1995;GF0402;Agriculture, sylviculture, pêche et chasse;2;2322.7;EUROSTAT_COFOG
+1995;GF0403;Combustibles et énergie;2;138.8;EUROSTAT_COFOG
+1995;GF0404;Industries extractives et manufacturières, construction;2;98.4;EUROSTAT_COFOG
+1995;GF0405;Transports;2;4073.1;EUROSTAT_COFOG
+1995;GF0406;Communications;2;0;EUROSTAT_COFOG
+1995;GF0407;Autres branches d'activité;2;875;EUROSTAT_COFOG
+1995;GF0408;R & D concernant les affaires économiques;2;1430.8;EUROSTAT_COFOG
+1995;GF0409;Affaires économiques n.c.a.;2;513;EUROSTAT_COFOG
+1995;GF05;Protection de l'environnement;1;1165.9;EUROSTAT_COFOG
+1995;GF0501;Gestion des déchets;2;341.3;EUROSTAT_COFOG
+1995;GF0502;Gestion des eaux usées;2;67;EUROSTAT_COFOG
+1995;GF0503;Lutte contre la pollution;2;23.1;EUROSTAT_COFOG
+1995;GF0504;Préservation de la diversité biologique et protection de la nature;2;64.8;EUROSTAT_COFOG
+1995;GF0505;R & D dans le domaine de la protection de l'environnement;2;18.8;EUROSTAT_COFOG
+1995;GF0506;Protection de l'environnement n.c.a.;2;650.9;EUROSTAT_COFOG
+1995;GF06;Logements et équipements collectifs;1;1731.2;EUROSTAT_COFOG
+1995;GF0601;Logements;2;417.6;EUROSTAT_COFOG
+1995;GF0602;Équipements collectifs;2;1161.6;EUROSTAT_COFOG
+1995;GF0603;Alimentation en eau;2;50.8;EUROSTAT_COFOG
+1995;GF0604;Éclairage public;2;16.2;EUROSTAT_COFOG
+1995;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+1995;GF0606;Logement et équipements collectifs n.c.a.;2;85;EUROSTAT_COFOG
+1995;GF07;Santé;1;28050.5;EUROSTAT_COFOG
+1995;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+1995;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+1995;GF0703;Services hospitaliers;2;25619.2;EUROSTAT_COFOG
+1995;GF0704;Services de santé publique;2;834.5;EUROSTAT_COFOG
+1995;GF0705;R & D dans le domaine de la santé;2;1061.8;EUROSTAT_COFOG
+1995;GF0706;Santé n.c.a.;2;535;EUROSTAT_COFOG
+1995;GF08;Loisirs, culture et culte;1;3670.4;EUROSTAT_COFOG
+1995;GF0801;Services récréatifs et sportifs;2;766;EUROSTAT_COFOG
+1995;GF0802;Services culturels;2;1861.3;EUROSTAT_COFOG
+1995;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1034;EUROSTAT_COFOG
+1995;GF0804;Culte et autres services communautaires;2;9;EUROSTAT_COFOG
+1995;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+1995;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+1995;GF09;Enseignement;1;51452;EUROSTAT_COFOG
+1995;GF0901;Enseignement préélémentaire et primaire;2;15680.6;EUROSTAT_COFOG
+1995;GF0902;Enseignement secondaire;2;27555.2;EUROSTAT_COFOG
+1995;GF0903;Enseignement postsecondaire non supérieur;2;219.6;EUROSTAT_COFOG
+1995;GF0904;Enseignement supérieur;2;3368.9;EUROSTAT_COFOG
+1995;GF0905;Enseignement non défini par niveau;2;878.9;EUROSTAT_COFOG
+1995;GF0906;Services annexes à l'enseignement;2;2813.9;EUROSTAT_COFOG
+1995;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+1995;GF0908;Enseignement n.c.a.;2;935;EUROSTAT_COFOG
+1995;GF10;Protection sociale;1;13899.5;EUROSTAT_COFOG
+1995;GF1001;Maladie et invalidité;2;3212;EUROSTAT_COFOG
+1995;GF1002;Vieillesse;2;5630.7;EUROSTAT_COFOG
+1995;GF1003;Survivants;2;45.9;EUROSTAT_COFOG
+1995;GF1004;Famille et enfants;2;2232.6;EUROSTAT_COFOG
+1995;GF1005;Chômage;2;993.5;EUROSTAT_COFOG
+1995;GF1006;Logement;2;0;EUROSTAT_COFOG
+1995;GF1007;Exclusion sociale n.c.a.;2;772.7;EUROSTAT_COFOG
+1995;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+1995;GF1009;Protection sociale n.c.a.;2;1012;EUROSTAT_COFOG
+1996;TOTAL;Total;0;172174.8;EUROSTAT_COFOG
+1996;GF01;Services généraux des administrations publiques;1;29016.6;EUROSTAT_COFOG
+1996;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;8583.7;EUROSTAT_COFOG
+1996;GF0102;Aide économique extérieure;2;136.5;EUROSTAT_COFOG
+1996;GF0103;Services généraux;2;16660.2;EUROSTAT_COFOG
+1996;GF0104;Recherche fondamentale;2;3274.3;EUROSTAT_COFOG
+1996;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+1996;GF0106;Services généraux des administrations publiques n.c.a.;2;362;EUROSTAT_COFOG
+1996;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+1996;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+1996;GF02;Défense;1;13944;EUROSTAT_COFOG
+1996;GF0201;Défense militaire;2;11867.8;EUROSTAT_COFOG
+1996;GF0202;Défense civile;2;225.3;EUROSTAT_COFOG
+1996;GF0203;Aide militaire à des pays étrangers;2;559.6;EUROSTAT_COFOG
+1996;GF0204;R & D concernant la défense;2;832.4;EUROSTAT_COFOG
+1996;GF0205;Défense n.c.a.;2;459;EUROSTAT_COFOG
+1996;GF03;Ordre et sécurité publics;1;13304.1;EUROSTAT_COFOG
+1996;GF0301;Services de police;2;9288.1;EUROSTAT_COFOG
+1996;GF0302;Services de protection civile;2;1025.9;EUROSTAT_COFOG
+1996;GF0303;Tribunaux;2;1759.4;EUROSTAT_COFOG
+1996;GF0304;Administration pénitentiaire;2;1003.6;EUROSTAT_COFOG
+1996;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+1996;GF0306;Ordre et sécurité publics n.c.a.;2;226.2;EUROSTAT_COFOG
+1996;GF04;Affaires économiques;1;11655.1;EUROSTAT_COFOG
+1996;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1633.8;EUROSTAT_COFOG
+1996;GF0402;Agriculture, sylviculture, pêche et chasse;2;2506.5;EUROSTAT_COFOG
+1996;GF0403;Combustibles et énergie;2;149.9;EUROSTAT_COFOG
+1996;GF0404;Industries extractives et manufacturières, construction;2;104.5;EUROSTAT_COFOG
+1996;GF0405;Transports;2;4235.2;EUROSTAT_COFOG
+1996;GF0406;Communications;2;0;EUROSTAT_COFOG
+1996;GF0407;Autres branches d'activité;2;946.9;EUROSTAT_COFOG
+1996;GF0408;R & D concernant les affaires économiques;2;1531.9;EUROSTAT_COFOG
+1996;GF0409;Affaires économiques n.c.a.;2;546.4;EUROSTAT_COFOG
+1996;GF05;Protection de l'environnement;1;1276.1;EUROSTAT_COFOG
+1996;GF0501;Gestion des déchets;2;389.8;EUROSTAT_COFOG
+1996;GF0502;Gestion des eaux usées;2;76.2;EUROSTAT_COFOG
+1996;GF0503;Lutte contre la pollution;2;26;EUROSTAT_COFOG
+1996;GF0504;Préservation de la diversité biologique et protection de la nature;2;70.9;EUROSTAT_COFOG
+1996;GF0505;R & D dans le domaine de la protection de l'environnement;2;19.8;EUROSTAT_COFOG
+1996;GF0506;Protection de l'environnement n.c.a.;2;693.3;EUROSTAT_COFOG
+1996;GF06;Logements et équipements collectifs;1;1873;EUROSTAT_COFOG
+1996;GF0601;Logements;2;442.7;EUROSTAT_COFOG
+1996;GF0602;Équipements collectifs;2;1266.9;EUROSTAT_COFOG
+1996;GF0603;Alimentation en eau;2;55.2;EUROSTAT_COFOG
+1996;GF0604;Éclairage public;2;18.2;EUROSTAT_COFOG
+1996;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+1996;GF0606;Logement et équipements collectifs n.c.a.;2;90.1;EUROSTAT_COFOG
+1996;GF07;Santé;1;29123.2;EUROSTAT_COFOG
+1996;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+1996;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+1996;GF0703;Services hospitaliers;2;26560.9;EUROSTAT_COFOG
+1996;GF0704;Services de santé publique;2;890;EUROSTAT_COFOG
+1996;GF0705;R & D dans le domaine de la santé;2;1113;EUROSTAT_COFOG
+1996;GF0706;Santé n.c.a.;2;559.2;EUROSTAT_COFOG
+1996;GF08;Loisirs, culture et culte;1;3971.9;EUROSTAT_COFOG
+1996;GF0801;Services récréatifs et sportifs;2;864.4;EUROSTAT_COFOG
+1996;GF0802;Services culturels;2;2031;EUROSTAT_COFOG
+1996;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1065.5;EUROSTAT_COFOG
+1996;GF0804;Culte et autres services communautaires;2;11.1;EUROSTAT_COFOG
+1996;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+1996;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+1996;GF09;Enseignement;1;53735.4;EUROSTAT_COFOG
+1996;GF0901;Enseignement préélémentaire et primaire;2;16365.6;EUROSTAT_COFOG
+1996;GF0902;Enseignement secondaire;2;28817.4;EUROSTAT_COFOG
+1996;GF0903;Enseignement postsecondaire non supérieur;2;222.3;EUROSTAT_COFOG
+1996;GF0904;Enseignement supérieur;2;3515.6;EUROSTAT_COFOG
+1996;GF0905;Enseignement non défini par niveau;2;915.4;EUROSTAT_COFOG
+1996;GF0906;Services annexes à l'enseignement;2;2913.7;EUROSTAT_COFOG
+1996;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+1996;GF0908;Enseignement n.c.a.;2;985.5;EUROSTAT_COFOG
+1996;GF10;Protection sociale;1;14275.5;EUROSTAT_COFOG
+1996;GF1001;Maladie et invalidité;2;3293.2;EUROSTAT_COFOG
+1996;GF1002;Vieillesse;2;5722.4;EUROSTAT_COFOG
+1996;GF1003;Survivants;2;48.2;EUROSTAT_COFOG
+1996;GF1004;Famille et enfants;2;2315.5;EUROSTAT_COFOG
+1996;GF1005;Chômage;2;993.9;EUROSTAT_COFOG
+1996;GF1006;Logement;2;0;EUROSTAT_COFOG
+1996;GF1007;Exclusion sociale n.c.a.;2;840;EUROSTAT_COFOG
+1996;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+1996;GF1009;Protection sociale n.c.a.;2;1062.2;EUROSTAT_COFOG
+1997;TOTAL;Total;0;173184.7;EUROSTAT_COFOG
+1997;GF01;Services généraux des administrations publiques;1;27991.7;EUROSTAT_COFOG
+1997;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;8707.5;EUROSTAT_COFOG
+1997;GF0102;Aide économique extérieure;2;125.5;EUROSTAT_COFOG
+1997;GF0103;Services généraux;2;15440.4;EUROSTAT_COFOG
+1997;GF0104;Recherche fondamentale;2;3367.3;EUROSTAT_COFOG
+1997;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+1997;GF0106;Services généraux des administrations publiques n.c.a.;2;351.2;EUROSTAT_COFOG
+1997;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+1997;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+1997;GF02;Défense;1;13836.4;EUROSTAT_COFOG
+1997;GF0201;Défense militaire;2;11776.9;EUROSTAT_COFOG
+1997;GF0202;Défense civile;2;223.4;EUROSTAT_COFOG
+1997;GF0203;Aide militaire à des pays étrangers;2;555.8;EUROSTAT_COFOG
+1997;GF0204;R & D concernant la défense;2;825.5;EUROSTAT_COFOG
+1997;GF0205;Défense n.c.a.;2;454.8;EUROSTAT_COFOG
+1997;GF03;Ordre et sécurité publics;1;13208.1;EUROSTAT_COFOG
+1997;GF0301;Services de police;2;9266;EUROSTAT_COFOG
+1997;GF0302;Services de protection civile;2;951.7;EUROSTAT_COFOG
+1997;GF0303;Tribunaux;2;1760;EUROSTAT_COFOG
+1997;GF0304;Administration pénitentiaire;2;1003.9;EUROSTAT_COFOG
+1997;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+1997;GF0306;Ordre et sécurité publics n.c.a.;2;225.8;EUROSTAT_COFOG
+1997;GF04;Affaires économiques;1;12213.5;EUROSTAT_COFOG
+1997;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1707.8;EUROSTAT_COFOG
+1997;GF0402;Agriculture, sylviculture, pêche et chasse;2;2710.3;EUROSTAT_COFOG
+1997;GF0403;Combustibles et énergie;2;158.7;EUROSTAT_COFOG
+1997;GF0404;Industries extractives et manufacturières, construction;2;108.7;EUROSTAT_COFOG
+1997;GF0405;Transports;2;4462.7;EUROSTAT_COFOG
+1997;GF0406;Communications;2;0;EUROSTAT_COFOG
+1997;GF0407;Autres branches d'activité;2;1041.5;EUROSTAT_COFOG
+1997;GF0408;R & D concernant les affaires économiques;2;1460.3;EUROSTAT_COFOG
+1997;GF0409;Affaires économiques n.c.a.;2;563.4;EUROSTAT_COFOG
+1997;GF05;Protection de l'environnement;1;1606.4;EUROSTAT_COFOG
+1997;GF0501;Gestion des déchets;2;617.8;EUROSTAT_COFOG
+1997;GF0502;Gestion des eaux usées;2;121;EUROSTAT_COFOG
+1997;GF0503;Lutte contre la pollution;2;41.2;EUROSTAT_COFOG
+1997;GF0504;Préservation de la diversité biologique et protection de la nature;2;95.1;EUROSTAT_COFOG
+1997;GF0505;R & D dans le domaine de la protection de l'environnement;2;20.5;EUROSTAT_COFOG
+1997;GF0506;Protection de l'environnement n.c.a.;2;710.9;EUROSTAT_COFOG
+1997;GF06;Logements et équipements collectifs;1;3273.2;EUROSTAT_COFOG
+1997;GF0601;Logements;2;676.7;EUROSTAT_COFOG
+1997;GF0602;Équipements collectifs;2;2411.6;EUROSTAT_COFOG
+1997;GF0603;Alimentation en eau;2;65.9;EUROSTAT_COFOG
+1997;GF0604;Éclairage public;2;21.7;EUROSTAT_COFOG
+1997;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+1997;GF0606;Logement et équipements collectifs n.c.a.;2;97.4;EUROSTAT_COFOG
+1997;GF07;Santé;1;29103.3;EUROSTAT_COFOG
+1997;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+1997;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+1997;GF0703;Services hospitaliers;2;26524.8;EUROSTAT_COFOG
+1997;GF0704;Services de santé publique;2;880.5;EUROSTAT_COFOG
+1997;GF0705;R & D dans le domaine de la santé;2;1131.8;EUROSTAT_COFOG
+1997;GF0706;Santé n.c.a.;2;566.3;EUROSTAT_COFOG
+1997;GF08;Loisirs, culture et culte;1;4265;EUROSTAT_COFOG
+1997;GF0801;Services récréatifs et sportifs;2;967.5;EUROSTAT_COFOG
+1997;GF0802;Services culturels;2;2207.5;EUROSTAT_COFOG
+1997;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1078.3;EUROSTAT_COFOG
+1997;GF0804;Culte et autres services communautaires;2;11.8;EUROSTAT_COFOG
+1997;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+1997;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+1997;GF09;Enseignement;1;53677.5;EUROSTAT_COFOG
+1997;GF0901;Enseignement préélémentaire et primaire;2;16316.2;EUROSTAT_COFOG
+1997;GF0902;Enseignement secondaire;2;28645.8;EUROSTAT_COFOG
+1997;GF0903;Enseignement postsecondaire non supérieur;2;235.1;EUROSTAT_COFOG
+1997;GF0904;Enseignement supérieur;2;3611.9;EUROSTAT_COFOG
+1997;GF0905;Enseignement non défini par niveau;2;948.5;EUROSTAT_COFOG
+1997;GF0906;Services annexes à l'enseignement;2;2949.7;EUROSTAT_COFOG
+1997;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+1997;GF0908;Enseignement n.c.a.;2;970.3;EUROSTAT_COFOG
+1997;GF10;Protection sociale;1;14009.5;EUROSTAT_COFOG
+1997;GF1001;Maladie et invalidité;2;3285;EUROSTAT_COFOG
+1997;GF1002;Vieillesse;2;5670.4;EUROSTAT_COFOG
+1997;GF1003;Survivants;2;49.4;EUROSTAT_COFOG
+1997;GF1004;Famille et enfants;2;2185.4;EUROSTAT_COFOG
+1997;GF1005;Chômage;2;990.5;EUROSTAT_COFOG
+1997;GF1006;Logement;2;0;EUROSTAT_COFOG
+1997;GF1007;Exclusion sociale n.c.a.;2;764.3;EUROSTAT_COFOG
+1997;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+1997;GF1009;Protection sociale n.c.a.;2;1064.5;EUROSTAT_COFOG
+1998;TOTAL;Total;0;178201.7;EUROSTAT_COFOG
+1998;GF01;Services généraux des administrations publiques;1;28912.3;EUROSTAT_COFOG
+1998;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;8990;EUROSTAT_COFOG
+1998;GF0102;Aide économique extérieure;2;132.4;EUROSTAT_COFOG
+1998;GF0103;Services généraux;2;15966.5;EUROSTAT_COFOG
+1998;GF0104;Recherche fondamentale;2;3455.7;EUROSTAT_COFOG
+1998;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+1998;GF0106;Services généraux des administrations publiques n.c.a.;2;367.9;EUROSTAT_COFOG
+1998;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+1998;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+1998;GF02;Défense;1;14330.8;EUROSTAT_COFOG
+1998;GF0201;Défense militaire;2;12198.9;EUROSTAT_COFOG
+1998;GF0202;Défense civile;2;231.9;EUROSTAT_COFOG
+1998;GF0203;Aide militaire à des pays étrangers;2;575.1;EUROSTAT_COFOG
+1998;GF0204;R & D concernant la défense;2;853.7;EUROSTAT_COFOG
+1998;GF0205;Défense n.c.a.;2;471.3;EUROSTAT_COFOG
+1998;GF03;Ordre et sécurité publics;1;13644.4;EUROSTAT_COFOG
+1998;GF0301;Services de police;2;9571.6;EUROSTAT_COFOG
+1998;GF0302;Services de protection civile;2;983.4;EUROSTAT_COFOG
+1998;GF0303;Tribunaux;2;1818;EUROSTAT_COFOG
+1998;GF0304;Administration pénitentiaire;2;1036.9;EUROSTAT_COFOG
+1998;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+1998;GF0306;Ordre et sécurité publics n.c.a.;2;233.5;EUROSTAT_COFOG
+1998;GF04;Affaires économiques;1;12288.6;EUROSTAT_COFOG
+1998;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1716.3;EUROSTAT_COFOG
+1998;GF0402;Agriculture, sylviculture, pêche et chasse;2;2741.2;EUROSTAT_COFOG
+1998;GF0403;Combustibles et énergie;2;159.1;EUROSTAT_COFOG
+1998;GF0404;Industries extractives et manufacturières, construction;2;109.8;EUROSTAT_COFOG
+1998;GF0405;Transports;2;4486.7;EUROSTAT_COFOG
+1998;GF0406;Communications;2;0;EUROSTAT_COFOG
+1998;GF0407;Autres branches d'activité;2;1056.3;EUROSTAT_COFOG
+1998;GF0408;R & D concernant les affaires économiques;2;1454.4;EUROSTAT_COFOG
+1998;GF0409;Affaires économiques n.c.a.;2;564.8;EUROSTAT_COFOG
+1998;GF05;Protection de l'environnement;1;1483.1;EUROSTAT_COFOG
+1998;GF0501;Gestion des déchets;2;598.3;EUROSTAT_COFOG
+1998;GF0502;Gestion des eaux usées;2;116.8;EUROSTAT_COFOG
+1998;GF0503;Lutte contre la pollution;2;39.9;EUROSTAT_COFOG
+1998;GF0504;Préservation de la diversité biologique et protection de la nature;2;95.7;EUROSTAT_COFOG
+1998;GF0505;R & D dans le domaine de la protection de l'environnement;2;21.5;EUROSTAT_COFOG
+1998;GF0506;Protection de l'environnement n.c.a.;2;611.1;EUROSTAT_COFOG
+1998;GF06;Logements et équipements collectifs;1;3388.8;EUROSTAT_COFOG
+1998;GF0601;Logements;2;655.9;EUROSTAT_COFOG
+1998;GF0602;Équipements collectifs;2;2535.2;EUROSTAT_COFOG
+1998;GF0603;Alimentation en eau;2;71.4;EUROSTAT_COFOG
+1998;GF0604;Éclairage public;2;23.5;EUROSTAT_COFOG
+1998;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+1998;GF0606;Logement et équipements collectifs n.c.a.;2;102.7;EUROSTAT_COFOG
+1998;GF07;Santé;1;30077.9;EUROSTAT_COFOG
+1998;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+1998;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+1998;GF0703;Services hospitaliers;2;27350.1;EUROSTAT_COFOG
+1998;GF0704;Services de santé publique;2;965.5;EUROSTAT_COFOG
+1998;GF0705;R & D dans le domaine de la santé;2;1170.3;EUROSTAT_COFOG
+1998;GF0706;Santé n.c.a.;2;591.9;EUROSTAT_COFOG
+1998;GF08;Loisirs, culture et culte;1;4476.8;EUROSTAT_COFOG
+1998;GF0801;Services récréatifs et sportifs;2;1015.9;EUROSTAT_COFOG
+1998;GF0802;Services culturels;2;2320.4;EUROSTAT_COFOG
+1998;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1127.9;EUROSTAT_COFOG
+1998;GF0804;Culte et autres services communautaires;2;12.7;EUROSTAT_COFOG
+1998;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+1998;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+1998;GF09;Enseignement;1;55135.4;EUROSTAT_COFOG
+1998;GF0901;Enseignement préélémentaire et primaire;2;16802.3;EUROSTAT_COFOG
+1998;GF0902;Enseignement secondaire;2;29422.7;EUROSTAT_COFOG
+1998;GF0903;Enseignement postsecondaire non supérieur;2;247.7;EUROSTAT_COFOG
+1998;GF0904;Enseignement supérieur;2;3657;EUROSTAT_COFOG
+1998;GF0905;Enseignement non défini par niveau;2;959.2;EUROSTAT_COFOG
+1998;GF0906;Services annexes à l'enseignement;2;3058.5;EUROSTAT_COFOG
+1998;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+1998;GF0908;Enseignement n.c.a.;2;988.2;EUROSTAT_COFOG
+1998;GF10;Protection sociale;1;14463.6;EUROSTAT_COFOG
+1998;GF1001;Maladie et invalidité;2;3317.8;EUROSTAT_COFOG
+1998;GF1002;Vieillesse;2;5757.4;EUROSTAT_COFOG
+1998;GF1003;Survivants;2;50.4;EUROSTAT_COFOG
+1998;GF1004;Famille et enfants;2;2352.9;EUROSTAT_COFOG
+1998;GF1005;Chômage;2;1008.3;EUROSTAT_COFOG
+1998;GF1006;Logement;2;0;EUROSTAT_COFOG
+1998;GF1007;Exclusion sociale n.c.a.;2;850.1;EUROSTAT_COFOG
+1998;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+1998;GF1009;Protection sociale n.c.a.;2;1126.8;EUROSTAT_COFOG
+1999;TOTAL;Total;0;186144.9;EUROSTAT_COFOG
+1999;GF01;Services généraux des administrations publiques;1;30646.9;EUROSTAT_COFOG
+1999;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;9433.2;EUROSTAT_COFOG
+1999;GF0102;Aide économique extérieure;2;140.4;EUROSTAT_COFOG
+1999;GF0103;Services généraux;2;17138.1;EUROSTAT_COFOG
+1999;GF0104;Recherche fondamentale;2;3556.9;EUROSTAT_COFOG
+1999;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+1999;GF0106;Services généraux des administrations publiques n.c.a.;2;378.4;EUROSTAT_COFOG
+1999;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+1999;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+1999;GF02;Défense;1;14608.7;EUROSTAT_COFOG
+1999;GF0201;Défense militaire;2;12436.1;EUROSTAT_COFOG
+1999;GF0202;Défense civile;2;235.8;EUROSTAT_COFOG
+1999;GF0203;Aide militaire à des pays étrangers;2;586.8;EUROSTAT_COFOG
+1999;GF0204;R & D concernant la défense;2;870.7;EUROSTAT_COFOG
+1999;GF0205;Défense n.c.a.;2;479.3;EUROSTAT_COFOG
+1999;GF03;Ordre et sécurité publics;1;14252.8;EUROSTAT_COFOG
+1999;GF0301;Services de police;2;9979.8;EUROSTAT_COFOG
+1999;GF0302;Services de protection civile;2;1055.1;EUROSTAT_COFOG
+1999;GF0303;Tribunaux;2;1894.1;EUROSTAT_COFOG
+1999;GF0304;Administration pénitentiaire;2;1079.4;EUROSTAT_COFOG
+1999;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+1999;GF0306;Ordre et sécurité publics n.c.a.;2;243.4;EUROSTAT_COFOG
+1999;GF04;Affaires économiques;1;12240.1;EUROSTAT_COFOG
+1999;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1705.2;EUROSTAT_COFOG
+1999;GF0402;Agriculture, sylviculture, pêche et chasse;2;2739.5;EUROSTAT_COFOG
+1999;GF0403;Combustibles et énergie;2;158.3;EUROSTAT_COFOG
+1999;GF0404;Industries extractives et manufacturières, construction;2;111;EUROSTAT_COFOG
+1999;GF0405;Transports;2;4419;EUROSTAT_COFOG
+1999;GF0406;Communications;2;0;EUROSTAT_COFOG
+1999;GF0407;Autres branches d'activité;2;1062.2;EUROSTAT_COFOG
+1999;GF0408;R & D concernant les affaires économiques;2;1482.4;EUROSTAT_COFOG
+1999;GF0409;Affaires économiques n.c.a.;2;562.4;EUROSTAT_COFOG
+1999;GF05;Protection de l'environnement;1;1645.6;EUROSTAT_COFOG
+1999;GF0501;Gestion des déchets;2;690.6;EUROSTAT_COFOG
+1999;GF0502;Gestion des eaux usées;2;135.2;EUROSTAT_COFOG
+1999;GF0503;Lutte contre la pollution;2;46;EUROSTAT_COFOG
+1999;GF0504;Préservation de la diversité biologique et protection de la nature;2;107;EUROSTAT_COFOG
+1999;GF0505;R & D dans le domaine de la protection de l'environnement;2;23.6;EUROSTAT_COFOG
+1999;GF0506;Protection de l'environnement n.c.a.;2;643.3;EUROSTAT_COFOG
+1999;GF06;Logements et équipements collectifs;1;3503.4;EUROSTAT_COFOG
+1999;GF0601;Logements;2;668.9;EUROSTAT_COFOG
+1999;GF0602;Équipements collectifs;2;2627.7;EUROSTAT_COFOG
+1999;GF0603;Alimentation en eau;2;75.2;EUROSTAT_COFOG
+1999;GF0604;Éclairage public;2;24.6;EUROSTAT_COFOG
+1999;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+1999;GF0606;Logement et équipements collectifs n.c.a.;2;107;EUROSTAT_COFOG
+1999;GF07;Santé;1;31498.5;EUROSTAT_COFOG
+1999;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+1999;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+1999;GF0703;Services hospitaliers;2;28602.4;EUROSTAT_COFOG
+1999;GF0704;Services de santé publique;2;1044.7;EUROSTAT_COFOG
+1999;GF0705;R & D dans le domaine de la santé;2;1220.5;EUROSTAT_COFOG
+1999;GF0706;Santé n.c.a.;2;630.9;EUROSTAT_COFOG
+1999;GF08;Loisirs, culture et culte;1;4745.5;EUROSTAT_COFOG
+1999;GF0801;Services récréatifs et sportifs;2;1088.6;EUROSTAT_COFOG
+1999;GF0802;Services culturels;2;2453.7;EUROSTAT_COFOG
+1999;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1189.5;EUROSTAT_COFOG
+1999;GF0804;Culte et autres services communautaires;2;13.7;EUROSTAT_COFOG
+1999;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+1999;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+1999;GF09;Enseignement;1;57826.3;EUROSTAT_COFOG
+1999;GF0901;Enseignement préélémentaire et primaire;2;17682.5;EUROSTAT_COFOG
+1999;GF0902;Enseignement secondaire;2;30871.5;EUROSTAT_COFOG
+1999;GF0903;Enseignement postsecondaire non supérieur;2;266.8;EUROSTAT_COFOG
+1999;GF0904;Enseignement supérieur;2;3755.4;EUROSTAT_COFOG
+1999;GF0905;Enseignement non défini par niveau;2;981.7;EUROSTAT_COFOG
+1999;GF0906;Services annexes à l'enseignement;2;3240.9;EUROSTAT_COFOG
+1999;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+1999;GF0908;Enseignement n.c.a.;2;1027.6;EUROSTAT_COFOG
+1999;GF10;Protection sociale;1;15177;EUROSTAT_COFOG
+1999;GF1001;Maladie et invalidité;2;3402.4;EUROSTAT_COFOG
+1999;GF1002;Vieillesse;2;5929.4;EUROSTAT_COFOG
+1999;GF1003;Survivants;2;51.8;EUROSTAT_COFOG
+1999;GF1004;Famille et enfants;2;2565.1;EUROSTAT_COFOG
+1999;GF1005;Chômage;2;1048.1;EUROSTAT_COFOG
+1999;GF1006;Logement;2;0;EUROSTAT_COFOG
+1999;GF1007;Exclusion sociale n.c.a.;2;953.9;EUROSTAT_COFOG
+1999;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+1999;GF1009;Protection sociale n.c.a.;2;1226.4;EUROSTAT_COFOG
+2000;TOTAL;Total;0;194022.9;EUROSTAT_COFOG
+2000;GF01;Services généraux des administrations publiques;1;32118.1;EUROSTAT_COFOG
+2000;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;10020.3;EUROSTAT_COFOG
+2000;GF0102;Aide économique extérieure;2;166.4;EUROSTAT_COFOG
+2000;GF0103;Services généraux;2;18112.2;EUROSTAT_COFOG
+2000;GF0104;Recherche fondamentale;2;3404.8;EUROSTAT_COFOG
+2000;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2000;GF0106;Services généraux des administrations publiques n.c.a.;2;414.4;EUROSTAT_COFOG
+2000;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2000;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2000;GF02;Défense;1;14939;EUROSTAT_COFOG
+2000;GF0201;Défense militaire;2;12712.1;EUROSTAT_COFOG
+2000;GF0202;Défense civile;2;241.9;EUROSTAT_COFOG
+2000;GF0203;Aide militaire à des pays étrangers;2;599.6;EUROSTAT_COFOG
+2000;GF0204;R & D concernant la défense;2;893.8;EUROSTAT_COFOG
+2000;GF0205;Défense n.c.a.;2;491.6;EUROSTAT_COFOG
+2000;GF03;Ordre et sécurité publics;1;14803.7;EUROSTAT_COFOG
+2000;GF0301;Services de police;2;10354;EUROSTAT_COFOG
+2000;GF0302;Services de protection civile;2;1114.5;EUROSTAT_COFOG
+2000;GF0303;Tribunaux;2;1963.3;EUROSTAT_COFOG
+2000;GF0304;Administration pénitentiaire;2;1118.9;EUROSTAT_COFOG
+2000;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2000;GF0306;Ordre et sécurité publics n.c.a.;2;252.1;EUROSTAT_COFOG
+2000;GF04;Affaires économiques;1;12362.6;EUROSTAT_COFOG
+2000;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1697;EUROSTAT_COFOG
+2000;GF0402;Agriculture, sylviculture, pêche et chasse;2;2744.9;EUROSTAT_COFOG
+2000;GF0403;Combustibles et énergie;2;162.7;EUROSTAT_COFOG
+2000;GF0404;Industries extractives et manufacturières, construction;2;112.7;EUROSTAT_COFOG
+2000;GF0405;Transports;2;4314.6;EUROSTAT_COFOG
+2000;GF0406;Communications;2;0;EUROSTAT_COFOG
+2000;GF0407;Autres branches d'activité;2;1062.7;EUROSTAT_COFOG
+2000;GF0408;R & D concernant les affaires économiques;2;1700;EUROSTAT_COFOG
+2000;GF0409;Affaires économiques n.c.a.;2;568.1;EUROSTAT_COFOG
+2000;GF05;Protection de l'environnement;1;1679;EUROSTAT_COFOG
+2000;GF0501;Gestion des déchets;2;800;EUROSTAT_COFOG
+2000;GF0502;Gestion des eaux usées;2;156.1;EUROSTAT_COFOG
+2000;GF0503;Lutte contre la pollution;2;53;EUROSTAT_COFOG
+2000;GF0504;Préservation de la diversité biologique et protection de la nature;2;148;EUROSTAT_COFOG
+2000;GF0505;R & D dans le domaine de la protection de l'environnement;2;41.6;EUROSTAT_COFOG
+2000;GF0506;Protection de l'environnement n.c.a.;2;480.3;EUROSTAT_COFOG
+2000;GF06;Logements et équipements collectifs;1;3873.3;EUROSTAT_COFOG
+2000;GF0601;Logements;2;680.3;EUROSTAT_COFOG
+2000;GF0602;Équipements collectifs;2;2979.3;EUROSTAT_COFOG
+2000;GF0603;Alimentation en eau;2;79.6;EUROSTAT_COFOG
+2000;GF0604;Éclairage public;2;25.7;EUROSTAT_COFOG
+2000;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2000;GF0606;Logement et équipements collectifs n.c.a.;2;108.4;EUROSTAT_COFOG
+2000;GF07;Santé;1;33209.9;EUROSTAT_COFOG
+2000;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2000;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2000;GF0703;Services hospitaliers;2;30153.1;EUROSTAT_COFOG
+2000;GF0704;Services de santé publique;2;1097.2;EUROSTAT_COFOG
+2000;GF0705;R & D dans le domaine de la santé;2;1288.7;EUROSTAT_COFOG
+2000;GF0706;Santé n.c.a.;2;670.8;EUROSTAT_COFOG
+2000;GF08;Loisirs, culture et culte;1;4944.8;EUROSTAT_COFOG
+2000;GF0801;Services récréatifs et sportifs;2;1174.2;EUROSTAT_COFOG
+2000;GF0802;Services culturels;2;2542.9;EUROSTAT_COFOG
+2000;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1213;EUROSTAT_COFOG
+2000;GF0804;Culte et autres services communautaires;2;14.8;EUROSTAT_COFOG
+2000;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2000;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2000;GF09;Enseignement;1;60160.5;EUROSTAT_COFOG
+2000;GF0901;Enseignement préélémentaire et primaire;2;18395.4;EUROSTAT_COFOG
+2000;GF0902;Enseignement secondaire;2;32086.6;EUROSTAT_COFOG
+2000;GF0903;Enseignement postsecondaire non supérieur;2;281.7;EUROSTAT_COFOG
+2000;GF0904;Enseignement supérieur;2;3922.4;EUROSTAT_COFOG
+2000;GF0905;Enseignement non défini par niveau;2;1026.9;EUROSTAT_COFOG
+2000;GF0906;Services annexes à l'enseignement;2;3382.5;EUROSTAT_COFOG
+2000;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+2000;GF0908;Enseignement n.c.a.;2;1065;EUROSTAT_COFOG
+2000;GF10;Protection sociale;1;15932.1;EUROSTAT_COFOG
+2000;GF1001;Maladie et invalidité;2;3481;EUROSTAT_COFOG
+2000;GF1002;Vieillesse;2;6101.4;EUROSTAT_COFOG
+2000;GF1003;Survivants;2;53.2;EUROSTAT_COFOG
+2000;GF1004;Famille et enfants;2;2874.5;EUROSTAT_COFOG
+2000;GF1005;Chômage;2;1140.4;EUROSTAT_COFOG
+2000;GF1006;Logement;2;0;EUROSTAT_COFOG
+2000;GF1007;Exclusion sociale n.c.a.;2;986.7;EUROSTAT_COFOG
+2000;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2000;GF1009;Protection sociale n.c.a.;2;1294.8;EUROSTAT_COFOG
+2001;TOTAL;Total;0;200052.2;EUROSTAT_COFOG
+2001;GF01;Services généraux des administrations publiques;1;33173;EUROSTAT_COFOG
+2001;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;10394.3;EUROSTAT_COFOG
+2001;GF0102;Aide économique extérieure;2;161.1;EUROSTAT_COFOG
+2001;GF0103;Services généraux;2;18685.6;EUROSTAT_COFOG
+2001;GF0104;Recherche fondamentale;2;3514;EUROSTAT_COFOG
+2001;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2001;GF0106;Services généraux des administrations publiques n.c.a.;2;418.1;EUROSTAT_COFOG
+2001;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2001;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2001;GF02;Défense;1;14935.1;EUROSTAT_COFOG
+2001;GF0201;Défense militaire;2;12707.3;EUROSTAT_COFOG
+2001;GF0202;Défense civile;2;243.4;EUROSTAT_COFOG
+2001;GF0203;Aide militaire à des pays étrangers;2;599.5;EUROSTAT_COFOG
+2001;GF0204;R & D concernant la défense;2;893.2;EUROSTAT_COFOG
+2001;GF0205;Défense n.c.a.;2;491.7;EUROSTAT_COFOG
+2001;GF03;Ordre et sécurité publics;1;15884.7;EUROSTAT_COFOG
+2001;GF0301;Services de police;2;10778.6;EUROSTAT_COFOG
+2001;GF0302;Services de protection civile;2;1687.4;EUROSTAT_COFOG
+2001;GF0303;Tribunaux;2;2013;EUROSTAT_COFOG
+2001;GF0304;Administration pénitentiaire;2;1147.1;EUROSTAT_COFOG
+2001;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2001;GF0306;Ordre et sécurité publics n.c.a.;2;257.7;EUROSTAT_COFOG
+2001;GF04;Affaires économiques;1;11183.2;EUROSTAT_COFOG
+2001;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1662.2;EUROSTAT_COFOG
+2001;GF0402;Agriculture, sylviculture, pêche et chasse;2;2137.5;EUROSTAT_COFOG
+2001;GF0403;Combustibles et énergie;2;143.9;EUROSTAT_COFOG
+2001;GF0404;Industries extractives et manufacturières, construction;2;112;EUROSTAT_COFOG
+2001;GF0405;Transports;2;3819.8;EUROSTAT_COFOG
+2001;GF0406;Communications;2;0;EUROSTAT_COFOG
+2001;GF0407;Autres branches d'activité;2;754.8;EUROSTAT_COFOG
+2001;GF0408;R & D concernant les affaires économiques;2;1977.4;EUROSTAT_COFOG
+2001;GF0409;Affaires économiques n.c.a.;2;575.6;EUROSTAT_COFOG
+2001;GF05;Protection de l'environnement;1;2091.8;EUROSTAT_COFOG
+2001;GF0501;Gestion des déchets;2;907.7;EUROSTAT_COFOG
+2001;GF0502;Gestion des eaux usées;2;177.6;EUROSTAT_COFOG
+2001;GF0503;Lutte contre la pollution;2;60.6;EUROSTAT_COFOG
+2001;GF0504;Préservation de la diversité biologique et protection de la nature;2;163.1;EUROSTAT_COFOG
+2001;GF0505;R & D dans le domaine de la protection de l'environnement;2;44.5;EUROSTAT_COFOG
+2001;GF0506;Protection de l'environnement n.c.a.;2;738.4;EUROSTAT_COFOG
+2001;GF06;Logements et équipements collectifs;1;4118.7;EUROSTAT_COFOG
+2001;GF0601;Logements;2;747.5;EUROSTAT_COFOG
+2001;GF0602;Équipements collectifs;2;3131.4;EUROSTAT_COFOG
+2001;GF0603;Alimentation en eau;2;91.1;EUROSTAT_COFOG
+2001;GF0604;Éclairage public;2;29.4;EUROSTAT_COFOG
+2001;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2001;GF0606;Logement et équipements collectifs n.c.a.;2;119.2;EUROSTAT_COFOG
+2001;GF07;Santé;1;34506.3;EUROSTAT_COFOG
+2001;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2001;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2001;GF0703;Services hospitaliers;2;31378;EUROSTAT_COFOG
+2001;GF0704;Services de santé publique;2;1123.8;EUROSTAT_COFOG
+2001;GF0705;R & D dans le domaine de la santé;2;1299.9;EUROSTAT_COFOG
+2001;GF0706;Santé n.c.a.;2;704.7;EUROSTAT_COFOG
+2001;GF08;Loisirs, culture et culte;1;5595.9;EUROSTAT_COFOG
+2001;GF0801;Services récréatifs et sportifs;2;1412.3;EUROSTAT_COFOG
+2001;GF0802;Services culturels;2;2932;EUROSTAT_COFOG
+2001;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1234;EUROSTAT_COFOG
+2001;GF0804;Culte et autres services communautaires;2;17.6;EUROSTAT_COFOG
+2001;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2001;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2001;GF09;Enseignement;1;62211.1;EUROSTAT_COFOG
+2001;GF0901;Enseignement préélémentaire et primaire;2;19043.5;EUROSTAT_COFOG
+2001;GF0902;Enseignement secondaire;2;33141.8;EUROSTAT_COFOG
+2001;GF0903;Enseignement postsecondaire non supérieur;2;297.9;EUROSTAT_COFOG
+2001;GF0904;Enseignement supérieur;2;4046.9;EUROSTAT_COFOG
+2001;GF0905;Enseignement non défini par niveau;2;1060.5;EUROSTAT_COFOG
+2001;GF0906;Services annexes à l'enseignement;2;3530.2;EUROSTAT_COFOG
+2001;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+2001;GF0908;Enseignement n.c.a.;2;1090.3;EUROSTAT_COFOG
+2001;GF10;Protection sociale;1;16352.4;EUROSTAT_COFOG
+2001;GF1001;Maladie et invalidité;2;3543.3;EUROSTAT_COFOG
+2001;GF1002;Vieillesse;2;6176;EUROSTAT_COFOG
+2001;GF1003;Survivants;2;55.1;EUROSTAT_COFOG
+2001;GF1004;Famille et enfants;2;2958.4;EUROSTAT_COFOG
+2001;GF1005;Chômage;2;1189.7;EUROSTAT_COFOG
+2001;GF1006;Logement;2;0;EUROSTAT_COFOG
+2001;GF1007;Exclusion sociale n.c.a.;2;1053.9;EUROSTAT_COFOG
+2001;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2001;GF1009;Protection sociale n.c.a.;2;1376.1;EUROSTAT_COFOG
+2002;TOTAL;Total;0;209169.6;EUROSTAT_COFOG
+2002;GF01;Services généraux des administrations publiques;1;32582.9;EUROSTAT_COFOG
+2002;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;10407.4;EUROSTAT_COFOG
+2002;GF0102;Aide économique extérieure;2;176.3;EUROSTAT_COFOG
+2002;GF0103;Services généraux;2;17930;EUROSTAT_COFOG
+2002;GF0104;Recherche fondamentale;2;3654.9;EUROSTAT_COFOG
+2002;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2002;GF0106;Services généraux des administrations publiques n.c.a.;2;414.4;EUROSTAT_COFOG
+2002;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2002;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2002;GF02;Défense;1;15597.5;EUROSTAT_COFOG
+2002;GF0201;Défense militaire;2;13271.4;EUROSTAT_COFOG
+2002;GF0202;Défense civile;2;252.6;EUROSTAT_COFOG
+2002;GF0203;Aide militaire à des pays étrangers;2;626.1;EUROSTAT_COFOG
+2002;GF0204;R & D concernant la défense;2;934.1;EUROSTAT_COFOG
+2002;GF0205;Défense n.c.a.;2;513.2;EUROSTAT_COFOG
+2002;GF03;Ordre et sécurité publics;1;17376.1;EUROSTAT_COFOG
+2002;GF0301;Services de police;2;11686.2;EUROSTAT_COFOG
+2002;GF0302;Services de protection civile;2;2003.2;EUROSTAT_COFOG
+2002;GF0303;Tribunaux;2;2171.4;EUROSTAT_COFOG
+2002;GF0304;Administration pénitentiaire;2;1236.4;EUROSTAT_COFOG
+2002;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2002;GF0306;Ordre et sécurité publics n.c.a.;2;278;EUROSTAT_COFOG
+2002;GF04;Affaires économiques;1;11951.4;EUROSTAT_COFOG
+2002;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1773.4;EUROSTAT_COFOG
+2002;GF0402;Agriculture, sylviculture, pêche et chasse;2;2326.1;EUROSTAT_COFOG
+2002;GF0403;Combustibles et énergie;2;153.4;EUROSTAT_COFOG
+2002;GF0404;Industries extractives et manufacturières, construction;2;119.7;EUROSTAT_COFOG
+2002;GF0405;Transports;2;4112.1;EUROSTAT_COFOG
+2002;GF0406;Communications;2;0;EUROSTAT_COFOG
+2002;GF0407;Autres branches d'activité;2;832.8;EUROSTAT_COFOG
+2002;GF0408;R & D concernant les affaires économiques;2;2024.9;EUROSTAT_COFOG
+2002;GF0409;Affaires économiques n.c.a.;2;609.1;EUROSTAT_COFOG
+2002;GF05;Protection de l'environnement;1;2112.5;EUROSTAT_COFOG
+2002;GF0501;Gestion des déchets;2;884.5;EUROSTAT_COFOG
+2002;GF0502;Gestion des eaux usées;2;172.6;EUROSTAT_COFOG
+2002;GF0503;Lutte contre la pollution;2;58.4;EUROSTAT_COFOG
+2002;GF0504;Préservation de la diversité biologique et protection de la nature;2;168.9;EUROSTAT_COFOG
+2002;GF0505;R & D dans le domaine de la protection de l'environnement;2;50.5;EUROSTAT_COFOG
+2002;GF0506;Protection de l'environnement n.c.a.;2;777.6;EUROSTAT_COFOG
+2002;GF06;Logements et équipements collectifs;1;4683.3;EUROSTAT_COFOG
+2002;GF0601;Logements;2;794.2;EUROSTAT_COFOG
+2002;GF0602;Équipements collectifs;2;3611.8;EUROSTAT_COFOG
+2002;GF0603;Alimentation en eau;2;114.6;EUROSTAT_COFOG
+2002;GF0604;Éclairage public;2;37.2;EUROSTAT_COFOG
+2002;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2002;GF0606;Logement et équipements collectifs n.c.a.;2;125.5;EUROSTAT_COFOG
+2002;GF07;Santé;1;36365.3;EUROSTAT_COFOG
+2002;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2002;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2002;GF0703;Services hospitaliers;2;33063;EUROSTAT_COFOG
+2002;GF0704;Services de santé publique;2;1187.2;EUROSTAT_COFOG
+2002;GF0705;R & D dans le domaine de la santé;2;1386.7;EUROSTAT_COFOG
+2002;GF0706;Santé n.c.a.;2;728.5;EUROSTAT_COFOG
+2002;GF08;Loisirs, culture et culte;1;6785.5;EUROSTAT_COFOG
+2002;GF0801;Services récréatifs et sportifs;2;1932.3;EUROSTAT_COFOG
+2002;GF0802;Services culturels;2;3539.6;EUROSTAT_COFOG
+2002;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1290.2;EUROSTAT_COFOG
+2002;GF0804;Culte et autres services communautaires;2;23.4;EUROSTAT_COFOG
+2002;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2002;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2002;GF09;Enseignement;1;64589.7;EUROSTAT_COFOG
+2002;GF0901;Enseignement préélémentaire et primaire;2;19734;EUROSTAT_COFOG
+2002;GF0902;Enseignement secondaire;2;34335.6;EUROSTAT_COFOG
+2002;GF0903;Enseignement postsecondaire non supérieur;2;313.7;EUROSTAT_COFOG
+2002;GF0904;Enseignement supérieur;2;4280.7;EUROSTAT_COFOG
+2002;GF0905;Enseignement non défini par niveau;2;1126.1;EUROSTAT_COFOG
+2002;GF0906;Services annexes à l'enseignement;2;3669.5;EUROSTAT_COFOG
+2002;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+2002;GF0908;Enseignement n.c.a.;2;1130;EUROSTAT_COFOG
+2002;GF10;Protection sociale;1;17125.3;EUROSTAT_COFOG
+2002;GF1001;Maladie et invalidité;2;3626.6;EUROSTAT_COFOG
+2002;GF1002;Vieillesse;2;6251.8;EUROSTAT_COFOG
+2002;GF1003;Survivants;2;57.1;EUROSTAT_COFOG
+2002;GF1004;Famille et enfants;2;3266.7;EUROSTAT_COFOG
+2002;GF1005;Chômage;2;1253.6;EUROSTAT_COFOG
+2002;GF1006;Logement;2;0;EUROSTAT_COFOG
+2002;GF1007;Exclusion sociale n.c.a.;2;1185.3;EUROSTAT_COFOG
+2002;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2002;GF1009;Protection sociale n.c.a.;2;1484.3;EUROSTAT_COFOG
+2003;TOTAL;Total;0;216534;EUROSTAT_COFOG
+2003;GF01;Services généraux des administrations publiques;1;32247.6;EUROSTAT_COFOG
+2003;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11180.8;EUROSTAT_COFOG
+2003;GF0102;Aide économique extérieure;2;168.1;EUROSTAT_COFOG
+2003;GF0103;Services généraux;2;16624.6;EUROSTAT_COFOG
+2003;GF0104;Recherche fondamentale;2;3844.6;EUROSTAT_COFOG
+2003;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2003;GF0106;Services généraux des administrations publiques n.c.a.;2;429.5;EUROSTAT_COFOG
+2003;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2003;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2003;GF02;Défense;1;15678.5;EUROSTAT_COFOG
+2003;GF0201;Défense militaire;2;13337.5;EUROSTAT_COFOG
+2003;GF0202;Défense civile;2;255.6;EUROSTAT_COFOG
+2003;GF0203;Aide militaire à des pays étrangers;2;628.3;EUROSTAT_COFOG
+2003;GF0204;R & D concernant la défense;2;941.4;EUROSTAT_COFOG
+2003;GF0205;Défense n.c.a.;2;515.8;EUROSTAT_COFOG
+2003;GF03;Ordre et sécurité publics;1;18437.3;EUROSTAT_COFOG
+2003;GF0301;Services de police;2;12319.1;EUROSTAT_COFOG
+2003;GF0302;Services de protection civile;2;2245.2;EUROSTAT_COFOG
+2003;GF0303;Tribunaux;2;2280.8;EUROSTAT_COFOG
+2003;GF0304;Administration pénitentiaire;2;1299.4;EUROSTAT_COFOG
+2003;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2003;GF0306;Ordre et sécurité publics n.c.a.;2;291.8;EUROSTAT_COFOG
+2003;GF04;Affaires économiques;1;12820.2;EUROSTAT_COFOG
+2003;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;1873.3;EUROSTAT_COFOG
+2003;GF0402;Agriculture, sylviculture, pêche et chasse;2;2535.9;EUROSTAT_COFOG
+2003;GF0403;Combustibles et énergie;2;163.2;EUROSTAT_COFOG
+2003;GF0404;Industries extractives et manufacturières, construction;2;125.3;EUROSTAT_COFOG
+2003;GF0405;Transports;2;4497.9;EUROSTAT_COFOG
+2003;GF0406;Communications;2;0;EUROSTAT_COFOG
+2003;GF0407;Autres branches d'activité;2;922.1;EUROSTAT_COFOG
+2003;GF0408;R & D concernant les affaires économiques;2;2064.8;EUROSTAT_COFOG
+2003;GF0409;Affaires économiques n.c.a.;2;637.7;EUROSTAT_COFOG
+2003;GF05;Protection de l'environnement;1;2590.7;EUROSTAT_COFOG
+2003;GF0501;Gestion des déchets;2;1187;EUROSTAT_COFOG
+2003;GF0502;Gestion des eaux usées;2;232.1;EUROSTAT_COFOG
+2003;GF0503;Lutte contre la pollution;2;78.2;EUROSTAT_COFOG
+2003;GF0504;Préservation de la diversité biologique et protection de la nature;2;206.3;EUROSTAT_COFOG
+2003;GF0505;R & D dans le domaine de la protection de l'environnement;2;54.4;EUROSTAT_COFOG
+2003;GF0506;Protection de l'environnement n.c.a.;2;832.6;EUROSTAT_COFOG
+2003;GF06;Logements et équipements collectifs;1;5113.8;EUROSTAT_COFOG
+2003;GF0601;Logements;2;804.4;EUROSTAT_COFOG
+2003;GF0602;Équipements collectifs;2;3991.8;EUROSTAT_COFOG
+2003;GF0603;Alimentation en eau;2;138.8;EUROSTAT_COFOG
+2003;GF0604;Éclairage public;2;45.2;EUROSTAT_COFOG
+2003;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2003;GF0606;Logement et équipements collectifs n.c.a.;2;133.6;EUROSTAT_COFOG
+2003;GF07;Santé;1;37852.3;EUROSTAT_COFOG
+2003;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2003;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2003;GF0703;Services hospitaliers;2;34343.1;EUROSTAT_COFOG
+2003;GF0704;Services de santé publique;2;1249.9;EUROSTAT_COFOG
+2003;GF0705;R & D dans le domaine de la santé;2;1472.1;EUROSTAT_COFOG
+2003;GF0706;Santé n.c.a.;2;787.3;EUROSTAT_COFOG
+2003;GF08;Loisirs, culture et culte;1;7550.2;EUROSTAT_COFOG
+2003;GF0801;Services récréatifs et sportifs;2;2279.4;EUROSTAT_COFOG
+2003;GF0802;Services culturels;2;3946.3;EUROSTAT_COFOG
+2003;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1297.1;EUROSTAT_COFOG
+2003;GF0804;Culte et autres services communautaires;2;27.4;EUROSTAT_COFOG
+2003;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2003;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2003;GF09;Enseignement;1;65928.1;EUROSTAT_COFOG
+2003;GF0901;Enseignement préélémentaire et primaire;2;20173.1;EUROSTAT_COFOG
+2003;GF0902;Enseignement secondaire;2;34966.6;EUROSTAT_COFOG
+2003;GF0903;Enseignement postsecondaire non supérieur;2;335.4;EUROSTAT_COFOG
+2003;GF0904;Enseignement supérieur;2;4366.2;EUROSTAT_COFOG
+2003;GF0905;Enseignement non défini par niveau;2;1151.2;EUROSTAT_COFOG
+2003;GF0906;Services annexes à l'enseignement;2;3799.3;EUROSTAT_COFOG
+2003;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+2003;GF0908;Enseignement n.c.a.;2;1136.4;EUROSTAT_COFOG
+2003;GF10;Protection sociale;1;18315.5;EUROSTAT_COFOG
+2003;GF1001;Maladie et invalidité;2;3873.4;EUROSTAT_COFOG
+2003;GF1002;Vieillesse;2;6613.4;EUROSTAT_COFOG
+2003;GF1003;Survivants;2;59.1;EUROSTAT_COFOG
+2003;GF1004;Famille et enfants;2;3495.1;EUROSTAT_COFOG
+2003;GF1005;Chômage;2;1335.9;EUROSTAT_COFOG
+2003;GF1006;Logement;2;0;EUROSTAT_COFOG
+2003;GF1007;Exclusion sociale n.c.a.;2;1343.1;EUROSTAT_COFOG
+2003;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2003;GF1009;Protection sociale n.c.a.;2;1595.5;EUROSTAT_COFOG
+2004;TOTAL;Total;0;221353.9;EUROSTAT_COFOG
+2004;GF01;Services généraux des administrations publiques;1;32934.9;EUROSTAT_COFOG
+2004;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11252.2;EUROSTAT_COFOG
+2004;GF0102;Aide économique extérieure;2;202.5;EUROSTAT_COFOG
+2004;GF0103;Services généraux;2;17189.1;EUROSTAT_COFOG
+2004;GF0104;Recherche fondamentale;2;3858.5;EUROSTAT_COFOG
+2004;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2004;GF0106;Services généraux des administrations publiques n.c.a.;2;432.5;EUROSTAT_COFOG
+2004;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2004;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2004;GF02;Défense;1;15772.4;EUROSTAT_COFOG
+2004;GF0201;Défense militaire;2;13418.6;EUROSTAT_COFOG
+2004;GF0202;Défense civile;2;258;EUROSTAT_COFOG
+2004;GF0203;Aide militaire à des pays étrangers;2;633.3;EUROSTAT_COFOG
+2004;GF0204;R & D concernant la défense;2;943.4;EUROSTAT_COFOG
+2004;GF0205;Défense n.c.a.;2;519.2;EUROSTAT_COFOG
+2004;GF03;Ordre et sécurité publics;1;18614.3;EUROSTAT_COFOG
+2004;GF0301;Services de police;2;12379.2;EUROSTAT_COFOG
+2004;GF0302;Services de protection civile;2;2353.2;EUROSTAT_COFOG
+2004;GF0303;Tribunaux;2;2285.6;EUROSTAT_COFOG
+2004;GF0304;Administration pénitentiaire;2;1302.4;EUROSTAT_COFOG
+2004;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2004;GF0306;Ordre et sécurité publics n.c.a.;2;292.9;EUROSTAT_COFOG
+2004;GF04;Affaires économiques;1;14028.1;EUROSTAT_COFOG
+2004;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;2183.7;EUROSTAT_COFOG
+2004;GF0402;Agriculture, sylviculture, pêche et chasse;2;2765;EUROSTAT_COFOG
+2004;GF0403;Combustibles et énergie;2;176.1;EUROSTAT_COFOG
+2004;GF0404;Industries extractives et manufacturières, construction;2;140;EUROSTAT_COFOG
+2004;GF0405;Transports;2;4970.4;EUROSTAT_COFOG
+2004;GF0406;Communications;2;0;EUROSTAT_COFOG
+2004;GF0407;Autres branches d'activité;2;965.7;EUROSTAT_COFOG
+2004;GF0408;R & D concernant les affaires économiques;2;2087;EUROSTAT_COFOG
+2004;GF0409;Affaires économiques n.c.a.;2;740.4;EUROSTAT_COFOG
+2004;GF05;Protection de l'environnement;1;2682.4;EUROSTAT_COFOG
+2004;GF0501;Gestion des déchets;2;1249.6;EUROSTAT_COFOG
+2004;GF0502;Gestion des eaux usées;2;244.7;EUROSTAT_COFOG
+2004;GF0503;Lutte contre la pollution;2;83.1;EUROSTAT_COFOG
+2004;GF0504;Préservation de la diversité biologique et protection de la nature;2;213;EUROSTAT_COFOG
+2004;GF0505;R & D dans le domaine de la protection de l'environnement;2;54.2;EUROSTAT_COFOG
+2004;GF0506;Protection de l'environnement n.c.a.;2;837.8;EUROSTAT_COFOG
+2004;GF06;Logements et équipements collectifs;1;5359.7;EUROSTAT_COFOG
+2004;GF0601;Logements;2;839.3;EUROSTAT_COFOG
+2004;GF0602;Équipements collectifs;2;4184.5;EUROSTAT_COFOG
+2004;GF0603;Alimentation en eau;2;150;EUROSTAT_COFOG
+2004;GF0604;Éclairage public;2;49.1;EUROSTAT_COFOG
+2004;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2004;GF0606;Logement et équipements collectifs n.c.a.;2;136.8;EUROSTAT_COFOG
+2004;GF07;Santé;1;39101.4;EUROSTAT_COFOG
+2004;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2004;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2004;GF0703;Services hospitaliers;2;35484.6;EUROSTAT_COFOG
+2004;GF0704;Services de santé publique;2;1278.8;EUROSTAT_COFOG
+2004;GF0705;R & D dans le domaine de la santé;2;1533.7;EUROSTAT_COFOG
+2004;GF0706;Santé n.c.a.;2;804.3;EUROSTAT_COFOG
+2004;GF08;Loisirs, culture et culte;1;7787.3;EUROSTAT_COFOG
+2004;GF0801;Services récréatifs et sportifs;2;2370.1;EUROSTAT_COFOG
+2004;GF0802;Services culturels;2;4085.1;EUROSTAT_COFOG
+2004;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1302.7;EUROSTAT_COFOG
+2004;GF0804;Culte et autres services communautaires;2;29.4;EUROSTAT_COFOG
+2004;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2004;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2004;GF09;Enseignement;1;66143.4;EUROSTAT_COFOG
+2004;GF0901;Enseignement préélémentaire et primaire;2;20243.3;EUROSTAT_COFOG
+2004;GF0902;Enseignement secondaire;2;35086.3;EUROSTAT_COFOG
+2004;GF0903;Enseignement postsecondaire non supérieur;2;335.9;EUROSTAT_COFOG
+2004;GF0904;Enseignement supérieur;2;4373.1;EUROSTAT_COFOG
+2004;GF0905;Enseignement non défini par niveau;2;1152.8;EUROSTAT_COFOG
+2004;GF0906;Services annexes à l'enseignement;2;3812.1;EUROSTAT_COFOG
+2004;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+2004;GF0908;Enseignement n.c.a.;2;1140.1;EUROSTAT_COFOG
+2004;GF10;Protection sociale;1;18929.9;EUROSTAT_COFOG
+2004;GF1001;Maladie et invalidité;2;3999;EUROSTAT_COFOG
+2004;GF1002;Vieillesse;2;6782.3;EUROSTAT_COFOG
+2004;GF1003;Survivants;2;59.9;EUROSTAT_COFOG
+2004;GF1004;Famille et enfants;2;3620.8;EUROSTAT_COFOG
+2004;GF1005;Chômage;2;1423.7;EUROSTAT_COFOG
+2004;GF1006;Logement;2;0;EUROSTAT_COFOG
+2004;GF1007;Exclusion sociale n.c.a.;2;1385.1;EUROSTAT_COFOG
+2004;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2004;GF1009;Protection sociale n.c.a.;2;1659.2;EUROSTAT_COFOG
+2005;TOTAL;Total;0;229824.1;EUROSTAT_COFOG
+2005;GF01;Services généraux des administrations publiques;1;34520.1;EUROSTAT_COFOG
+2005;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11541;EUROSTAT_COFOG
+2005;GF0102;Aide économique extérieure;2;221.9;EUROSTAT_COFOG
+2005;GF0103;Services généraux;2;18285.7;EUROSTAT_COFOG
+2005;GF0104;Recherche fondamentale;2;4017.8;EUROSTAT_COFOG
+2005;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2005;GF0106;Services généraux des administrations publiques n.c.a.;2;453.7;EUROSTAT_COFOG
+2005;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2005;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2005;GF02;Défense;1;16116.2;EUROSTAT_COFOG
+2005;GF0201;Défense militaire;2;13703;EUROSTAT_COFOG
+2005;GF0202;Défense civile;2;264.2;EUROSTAT_COFOG
+2005;GF0203;Aide militaire à des pays étrangers;2;645.5;EUROSTAT_COFOG
+2005;GF0204;R & D concernant la défense;2;971.3;EUROSTAT_COFOG
+2005;GF0205;Défense n.c.a.;2;532.2;EUROSTAT_COFOG
+2005;GF03;Ordre et sécurité publics;1;19182.9;EUROSTAT_COFOG
+2005;GF0301;Services de police;2;12639.4;EUROSTAT_COFOG
+2005;GF0302;Services de protection civile;2;2598.8;EUROSTAT_COFOG
+2005;GF0303;Tribunaux;2;2322.3;EUROSTAT_COFOG
+2005;GF0304;Administration pénitentiaire;2;1323;EUROSTAT_COFOG
+2005;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2005;GF0306;Ordre et sécurité publics n.c.a.;2;298.5;EUROSTAT_COFOG
+2005;GF04;Affaires économiques;1;14964.8;EUROSTAT_COFOG
+2005;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;2385.1;EUROSTAT_COFOG
+2005;GF0402;Agriculture, sylviculture, pêche et chasse;2;3016.6;EUROSTAT_COFOG
+2005;GF0403;Combustibles et énergie;2;187.4;EUROSTAT_COFOG
+2005;GF0404;Industries extractives et manufacturières, construction;2;150.3;EUROSTAT_COFOG
+2005;GF0405;Transports;2;5328.4;EUROSTAT_COFOG
+2005;GF0406;Communications;2;0;EUROSTAT_COFOG
+2005;GF0407;Autres branches d'activité;2;1049.3;EUROSTAT_COFOG
+2005;GF0408;R & D concernant les affaires économiques;2;2045.6;EUROSTAT_COFOG
+2005;GF0409;Affaires économiques n.c.a.;2;802;EUROSTAT_COFOG
+2005;GF05;Protection de l'environnement;1;2832.6;EUROSTAT_COFOG
+2005;GF0501;Gestion des déchets;2;1332.9;EUROSTAT_COFOG
+2005;GF0502;Gestion des eaux usées;2;260.7;EUROSTAT_COFOG
+2005;GF0503;Lutte contre la pollution;2;88.6;EUROSTAT_COFOG
+2005;GF0504;Préservation de la diversité biologique et protection de la nature;2;222.9;EUROSTAT_COFOG
+2005;GF0505;R & D dans le domaine de la protection de l'environnement;2;55.3;EUROSTAT_COFOG
+2005;GF0506;Protection de l'environnement n.c.a.;2;872.2;EUROSTAT_COFOG
+2005;GF06;Logements et équipements collectifs;1;5669;EUROSTAT_COFOG
+2005;GF0601;Logements;2;889.6;EUROSTAT_COFOG
+2005;GF0602;Équipements collectifs;2;4428.9;EUROSTAT_COFOG
+2005;GF0603;Alimentation en eau;2;157.8;EUROSTAT_COFOG
+2005;GF0604;Éclairage public;2;51.4;EUROSTAT_COFOG
+2005;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2005;GF0606;Logement et équipements collectifs n.c.a.;2;141.3;EUROSTAT_COFOG
+2005;GF07;Santé;1;40990.9;EUROSTAT_COFOG
+2005;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2005;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2005;GF0703;Services hospitaliers;2;37199.9;EUROSTAT_COFOG
+2005;GF0704;Services de santé publique;2;1333.5;EUROSTAT_COFOG
+2005;GF0705;R & D dans le domaine de la santé;2;1620.5;EUROSTAT_COFOG
+2005;GF0706;Santé n.c.a.;2;837.1;EUROSTAT_COFOG
+2005;GF08;Loisirs, culture et culte;1;8096.7;EUROSTAT_COFOG
+2005;GF0801;Services récréatifs et sportifs;2;2466.8;EUROSTAT_COFOG
+2005;GF0802;Services culturels;2;4251.2;EUROSTAT_COFOG
+2005;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1348.2;EUROSTAT_COFOG
+2005;GF0804;Culte et autres services communautaires;2;30.6;EUROSTAT_COFOG
+2005;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2005;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2005;GF09;Enseignement;1;67579.6;EUROSTAT_COFOG
+2005;GF0901;Enseignement préélémentaire et primaire;2;20670.8;EUROSTAT_COFOG
+2005;GF0902;Enseignement secondaire;2;35836.9;EUROSTAT_COFOG
+2005;GF0903;Enseignement postsecondaire non supérieur;2;342.8;EUROSTAT_COFOG
+2005;GF0904;Enseignement supérieur;2;4489.3;EUROSTAT_COFOG
+2005;GF0905;Enseignement non défini par niveau;2;1184.2;EUROSTAT_COFOG
+2005;GF0906;Services annexes à l'enseignement;2;3889.4;EUROSTAT_COFOG
+2005;GF0907;R & D dans le domaine de l'enseignement;2;0.8;EUROSTAT_COFOG
+2005;GF0908;Enseignement n.c.a.;2;1165.3;EUROSTAT_COFOG
+2005;GF10;Protection sociale;1;19871.4;EUROSTAT_COFOG
+2005;GF1001;Maladie et invalidité;2;4161.2;EUROSTAT_COFOG
+2005;GF1002;Vieillesse;2;7266.4;EUROSTAT_COFOG
+2005;GF1003;Survivants;2;62;EUROSTAT_COFOG
+2005;GF1004;Famille et enfants;2;3676.3;EUROSTAT_COFOG
+2005;GF1005;Chômage;2;1454.2;EUROSTAT_COFOG
+2005;GF1006;Logement;2;0;EUROSTAT_COFOG
+2005;GF1007;Exclusion sociale n.c.a.;2;1500.6;EUROSTAT_COFOG
+2005;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2005;GF1009;Protection sociale n.c.a.;2;1750.7;EUROSTAT_COFOG
+2006;TOTAL;Total;0;235441.8;EUROSTAT_COFOG
+2006;GF01;Services généraux des administrations publiques;1;35067.8;EUROSTAT_COFOG
+2006;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11361.6;EUROSTAT_COFOG
+2006;GF0102;Aide économique extérieure;2;232.2;EUROSTAT_COFOG
+2006;GF0103;Services généraux;2;18967.8;EUROSTAT_COFOG
+2006;GF0104;Recherche fondamentale;2;4060.5;EUROSTAT_COFOG
+2006;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2006;GF0106;Services généraux des administrations publiques n.c.a.;2;445.8;EUROSTAT_COFOG
+2006;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2006;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2006;GF02;Défense;1;16365.5;EUROSTAT_COFOG
+2006;GF0201;Défense militaire;2;13913.7;EUROSTAT_COFOG
+2006;GF0202;Défense civile;2;266.9;EUROSTAT_COFOG
+2006;GF0203;Aide militaire à des pays étrangers;2;656.4;EUROSTAT_COFOG
+2006;GF0204;R & D concernant la défense;2;988.1;EUROSTAT_COFOG
+2006;GF0205;Défense n.c.a.;2;540.5;EUROSTAT_COFOG
+2006;GF03;Ordre et sécurité publics;1;19677.3;EUROSTAT_COFOG
+2006;GF0301;Services de police;2;12842;EUROSTAT_COFOG
+2006;GF0302;Services de protection civile;2;2848.5;EUROSTAT_COFOG
+2006;GF0303;Tribunaux;2;2347.7;EUROSTAT_COFOG
+2006;GF0304;Administration pénitentiaire;2;1336.6;EUROSTAT_COFOG
+2006;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2006;GF0306;Ordre et sécurité publics n.c.a.;2;301.5;EUROSTAT_COFOG
+2006;GF04;Affaires économiques;1;15479.6;EUROSTAT_COFOG
+2006;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;2485.3;EUROSTAT_COFOG
+2006;GF0402;Agriculture, sylviculture, pêche et chasse;2;3112.4;EUROSTAT_COFOG
+2006;GF0403;Combustibles et énergie;2;192.8;EUROSTAT_COFOG
+2006;GF0404;Industries extractives et manufacturières, construction;2;156.1;EUROSTAT_COFOG
+2006;GF0405;Transports;2;5533.8;EUROSTAT_COFOG
+2006;GF0406;Communications;2;0;EUROSTAT_COFOG
+2006;GF0407;Autres branches d'activité;2;1079.5;EUROSTAT_COFOG
+2006;GF0408;R & D concernant les affaires économiques;2;2086.3;EUROSTAT_COFOG
+2006;GF0409;Affaires économiques n.c.a.;2;833.4;EUROSTAT_COFOG
+2006;GF05;Protection de l'environnement;1;3055.1;EUROSTAT_COFOG
+2006;GF0501;Gestion des déchets;2;1418.8;EUROSTAT_COFOG
+2006;GF0502;Gestion des eaux usées;2;276.9;EUROSTAT_COFOG
+2006;GF0503;Lutte contre la pollution;2;94.5;EUROSTAT_COFOG
+2006;GF0504;Préservation de la diversité biologique et protection de la nature;2;233.4;EUROSTAT_COFOG
+2006;GF0505;R & D dans le domaine de la protection de l'environnement;2;56.1;EUROSTAT_COFOG
+2006;GF0506;Protection de l'environnement n.c.a.;2;975.4;EUROSTAT_COFOG
+2006;GF06;Logements et équipements collectifs;1;5456.4;EUROSTAT_COFOG
+2006;GF0601;Logements;2;867.5;EUROSTAT_COFOG
+2006;GF0602;Équipements collectifs;2;4230.8;EUROSTAT_COFOG
+2006;GF0603;Alimentation en eau;2;163.8;EUROSTAT_COFOG
+2006;GF0604;Éclairage public;2;52.4;EUROSTAT_COFOG
+2006;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2006;GF0606;Logement et équipements collectifs n.c.a.;2;141.9;EUROSTAT_COFOG
+2006;GF07;Santé;1;41804.2;EUROSTAT_COFOG
+2006;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2006;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2006;GF0703;Services hospitaliers;2;37927.3;EUROSTAT_COFOG
+2006;GF0704;Services de santé publique;2;1366.4;EUROSTAT_COFOG
+2006;GF0705;R & D dans le domaine de la santé;2;1659.3;EUROSTAT_COFOG
+2006;GF0706;Santé n.c.a.;2;851.3;EUROSTAT_COFOG
+2006;GF08;Loisirs, culture et culte;1;8625.5;EUROSTAT_COFOG
+2006;GF0801;Services récréatifs et sportifs;2;2681.1;EUROSTAT_COFOG
+2006;GF0802;Services culturels;2;4510.6;EUROSTAT_COFOG
+2006;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1401.2;EUROSTAT_COFOG
+2006;GF0804;Culte et autres services communautaires;2;32.5;EUROSTAT_COFOG
+2006;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2006;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2006;GF09;Enseignement;1;68491.6;EUROSTAT_COFOG
+2006;GF0901;Enseignement préélémentaire et primaire;2;20900.1;EUROSTAT_COFOG
+2006;GF0902;Enseignement secondaire;2;36339.4;EUROSTAT_COFOG
+2006;GF0903;Enseignement postsecondaire non supérieur;2;339;EUROSTAT_COFOG
+2006;GF0904;Enseignement supérieur;2;4602.7;EUROSTAT_COFOG
+2006;GF0905;Enseignement non défini par niveau;2;1213.6;EUROSTAT_COFOG
+2006;GF0906;Services annexes à l'enseignement;2;3903.3;EUROSTAT_COFOG
+2006;GF0907;R & D dans le domaine de l'enseignement;2;0.8;EUROSTAT_COFOG
+2006;GF0908;Enseignement n.c.a.;2;1192.7;EUROSTAT_COFOG
+2006;GF10;Protection sociale;1;21418.7;EUROSTAT_COFOG
+2006;GF1001;Maladie et invalidité;2;4136.4;EUROSTAT_COFOG
+2006;GF1002;Vieillesse;2;7495.1;EUROSTAT_COFOG
+2006;GF1003;Survivants;2;69.8;EUROSTAT_COFOG
+2006;GF1004;Famille et enfants;2;4271.6;EUROSTAT_COFOG
+2006;GF1005;Chômage;2;1732;EUROSTAT_COFOG
+2006;GF1006;Logement;2;0;EUROSTAT_COFOG
+2006;GF1007;Exclusion sociale n.c.a.;2;1867.4;EUROSTAT_COFOG
+2006;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2006;GF1009;Protection sociale n.c.a.;2;1846.5;EUROSTAT_COFOG
+2007;TOTAL;Total;0;242883.8;EUROSTAT_COFOG
+2007;GF01;Services généraux des administrations publiques;1;37326;EUROSTAT_COFOG
+2007;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11932.5;EUROSTAT_COFOG
+2007;GF0102;Aide économique extérieure;2;240.7;EUROSTAT_COFOG
+2007;GF0103;Services généraux;2;20408.8;EUROSTAT_COFOG
+2007;GF0104;Recherche fondamentale;2;4263.3;EUROSTAT_COFOG
+2007;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2007;GF0106;Services généraux des administrations publiques n.c.a.;2;480.8;EUROSTAT_COFOG
+2007;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2007;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2007;GF02;Défense;1;16833.2;EUROSTAT_COFOG
+2007;GF0201;Défense militaire;2;14314.5;EUROSTAT_COFOG
+2007;GF0202;Défense civile;2;275.1;EUROSTAT_COFOG
+2007;GF0203;Aide militaire à des pays étrangers;2;674;EUROSTAT_COFOG
+2007;GF0204;R & D concernant la défense;2;1015.3;EUROSTAT_COFOG
+2007;GF0205;Défense n.c.a.;2;554.5;EUROSTAT_COFOG
+2007;GF03;Ordre et sécurité publics;1;20499.2;EUROSTAT_COFOG
+2007;GF0301;Services de police;2;13313.7;EUROSTAT_COFOG
+2007;GF0302;Services de protection civile;2;3063.1;EUROSTAT_COFOG
+2007;GF0303;Tribunaux;2;2427.3;EUROSTAT_COFOG
+2007;GF0304;Administration pénitentiaire;2;1382.2;EUROSTAT_COFOG
+2007;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2007;GF0306;Ordre et sécurité publics n.c.a.;2;312;EUROSTAT_COFOG
+2007;GF04;Affaires économiques;1;16142.6;EUROSTAT_COFOG
+2007;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;2562;EUROSTAT_COFOG
+2007;GF0402;Agriculture, sylviculture, pêche et chasse;2;3293.1;EUROSTAT_COFOG
+2007;GF0403;Combustibles et énergie;2;201.3;EUROSTAT_COFOG
+2007;GF0404;Industries extractives et manufacturières, construction;2;160.1;EUROSTAT_COFOG
+2007;GF0405;Transports;2;5801.8;EUROSTAT_COFOG
+2007;GF0406;Communications;2;0;EUROSTAT_COFOG
+2007;GF0407;Autres branches d'activité;2;1157;EUROSTAT_COFOG
+2007;GF0408;R & D concernant les affaires économiques;2;2113.3;EUROSTAT_COFOG
+2007;GF0409;Affaires économiques n.c.a.;2;854.1;EUROSTAT_COFOG
+2007;GF05;Protection de l'environnement;1;2995.3;EUROSTAT_COFOG
+2007;GF0501;Gestion des déchets;2;1525.7;EUROSTAT_COFOG
+2007;GF0502;Gestion des eaux usées;2;298.6;EUROSTAT_COFOG
+2007;GF0503;Lutte contre la pollution;2;101.5;EUROSTAT_COFOG
+2007;GF0504;Préservation de la diversité biologique et protection de la nature;2;241.2;EUROSTAT_COFOG
+2007;GF0505;R & D dans le domaine de la protection de l'environnement;2;54.1;EUROSTAT_COFOG
+2007;GF0506;Protection de l'environnement n.c.a.;2;774.2;EUROSTAT_COFOG
+2007;GF06;Logements et équipements collectifs;1;5932.6;EUROSTAT_COFOG
+2007;GF0601;Logements;2;867.8;EUROSTAT_COFOG
+2007;GF0602;Équipements collectifs;2;4688.3;EUROSTAT_COFOG
+2007;GF0603;Alimentation en eau;2;175.9;EUROSTAT_COFOG
+2007;GF0604;Éclairage public;2;57.4;EUROSTAT_COFOG
+2007;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2007;GF0606;Logement et équipements collectifs n.c.a.;2;143.3;EUROSTAT_COFOG
+2007;GF07;Santé;1;42902;EUROSTAT_COFOG
+2007;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2007;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2007;GF0703;Services hospitaliers;2;38808.9;EUROSTAT_COFOG
+2007;GF0704;Services de santé publique;2;1408.1;EUROSTAT_COFOG
+2007;GF0705;R & D dans le domaine de la santé;2;1809.6;EUROSTAT_COFOG
+2007;GF0706;Santé n.c.a.;2;875.4;EUROSTAT_COFOG
+2007;GF08;Loisirs, culture et culte;1;9082.9;EUROSTAT_COFOG
+2007;GF0801;Services récréatifs et sportifs;2;2885.7;EUROSTAT_COFOG
+2007;GF0802;Services culturels;2;4736.5;EUROSTAT_COFOG
+2007;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1425.1;EUROSTAT_COFOG
+2007;GF0804;Culte et autres services communautaires;2;35.5;EUROSTAT_COFOG
+2007;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2007;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2007;GF09;Enseignement;1;68906.8;EUROSTAT_COFOG
+2007;GF0901;Enseignement préélémentaire et primaire;2;21052.7;EUROSTAT_COFOG
+2007;GF0902;Enseignement secondaire;2;36497.4;EUROSTAT_COFOG
+2007;GF0903;Enseignement postsecondaire non supérieur;2;350.7;EUROSTAT_COFOG
+2007;GF0904;Enseignement supérieur;2;4626.5;EUROSTAT_COFOG
+2007;GF0905;Enseignement non défini par niveau;2;1221.8;EUROSTAT_COFOG
+2007;GF0906;Services annexes à l'enseignement;2;3969.3;EUROSTAT_COFOG
+2007;GF0907;R & D dans le domaine de l'enseignement;2;0.8;EUROSTAT_COFOG
+2007;GF0908;Enseignement n.c.a.;2;1187.6;EUROSTAT_COFOG
+2007;GF10;Protection sociale;1;22263.3;EUROSTAT_COFOG
+2007;GF1001;Maladie et invalidité;2;4143.2;EUROSTAT_COFOG
+2007;GF1002;Vieillesse;2;7653.2;EUROSTAT_COFOG
+2007;GF1003;Survivants;2;75.7;EUROSTAT_COFOG
+2007;GF1004;Famille et enfants;2;4528.1;EUROSTAT_COFOG
+2007;GF1005;Chômage;2;1866.7;EUROSTAT_COFOG
+2007;GF1006;Logement;2;0;EUROSTAT_COFOG
+2007;GF1007;Exclusion sociale n.c.a.;2;2009.6;EUROSTAT_COFOG
+2007;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2007;GF1009;Protection sociale n.c.a.;2;1986.7;EUROSTAT_COFOG
+2008;TOTAL;Total;0;249274;EUROSTAT_COFOG
+2008;GF01;Services généraux des administrations publiques;1;37795.8;EUROSTAT_COFOG
+2008;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12101.2;EUROSTAT_COFOG
+2008;GF0102;Aide économique extérieure;2;250.7;EUROSTAT_COFOG
+2008;GF0103;Services généraux;2;20640.9;EUROSTAT_COFOG
+2008;GF0104;Recherche fondamentale;2;4320.4;EUROSTAT_COFOG
+2008;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2008;GF0106;Services généraux des administrations publiques n.c.a.;2;482.6;EUROSTAT_COFOG
+2008;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2008;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2008;GF02;Défense;1;16848.8;EUROSTAT_COFOG
+2008;GF0201;Défense militaire;2;14274.9;EUROSTAT_COFOG
+2008;GF0202;Défense civile;2;275.5;EUROSTAT_COFOG
+2008;GF0203;Aide militaire à des pays étrangers;2;672.9;EUROSTAT_COFOG
+2008;GF0204;R & D concernant la défense;2;1062.1;EUROSTAT_COFOG
+2008;GF0205;Défense n.c.a.;2;563.4;EUROSTAT_COFOG
+2008;GF03;Ordre et sécurité publics;1;22292.3;EUROSTAT_COFOG
+2008;GF0301;Services de police;2;14547.3;EUROSTAT_COFOG
+2008;GF0302;Services de protection civile;2;3229;EUROSTAT_COFOG
+2008;GF0303;Tribunaux;2;2658.5;EUROSTAT_COFOG
+2008;GF0304;Administration pénitentiaire;2;1514.7;EUROSTAT_COFOG
+2008;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2008;GF0306;Ordre et sécurité publics n.c.a.;2;341.9;EUROSTAT_COFOG
+2008;GF04;Affaires économiques;1;15790.3;EUROSTAT_COFOG
+2008;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;2318.6;EUROSTAT_COFOG
+2008;GF0402;Agriculture, sylviculture, pêche et chasse;2;3313.7;EUROSTAT_COFOG
+2008;GF0403;Combustibles et énergie;2;198.6;EUROSTAT_COFOG
+2008;GF0404;Industries extractives et manufacturières, construction;2;149.6;EUROSTAT_COFOG
+2008;GF0405;Transports;2;5811.6;EUROSTAT_COFOG
+2008;GF0406;Communications;2;0;EUROSTAT_COFOG
+2008;GF0407;Autres branches d'activité;2;1231.9;EUROSTAT_COFOG
+2008;GF0408;R & D concernant les affaires économiques;2;1998.1;EUROSTAT_COFOG
+2008;GF0409;Affaires économiques n.c.a.;2;768.2;EUROSTAT_COFOG
+2008;GF05;Protection de l'environnement;1;3199.9;EUROSTAT_COFOG
+2008;GF0501;Gestion des déchets;2;1683;EUROSTAT_COFOG
+2008;GF0502;Gestion des eaux usées;2;329.1;EUROSTAT_COFOG
+2008;GF0503;Lutte contre la pollution;2;111;EUROSTAT_COFOG
+2008;GF0504;Préservation de la diversité biologique et protection de la nature;2;269.7;EUROSTAT_COFOG
+2008;GF0505;R & D dans le domaine de la protection de l'environnement;2;62.9;EUROSTAT_COFOG
+2008;GF0506;Protection de l'environnement n.c.a.;2;744.2;EUROSTAT_COFOG
+2008;GF06;Logements et équipements collectifs;1;6167.7;EUROSTAT_COFOG
+2008;GF0601;Logements;2;773.6;EUROSTAT_COFOG
+2008;GF0602;Équipements collectifs;2;4969.4;EUROSTAT_COFOG
+2008;GF0603;Alimentation en eau;2;206.2;EUROSTAT_COFOG
+2008;GF0604;Éclairage public;2;66.6;EUROSTAT_COFOG
+2008;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2008;GF0606;Logement et équipements collectifs n.c.a.;2;151.9;EUROSTAT_COFOG
+2008;GF07;Santé;1;44055.1;EUROSTAT_COFOG
+2008;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2008;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2008;GF0703;Services hospitaliers;2;39852.9;EUROSTAT_COFOG
+2008;GF0704;Services de santé publique;2;1446.1;EUROSTAT_COFOG
+2008;GF0705;R & D dans le domaine de la santé;2;1860;EUROSTAT_COFOG
+2008;GF0706;Santé n.c.a.;2;896.1;EUROSTAT_COFOG
+2008;GF08;Loisirs, culture et culte;1;9511.9;EUROSTAT_COFOG
+2008;GF0801;Services récréatifs et sportifs;2;3103.9;EUROSTAT_COFOG
+2008;GF0802;Services culturels;2;4997.2;EUROSTAT_COFOG
+2008;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1373.1;EUROSTAT_COFOG
+2008;GF0804;Culte et autres services communautaires;2;37.7;EUROSTAT_COFOG
+2008;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2008;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2008;GF09;Enseignement;1;70570.2;EUROSTAT_COFOG
+2008;GF0901;Enseignement préélémentaire et primaire;2;21626.4;EUROSTAT_COFOG
+2008;GF0902;Enseignement secondaire;2;37278.9;EUROSTAT_COFOG
+2008;GF0903;Enseignement postsecondaire non supérieur;2;381.7;EUROSTAT_COFOG
+2008;GF0904;Enseignement supérieur;2;4698.9;EUROSTAT_COFOG
+2008;GF0905;Enseignement non défini par niveau;2;1242.6;EUROSTAT_COFOG
+2008;GF0906;Services annexes à l'enseignement;2;4151.3;EUROSTAT_COFOG
+2008;GF0907;R & D dans le domaine de l'enseignement;2;0.8;EUROSTAT_COFOG
+2008;GF0908;Enseignement n.c.a.;2;1189.7;EUROSTAT_COFOG
+2008;GF10;Protection sociale;1;23042.1;EUROSTAT_COFOG
+2008;GF1001;Maladie et invalidité;2;4148.7;EUROSTAT_COFOG
+2008;GF1002;Vieillesse;2;7941.8;EUROSTAT_COFOG
+2008;GF1003;Survivants;2;73.7;EUROSTAT_COFOG
+2008;GF1004;Famille et enfants;2;4912.1;EUROSTAT_COFOG
+2008;GF1005;Chômage;2;1725.9;EUROSTAT_COFOG
+2008;GF1006;Logement;2;0;EUROSTAT_COFOG
+2008;GF1007;Exclusion sociale n.c.a.;2;2192.5;EUROSTAT_COFOG
+2008;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2008;GF1009;Protection sociale n.c.a.;2;2047.5;EUROSTAT_COFOG
+2009;TOTAL;Total;0;257817.1;EUROSTAT_COFOG
+2009;GF01;Services généraux des administrations publiques;1;38966.2;EUROSTAT_COFOG
+2009;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12284;EUROSTAT_COFOG
+2009;GF0102;Aide économique extérieure;2;272.6;EUROSTAT_COFOG
+2009;GF0103;Services généraux;2;21244.4;EUROSTAT_COFOG
+2009;GF0104;Recherche fondamentale;2;4675.4;EUROSTAT_COFOG
+2009;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2009;GF0106;Services généraux des administrations publiques n.c.a.;2;489.8;EUROSTAT_COFOG
+2009;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2009;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2009;GF02;Défense;1;17368.8;EUROSTAT_COFOG
+2009;GF0201;Défense militaire;2;14789.9;EUROSTAT_COFOG
+2009;GF0202;Défense civile;2;284.5;EUROSTAT_COFOG
+2009;GF0203;Aide militaire à des pays étrangers;2;696;EUROSTAT_COFOG
+2009;GF0204;R & D concernant la défense;2;1028.7;EUROSTAT_COFOG
+2009;GF0205;Défense n.c.a.;2;569.6;EUROSTAT_COFOG
+2009;GF03;Ordre et sécurité publics;1;23346.2;EUROSTAT_COFOG
+2009;GF0301;Services de police;2;15251.9;EUROSTAT_COFOG
+2009;GF0302;Services de protection civile;2;3357.5;EUROSTAT_COFOG
+2009;GF0303;Tribunaux;2;2788.1;EUROSTAT_COFOG
+2009;GF0304;Administration pénitentiaire;2;1588.9;EUROSTAT_COFOG
+2009;GF0305;R & D concernant l'ordre et la sécurité publics;2;1;EUROSTAT_COFOG
+2009;GF0306;Ordre et sécurité publics n.c.a.;2;358.8;EUROSTAT_COFOG
+2009;GF04;Affaires économiques;1;16526.8;EUROSTAT_COFOG
+2009;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;2250.4;EUROSTAT_COFOG
+2009;GF0402;Agriculture, sylviculture, pêche et chasse;2;3509.1;EUROSTAT_COFOG
+2009;GF0403;Combustibles et énergie;2;213.3;EUROSTAT_COFOG
+2009;GF0404;Industries extractives et manufacturières, construction;2;153.9;EUROSTAT_COFOG
+2009;GF0405;Transports;2;6012.7;EUROSTAT_COFOG
+2009;GF0406;Communications;2;0;EUROSTAT_COFOG
+2009;GF0407;Autres branches d'activité;2;1331.1;EUROSTAT_COFOG
+2009;GF0408;R & D concernant les affaires économiques;2;2276.2;EUROSTAT_COFOG
+2009;GF0409;Affaires économiques n.c.a.;2;780.2;EUROSTAT_COFOG
+2009;GF05;Protection de l'environnement;1;3496.9;EUROSTAT_COFOG
+2009;GF0501;Gestion des déchets;2;1808.5;EUROSTAT_COFOG
+2009;GF0502;Gestion des eaux usées;2;353.4;EUROSTAT_COFOG
+2009;GF0503;Lutte contre la pollution;2;119.6;EUROSTAT_COFOG
+2009;GF0504;Préservation de la diversité biologique et protection de la nature;2;326.2;EUROSTAT_COFOG
+2009;GF0505;R & D dans le domaine de la protection de l'environnement;2;90.7;EUROSTAT_COFOG
+2009;GF0506;Protection de l'environnement n.c.a.;2;798.5;EUROSTAT_COFOG
+2009;GF06;Logements et équipements collectifs;1;6430;EUROSTAT_COFOG
+2009;GF0601;Logements;2;805.2;EUROSTAT_COFOG
+2009;GF0602;Équipements collectifs;2;5187;EUROSTAT_COFOG
+2009;GF0603;Alimentation en eau;2;216.4;EUROSTAT_COFOG
+2009;GF0604;Éclairage public;2;70.6;EUROSTAT_COFOG
+2009;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2009;GF0606;Logement et équipements collectifs n.c.a.;2;150.7;EUROSTAT_COFOG
+2009;GF07;Santé;1;44691.5;EUROSTAT_COFOG
+2009;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2009;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2009;GF0703;Services hospitaliers;2;40907.8;EUROSTAT_COFOG
+2009;GF0704;Services de santé publique;2;1018.8;EUROSTAT_COFOG
+2009;GF0705;R & D dans le domaine de la santé;2;1825.2;EUROSTAT_COFOG
+2009;GF0706;Santé n.c.a.;2;939.8;EUROSTAT_COFOG
+2009;GF08;Loisirs, culture et culte;1;9685.6;EUROSTAT_COFOG
+2009;GF0801;Services récréatifs et sportifs;2;3205.2;EUROSTAT_COFOG
+2009;GF0802;Services culturels;2;5109.4;EUROSTAT_COFOG
+2009;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1331.8;EUROSTAT_COFOG
+2009;GF0804;Culte et autres services communautaires;2;39.2;EUROSTAT_COFOG
+2009;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2009;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2009;GF09;Enseignement;1;73103.4;EUROSTAT_COFOG
+2009;GF0901;Enseignement préélémentaire et primaire;2;21945.8;EUROSTAT_COFOG
+2009;GF0902;Enseignement secondaire;2;37710.6;EUROSTAT_COFOG
+2009;GF0903;Enseignement postsecondaire non supérieur;2;423.7;EUROSTAT_COFOG
+2009;GF0904;Enseignement supérieur;2;5575;EUROSTAT_COFOG
+2009;GF0905;Enseignement non défini par niveau;2;1487.1;EUROSTAT_COFOG
+2009;GF0906;Services annexes à l'enseignement;2;4770.8;EUROSTAT_COFOG
+2009;GF0907;R & D dans le domaine de l'enseignement;2;0.5;EUROSTAT_COFOG
+2009;GF0908;Enseignement n.c.a.;2;1190;EUROSTAT_COFOG
+2009;GF10;Protection sociale;1;24201.8;EUROSTAT_COFOG
+2009;GF1001;Maladie et invalidité;2;4313.7;EUROSTAT_COFOG
+2009;GF1002;Vieillesse;2;8037.9;EUROSTAT_COFOG
+2009;GF1003;Survivants;2;73.8;EUROSTAT_COFOG
+2009;GF1004;Famille et enfants;2;5080.7;EUROSTAT_COFOG
+2009;GF1005;Chômage;2;2233.5;EUROSTAT_COFOG
+2009;GF1006;Logement;2;0;EUROSTAT_COFOG
+2009;GF1007;Exclusion sociale n.c.a.;2;2341.8;EUROSTAT_COFOG
+2009;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2009;GF1009;Protection sociale n.c.a.;2;2120.5;EUROSTAT_COFOG
+2010;TOTAL;Total;0;262535.5;EUROSTAT_COFOG
+2010;GF01;Services généraux des administrations publiques;1;37854.1;EUROSTAT_COFOG
+2010;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11745;EUROSTAT_COFOG
+2010;GF0102;Aide économique extérieure;2;274.3;EUROSTAT_COFOG
+2010;GF0103;Services généraux;2;20292.1;EUROSTAT_COFOG
+2010;GF0104;Recherche fondamentale;2;5071.7;EUROSTAT_COFOG
+2010;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2010;GF0106;Services généraux des administrations publiques n.c.a.;2;471;EUROSTAT_COFOG
+2010;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2010;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2010;GF02;Défense;1;18326.5;EUROSTAT_COFOG
+2010;GF0201;Défense militaire;2;15742.7;EUROSTAT_COFOG
+2010;GF0202;Défense civile;2;240;EUROSTAT_COFOG
+2010;GF0203;Aide militaire à des pays étrangers;2;635.2;EUROSTAT_COFOG
+2010;GF0204;R & D concernant la défense;2;1016.9;EUROSTAT_COFOG
+2010;GF0205;Défense n.c.a.;2;691.7;EUROSTAT_COFOG
+2010;GF03;Ordre et sécurité publics;1;24122.1;EUROSTAT_COFOG
+2010;GF0301;Services de police;2;15643.2;EUROSTAT_COFOG
+2010;GF0302;Services de protection civile;2;3514.4;EUROSTAT_COFOG
+2010;GF0303;Tribunaux;2;2882.4;EUROSTAT_COFOG
+2010;GF0304;Administration pénitentiaire;2;1716.5;EUROSTAT_COFOG
+2010;GF0305;R & D concernant l'ordre et la sécurité publics;2;4;EUROSTAT_COFOG
+2010;GF0306;Ordre et sécurité publics n.c.a.;2;361.7;EUROSTAT_COFOG
+2010;GF04;Affaires économiques;1;17122.6;EUROSTAT_COFOG
+2010;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;2378.8;EUROSTAT_COFOG
+2010;GF0402;Agriculture, sylviculture, pêche et chasse;2;3514.4;EUROSTAT_COFOG
+2010;GF0403;Combustibles et énergie;2;227.4;EUROSTAT_COFOG
+2010;GF0404;Industries extractives et manufacturières, construction;2;178.1;EUROSTAT_COFOG
+2010;GF0405;Transports;2;6242.8;EUROSTAT_COFOG
+2010;GF0406;Communications;2;0;EUROSTAT_COFOG
+2010;GF0407;Autres branches d'activité;2;1371.9;EUROSTAT_COFOG
+2010;GF0408;R & D concernant les affaires économiques;2;2402.4;EUROSTAT_COFOG
+2010;GF0409;Affaires économiques n.c.a.;2;806.7;EUROSTAT_COFOG
+2010;GF05;Protection de l'environnement;1;3694.5;EUROSTAT_COFOG
+2010;GF0501;Gestion des déchets;2;1937.5;EUROSTAT_COFOG
+2010;GF0502;Gestion des eaux usées;2;357.5;EUROSTAT_COFOG
+2010;GF0503;Lutte contre la pollution;2;126.1;EUROSTAT_COFOG
+2010;GF0504;Préservation de la diversité biologique et protection de la nature;2;370.5;EUROSTAT_COFOG
+2010;GF0505;R & D dans le domaine de la protection de l'environnement;2;95;EUROSTAT_COFOG
+2010;GF0506;Protection de l'environnement n.c.a.;2;808;EUROSTAT_COFOG
+2010;GF06;Logements et équipements collectifs;1;6748;EUROSTAT_COFOG
+2010;GF0601;Logements;2;833.4;EUROSTAT_COFOG
+2010;GF0602;Équipements collectifs;2;5480.2;EUROSTAT_COFOG
+2010;GF0603;Alimentation en eau;2;223.4;EUROSTAT_COFOG
+2010;GF0604;Éclairage public;2;77.4;EUROSTAT_COFOG
+2010;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2010;GF0606;Logement et équipements collectifs n.c.a.;2;133.6;EUROSTAT_COFOG
+2010;GF07;Santé;1;45760.3;EUROSTAT_COFOG
+2010;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2010;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2010;GF0703;Services hospitaliers;2;41382.5;EUROSTAT_COFOG
+2010;GF0704;Services de santé publique;2;1983;EUROSTAT_COFOG
+2010;GF0705;R & D dans le domaine de la santé;2;1614.7;EUROSTAT_COFOG
+2010;GF0706;Santé n.c.a.;2;780.1;EUROSTAT_COFOG
+2010;GF08;Loisirs, culture et culte;1;10336.2;EUROSTAT_COFOG
+2010;GF0801;Services récréatifs et sportifs;2;3488.6;EUROSTAT_COFOG
+2010;GF0802;Services culturels;2;5368.5;EUROSTAT_COFOG
+2010;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1431.9;EUROSTAT_COFOG
+2010;GF0804;Culte et autres services communautaires;2;47.1;EUROSTAT_COFOG
+2010;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2010;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2010;GF09;Enseignement;1;73792.9;EUROSTAT_COFOG
+2010;GF0901;Enseignement préélémentaire et primaire;2;22431.8;EUROSTAT_COFOG
+2010;GF0902;Enseignement secondaire;2;38441.3;EUROSTAT_COFOG
+2010;GF0903;Enseignement postsecondaire non supérieur;2;426.7;EUROSTAT_COFOG
+2010;GF0904;Enseignement supérieur;2;5893.1;EUROSTAT_COFOG
+2010;GF0905;Enseignement non défini par niveau;2;1441.2;EUROSTAT_COFOG
+2010;GF0906;Services annexes à l'enseignement;2;4358;EUROSTAT_COFOG
+2010;GF0907;R & D dans le domaine de l'enseignement;2;3.2;EUROSTAT_COFOG
+2010;GF0908;Enseignement n.c.a.;2;797.6;EUROSTAT_COFOG
+2010;GF10;Protection sociale;1;24778.6;EUROSTAT_COFOG
+2010;GF1001;Maladie et invalidité;2;4193.6;EUROSTAT_COFOG
+2010;GF1002;Vieillesse;2;8128.3;EUROSTAT_COFOG
+2010;GF1003;Survivants;2;64.9;EUROSTAT_COFOG
+2010;GF1004;Famille et enfants;2;5377.7;EUROSTAT_COFOG
+2010;GF1005;Chômage;2;2638.8;EUROSTAT_COFOG
+2010;GF1006;Logement;2;2.1;EUROSTAT_COFOG
+2010;GF1007;Exclusion sociale n.c.a.;2;2337.4;EUROSTAT_COFOG
+2010;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2010;GF1009;Protection sociale n.c.a.;2;2035.8;EUROSTAT_COFOG
+2011;TOTAL;Total;0;268478.4;EUROSTAT_COFOG
+2011;GF01;Services généraux des administrations publiques;1;38399.5;EUROSTAT_COFOG
+2011;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11955.3;EUROSTAT_COFOG
+2011;GF0102;Aide économique extérieure;2;274.8;EUROSTAT_COFOG
+2011;GF0103;Services généraux;2;20277.5;EUROSTAT_COFOG
+2011;GF0104;Recherche fondamentale;2;5237.1;EUROSTAT_COFOG
+2011;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2011;GF0106;Services généraux des administrations publiques n.c.a.;2;654.8;EUROSTAT_COFOG
+2011;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2011;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2011;GF02;Défense;1;18741.8;EUROSTAT_COFOG
+2011;GF0201;Défense militaire;2;16158.9;EUROSTAT_COFOG
+2011;GF0202;Défense civile;2;201.3;EUROSTAT_COFOG
+2011;GF0203;Aide militaire à des pays étrangers;2;668.9;EUROSTAT_COFOG
+2011;GF0204;R & D concernant la défense;2;1009.2;EUROSTAT_COFOG
+2011;GF0205;Défense n.c.a.;2;703.6;EUROSTAT_COFOG
+2011;GF03;Ordre et sécurité publics;1;25064.4;EUROSTAT_COFOG
+2011;GF0301;Services de police;2;16273;EUROSTAT_COFOG
+2011;GF0302;Services de protection civile;2;3616.5;EUROSTAT_COFOG
+2011;GF0303;Tribunaux;2;2990.2;EUROSTAT_COFOG
+2011;GF0304;Administration pénitentiaire;2;1805;EUROSTAT_COFOG
+2011;GF0305;R & D concernant l'ordre et la sécurité publics;2;4.2;EUROSTAT_COFOG
+2011;GF0306;Ordre et sécurité publics n.c.a.;2;375.5;EUROSTAT_COFOG
+2011;GF04;Affaires économiques;1;17448.2;EUROSTAT_COFOG
+2011;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;2432.1;EUROSTAT_COFOG
+2011;GF0402;Agriculture, sylviculture, pêche et chasse;2;3557.8;EUROSTAT_COFOG
+2011;GF0403;Combustibles et énergie;2;233.1;EUROSTAT_COFOG
+2011;GF0404;Industries extractives et manufacturières, construction;2;180.4;EUROSTAT_COFOG
+2011;GF0405;Transports;2;6727.2;EUROSTAT_COFOG
+2011;GF0406;Communications;2;0;EUROSTAT_COFOG
+2011;GF0407;Autres branches d'activité;2;1061.7;EUROSTAT_COFOG
+2011;GF0408;R & D concernant les affaires économiques;2;2516.8;EUROSTAT_COFOG
+2011;GF0409;Affaires économiques n.c.a.;2;739.1;EUROSTAT_COFOG
+2011;GF05;Protection de l'environnement;1;4035.6;EUROSTAT_COFOG
+2011;GF0501;Gestion des déchets;2;2214.5;EUROSTAT_COFOG
+2011;GF0502;Gestion des eaux usées;2;353.9;EUROSTAT_COFOG
+2011;GF0503;Lutte contre la pollution;2;126.4;EUROSTAT_COFOG
+2011;GF0504;Préservation de la diversité biologique et protection de la nature;2;432.1;EUROSTAT_COFOG
+2011;GF0505;R & D dans le domaine de la protection de l'environnement;2;98.6;EUROSTAT_COFOG
+2011;GF0506;Protection de l'environnement n.c.a.;2;810.1;EUROSTAT_COFOG
+2011;GF06;Logements et équipements collectifs;1;6755.2;EUROSTAT_COFOG
+2011;GF0601;Logements;2;785.8;EUROSTAT_COFOG
+2011;GF0602;Équipements collectifs;2;5536.1;EUROSTAT_COFOG
+2011;GF0603;Alimentation en eau;2;241.7;EUROSTAT_COFOG
+2011;GF0604;Éclairage public;2;77.2;EUROSTAT_COFOG
+2011;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2011;GF0606;Logement et équipements collectifs n.c.a.;2;114.5;EUROSTAT_COFOG
+2011;GF07;Santé;1;46993.2;EUROSTAT_COFOG
+2011;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2011;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2011;GF0703;Services hospitaliers;2;42568.3;EUROSTAT_COFOG
+2011;GF0704;Services de santé publique;2;2099.2;EUROSTAT_COFOG
+2011;GF0705;R & D dans le domaine de la santé;2;1529.8;EUROSTAT_COFOG
+2011;GF0706;Santé n.c.a.;2;795.9;EUROSTAT_COFOG
+2011;GF08;Loisirs, culture et culte;1;10779;EUROSTAT_COFOG
+2011;GF0801;Services récréatifs et sportifs;2;3710.1;EUROSTAT_COFOG
+2011;GF0802;Services culturels;2;5514.9;EUROSTAT_COFOG
+2011;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1468.6;EUROSTAT_COFOG
+2011;GF0804;Culte et autres services communautaires;2;49.7;EUROSTAT_COFOG
+2011;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2011;GF0806;Loisirs, culture et culte n.c.a.;2;35.7;EUROSTAT_COFOG
+2011;GF09;Enseignement;1;74481.5;EUROSTAT_COFOG
+2011;GF0901;Enseignement préélémentaire et primaire;2;23064.4;EUROSTAT_COFOG
+2011;GF0902;Enseignement secondaire;2;39049;EUROSTAT_COFOG
+2011;GF0903;Enseignement postsecondaire non supérieur;2;452.6;EUROSTAT_COFOG
+2011;GF0904;Enseignement supérieur;2;5908.9;EUROSTAT_COFOG
+2011;GF0905;Enseignement non défini par niveau;2;883.3;EUROSTAT_COFOG
+2011;GF0906;Services annexes à l'enseignement;2;4543.7;EUROSTAT_COFOG
+2011;GF0907;R & D dans le domaine de l'enseignement;2;2.8;EUROSTAT_COFOG
+2011;GF0908;Enseignement n.c.a.;2;576.8;EUROSTAT_COFOG
+2011;GF10;Protection sociale;1;25780.1;EUROSTAT_COFOG
+2011;GF1001;Maladie et invalidité;2;4228.9;EUROSTAT_COFOG
+2011;GF1002;Vieillesse;2;8427;EUROSTAT_COFOG
+2011;GF1003;Survivants;2;49.9;EUROSTAT_COFOG
+2011;GF1004;Famille et enfants;2;5708.2;EUROSTAT_COFOG
+2011;GF1005;Chômage;2;2752.8;EUROSTAT_COFOG
+2011;GF1006;Logement;2;5.4;EUROSTAT_COFOG
+2011;GF1007;Exclusion sociale n.c.a.;2;2476.8;EUROSTAT_COFOG
+2011;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2011;GF1009;Protection sociale n.c.a.;2;2131.2;EUROSTAT_COFOG
+2012;TOTAL;Total;0;272609;EUROSTAT_COFOG
+2012;GF01;Services généraux des administrations publiques;1;39443.6;EUROSTAT_COFOG
+2012;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12390.4;EUROSTAT_COFOG
+2012;GF0102;Aide économique extérieure;2;275;EUROSTAT_COFOG
+2012;GF0103;Services généraux;2;21074.6;EUROSTAT_COFOG
+2012;GF0104;Recherche fondamentale;2;5296.6;EUROSTAT_COFOG
+2012;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2012;GF0106;Services généraux des administrations publiques n.c.a.;2;407;EUROSTAT_COFOG
+2012;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2012;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2012;GF02;Défense;1;18969.1;EUROSTAT_COFOG
+2012;GF0201;Défense militaire;2;16554.3;EUROSTAT_COFOG
+2012;GF0202;Défense civile;2;115.8;EUROSTAT_COFOG
+2012;GF0203;Aide militaire à des pays étrangers;2;630.3;EUROSTAT_COFOG
+2012;GF0204;R & D concernant la défense;2;1003.4;EUROSTAT_COFOG
+2012;GF0205;Défense n.c.a.;2;665.4;EUROSTAT_COFOG
+2012;GF03;Ordre et sécurité publics;1;25444;EUROSTAT_COFOG
+2012;GF0301;Services de police;2;16406;EUROSTAT_COFOG
+2012;GF0302;Services de protection civile;2;3695.2;EUROSTAT_COFOG
+2012;GF0303;Tribunaux;2;3076.8;EUROSTAT_COFOG
+2012;GF0304;Administration pénitentiaire;2;1871.9;EUROSTAT_COFOG
+2012;GF0305;R & D concernant l'ordre et la sécurité publics;2;4.6;EUROSTAT_COFOG
+2012;GF0306;Ordre et sécurité publics n.c.a.;2;389.5;EUROSTAT_COFOG
+2012;GF04;Affaires économiques;1;17716.3;EUROSTAT_COFOG
+2012;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;4185.8;EUROSTAT_COFOG
+2012;GF0402;Agriculture, sylviculture, pêche et chasse;2;1869.7;EUROSTAT_COFOG
+2012;GF0403;Combustibles et énergie;2;249.3;EUROSTAT_COFOG
+2012;GF0404;Industries extractives et manufacturières, construction;2;207.8;EUROSTAT_COFOG
+2012;GF0405;Transports;2;6876.8;EUROSTAT_COFOG
+2012;GF0406;Communications;2;0;EUROSTAT_COFOG
+2012;GF0407;Autres branches d'activité;2;1113.8;EUROSTAT_COFOG
+2012;GF0408;R & D concernant les affaires économiques;2;2476.3;EUROSTAT_COFOG
+2012;GF0409;Affaires économiques n.c.a.;2;736.8;EUROSTAT_COFOG
+2012;GF05;Protection de l'environnement;1;4200.5;EUROSTAT_COFOG
+2012;GF0501;Gestion des déchets;2;2284.9;EUROSTAT_COFOG
+2012;GF0502;Gestion des eaux usées;2;372.8;EUROSTAT_COFOG
+2012;GF0503;Lutte contre la pollution;2;128.5;EUROSTAT_COFOG
+2012;GF0504;Préservation de la diversité biologique et protection de la nature;2;445.9;EUROSTAT_COFOG
+2012;GF0505;R & D dans le domaine de la protection de l'environnement;2;99.5;EUROSTAT_COFOG
+2012;GF0506;Protection de l'environnement n.c.a.;2;868.8;EUROSTAT_COFOG
+2012;GF06;Logements et équipements collectifs;1;7105.2;EUROSTAT_COFOG
+2012;GF0601;Logements;2;1057.5;EUROSTAT_COFOG
+2012;GF0602;Équipements collectifs;2;5605.8;EUROSTAT_COFOG
+2012;GF0603;Alimentation en eau;2;248.5;EUROSTAT_COFOG
+2012;GF0604;Éclairage public;2;79.9;EUROSTAT_COFOG
+2012;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2012;GF0606;Logement et équipements collectifs n.c.a.;2;113.4;EUROSTAT_COFOG
+2012;GF07;Santé;1;47594.7;EUROSTAT_COFOG
+2012;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2012;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2012;GF0703;Services hospitaliers;2;43315.4;EUROSTAT_COFOG
+2012;GF0704;Services de santé publique;2;2147;EUROSTAT_COFOG
+2012;GF0705;R & D dans le domaine de la santé;2;1503.5;EUROSTAT_COFOG
+2012;GF0706;Santé n.c.a.;2;628.8;EUROSTAT_COFOG
+2012;GF08;Loisirs, culture et culte;1;11077.2;EUROSTAT_COFOG
+2012;GF0801;Services récréatifs et sportifs;2;3845;EUROSTAT_COFOG
+2012;GF0802;Services culturels;2;5649.3;EUROSTAT_COFOG
+2012;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1496.9;EUROSTAT_COFOG
+2012;GF0804;Culte et autres services communautaires;2;51.5;EUROSTAT_COFOG
+2012;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2012;GF0806;Loisirs, culture et culte n.c.a.;2;34.5;EUROSTAT_COFOG
+2012;GF09;Enseignement;1;75070.1;EUROSTAT_COFOG
+2012;GF0901;Enseignement préélémentaire et primaire;2;22446.1;EUROSTAT_COFOG
+2012;GF0902;Enseignement secondaire;2;40130.4;EUROSTAT_COFOG
+2012;GF0903;Enseignement postsecondaire non supérieur;2;486.9;EUROSTAT_COFOG
+2012;GF0904;Enseignement supérieur;2;5929.5;EUROSTAT_COFOG
+2012;GF0905;Enseignement non défini par niveau;2;902.9;EUROSTAT_COFOG
+2012;GF0906;Services annexes à l'enseignement;2;4660.8;EUROSTAT_COFOG
+2012;GF0907;R & D dans le domaine de l'enseignement;2;2.5;EUROSTAT_COFOG
+2012;GF0908;Enseignement n.c.a.;2;511;EUROSTAT_COFOG
+2012;GF10;Protection sociale;1;25988.4;EUROSTAT_COFOG
+2012;GF1001;Maladie et invalidité;2;4244.4;EUROSTAT_COFOG
+2012;GF1002;Vieillesse;2;8478.4;EUROSTAT_COFOG
+2012;GF1003;Survivants;2;37.6;EUROSTAT_COFOG
+2012;GF1004;Famille et enfants;2;5810.8;EUROSTAT_COFOG
+2012;GF1005;Chômage;2;2772.3;EUROSTAT_COFOG
+2012;GF1006;Logement;2;6.4;EUROSTAT_COFOG
+2012;GF1007;Exclusion sociale n.c.a.;2;2501.9;EUROSTAT_COFOG
+2012;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2012;GF1009;Protection sociale n.c.a.;2;2136.6;EUROSTAT_COFOG
+2013;TOTAL;Total;0;278079.4;EUROSTAT_COFOG
+2013;GF01;Services généraux des administrations publiques;1;40143.8;EUROSTAT_COFOG
+2013;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12512.7;EUROSTAT_COFOG
+2013;GF0102;Aide économique extérieure;2;273.2;EUROSTAT_COFOG
+2013;GF0103;Services généraux;2;21783;EUROSTAT_COFOG
+2013;GF0104;Recherche fondamentale;2;5326.7;EUROSTAT_COFOG
+2013;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2013;GF0106;Services généraux des administrations publiques n.c.a.;2;248.3;EUROSTAT_COFOG
+2013;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2013;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2013;GF02;Défense;1;18858.3;EUROSTAT_COFOG
+2013;GF0201;Défense militaire;2;16296.6;EUROSTAT_COFOG
+2013;GF0202;Défense civile;2;202.9;EUROSTAT_COFOG
+2013;GF0203;Aide militaire à des pays étrangers;2;812.1;EUROSTAT_COFOG
+2013;GF0204;R & D concernant la défense;2;926.6;EUROSTAT_COFOG
+2013;GF0205;Défense n.c.a.;2;619.9;EUROSTAT_COFOG
+2013;GF03;Ordre et sécurité publics;1;26068.3;EUROSTAT_COFOG
+2013;GF0301;Services de police;2;16818;EUROSTAT_COFOG
+2013;GF0302;Services de protection civile;2;3748.8;EUROSTAT_COFOG
+2013;GF0303;Tribunaux;2;3157.6;EUROSTAT_COFOG
+2013;GF0304;Administration pénitentiaire;2;1909.1;EUROSTAT_COFOG
+2013;GF0305;R & D concernant l'ordre et la sécurité publics;2;4.2;EUROSTAT_COFOG
+2013;GF0306;Ordre et sécurité publics n.c.a.;2;430.7;EUROSTAT_COFOG
+2013;GF04;Affaires économiques;1;18543.1;EUROSTAT_COFOG
+2013;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;4138.9;EUROSTAT_COFOG
+2013;GF0402;Agriculture, sylviculture, pêche et chasse;2;1843.2;EUROSTAT_COFOG
+2013;GF0403;Combustibles et énergie;2;271.7;EUROSTAT_COFOG
+2013;GF0404;Industries extractives et manufacturières, construction;2;156.6;EUROSTAT_COFOG
+2013;GF0405;Transports;2;7555.5;EUROSTAT_COFOG
+2013;GF0406;Communications;2;0;EUROSTAT_COFOG
+2013;GF0407;Autres branches d'activité;2;1213.7;EUROSTAT_COFOG
+2013;GF0408;R & D concernant les affaires économiques;2;2523.5;EUROSTAT_COFOG
+2013;GF0409;Affaires économiques n.c.a.;2;839.9;EUROSTAT_COFOG
+2013;GF05;Protection de l'environnement;1;4532.1;EUROSTAT_COFOG
+2013;GF0501;Gestion des déchets;2;2365.2;EUROSTAT_COFOG
+2013;GF0502;Gestion des eaux usées;2;380.6;EUROSTAT_COFOG
+2013;GF0503;Lutte contre la pollution;2;127.5;EUROSTAT_COFOG
+2013;GF0504;Préservation de la diversité biologique et protection de la nature;2;462;EUROSTAT_COFOG
+2013;GF0505;R & D dans le domaine de la protection de l'environnement;2;102.7;EUROSTAT_COFOG
+2013;GF0506;Protection de l'environnement n.c.a.;2;1094.1;EUROSTAT_COFOG
+2013;GF06;Logements et équipements collectifs;1;6716.2;EUROSTAT_COFOG
+2013;GF0601;Logements;2;923.3;EUROSTAT_COFOG
+2013;GF0602;Équipements collectifs;2;5348.1;EUROSTAT_COFOG
+2013;GF0603;Alimentation en eau;2;256.2;EUROSTAT_COFOG
+2013;GF0604;Éclairage public;2;78.4;EUROSTAT_COFOG
+2013;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2013;GF0606;Logement et équipements collectifs n.c.a.;2;110.3;EUROSTAT_COFOG
+2013;GF07;Santé;1;48886.2;EUROSTAT_COFOG
+2013;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2013;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2013;GF0703;Services hospitaliers;2;44364.6;EUROSTAT_COFOG
+2013;GF0704;Services de santé publique;2;2222.8;EUROSTAT_COFOG
+2013;GF0705;R & D dans le domaine de la santé;2;1541.6;EUROSTAT_COFOG
+2013;GF0706;Santé n.c.a.;2;757.2;EUROSTAT_COFOG
+2013;GF08;Loisirs, culture et culte;1;11366.7;EUROSTAT_COFOG
+2013;GF0801;Services récréatifs et sportifs;2;4015.6;EUROSTAT_COFOG
+2013;GF0802;Services culturels;2;5742.6;EUROSTAT_COFOG
+2013;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1554.3;EUROSTAT_COFOG
+2013;GF0804;Culte et autres services communautaires;2;54.2;EUROSTAT_COFOG
+2013;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2013;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2013;GF09;Enseignement;1;76342.2;EUROSTAT_COFOG
+2013;GF0901;Enseignement préélémentaire et primaire;2;23801.2;EUROSTAT_COFOG
+2013;GF0902;Enseignement secondaire;2;39769.2;EUROSTAT_COFOG
+2013;GF0903;Enseignement postsecondaire non supérieur;2;488.6;EUROSTAT_COFOG
+2013;GF0904;Enseignement supérieur;2;5962.9;EUROSTAT_COFOG
+2013;GF0905;Enseignement non défini par niveau;2;932.6;EUROSTAT_COFOG
+2013;GF0906;Services annexes à l'enseignement;2;4882.1;EUROSTAT_COFOG
+2013;GF0907;R & D dans le domaine de l'enseignement;2;2.7;EUROSTAT_COFOG
+2013;GF0908;Enseignement n.c.a.;2;502.8;EUROSTAT_COFOG
+2013;GF10;Protection sociale;1;26622.4;EUROSTAT_COFOG
+2013;GF1001;Maladie et invalidité;2;4306.3;EUROSTAT_COFOG
+2013;GF1002;Vieillesse;2;8615.7;EUROSTAT_COFOG
+2013;GF1003;Survivants;2;37.7;EUROSTAT_COFOG
+2013;GF1004;Famille et enfants;2;6003.4;EUROSTAT_COFOG
+2013;GF1005;Chômage;2;2860.5;EUROSTAT_COFOG
+2013;GF1006;Logement;2;8.4;EUROSTAT_COFOG
+2013;GF1007;Exclusion sociale n.c.a.;2;2569;EUROSTAT_COFOG
+2013;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2013;GF1009;Protection sociale n.c.a.;2;2221.4;EUROSTAT_COFOG
+2014;TOTAL;Total;0;282943.7;EUROSTAT_COFOG
+2014;GF01;Services généraux des administrations publiques;1;40468.1;EUROSTAT_COFOG
+2014;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12405.9;EUROSTAT_COFOG
+2014;GF0102;Aide économique extérieure;2;258.7;EUROSTAT_COFOG
+2014;GF0103;Services généraux;2;22173.3;EUROSTAT_COFOG
+2014;GF0104;Recherche fondamentale;2;5369.4;EUROSTAT_COFOG
+2014;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2014;GF0106;Services généraux des administrations publiques n.c.a.;2;260.8;EUROSTAT_COFOG
+2014;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2014;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2014;GF02;Défense;1;18426.4;EUROSTAT_COFOG
+2014;GF0201;Défense militaire;2;15939.4;EUROSTAT_COFOG
+2014;GF0202;Défense civile;2;168.9;EUROSTAT_COFOG
+2014;GF0203;Aide militaire à des pays étrangers;2;780.8;EUROSTAT_COFOG
+2014;GF0204;R & D concernant la défense;2;920.6;EUROSTAT_COFOG
+2014;GF0205;Défense n.c.a.;2;616.7;EUROSTAT_COFOG
+2014;GF03;Ordre et sécurité publics;1;26440.6;EUROSTAT_COFOG
+2014;GF0301;Services de police;2;16976.4;EUROSTAT_COFOG
+2014;GF0302;Services de protection civile;2;3868.4;EUROSTAT_COFOG
+2014;GF0303;Tribunaux;2;3190.3;EUROSTAT_COFOG
+2014;GF0304;Administration pénitentiaire;2;1972.8;EUROSTAT_COFOG
+2014;GF0305;R & D concernant l'ordre et la sécurité publics;2;4;EUROSTAT_COFOG
+2014;GF0306;Ordre et sécurité publics n.c.a.;2;428.8;EUROSTAT_COFOG
+2014;GF04;Affaires économiques;1;18768.7;EUROSTAT_COFOG
+2014;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;4147.6;EUROSTAT_COFOG
+2014;GF0402;Agriculture, sylviculture, pêche et chasse;2;1868.2;EUROSTAT_COFOG
+2014;GF0403;Combustibles et énergie;2;266.3;EUROSTAT_COFOG
+2014;GF0404;Industries extractives et manufacturières, construction;2;160;EUROSTAT_COFOG
+2014;GF0405;Transports;2;7686.5;EUROSTAT_COFOG
+2014;GF0406;Communications;2;0;EUROSTAT_COFOG
+2014;GF0407;Autres branches d'activité;2;1254;EUROSTAT_COFOG
+2014;GF0408;R & D concernant les affaires économiques;2;2553.2;EUROSTAT_COFOG
+2014;GF0409;Affaires économiques n.c.a.;2;832.9;EUROSTAT_COFOG
+2014;GF05;Protection de l'environnement;1;4770.9;EUROSTAT_COFOG
+2014;GF0501;Gestion des déchets;2;2460.5;EUROSTAT_COFOG
+2014;GF0502;Gestion des eaux usées;2;390.6;EUROSTAT_COFOG
+2014;GF0503;Lutte contre la pollution;2;124.5;EUROSTAT_COFOG
+2014;GF0504;Préservation de la diversité biologique et protection de la nature;2;473.3;EUROSTAT_COFOG
+2014;GF0505;R & D dans le domaine de la protection de l'environnement;2;245.2;EUROSTAT_COFOG
+2014;GF0506;Protection de l'environnement n.c.a.;2;1076.7;EUROSTAT_COFOG
+2014;GF06;Logements et équipements collectifs;1;6825.4;EUROSTAT_COFOG
+2014;GF0601;Logements;2;905.2;EUROSTAT_COFOG
+2014;GF0602;Équipements collectifs;2;5480.8;EUROSTAT_COFOG
+2014;GF0603;Alimentation en eau;2;264;EUROSTAT_COFOG
+2014;GF0604;Éclairage public;2;77.5;EUROSTAT_COFOG
+2014;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2014;GF0606;Logement et équipements collectifs n.c.a.;2;97.9;EUROSTAT_COFOG
+2014;GF07;Santé;1;50182.1;EUROSTAT_COFOG
+2014;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2014;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2014;GF0703;Services hospitaliers;2;45577.3;EUROSTAT_COFOG
+2014;GF0704;Services de santé publique;2;2238.9;EUROSTAT_COFOG
+2014;GF0705;R & D dans le domaine de la santé;2;1558;EUROSTAT_COFOG
+2014;GF0706;Santé n.c.a.;2;808;EUROSTAT_COFOG
+2014;GF08;Loisirs, culture et culte;1;11694.9;EUROSTAT_COFOG
+2014;GF0801;Services récréatifs et sportifs;2;4183.6;EUROSTAT_COFOG
+2014;GF0802;Services culturels;2;5842.9;EUROSTAT_COFOG
+2014;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1612.7;EUROSTAT_COFOG
+2014;GF0804;Culte et autres services communautaires;2;55.6;EUROSTAT_COFOG
+2014;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2014;GF0806;Loisirs, culture et culte n.c.a.;2;0;EUROSTAT_COFOG
+2014;GF09;Enseignement;1;78106.1;EUROSTAT_COFOG
+2014;GF0901;Enseignement préélémentaire et primaire;2;25082.2;EUROSTAT_COFOG
+2014;GF0902;Enseignement secondaire;2;39862.7;EUROSTAT_COFOG
+2014;GF0903;Enseignement postsecondaire non supérieur;2;499.8;EUROSTAT_COFOG
+2014;GF0904;Enseignement supérieur;2;6074.9;EUROSTAT_COFOG
+2014;GF0905;Enseignement non défini par niveau;2;1032.9;EUROSTAT_COFOG
+2014;GF0906;Services annexes à l'enseignement;2;5049.4;EUROSTAT_COFOG
+2014;GF0907;R & D dans le domaine de l'enseignement;2;3.4;EUROSTAT_COFOG
+2014;GF0908;Enseignement n.c.a.;2;500.9;EUROSTAT_COFOG
+2014;GF10;Protection sociale;1;27260.5;EUROSTAT_COFOG
+2014;GF1001;Maladie et invalidité;2;4184.8;EUROSTAT_COFOG
+2014;GF1002;Vieillesse;2;8780;EUROSTAT_COFOG
+2014;GF1003;Survivants;2;38.3;EUROSTAT_COFOG
+2014;GF1004;Famille et enfants;2;6372.7;EUROSTAT_COFOG
+2014;GF1005;Chômage;2;2951.5;EUROSTAT_COFOG
+2014;GF1006;Logement;2;8.7;EUROSTAT_COFOG
+2014;GF1007;Exclusion sociale n.c.a.;2;2637.6;EUROSTAT_COFOG
+2014;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2014;GF1009;Protection sociale n.c.a.;2;2286.9;EUROSTAT_COFOG
+2015;TOTAL;Total;0;285115.5;EUROSTAT_COFOG
+2015;GF01;Services généraux des administrations publiques;1;40661.9;EUROSTAT_COFOG
+2015;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12308.8;EUROSTAT_COFOG
+2015;GF0102;Aide économique extérieure;2;263.8;EUROSTAT_COFOG
+2015;GF0103;Services généraux;2;22378.9;EUROSTAT_COFOG
+2015;GF0104;Recherche fondamentale;2;5398.3;EUROSTAT_COFOG
+2015;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2015;GF0106;Services généraux des administrations publiques n.c.a.;2;312;EUROSTAT_COFOG
+2015;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2015;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2015;GF02;Défense;1;17911;EUROSTAT_COFOG
+2015;GF0201;Défense militaire;2;15400.8;EUROSTAT_COFOG
+2015;GF0202;Défense civile;2;164.4;EUROSTAT_COFOG
+2015;GF0203;Aide militaire à des pays étrangers;2;717.5;EUROSTAT_COFOG
+2015;GF0204;R & D concernant la défense;2;965.2;EUROSTAT_COFOG
+2015;GF0205;Défense n.c.a.;2;663.1;EUROSTAT_COFOG
+2015;GF03;Ordre et sécurité publics;1;26744.9;EUROSTAT_COFOG
+2015;GF0301;Services de police;2;17072.4;EUROSTAT_COFOG
+2015;GF0302;Services de protection civile;2;3950;EUROSTAT_COFOG
+2015;GF0303;Tribunaux;2;3200.7;EUROSTAT_COFOG
+2015;GF0304;Administration pénitentiaire;2;2036.9;EUROSTAT_COFOG
+2015;GF0305;R & D concernant l'ordre et la sécurité publics;2;3.5;EUROSTAT_COFOG
+2015;GF0306;Ordre et sécurité publics n.c.a.;2;481.4;EUROSTAT_COFOG
+2015;GF04;Affaires économiques;1;18350;EUROSTAT_COFOG
+2015;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;3834.2;EUROSTAT_COFOG
+2015;GF0402;Agriculture, sylviculture, pêche et chasse;2;1840.9;EUROSTAT_COFOG
+2015;GF0403;Combustibles et énergie;2;231.5;EUROSTAT_COFOG
+2015;GF0404;Industries extractives et manufacturières, construction;2;112.9;EUROSTAT_COFOG
+2015;GF0405;Transports;2;7558.9;EUROSTAT_COFOG
+2015;GF0406;Communications;2;0.9;EUROSTAT_COFOG
+2015;GF0407;Autres branches d'activité;2;1297.1;EUROSTAT_COFOG
+2015;GF0408;R & D concernant les affaires économiques;2;2574.5;EUROSTAT_COFOG
+2015;GF0409;Affaires économiques n.c.a.;2;899.1;EUROSTAT_COFOG
+2015;GF05;Protection de l'environnement;1;4909.6;EUROSTAT_COFOG
+2015;GF0501;Gestion des déchets;2;2534;EUROSTAT_COFOG
+2015;GF0502;Gestion des eaux usées;2;402;EUROSTAT_COFOG
+2015;GF0503;Lutte contre la pollution;2;124.5;EUROSTAT_COFOG
+2015;GF0504;Préservation de la diversité biologique et protection de la nature;2;483.2;EUROSTAT_COFOG
+2015;GF0505;R & D dans le domaine de la protection de l'environnement;2;246.8;EUROSTAT_COFOG
+2015;GF0506;Protection de l'environnement n.c.a.;2;1119.1;EUROSTAT_COFOG
+2015;GF06;Logements et équipements collectifs;1;6913.8;EUROSTAT_COFOG
+2015;GF0601;Logements;2;906.4;EUROSTAT_COFOG
+2015;GF0602;Équipements collectifs;2;5592.5;EUROSTAT_COFOG
+2015;GF0603;Alimentation en eau;2;269.5;EUROSTAT_COFOG
+2015;GF0604;Éclairage public;2;81.3;EUROSTAT_COFOG
+2015;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2015;GF0606;Logement et équipements collectifs n.c.a.;2;64;EUROSTAT_COFOG
+2015;GF07;Santé;1;50825.9;EUROSTAT_COFOG
+2015;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2015;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2015;GF0703;Services hospitaliers;2;46173;EUROSTAT_COFOG
+2015;GF0704;Services de santé publique;2;2293.2;EUROSTAT_COFOG
+2015;GF0705;R & D dans le domaine de la santé;2;1546.4;EUROSTAT_COFOG
+2015;GF0706;Santé n.c.a.;2;813.4;EUROSTAT_COFOG
+2015;GF08;Loisirs, culture et culte;1;11828.4;EUROSTAT_COFOG
+2015;GF0801;Services récréatifs et sportifs;2;4294.4;EUROSTAT_COFOG
+2015;GF0802;Services culturels;2;5851.1;EUROSTAT_COFOG
+2015;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1623.8;EUROSTAT_COFOG
+2015;GF0804;Culte et autres services communautaires;2;58.2;EUROSTAT_COFOG
+2015;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2015;GF0806;Loisirs, culture et culte n.c.a.;2;1.1;EUROSTAT_COFOG
+2015;GF09;Enseignement;1;79557.5;EUROSTAT_COFOG
+2015;GF0901;Enseignement préélémentaire et primaire;2;25295.6;EUROSTAT_COFOG
+2015;GF0902;Enseignement secondaire;2;40858.5;EUROSTAT_COFOG
+2015;GF0903;Enseignement postsecondaire non supérieur;2;546.1;EUROSTAT_COFOG
+2015;GF0904;Enseignement supérieur;2;6170.4;EUROSTAT_COFOG
+2015;GF0905;Enseignement non défini par niveau;2;1085.8;EUROSTAT_COFOG
+2015;GF0906;Services annexes à l'enseignement;2;5173;EUROSTAT_COFOG
+2015;GF0907;R & D dans le domaine de l'enseignement;2;4.1;EUROSTAT_COFOG
+2015;GF0908;Enseignement n.c.a.;2;424;EUROSTAT_COFOG
+2015;GF10;Protection sociale;1;27412.5;EUROSTAT_COFOG
+2015;GF1001;Maladie et invalidité;2;4124.6;EUROSTAT_COFOG
+2015;GF1002;Vieillesse;2;8792.8;EUROSTAT_COFOG
+2015;GF1003;Survivants;2;37.4;EUROSTAT_COFOG
+2015;GF1004;Famille et enfants;2;6533.5;EUROSTAT_COFOG
+2015;GF1005;Chômage;2;2979.5;EUROSTAT_COFOG
+2015;GF1006;Logement;2;19.2;EUROSTAT_COFOG
+2015;GF1007;Exclusion sociale n.c.a.;2;2665.6;EUROSTAT_COFOG
+2015;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2015;GF1009;Protection sociale n.c.a.;2;2259.9;EUROSTAT_COFOG
+2016;TOTAL;Total;0;287660.1;EUROSTAT_COFOG
+2016;GF01;Services généraux des administrations publiques;1;40505;EUROSTAT_COFOG
+2016;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11919.7;EUROSTAT_COFOG
+2016;GF0102;Aide économique extérieure;2;257.7;EUROSTAT_COFOG
+2016;GF0103;Services généraux;2;22703.2;EUROSTAT_COFOG
+2016;GF0104;Recherche fondamentale;2;5409.2;EUROSTAT_COFOG
+2016;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2016;GF0106;Services généraux des administrations publiques n.c.a.;2;215.2;EUROSTAT_COFOG
+2016;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2016;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2016;GF02;Défense;1;18007.7;EUROSTAT_COFOG
+2016;GF0201;Défense militaire;2;14966.7;EUROSTAT_COFOG
+2016;GF0202;Défense civile;2;207.5;EUROSTAT_COFOG
+2016;GF0203;Aide militaire à des pays étrangers;2;764.6;EUROSTAT_COFOG
+2016;GF0204;R & D concernant la défense;2;953.1;EUROSTAT_COFOG
+2016;GF0205;Défense n.c.a.;2;1115.8;EUROSTAT_COFOG
+2016;GF03;Ordre et sécurité publics;1;27095.5;EUROSTAT_COFOG
+2016;GF0301;Services de police;2;17253;EUROSTAT_COFOG
+2016;GF0302;Services de protection civile;2;3952.8;EUROSTAT_COFOG
+2016;GF0303;Tribunaux;2;3273.8;EUROSTAT_COFOG
+2016;GF0304;Administration pénitentiaire;2;2122.6;EUROSTAT_COFOG
+2016;GF0305;R & D concernant l'ordre et la sécurité publics;2;3.2;EUROSTAT_COFOG
+2016;GF0306;Ordre et sécurité publics n.c.a.;2;490.1;EUROSTAT_COFOG
+2016;GF04;Affaires économiques;1;18844.6;EUROSTAT_COFOG
+2016;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;4027.6;EUROSTAT_COFOG
+2016;GF0402;Agriculture, sylviculture, pêche et chasse;2;1813.6;EUROSTAT_COFOG
+2016;GF0403;Combustibles et énergie;2;282.4;EUROSTAT_COFOG
+2016;GF0404;Industries extractives et manufacturières, construction;2;152.6;EUROSTAT_COFOG
+2016;GF0405;Transports;2;7726.1;EUROSTAT_COFOG
+2016;GF0406;Communications;2;1.7;EUROSTAT_COFOG
+2016;GF0407;Autres branches d'activité;2;1397.4;EUROSTAT_COFOG
+2016;GF0408;R & D concernant les affaires économiques;2;2564.1;EUROSTAT_COFOG
+2016;GF0409;Affaires économiques n.c.a.;2;879.1;EUROSTAT_COFOG
+2016;GF05;Protection de l'environnement;1;4872.1;EUROSTAT_COFOG
+2016;GF0501;Gestion des déchets;2;2534.6;EUROSTAT_COFOG
+2016;GF0502;Gestion des eaux usées;2;407.6;EUROSTAT_COFOG
+2016;GF0503;Lutte contre la pollution;2;136.2;EUROSTAT_COFOG
+2016;GF0504;Préservation de la diversité biologique et protection de la nature;2;481.8;EUROSTAT_COFOG
+2016;GF0505;R & D dans le domaine de la protection de l'environnement;2;259.3;EUROSTAT_COFOG
+2016;GF0506;Protection de l'environnement n.c.a.;2;1052.6;EUROSTAT_COFOG
+2016;GF06;Logements et équipements collectifs;1;6957.9;EUROSTAT_COFOG
+2016;GF0601;Logements;2;1042.3;EUROSTAT_COFOG
+2016;GF0602;Équipements collectifs;2;5425.4;EUROSTAT_COFOG
+2016;GF0603;Alimentation en eau;2;263.7;EUROSTAT_COFOG
+2016;GF0604;Éclairage public;2;76.8;EUROSTAT_COFOG
+2016;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2016;GF0606;Logement et équipements collectifs n.c.a.;2;149.7;EUROSTAT_COFOG
+2016;GF07;Santé;1;51630.3;EUROSTAT_COFOG
+2016;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2016;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2016;GF0703;Services hospitaliers;2;46821.3;EUROSTAT_COFOG
+2016;GF0704;Services de santé publique;2;2384.1;EUROSTAT_COFOG
+2016;GF0705;R & D dans le domaine de la santé;2;1575.8;EUROSTAT_COFOG
+2016;GF0706;Santé n.c.a.;2;849.1;EUROSTAT_COFOG
+2016;GF08;Loisirs, culture et culte;1;11887.9;EUROSTAT_COFOG
+2016;GF0801;Services récréatifs et sportifs;2;4307.8;EUROSTAT_COFOG
+2016;GF0802;Services culturels;2;5810.9;EUROSTAT_COFOG
+2016;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1708.9;EUROSTAT_COFOG
+2016;GF0804;Culte et autres services communautaires;2;59.4;EUROSTAT_COFOG
+2016;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2016;GF0806;Loisirs, culture et culte n.c.a.;2;0.9;EUROSTAT_COFOG
+2016;GF09;Enseignement;1;80416.8;EUROSTAT_COFOG
+2016;GF0901;Enseignement préélémentaire et primaire;2;25838;EUROSTAT_COFOG
+2016;GF0902;Enseignement secondaire;2;41139.6;EUROSTAT_COFOG
+2016;GF0903;Enseignement postsecondaire non supérieur;2;545.6;EUROSTAT_COFOG
+2016;GF0904;Enseignement supérieur;2;6154.9;EUROSTAT_COFOG
+2016;GF0905;Enseignement non défini par niveau;2;1000.1;EUROSTAT_COFOG
+2016;GF0906;Services annexes à l'enseignement;2;5285.6;EUROSTAT_COFOG
+2016;GF0907;R & D dans le domaine de l'enseignement;2;2.8;EUROSTAT_COFOG
+2016;GF0908;Enseignement n.c.a.;2;450.4;EUROSTAT_COFOG
+2016;GF10;Protection sociale;1;27442.3;EUROSTAT_COFOG
+2016;GF1001;Maladie et invalidité;2;4053.2;EUROSTAT_COFOG
+2016;GF1002;Vieillesse;2;8778.9;EUROSTAT_COFOG
+2016;GF1003;Survivants;2;37.3;EUROSTAT_COFOG
+2016;GF1004;Famille et enfants;2;6641.8;EUROSTAT_COFOG
+2016;GF1005;Chômage;2;3010.2;EUROSTAT_COFOG
+2016;GF1006;Logement;2;20.6;EUROSTAT_COFOG
+2016;GF1007;Exclusion sociale n.c.a.;2;2650.9;EUROSTAT_COFOG
+2016;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2016;GF1009;Protection sociale n.c.a.;2;2249.5;EUROSTAT_COFOG
+2017;TOTAL;Total;0;294836;EUROSTAT_COFOG
+2017;GF01;Services généraux des administrations publiques;1;41100.5;EUROSTAT_COFOG
+2017;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12019.3;EUROSTAT_COFOG
+2017;GF0102;Aide économique extérieure;2;231.8;EUROSTAT_COFOG
+2017;GF0103;Services généraux;2;23140.7;EUROSTAT_COFOG
+2017;GF0104;Recherche fondamentale;2;5485.8;EUROSTAT_COFOG
+2017;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2017;GF0106;Services généraux des administrations publiques n.c.a.;2;222.9;EUROSTAT_COFOG
+2017;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2017;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2017;GF02;Défense;1;18420.4;EUROSTAT_COFOG
+2017;GF0201;Défense militaire;2;15344.8;EUROSTAT_COFOG
+2017;GF0202;Défense civile;2;213.3;EUROSTAT_COFOG
+2017;GF0203;Aide militaire à des pays étrangers;2;798.1;EUROSTAT_COFOG
+2017;GF0204;R & D concernant la défense;2;971;EUROSTAT_COFOG
+2017;GF0205;Défense n.c.a.;2;1093.3;EUROSTAT_COFOG
+2017;GF03;Ordre et sécurité publics;1;27976;EUROSTAT_COFOG
+2017;GF0301;Services de police;2;17903.4;EUROSTAT_COFOG
+2017;GF0302;Services de protection civile;2;4006.1;EUROSTAT_COFOG
+2017;GF0303;Tribunaux;2;3360.9;EUROSTAT_COFOG
+2017;GF0304;Administration pénitentiaire;2;2213.3;EUROSTAT_COFOG
+2017;GF0305;R & D concernant l'ordre et la sécurité publics;2;3.6;EUROSTAT_COFOG
+2017;GF0306;Ordre et sécurité publics n.c.a.;2;488.7;EUROSTAT_COFOG
+2017;GF04;Affaires économiques;1;19034;EUROSTAT_COFOG
+2017;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;4013.5;EUROSTAT_COFOG
+2017;GF0402;Agriculture, sylviculture, pêche et chasse;2;1798.5;EUROSTAT_COFOG
+2017;GF0403;Combustibles et énergie;2;300.4;EUROSTAT_COFOG
+2017;GF0404;Industries extractives et manufacturières, construction;2;152.5;EUROSTAT_COFOG
+2017;GF0405;Transports;2;7790.8;EUROSTAT_COFOG
+2017;GF0406;Communications;2;3;EUROSTAT_COFOG
+2017;GF0407;Autres branches d'activité;2;1464.7;EUROSTAT_COFOG
+2017;GF0408;R & D concernant les affaires économiques;2;2589.8;EUROSTAT_COFOG
+2017;GF0409;Affaires économiques n.c.a.;2;920.8;EUROSTAT_COFOG
+2017;GF05;Protection de l'environnement;1;4987.6;EUROSTAT_COFOG
+2017;GF0501;Gestion des déchets;2;2630.1;EUROSTAT_COFOG
+2017;GF0502;Gestion des eaux usées;2;423.7;EUROSTAT_COFOG
+2017;GF0503;Lutte contre la pollution;2;136.8;EUROSTAT_COFOG
+2017;GF0504;Préservation de la diversité biologique et protection de la nature;2;489.7;EUROSTAT_COFOG
+2017;GF0505;R & D dans le domaine de la protection de l'environnement;2;255.8;EUROSTAT_COFOG
+2017;GF0506;Protection de l'environnement n.c.a.;2;1051.5;EUROSTAT_COFOG
+2017;GF06;Logements et équipements collectifs;1;7138.9;EUROSTAT_COFOG
+2017;GF0601;Logements;2;1062.5;EUROSTAT_COFOG
+2017;GF0602;Équipements collectifs;2;5574.5;EUROSTAT_COFOG
+2017;GF0603;Alimentation en eau;2;278.2;EUROSTAT_COFOG
+2017;GF0604;Éclairage public;2;75.9;EUROSTAT_COFOG
+2017;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2017;GF0606;Logement et équipements collectifs n.c.a.;2;147.8;EUROSTAT_COFOG
+2017;GF07;Santé;1;52856.4;EUROSTAT_COFOG
+2017;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2017;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2017;GF0703;Services hospitaliers;2;47888.9;EUROSTAT_COFOG
+2017;GF0704;Services de santé publique;2;2475.2;EUROSTAT_COFOG
+2017;GF0705;R & D dans le domaine de la santé;2;1600.9;EUROSTAT_COFOG
+2017;GF0706;Santé n.c.a.;2;891.4;EUROSTAT_COFOG
+2017;GF08;Loisirs, culture et culte;1;12228.5;EUROSTAT_COFOG
+2017;GF0801;Services récréatifs et sportifs;2;4451.4;EUROSTAT_COFOG
+2017;GF0802;Services culturels;2;5994.7;EUROSTAT_COFOG
+2017;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1716.3;EUROSTAT_COFOG
+2017;GF0804;Culte et autres services communautaires;2;64.5;EUROSTAT_COFOG
+2017;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2017;GF0806;Loisirs, culture et culte n.c.a.;2;1.5;EUROSTAT_COFOG
+2017;GF09;Enseignement;1;83057.4;EUROSTAT_COFOG
+2017;GF0901;Enseignement préélémentaire et primaire;2;27042.5;EUROSTAT_COFOG
+2017;GF0902;Enseignement secondaire;2;42076.1;EUROSTAT_COFOG
+2017;GF0903;Enseignement postsecondaire non supérieur;2;533.4;EUROSTAT_COFOG
+2017;GF0904;Enseignement supérieur;2;6264.9;EUROSTAT_COFOG
+2017;GF0905;Enseignement non défini par niveau;2;1030;EUROSTAT_COFOG
+2017;GF0906;Services annexes à l'enseignement;2;5651.1;EUROSTAT_COFOG
+2017;GF0907;R & D dans le domaine de l'enseignement;2;1.4;EUROSTAT_COFOG
+2017;GF0908;Enseignement n.c.a.;2;457.9;EUROSTAT_COFOG
+2017;GF10;Protection sociale;1;28036.4;EUROSTAT_COFOG
+2017;GF1001;Maladie et invalidité;2;4076.6;EUROSTAT_COFOG
+2017;GF1002;Vieillesse;2;8934;EUROSTAT_COFOG
+2017;GF1003;Survivants;2;43.2;EUROSTAT_COFOG
+2017;GF1004;Famille et enfants;2;6898.4;EUROSTAT_COFOG
+2017;GF1005;Chômage;2;3040.3;EUROSTAT_COFOG
+2017;GF1006;Logement;2;22.5;EUROSTAT_COFOG
+2017;GF1007;Exclusion sociale n.c.a.;2;2731.8;EUROSTAT_COFOG
+2017;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2017;GF1009;Protection sociale n.c.a.;2;2289.5;EUROSTAT_COFOG
+2018;TOTAL;Total;0;296685.1;EUROSTAT_COFOG
+2018;GF01;Services généraux des administrations publiques;1;41079.5;EUROSTAT_COFOG
+2018;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11917.6;EUROSTAT_COFOG
+2018;GF0102;Aide économique extérieure;2;214;EUROSTAT_COFOG
+2018;GF0103;Services généraux;2;23200.4;EUROSTAT_COFOG
+2018;GF0104;Recherche fondamentale;2;5563.6;EUROSTAT_COFOG
+2018;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2018;GF0106;Services généraux des administrations publiques n.c.a.;2;184;EUROSTAT_COFOG
+2018;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2018;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2018;GF02;Défense;1;18556.9;EUROSTAT_COFOG
+2018;GF0201;Défense militaire;2;15472.3;EUROSTAT_COFOG
+2018;GF0202;Défense civile;2;219.9;EUROSTAT_COFOG
+2018;GF0203;Aide militaire à des pays étrangers;2;739.2;EUROSTAT_COFOG
+2018;GF0204;R & D concernant la défense;2;1006.4;EUROSTAT_COFOG
+2018;GF0205;Défense n.c.a.;2;1119;EUROSTAT_COFOG
+2018;GF03;Ordre et sécurité publics;1;28465.6;EUROSTAT_COFOG
+2018;GF0301;Services de police;2;18155;EUROSTAT_COFOG
+2018;GF0302;Services de protection civile;2;4021.6;EUROSTAT_COFOG
+2018;GF0303;Tribunaux;2;3439.7;EUROSTAT_COFOG
+2018;GF0304;Administration pénitentiaire;2;2324.6;EUROSTAT_COFOG
+2018;GF0305;R & D concernant l'ordre et la sécurité publics;2;3.9;EUROSTAT_COFOG
+2018;GF0306;Ordre et sécurité publics n.c.a.;2;520.8;EUROSTAT_COFOG
+2018;GF04;Affaires économiques;1;18737.2;EUROSTAT_COFOG
+2018;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;4007.3;EUROSTAT_COFOG
+2018;GF0402;Agriculture, sylviculture, pêche et chasse;2;1782.2;EUROSTAT_COFOG
+2018;GF0403;Combustibles et énergie;2;315;EUROSTAT_COFOG
+2018;GF0404;Industries extractives et manufacturières, construction;2;152.5;EUROSTAT_COFOG
+2018;GF0405;Transports;2;7520;EUROSTAT_COFOG
+2018;GF0406;Communications;2;5.1;EUROSTAT_COFOG
+2018;GF0407;Autres branches d'activité;2;1477;EUROSTAT_COFOG
+2018;GF0408;R & D concernant les affaires économiques;2;2566.9;EUROSTAT_COFOG
+2018;GF0409;Affaires économiques n.c.a.;2;911.2;EUROSTAT_COFOG
+2018;GF05;Protection de l'environnement;1;5181.1;EUROSTAT_COFOG
+2018;GF0501;Gestion des déchets;2;2698.1;EUROSTAT_COFOG
+2018;GF0502;Gestion des eaux usées;2;443.9;EUROSTAT_COFOG
+2018;GF0503;Lutte contre la pollution;2;137.7;EUROSTAT_COFOG
+2018;GF0504;Préservation de la diversité biologique et protection de la nature;2;514.8;EUROSTAT_COFOG
+2018;GF0505;R & D dans le domaine de la protection de l'environnement;2;263.7;EUROSTAT_COFOG
+2018;GF0506;Protection de l'environnement n.c.a.;2;1122.9;EUROSTAT_COFOG
+2018;GF06;Logements et équipements collectifs;1;7189.8;EUROSTAT_COFOG
+2018;GF0601;Logements;2;1162.1;EUROSTAT_COFOG
+2018;GF0602;Équipements collectifs;2;5507.7;EUROSTAT_COFOG
+2018;GF0603;Alimentation en eau;2;280.9;EUROSTAT_COFOG
+2018;GF0604;Éclairage public;2;73.5;EUROSTAT_COFOG
+2018;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2018;GF0606;Logement et équipements collectifs n.c.a.;2;165.6;EUROSTAT_COFOG
+2018;GF07;Santé;1;53289.9;EUROSTAT_COFOG
+2018;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2018;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2018;GF0703;Services hospitaliers;2;48231.3;EUROSTAT_COFOG
+2018;GF0704;Services de santé publique;2;2574.4;EUROSTAT_COFOG
+2018;GF0705;R & D dans le domaine de la santé;2;1615.5;EUROSTAT_COFOG
+2018;GF0706;Santé n.c.a.;2;868.7;EUROSTAT_COFOG
+2018;GF08;Loisirs, culture et culte;1;12292.1;EUROSTAT_COFOG
+2018;GF0801;Services récréatifs et sportifs;2;4397.4;EUROSTAT_COFOG
+2018;GF0802;Services culturels;2;6089.3;EUROSTAT_COFOG
+2018;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1698.3;EUROSTAT_COFOG
+2018;GF0804;Culte et autres services communautaires;2;67.3;EUROSTAT_COFOG
+2018;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2018;GF0806;Loisirs, culture et culte n.c.a.;2;39.8;EUROSTAT_COFOG
+2018;GF09;Enseignement;1;84067.3;EUROSTAT_COFOG
+2018;GF0901;Enseignement préélémentaire et primaire;2;27374.5;EUROSTAT_COFOG
+2018;GF0902;Enseignement secondaire;2;42249.9;EUROSTAT_COFOG
+2018;GF0903;Enseignement postsecondaire non supérieur;2;546.8;EUROSTAT_COFOG
+2018;GF0904;Enseignement supérieur;2;6356.7;EUROSTAT_COFOG
+2018;GF0905;Enseignement non défini par niveau;2;1098.5;EUROSTAT_COFOG
+2018;GF0906;Services annexes à l'enseignement;2;5982.8;EUROSTAT_COFOG
+2018;GF0907;R & D dans le domaine de l'enseignement;2;1.1;EUROSTAT_COFOG
+2018;GF0908;Enseignement n.c.a.;2;457.2;EUROSTAT_COFOG
+2018;GF10;Protection sociale;1;27825.8;EUROSTAT_COFOG
+2018;GF1001;Maladie et invalidité;2;4043.5;EUROSTAT_COFOG
+2018;GF1002;Vieillesse;2;8856.2;EUROSTAT_COFOG
+2018;GF1003;Survivants;2;39.6;EUROSTAT_COFOG
+2018;GF1004;Famille et enfants;2;6846.4;EUROSTAT_COFOG
+2018;GF1005;Chômage;2;2991.5;EUROSTAT_COFOG
+2018;GF1006;Logement;2;21.9;EUROSTAT_COFOG
+2018;GF1007;Exclusion sociale n.c.a.;2;2788.3;EUROSTAT_COFOG
+2018;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2018;GF1009;Protection sociale n.c.a.;2;2238.5;EUROSTAT_COFOG
+2019;TOTAL;Total;0;300632;EUROSTAT_COFOG
+2019;GF01;Services généraux des administrations publiques;1;41570.4;EUROSTAT_COFOG
+2019;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11729.1;EUROSTAT_COFOG
+2019;GF0102;Aide économique extérieure;2;204.3;EUROSTAT_COFOG
+2019;GF0103;Services généraux;2;23793.2;EUROSTAT_COFOG
+2019;GF0104;Recherche fondamentale;2;5655.2;EUROSTAT_COFOG
+2019;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2019;GF0106;Services généraux des administrations publiques n.c.a.;2;188.5;EUROSTAT_COFOG
+2019;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2019;GF0108;Transferts de caractère général entre administrations publiques;2;0.1;EUROSTAT_COFOG
+2019;GF02;Défense;1;18850.4;EUROSTAT_COFOG
+2019;GF0201;Défense militaire;2;15649.8;EUROSTAT_COFOG
+2019;GF0202;Défense civile;2;220.9;EUROSTAT_COFOG
+2019;GF0203;Aide militaire à des pays étrangers;2;724.9;EUROSTAT_COFOG
+2019;GF0204;R & D concernant la défense;2;1035.2;EUROSTAT_COFOG
+2019;GF0205;Défense n.c.a.;2;1219.5;EUROSTAT_COFOG
+2019;GF03;Ordre et sécurité publics;1;29535.1;EUROSTAT_COFOG
+2019;GF0301;Services de police;2;18933.4;EUROSTAT_COFOG
+2019;GF0302;Services de protection civile;2;4106.4;EUROSTAT_COFOG
+2019;GF0303;Tribunaux;2;3509.4;EUROSTAT_COFOG
+2019;GF0304;Administration pénitentiaire;2;2422.3;EUROSTAT_COFOG
+2019;GF0305;R & D concernant l'ordre et la sécurité publics;2;4.2;EUROSTAT_COFOG
+2019;GF0306;Ordre et sécurité publics n.c.a.;2;559.5;EUROSTAT_COFOG
+2019;GF04;Affaires économiques;1;18687.8;EUROSTAT_COFOG
+2019;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;3894.3;EUROSTAT_COFOG
+2019;GF0402;Agriculture, sylviculture, pêche et chasse;2;1768.6;EUROSTAT_COFOG
+2019;GF0403;Combustibles et énergie;2;324.8;EUROSTAT_COFOG
+2019;GF0404;Industries extractives et manufacturières, construction;2;161.1;EUROSTAT_COFOG
+2019;GF0405;Transports;2;7526;EUROSTAT_COFOG
+2019;GF0406;Communications;2;5.9;EUROSTAT_COFOG
+2019;GF0407;Autres branches d'activité;2;1538.3;EUROSTAT_COFOG
+2019;GF0408;R & D concernant les affaires économiques;2;2577.2;EUROSTAT_COFOG
+2019;GF0409;Affaires économiques n.c.a.;2;891.7;EUROSTAT_COFOG
+2019;GF05;Protection de l'environnement;1;5259.3;EUROSTAT_COFOG
+2019;GF0501;Gestion des déchets;2;2774.4;EUROSTAT_COFOG
+2019;GF0502;Gestion des eaux usées;2;450.5;EUROSTAT_COFOG
+2019;GF0503;Lutte contre la pollution;2;129.4;EUROSTAT_COFOG
+2019;GF0504;Préservation de la diversité biologique et protection de la nature;2;530.8;EUROSTAT_COFOG
+2019;GF0505;R & D dans le domaine de la protection de l'environnement;2;261.3;EUROSTAT_COFOG
+2019;GF0506;Protection de l'environnement n.c.a.;2;1113;EUROSTAT_COFOG
+2019;GF06;Logements et équipements collectifs;1;7351.9;EUROSTAT_COFOG
+2019;GF0601;Logements;2;1146;EUROSTAT_COFOG
+2019;GF0602;Équipements collectifs;2;5660.9;EUROSTAT_COFOG
+2019;GF0603;Alimentation en eau;2;306.3;EUROSTAT_COFOG
+2019;GF0604;Éclairage public;2;74.1;EUROSTAT_COFOG
+2019;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2019;GF0606;Logement et équipements collectifs n.c.a.;2;164.6;EUROSTAT_COFOG
+2019;GF07;Santé;1;53912.7;EUROSTAT_COFOG
+2019;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2019;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2019;GF0703;Services hospitaliers;2;48783.3;EUROSTAT_COFOG
+2019;GF0704;Services de santé publique;2;2678.5;EUROSTAT_COFOG
+2019;GF0705;R & D dans le domaine de la santé;2;1639.4;EUROSTAT_COFOG
+2019;GF0706;Santé n.c.a.;2;811.5;EUROSTAT_COFOG
+2019;GF08;Loisirs, culture et culte;1;12481.7;EUROSTAT_COFOG
+2019;GF0801;Services récréatifs et sportifs;2;4485.3;EUROSTAT_COFOG
+2019;GF0802;Services culturels;2;6219.6;EUROSTAT_COFOG
+2019;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1670.5;EUROSTAT_COFOG
+2019;GF0804;Culte et autres services communautaires;2;66.3;EUROSTAT_COFOG
+2019;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2019;GF0806;Loisirs, culture et culte n.c.a.;2;40;EUROSTAT_COFOG
+2019;GF09;Enseignement;1;85292.8;EUROSTAT_COFOG
+2019;GF0901;Enseignement préélémentaire et primaire;2;27879.8;EUROSTAT_COFOG
+2019;GF0902;Enseignement secondaire;2;42625.3;EUROSTAT_COFOG
+2019;GF0903;Enseignement postsecondaire non supérieur;2;572.4;EUROSTAT_COFOG
+2019;GF0904;Enseignement supérieur;2;6441.5;EUROSTAT_COFOG
+2019;GF0905;Enseignement non défini par niveau;2;1104.6;EUROSTAT_COFOG
+2019;GF0906;Services annexes à l'enseignement;2;6216.3;EUROSTAT_COFOG
+2019;GF0907;R & D dans le domaine de l'enseignement;2;1.2;EUROSTAT_COFOG
+2019;GF0908;Enseignement n.c.a.;2;451.8;EUROSTAT_COFOG
+2019;GF10;Protection sociale;1;27690;EUROSTAT_COFOG
+2019;GF1001;Maladie et invalidité;2;3905.1;EUROSTAT_COFOG
+2019;GF1002;Vieillesse;2;8713.1;EUROSTAT_COFOG
+2019;GF1003;Survivants;2;38.6;EUROSTAT_COFOG
+2019;GF1004;Famille et enfants;2;6929.6;EUROSTAT_COFOG
+2019;GF1005;Chômage;2;3011;EUROSTAT_COFOG
+2019;GF1006;Logement;2;22.2;EUROSTAT_COFOG
+2019;GF1007;Exclusion sociale n.c.a.;2;2810.3;EUROSTAT_COFOG
+2019;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2019;GF1009;Protection sociale n.c.a.;2;2260.1;EUROSTAT_COFOG
+2020;TOTAL;Total;0;307596;EUROSTAT_COFOG
+2020;GF01;Services généraux des administrations publiques;1;42024.7;EUROSTAT_COFOG
+2020;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11880.6;EUROSTAT_COFOG
+2020;GF0102;Aide économique extérieure;2;197.9;EUROSTAT_COFOG
+2020;GF0103;Services généraux;2;24139.3;EUROSTAT_COFOG
+2020;GF0104;Recherche fondamentale;2;5612.4;EUROSTAT_COFOG
+2020;GF0105;R & D concernant des services généraux des administrations publiques;2;0.1;EUROSTAT_COFOG
+2020;GF0106;Services généraux des administrations publiques n.c.a.;2;194.5;EUROSTAT_COFOG
+2020;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2020;GF0108;Transferts de caractère général entre administrations publiques;2;0.1;EUROSTAT_COFOG
+2020;GF02;Défense;1;19077.8;EUROSTAT_COFOG
+2020;GF0201;Défense militaire;2;15852.7;EUROSTAT_COFOG
+2020;GF0202;Défense civile;2;181.9;EUROSTAT_COFOG
+2020;GF0203;Aide militaire à des pays étrangers;2;815.6;EUROSTAT_COFOG
+2020;GF0204;R & D concernant la défense;2;1061;EUROSTAT_COFOG
+2020;GF0205;Défense n.c.a.;2;1166.6;EUROSTAT_COFOG
+2020;GF03;Ordre et sécurité publics;1;30154;EUROSTAT_COFOG
+2020;GF0301;Services de police;2;19125.6;EUROSTAT_COFOG
+2020;GF0302;Services de protection civile;2;4187.5;EUROSTAT_COFOG
+2020;GF0303;Tribunaux;2;3559.9;EUROSTAT_COFOG
+2020;GF0304;Administration pénitentiaire;2;2503.5;EUROSTAT_COFOG
+2020;GF0305;R & D concernant l'ordre et la sécurité publics;2;3.8;EUROSTAT_COFOG
+2020;GF0306;Ordre et sécurité publics n.c.a.;2;773.8;EUROSTAT_COFOG
+2020;GF04;Affaires économiques;1;18652.2;EUROSTAT_COFOG
+2020;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;3440.9;EUROSTAT_COFOG
+2020;GF0402;Agriculture, sylviculture, pêche et chasse;2;1789.1;EUROSTAT_COFOG
+2020;GF0403;Combustibles et énergie;2;342.1;EUROSTAT_COFOG
+2020;GF0404;Industries extractives et manufacturières, construction;2;157;EUROSTAT_COFOG
+2020;GF0405;Transports;2;7829.1;EUROSTAT_COFOG
+2020;GF0406;Communications;2;8.6;EUROSTAT_COFOG
+2020;GF0407;Autres branches d'activité;2;1543.1;EUROSTAT_COFOG
+2020;GF0408;R & D concernant les affaires économiques;2;2664.6;EUROSTAT_COFOG
+2020;GF0409;Affaires économiques n.c.a.;2;877.6;EUROSTAT_COFOG
+2020;GF05;Protection de l'environnement;1;5247.6;EUROSTAT_COFOG
+2020;GF0501;Gestion des déchets;2;2797.2;EUROSTAT_COFOG
+2020;GF0502;Gestion des eaux usées;2;465.8;EUROSTAT_COFOG
+2020;GF0503;Lutte contre la pollution;2;131.7;EUROSTAT_COFOG
+2020;GF0504;Préservation de la diversité biologique et protection de la nature;2;534.1;EUROSTAT_COFOG
+2020;GF0505;R & D dans le domaine de la protection de l'environnement;2;205.1;EUROSTAT_COFOG
+2020;GF0506;Protection de l'environnement n.c.a.;2;1113.7;EUROSTAT_COFOG
+2020;GF06;Logements et équipements collectifs;1;7426.7;EUROSTAT_COFOG
+2020;GF0601;Logements;2;1140.8;EUROSTAT_COFOG
+2020;GF0602;Équipements collectifs;2;5713.2;EUROSTAT_COFOG
+2020;GF0603;Alimentation en eau;2;327;EUROSTAT_COFOG
+2020;GF0604;Éclairage public;2;72.1;EUROSTAT_COFOG
+2020;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2020;GF0606;Logement et équipements collectifs n.c.a.;2;173.7;EUROSTAT_COFOG
+2020;GF07;Santé;1;56992.9;EUROSTAT_COFOG
+2020;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2020;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2020;GF0703;Services hospitaliers;2;51831.2;EUROSTAT_COFOG
+2020;GF0704;Services de santé publique;2;2688.1;EUROSTAT_COFOG
+2020;GF0705;R & D dans le domaine de la santé;2;1656.6;EUROSTAT_COFOG
+2020;GF0706;Santé n.c.a.;2;817.1;EUROSTAT_COFOG
+2020;GF08;Loisirs, culture et culte;1;12494.5;EUROSTAT_COFOG
+2020;GF0801;Services récréatifs et sportifs;2;4560.5;EUROSTAT_COFOG
+2020;GF0802;Services culturels;2;6202.2;EUROSTAT_COFOG
+2020;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1628.6;EUROSTAT_COFOG
+2020;GF0804;Culte et autres services communautaires;2;66.8;EUROSTAT_COFOG
+2020;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2020;GF0806;Loisirs, culture et culte n.c.a.;2;36.4;EUROSTAT_COFOG
+2020;GF09;Enseignement;1;86709.5;EUROSTAT_COFOG
+2020;GF0901;Enseignement préélémentaire et primaire;2;28502.5;EUROSTAT_COFOG
+2020;GF0902;Enseignement secondaire;2;43158.2;EUROSTAT_COFOG
+2020;GF0903;Enseignement postsecondaire non supérieur;2;566.6;EUROSTAT_COFOG
+2020;GF0904;Enseignement supérieur;2;6739.3;EUROSTAT_COFOG
+2020;GF0905;Enseignement non défini par niveau;2;1124.7;EUROSTAT_COFOG
+2020;GF0906;Services annexes à l'enseignement;2;6159.2;EUROSTAT_COFOG
+2020;GF0907;R & D dans le domaine de l'enseignement;2;1.2;EUROSTAT_COFOG
+2020;GF0908;Enseignement n.c.a.;2;457.8;EUROSTAT_COFOG
+2020;GF10;Protection sociale;1;28816;EUROSTAT_COFOG
+2020;GF1001;Maladie et invalidité;2;4128;EUROSTAT_COFOG
+2020;GF1002;Vieillesse;2;8913.1;EUROSTAT_COFOG
+2020;GF1003;Survivants;2;37.8;EUROSTAT_COFOG
+2020;GF1004;Famille et enfants;2;7327.5;EUROSTAT_COFOG
+2020;GF1005;Chômage;2;3127.2;EUROSTAT_COFOG
+2020;GF1006;Logement;2;21.1;EUROSTAT_COFOG
+2020;GF1007;Exclusion sociale n.c.a.;2;2969.1;EUROSTAT_COFOG
+2020;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2020;GF1009;Protection sociale n.c.a.;2;2292.2;EUROSTAT_COFOG
+2021;TOTAL;Total;0;317140;EUROSTAT_COFOG
+2021;GF01;Services généraux des administrations publiques;1;42813.4;EUROSTAT_COFOG
+2021;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;11662.7;EUROSTAT_COFOG
+2021;GF0102;Aide économique extérieure;2;191.1;EUROSTAT_COFOG
+2021;GF0103;Services généraux;2;24985.1;EUROSTAT_COFOG
+2021;GF0104;Recherche fondamentale;2;5773.4;EUROSTAT_COFOG
+2021;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2021;GF0106;Services généraux des administrations publiques n.c.a.;2;201.2;EUROSTAT_COFOG
+2021;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2021;GF0108;Transferts de caractère général entre administrations publiques;2;0;EUROSTAT_COFOG
+2021;GF02;Défense;1;19180.7;EUROSTAT_COFOG
+2021;GF0201;Défense militaire;2;16020.4;EUROSTAT_COFOG
+2021;GF0202;Défense civile;2;163;EUROSTAT_COFOG
+2021;GF0203;Aide militaire à des pays étrangers;2;754.4;EUROSTAT_COFOG
+2021;GF0204;R & D concernant la défense;2;1054.6;EUROSTAT_COFOG
+2021;GF0205;Défense n.c.a.;2;1188.3;EUROSTAT_COFOG
+2021;GF03;Ordre et sécurité publics;1;30789.5;EUROSTAT_COFOG
+2021;GF0301;Services de police;2;19379.5;EUROSTAT_COFOG
+2021;GF0302;Services de protection civile;2;4319.2;EUROSTAT_COFOG
+2021;GF0303;Tribunaux;2;3694;EUROSTAT_COFOG
+2021;GF0304;Administration pénitentiaire;2;2589.6;EUROSTAT_COFOG
+2021;GF0305;R & D concernant l'ordre et la sécurité publics;2;0;EUROSTAT_COFOG
+2021;GF0306;Ordre et sécurité publics n.c.a.;2;807.3;EUROSTAT_COFOG
+2021;GF04;Affaires économiques;1;18764.5;EUROSTAT_COFOG
+2021;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;3365.6;EUROSTAT_COFOG
+2021;GF0402;Agriculture, sylviculture, pêche et chasse;2;1818.1;EUROSTAT_COFOG
+2021;GF0403;Combustibles et énergie;2;355.1;EUROSTAT_COFOG
+2021;GF0404;Industries extractives et manufacturières, construction;2;154.9;EUROSTAT_COFOG
+2021;GF0405;Transports;2;7841.7;EUROSTAT_COFOG
+2021;GF0406;Communications;2;11.8;EUROSTAT_COFOG
+2021;GF0407;Autres branches d'activité;2;1605;EUROSTAT_COFOG
+2021;GF0408;R & D concernant les affaires économiques;2;2721;EUROSTAT_COFOG
+2021;GF0409;Affaires économiques n.c.a.;2;891.3;EUROSTAT_COFOG
+2021;GF05;Protection de l'environnement;1;5348.5;EUROSTAT_COFOG
+2021;GF0501;Gestion des déchets;2;2918.2;EUROSTAT_COFOG
+2021;GF0502;Gestion des eaux usées;2;483.3;EUROSTAT_COFOG
+2021;GF0503;Lutte contre la pollution;2;130.3;EUROSTAT_COFOG
+2021;GF0504;Préservation de la diversité biologique et protection de la nature;2;556.5;EUROSTAT_COFOG
+2021;GF0505;R & D dans le domaine de la protection de l'environnement;2;213;EUROSTAT_COFOG
+2021;GF0506;Protection de l'environnement n.c.a.;2;1047.2;EUROSTAT_COFOG
+2021;GF06;Logements et équipements collectifs;1;7518.3;EUROSTAT_COFOG
+2021;GF0601;Logements;2;1236.5;EUROSTAT_COFOG
+2021;GF0602;Équipements collectifs;2;5679.6;EUROSTAT_COFOG
+2021;GF0603;Alimentation en eau;2;337;EUROSTAT_COFOG
+2021;GF0604;Éclairage public;2;71.7;EUROSTAT_COFOG
+2021;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2021;GF0606;Logement et équipements collectifs n.c.a.;2;193.4;EUROSTAT_COFOG
+2021;GF07;Santé;1;61123.5;EUROSTAT_COFOG
+2021;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2021;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2021;GF0703;Services hospitaliers;2;55741.7;EUROSTAT_COFOG
+2021;GF0704;Services de santé publique;2;2779.7;EUROSTAT_COFOG
+2021;GF0705;R & D dans le domaine de la santé;2;1762.5;EUROSTAT_COFOG
+2021;GF0706;Santé n.c.a.;2;839.7;EUROSTAT_COFOG
+2021;GF08;Loisirs, culture et culte;1;12688.5;EUROSTAT_COFOG
+2021;GF0801;Services récréatifs et sportifs;2;4623.2;EUROSTAT_COFOG
+2021;GF0802;Services culturels;2;6284.9;EUROSTAT_COFOG
+2021;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1673;EUROSTAT_COFOG
+2021;GF0804;Culte et autres services communautaires;2;70.2;EUROSTAT_COFOG
+2021;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2021;GF0806;Loisirs, culture et culte n.c.a.;2;37.2;EUROSTAT_COFOG
+2021;GF09;Enseignement;1;89322.3;EUROSTAT_COFOG
+2021;GF0901;Enseignement préélémentaire et primaire;2;29332.6;EUROSTAT_COFOG
+2021;GF0902;Enseignement secondaire;2;44163.5;EUROSTAT_COFOG
+2021;GF0903;Enseignement postsecondaire non supérieur;2;599.5;EUROSTAT_COFOG
+2021;GF0904;Enseignement supérieur;2;7009.3;EUROSTAT_COFOG
+2021;GF0905;Enseignement non défini par niveau;2;1172.6;EUROSTAT_COFOG
+2021;GF0906;Services annexes à l'enseignement;2;6574.5;EUROSTAT_COFOG
+2021;GF0907;R & D dans le domaine de l'enseignement;2;0.9;EUROSTAT_COFOG
+2021;GF0908;Enseignement n.c.a.;2;469.3;EUROSTAT_COFOG
+2021;GF10;Protection sociale;1;29590.8;EUROSTAT_COFOG
+2021;GF1001;Maladie et invalidité;2;4276.7;EUROSTAT_COFOG
+2021;GF1002;Vieillesse;2;9220.1;EUROSTAT_COFOG
+2021;GF1003;Survivants;2;37;EUROSTAT_COFOG
+2021;GF1004;Famille et enfants;2;7470.9;EUROSTAT_COFOG
+2021;GF1005;Chômage;2;3253;EUROSTAT_COFOG
+2021;GF1006;Logement;2;20.2;EUROSTAT_COFOG
+2021;GF1007;Exclusion sociale n.c.a.;2;3000.2;EUROSTAT_COFOG
+2021;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2021;GF1009;Protection sociale n.c.a.;2;2312.6;EUROSTAT_COFOG
+2022;TOTAL;Total;0;331171;EUROSTAT_COFOG
+2022;GF01;Services généraux des administrations publiques;1;44936.2;EUROSTAT_COFOG
+2022;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12000;EUROSTAT_COFOG
+2022;GF0102;Aide économique extérieure;2;197.9;EUROSTAT_COFOG
+2022;GF0103;Services généraux;2;26394.4;EUROSTAT_COFOG
+2022;GF0104;Recherche fondamentale;2;6091.6;EUROSTAT_COFOG
+2022;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2022;GF0106;Services généraux des administrations publiques n.c.a.;2;252.3;EUROSTAT_COFOG
+2022;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2022;GF0108;Transferts de caractère général entre administrations publiques;2;0.1;EUROSTAT_COFOG
+2022;GF02;Défense;1;19807.8;EUROSTAT_COFOG
+2022;GF0201;Défense militaire;2;16638.2;EUROSTAT_COFOG
+2022;GF0202;Défense civile;2;173.9;EUROSTAT_COFOG
+2022;GF0203;Aide militaire à des pays étrangers;2;641.6;EUROSTAT_COFOG
+2022;GF0204;R & D concernant la défense;2;1089.8;EUROSTAT_COFOG
+2022;GF0205;Défense n.c.a.;2;1264.4;EUROSTAT_COFOG
+2022;GF03;Ordre et sécurité publics;1;32135.7;EUROSTAT_COFOG
+2022;GF0301;Services de police;2;20101.4;EUROSTAT_COFOG
+2022;GF0302;Services de protection civile;2;4479.9;EUROSTAT_COFOG
+2022;GF0303;Tribunaux;2;3933.3;EUROSTAT_COFOG
+2022;GF0304;Administration pénitentiaire;2;2759;EUROSTAT_COFOG
+2022;GF0305;R & D concernant l'ordre et la sécurité publics;2;0;EUROSTAT_COFOG
+2022;GF0306;Ordre et sécurité publics n.c.a.;2;862.1;EUROSTAT_COFOG
+2022;GF04;Affaires économiques;1;19450.9;EUROSTAT_COFOG
+2022;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;3464.8;EUROSTAT_COFOG
+2022;GF0402;Agriculture, sylviculture, pêche et chasse;2;1873.3;EUROSTAT_COFOG
+2022;GF0403;Combustibles et énergie;2;408.6;EUROSTAT_COFOG
+2022;GF0404;Industries extractives et manufacturières, construction;2;156.3;EUROSTAT_COFOG
+2022;GF0405;Transports;2;8171.8;EUROSTAT_COFOG
+2022;GF0406;Communications;2;13.5;EUROSTAT_COFOG
+2022;GF0407;Autres branches d'activité;2;1663.1;EUROSTAT_COFOG
+2022;GF0408;R & D concernant les affaires économiques;2;2834.1;EUROSTAT_COFOG
+2022;GF0409;Affaires économiques n.c.a.;2;865.4;EUROSTAT_COFOG
+2022;GF05;Protection de l'environnement;1;5647.9;EUROSTAT_COFOG
+2022;GF0501;Gestion des déchets;2;3098;EUROSTAT_COFOG
+2022;GF0502;Gestion des eaux usées;2;513.8;EUROSTAT_COFOG
+2022;GF0503;Lutte contre la pollution;2;138;EUROSTAT_COFOG
+2022;GF0504;Préservation de la diversité biologique et protection de la nature;2;577.9;EUROSTAT_COFOG
+2022;GF0505;R & D dans le domaine de la protection de l'environnement;2;247.6;EUROSTAT_COFOG
+2022;GF0506;Protection de l'environnement n.c.a.;2;1072.7;EUROSTAT_COFOG
+2022;GF06;Logements et équipements collectifs;1;7805.4;EUROSTAT_COFOG
+2022;GF0601;Logements;2;1124.5;EUROSTAT_COFOG
+2022;GF0602;Équipements collectifs;2;6076.6;EUROSTAT_COFOG
+2022;GF0603;Alimentation en eau;2;340.6;EUROSTAT_COFOG
+2022;GF0604;Éclairage public;2;72.8;EUROSTAT_COFOG
+2022;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2022;GF0606;Logement et équipements collectifs n.c.a.;2;191.1;EUROSTAT_COFOG
+2022;GF07;Santé;1;64323.6;EUROSTAT_COFOG
+2022;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2022;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2022;GF0703;Services hospitaliers;2;58740;EUROSTAT_COFOG
+2022;GF0704;Services de santé publique;2;2874.3;EUROSTAT_COFOG
+2022;GF0705;R & D dans le domaine de la santé;2;1841.1;EUROSTAT_COFOG
+2022;GF0706;Santé n.c.a.;2;868.2;EUROSTAT_COFOG
+2022;GF08;Loisirs, culture et culte;1;13437.7;EUROSTAT_COFOG
+2022;GF0801;Services récréatifs et sportifs;2;4894;EUROSTAT_COFOG
+2022;GF0802;Services culturels;2;6719.2;EUROSTAT_COFOG
+2022;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1710;EUROSTAT_COFOG
+2022;GF0804;Culte et autres services communautaires;2;72.7;EUROSTAT_COFOG
+2022;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2022;GF0806;Loisirs, culture et culte n.c.a.;2;41.8;EUROSTAT_COFOG
+2022;GF09;Enseignement;1;93150.7;EUROSTAT_COFOG
+2022;GF0901;Enseignement préélémentaire et primaire;2;30536.2;EUROSTAT_COFOG
+2022;GF0902;Enseignement secondaire;2;45946.2;EUROSTAT_COFOG
+2022;GF0903;Enseignement postsecondaire non supérieur;2;621.4;EUROSTAT_COFOG
+2022;GF0904;Enseignement supérieur;2;7359;EUROSTAT_COFOG
+2022;GF0905;Enseignement non défini par niveau;2;1241.6;EUROSTAT_COFOG
+2022;GF0906;Services annexes à l'enseignement;2;7002;EUROSTAT_COFOG
+2022;GF0907;R & D dans le domaine de l'enseignement;2;0.9;EUROSTAT_COFOG
+2022;GF0908;Enseignement n.c.a.;2;443.4;EUROSTAT_COFOG
+2022;GF10;Protection sociale;1;30475;EUROSTAT_COFOG
+2022;GF1001;Maladie et invalidité;2;4135.4;EUROSTAT_COFOG
+2022;GF1002;Vieillesse;2;9552.6;EUROSTAT_COFOG
+2022;GF1003;Survivants;2;37;EUROSTAT_COFOG
+2022;GF1004;Famille et enfants;2;7766.5;EUROSTAT_COFOG
+2022;GF1005;Chômage;2;3317;EUROSTAT_COFOG
+2022;GF1006;Logement;2;22.8;EUROSTAT_COFOG
+2022;GF1007;Exclusion sociale n.c.a.;2;3265.2;EUROSTAT_COFOG
+2022;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2022;GF1009;Protection sociale n.c.a.;2;2378.5;EUROSTAT_COFOG
+2023;TOTAL;Total;0;346293.3;EUROSTAT_COFOG
+2023;GF01;Services généraux des administrations publiques;1;46562.3;EUROSTAT_COFOG
+2023;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12281.6;EUROSTAT_COFOG
+2023;GF0102;Aide économique extérieure;2;206.7;EUROSTAT_COFOG
+2023;GF0103;Services généraux;2;27329.9;EUROSTAT_COFOG
+2023;GF0104;Recherche fondamentale;2;6548.6;EUROSTAT_COFOG
+2023;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2023;GF0106;Services généraux des administrations publiques n.c.a.;2;195.5;EUROSTAT_COFOG
+2023;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2023;GF0108;Transferts de caractère général entre administrations publiques;2;0.1;EUROSTAT_COFOG
+2023;GF02;Défense;1;20529.5;EUROSTAT_COFOG
+2023;GF0201;Défense militaire;2;17366.1;EUROSTAT_COFOG
+2023;GF0202;Défense civile;2;179.7;EUROSTAT_COFOG
+2023;GF0203;Aide militaire à des pays étrangers;2;542.8;EUROSTAT_COFOG
+2023;GF0204;R & D concernant la défense;2;1171.5;EUROSTAT_COFOG
+2023;GF0205;Défense n.c.a.;2;1269.3;EUROSTAT_COFOG
+2023;GF03;Ordre et sécurité publics;1;33969.3;EUROSTAT_COFOG
+2023;GF0301;Services de police;2;21261.6;EUROSTAT_COFOG
+2023;GF0302;Services de protection civile;2;4697.3;EUROSTAT_COFOG
+2023;GF0303;Tribunaux;2;4194.1;EUROSTAT_COFOG
+2023;GF0304;Administration pénitentiaire;2;2894.7;EUROSTAT_COFOG
+2023;GF0305;R & D concernant l'ordre et la sécurité publics;2;0;EUROSTAT_COFOG
+2023;GF0306;Ordre et sécurité publics n.c.a.;2;921.6;EUROSTAT_COFOG
+2023;GF04;Affaires économiques;1;20015.1;EUROSTAT_COFOG
+2023;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;3627.8;EUROSTAT_COFOG
+2023;GF0402;Agriculture, sylviculture, pêche et chasse;2;1890.6;EUROSTAT_COFOG
+2023;GF0403;Combustibles et énergie;2;442.5;EUROSTAT_COFOG
+2023;GF0404;Industries extractives et manufacturières, construction;2;161.6;EUROSTAT_COFOG
+2023;GF0405;Transports;2;8189.2;EUROSTAT_COFOG
+2023;GF0406;Communications;2;14.6;EUROSTAT_COFOG
+2023;GF0407;Autres branches d'activité;2;1788;EUROSTAT_COFOG
+2023;GF0408;R & D concernant les affaires économiques;2;2998.9;EUROSTAT_COFOG
+2023;GF0409;Affaires économiques n.c.a.;2;902.1;EUROSTAT_COFOG
+2023;GF05;Protection de l'environnement;1;5943.9;EUROSTAT_COFOG
+2023;GF0501;Gestion des déchets;2;3346.2;EUROSTAT_COFOG
+2023;GF0502;Gestion des eaux usées;2;545;EUROSTAT_COFOG
+2023;GF0503;Lutte contre la pollution;2;171.2;EUROSTAT_COFOG
+2023;GF0504;Préservation de la diversité biologique et protection de la nature;2;588;EUROSTAT_COFOG
+2023;GF0505;R & D dans le domaine de la protection de l'environnement;2;276.9;EUROSTAT_COFOG
+2023;GF0506;Protection de l'environnement n.c.a.;2;1016.6;EUROSTAT_COFOG
+2023;GF06;Logements et équipements collectifs;1;8151.2;EUROSTAT_COFOG
+2023;GF0601;Logements;2;1150.4;EUROSTAT_COFOG
+2023;GF0602;Équipements collectifs;2;6366.9;EUROSTAT_COFOG
+2023;GF0603;Alimentation en eau;2;324.7;EUROSTAT_COFOG
+2023;GF0604;Éclairage public;2;68.1;EUROSTAT_COFOG
+2023;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2023;GF0606;Logement et équipements collectifs n.c.a.;2;241.1;EUROSTAT_COFOG
+2023;GF07;Santé;1;67466.8;EUROSTAT_COFOG
+2023;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2023;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2023;GF0703;Services hospitaliers;2;61536.8;EUROSTAT_COFOG
+2023;GF0704;Services de santé publique;2;3013.6;EUROSTAT_COFOG
+2023;GF0705;R & D dans le domaine de la santé;2;1977.3;EUROSTAT_COFOG
+2023;GF0706;Santé n.c.a.;2;939.1;EUROSTAT_COFOG
+2023;GF08;Loisirs, culture et culte;1;14152.7;EUROSTAT_COFOG
+2023;GF0801;Services récréatifs et sportifs;2;4943.1;EUROSTAT_COFOG
+2023;GF0802;Services culturels;2;7234.5;EUROSTAT_COFOG
+2023;GF0803;Services de radiodiffusion, de télévision et d'édition;2;1848.7;EUROSTAT_COFOG
+2023;GF0804;Culte et autres services communautaires;2;75.1;EUROSTAT_COFOG
+2023;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2023;GF0806;Loisirs, culture et culte n.c.a.;2;51.3;EUROSTAT_COFOG
+2023;GF09;Enseignement;1;97719.9;EUROSTAT_COFOG
+2023;GF0901;Enseignement préélémentaire et primaire;2;32038.1;EUROSTAT_COFOG
+2023;GF0902;Enseignement secondaire;2;47602.1;EUROSTAT_COFOG
+2023;GF0903;Enseignement postsecondaire non supérieur;2;662;EUROSTAT_COFOG
+2023;GF0904;Enseignement supérieur;2;7746.4;EUROSTAT_COFOG
+2023;GF0905;Enseignement non défini par niveau;2;1343.6;EUROSTAT_COFOG
+2023;GF0906;Services annexes à l'enseignement;2;7910.9;EUROSTAT_COFOG
+2023;GF0907;R & D dans le domaine de l'enseignement;2;1.9;EUROSTAT_COFOG
+2023;GF0908;Enseignement n.c.a.;2;414.9;EUROSTAT_COFOG
+2023;GF10;Protection sociale;1;31782.7;EUROSTAT_COFOG
+2023;GF1001;Maladie et invalidité;2;4104.4;EUROSTAT_COFOG
+2023;GF1002;Vieillesse;2;9963.9;EUROSTAT_COFOG
+2023;GF1003;Survivants;2;38.4;EUROSTAT_COFOG
+2023;GF1004;Famille et enfants;2;8276;EUROSTAT_COFOG
+2023;GF1005;Chômage;2;3443;EUROSTAT_COFOG
+2023;GF1006;Logement;2;24.4;EUROSTAT_COFOG
+2023;GF1007;Exclusion sociale n.c.a.;2;3595.2;EUROSTAT_COFOG
+2023;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2023;GF1009;Protection sociale n.c.a.;2;2337.5;EUROSTAT_COFOG
+2024;TOTAL;Total;0;362149.3;EUROSTAT_COFOG
+2024;GF01;Services généraux des administrations publiques;1;47614.6;EUROSTAT_COFOG
+2024;GF0101;Fonctionnement des organes exécutifs et législatifs, affaires financières et fiscales, affaires étrangères;2;12532.7;EUROSTAT_COFOG
+2024;GF0102;Aide économique extérieure;2;212.7;EUROSTAT_COFOG
+2024;GF0103;Services généraux;2;27836.3;EUROSTAT_COFOG
+2024;GF0104;Recherche fondamentale;2;6809.1;EUROSTAT_COFOG
+2024;GF0105;R & D concernant des services généraux des administrations publiques;2;0;EUROSTAT_COFOG
+2024;GF0106;Services généraux des administrations publiques n.c.a.;2;223.8;EUROSTAT_COFOG
+2024;GF0107;Opérations concernant la dette publique;2;0;EUROSTAT_COFOG
+2024;GF0108;Transferts de caractère général entre administrations publiques;2;0.1;EUROSTAT_COFOG
+2024;GF02;Défense;1;21526.2;EUROSTAT_COFOG
+2024;GF0201;Défense militaire;2;18262.7;EUROSTAT_COFOG
+2024;GF0202;Défense civile;2;185.4;EUROSTAT_COFOG
+2024;GF0203;Aide militaire à des pays étrangers;2;511.3;EUROSTAT_COFOG
+2024;GF0204;R & D concernant la défense;2;1254.5;EUROSTAT_COFOG
+2024;GF0205;Défense n.c.a.;2;1312.3;EUROSTAT_COFOG
+2024;GF03;Ordre et sécurité publics;1;36410.7;EUROSTAT_COFOG
+2024;GF0301;Services de police;2;22939.7;EUROSTAT_COFOG
+2024;GF0302;Services de protection civile;2;4873;EUROSTAT_COFOG
+2024;GF0303;Tribunaux;2;4548.1;EUROSTAT_COFOG
+2024;GF0304;Administration pénitentiaire;2;3081.5;EUROSTAT_COFOG
+2024;GF0305;R & D concernant l'ordre et la sécurité publics;2;0;EUROSTAT_COFOG
+2024;GF0306;Ordre et sécurité publics n.c.a.;2;968.4;EUROSTAT_COFOG
+2024;GF04;Affaires économiques;1;20340.7;EUROSTAT_COFOG
+2024;GF0401;Tutelle de l'économie générale, des échanges et de l'emploi;2;3751.7;EUROSTAT_COFOG
+2024;GF0402;Agriculture, sylviculture, pêche et chasse;2;1937.2;EUROSTAT_COFOG
+2024;GF0403;Combustibles et énergie;2;475.6;EUROSTAT_COFOG
+2024;GF0404;Industries extractives et manufacturières, construction;2;172.3;EUROSTAT_COFOG
+2024;GF0405;Transports;2;8063.7;EUROSTAT_COFOG
+2024;GF0406;Communications;2;15.6;EUROSTAT_COFOG
+2024;GF0407;Autres branches d'activité;2;2001.5;EUROSTAT_COFOG
+2024;GF0408;R & D concernant les affaires économiques;2;3093;EUROSTAT_COFOG
+2024;GF0409;Affaires économiques n.c.a.;2;830.2;EUROSTAT_COFOG
+2024;GF05;Protection de l'environnement;1;6407.8;EUROSTAT_COFOG
+2024;GF0501;Gestion des déchets;2;3678.4;EUROSTAT_COFOG
+2024;GF0502;Gestion des eaux usées;2;587.1;EUROSTAT_COFOG
+2024;GF0503;Lutte contre la pollution;2;224.7;EUROSTAT_COFOG
+2024;GF0504;Préservation de la diversité biologique et protection de la nature;2;567.4;EUROSTAT_COFOG
+2024;GF0505;R & D dans le domaine de la protection de l'environnement;2;366.4;EUROSTAT_COFOG
+2024;GF0506;Protection de l'environnement n.c.a.;2;983.9;EUROSTAT_COFOG
+2024;GF06;Logements et équipements collectifs;1;8802.5;EUROSTAT_COFOG
+2024;GF0601;Logements;2;1475.5;EUROSTAT_COFOG
+2024;GF0602;Équipements collectifs;2;6758.2;EUROSTAT_COFOG
+2024;GF0603;Alimentation en eau;2;306;EUROSTAT_COFOG
+2024;GF0604;Éclairage public;2;67.1;EUROSTAT_COFOG
+2024;GF0605;R & D dans le domaine du logement et des équipements collectifs;2;0;EUROSTAT_COFOG
+2024;GF0606;Logement et équipements collectifs n.c.a.;2;195.7;EUROSTAT_COFOG
+2024;GF07;Santé;1;70075;EUROSTAT_COFOG
+2024;GF0701;Produits, appareils et matériels médicaux;2;0;EUROSTAT_COFOG
+2024;GF0702;Services ambulatoires;2;0;EUROSTAT_COFOG
+2024;GF0703;Services hospitaliers;2;63811.3;EUROSTAT_COFOG
+2024;GF0704;Services de santé publique;2;3179.6;EUROSTAT_COFOG
+2024;GF0705;R & D dans le domaine de la santé;2;2079.4;EUROSTAT_COFOG
+2024;GF0706;Santé n.c.a.;2;1004.8;EUROSTAT_COFOG
+2024;GF08;Loisirs, culture et culte;1;14796.3;EUROSTAT_COFOG
+2024;GF0801;Services récréatifs et sportifs;2;4871.6;EUROSTAT_COFOG
+2024;GF0802;Services culturels;2;7539.1;EUROSTAT_COFOG
+2024;GF0803;Services de radiodiffusion, de télévision et d'édition;2;2205.8;EUROSTAT_COFOG
+2024;GF0804;Culte et autres services communautaires;2;71.1;EUROSTAT_COFOG
+2024;GF0805;R & D dans le domaine des loisirs, de la culture et du culte;2;0;EUROSTAT_COFOG
+2024;GF0806;Loisirs, culture et culte n.c.a.;2;108.7;EUROSTAT_COFOG
+2024;GF09;Enseignement;1;103784.5;EUROSTAT_COFOG
+2024;GF0901;Enseignement préélémentaire et primaire;2;34255.6;EUROSTAT_COFOG
+2024;GF0902;Enseignement secondaire;2;49762;EUROSTAT_COFOG
+2024;GF0903;Enseignement postsecondaire non supérieur;2;651.3;EUROSTAT_COFOG
+2024;GF0904;Enseignement supérieur;2;7416.7;EUROSTAT_COFOG
+2024;GF0905;Enseignement non défini par niveau;2;1489.6;EUROSTAT_COFOG
+2024;GF0906;Services annexes à l'enseignement;2;9789.4;EUROSTAT_COFOG
+2024;GF0907;R & D dans le domaine de l'enseignement;2;0;EUROSTAT_COFOG
+2024;GF0908;Enseignement n.c.a.;2;419.8;EUROSTAT_COFOG
+2024;GF10;Protection sociale;1;32391.1;EUROSTAT_COFOG
+2024;GF1001;Maladie et invalidité;2;4172.8;EUROSTAT_COFOG
+2024;GF1002;Vieillesse;2;10110.8;EUROSTAT_COFOG
+2024;GF1003;Survivants;2;39.4;EUROSTAT_COFOG
+2024;GF1004;Famille et enfants;2;8448.9;EUROSTAT_COFOG
+2024;GF1005;Chômage;2;3508;EUROSTAT_COFOG
+2024;GF1006;Logement;2;25.9;EUROSTAT_COFOG
+2024;GF1007;Exclusion sociale n.c.a.;2;3910.9;EUROSTAT_COFOG
+2024;GF1008;R & D dans le domaine de la protection sociale;2;0;EUROSTAT_COFOG
+2024;GF1009;Protection sociale n.c.a.;2;2174.3;EUROSTAT_COFOG

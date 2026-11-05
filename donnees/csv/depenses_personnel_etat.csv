@@ -1,0 +1,577 @@
+annee;rubrique;libelle;groupe;niveau;montant_milliards;source_id
+2008;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;73.076;DGAFP_RA2026_DEPENSES
+2008;traitement_brut;Traitement brut;remunerations_activite;2;56.224;DGAFP_RA2026_DEPENSES
+2008;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.218;DGAFP_RA2026_DEPENSES
+2008;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.138;DGAFP_RA2026_DEPENSES
+2008;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.913;DGAFP_RA2026_DEPENSES
+2008;majorations;Majorations;remunerations_activite;2;1.181;DGAFP_RA2026_DEPENSES
+2008;indemnites_indexees;Indemnités indexées;remunerations_activite;2;9.497;DGAFP_RA2026_DEPENSES
+2008;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;3.905;DGAFP_RA2026_DEPENSES
+2008;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2008;cotisations;Cotisations et contributions sociales;cotisations;1;45.218;DGAFP_RA2026_DEPENSES
+2008;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;33.449;DGAFP_RA2026_DEPENSES
+2008;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;24.535;DGAFP_RA2026_DEPENSES
+2008;cas_pensions_militaires;CAS pensions militaires;cotisations;3;7.896;DGAFP_RA2026_DEPENSES
+2008;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.018;DGAFP_RA2026_DEPENSES
+2008;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2008;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.363;DGAFP_RA2026_DEPENSES
+2008;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.275;DGAFP_RA2026_DEPENSES
+2008;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.036;DGAFP_RA2026_DEPENSES
+2008;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;6.031;DGAFP_RA2026_DEPENSES
+2008;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.367;DGAFP_RA2026_DEPENSES
+2008;cotisations_autres;Autres;cotisations;2;0.697;DGAFP_RA2026_DEPENSES
+2008;prestations;Prestations sociales et allocations diverses;prestations;1;1.286;DGAFP_RA2026_DEPENSES
+2008;prestations_sociales;Prestations sociales;prestations;2;0.104;DGAFP_RA2026_DEPENSES
+2008;remboursement_transport;Remboursement transport;prestations;2;0.081;DGAFP_RA2026_DEPENSES
+2008;capital_deces;Capital décès;prestations;2;0.051;DGAFP_RA2026_DEPENSES
+2008;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.058;DGAFP_RA2026_DEPENSES
+2008;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.3;DGAFP_RA2026_DEPENSES
+2008;accidents_travail;Accidents du travail;prestations;2;0.135;DGAFP_RA2026_DEPENSES
+2008;prestations_autres;Autres;prestations;2;0.294;DGAFP_RA2026_DEPENSES
+2008;total_titre2;Total des dépenses de personnel (titre 2);total;0;119.58;DGAFP_RA2026_DEPENSES
+2008;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;43.394;DGAFP_RA2026_DEPENSES
+2008;budget_etat;Budget de l'État;annexe;0;278.234263;DGAFP_RA2026_DEPENSES
+2009;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;72.16;DGAFP_RA2026_DEPENSES
+2009;traitement_brut;Traitement brut;remunerations_activite;2;54.846;DGAFP_RA2026_DEPENSES
+2009;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.214;DGAFP_RA2026_DEPENSES
+2009;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.154;DGAFP_RA2026_DEPENSES
+2009;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.906;DGAFP_RA2026_DEPENSES
+2009;majorations;Majorations;remunerations_activite;2;1.177;DGAFP_RA2026_DEPENSES
+2009;indemnites_indexees;Indemnités indexées;remunerations_activite;2;9.597;DGAFP_RA2026_DEPENSES
+2009;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;4.264;DGAFP_RA2026_DEPENSES
+2009;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2009;cotisations;Cotisations et contributions sociales;cotisations;1;46.056;DGAFP_RA2026_DEPENSES
+2009;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;34.245;DGAFP_RA2026_DEPENSES
+2009;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;24.933;DGAFP_RA2026_DEPENSES
+2009;cas_pensions_militaires;CAS pensions militaires;cotisations;3;8.238;DGAFP_RA2026_DEPENSES
+2009;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.074;DGAFP_RA2026_DEPENSES
+2009;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2009;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.36;DGAFP_RA2026_DEPENSES
+2009;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.318;DGAFP_RA2026_DEPENSES
+2009;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.312;DGAFP_RA2026_DEPENSES
+2009;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.904;DGAFP_RA2026_DEPENSES
+2009;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.286;DGAFP_RA2026_DEPENSES
+2009;cotisations_autres;Autres;cotisations;2;0.631;DGAFP_RA2026_DEPENSES
+2009;prestations;Prestations sociales et allocations diverses;prestations;1;0.995;DGAFP_RA2026_DEPENSES
+2009;prestations_sociales;Prestations sociales;prestations;2;0.109;DGAFP_RA2026_DEPENSES
+2009;remboursement_transport;Remboursement transport;prestations;2;0.079;DGAFP_RA2026_DEPENSES
+2009;capital_deces;Capital décès;prestations;2;0.047;DGAFP_RA2026_DEPENSES
+2009;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.064;DGAFP_RA2026_DEPENSES
+2009;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.31;DGAFP_RA2026_DEPENSES
+2009;accidents_travail;Accidents du travail;prestations;2;0.121;DGAFP_RA2026_DEPENSES
+2009;prestations_autres;Autres;prestations;2;0.011;DGAFP_RA2026_DEPENSES
+2009;total_titre2;Total des dépenses de personnel (titre 2);total;0;119.211;DGAFP_RA2026_DEPENSES
+2009;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;45.165;DGAFP_RA2026_DEPENSES
+2009;budget_etat;Budget de l'État;annexe;0;290.911;DGAFP_RA2026_DEPENSES
+2010;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;70.502;DGAFP_RA2026_DEPENSES
+2010;traitement_brut;Traitement brut;remunerations_activite;2;53.007;DGAFP_RA2026_DEPENSES
+2010;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.209;DGAFP_RA2026_DEPENSES
+2010;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.158;DGAFP_RA2026_DEPENSES
+2010;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.903;DGAFP_RA2026_DEPENSES
+2010;majorations;Majorations;remunerations_activite;2;1.176;DGAFP_RA2026_DEPENSES
+2010;indemnites_indexees;Indemnités indexées;remunerations_activite;2;9.357;DGAFP_RA2026_DEPENSES
+2010;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;4.691;DGAFP_RA2026_DEPENSES
+2010;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2010;cotisations;Cotisations et contributions sociales;cotisations;1;46.297;DGAFP_RA2026_DEPENSES
+2010;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;34.846;DGAFP_RA2026_DEPENSES
+2010;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;25.427;DGAFP_RA2026_DEPENSES
+2010;cas_pensions_militaires;CAS pensions militaires;cotisations;3;8.324;DGAFP_RA2026_DEPENSES
+2010;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.095;DGAFP_RA2026_DEPENSES
+2010;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2010;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.353;DGAFP_RA2026_DEPENSES
+2010;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.299;DGAFP_RA2026_DEPENSES
+2010;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.475;DGAFP_RA2026_DEPENSES
+2010;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.561;DGAFP_RA2026_DEPENSES
+2010;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.152;DGAFP_RA2026_DEPENSES
+2010;cotisations_autres;Autres;cotisations;2;0.611;DGAFP_RA2026_DEPENSES
+2010;prestations;Prestations sociales et allocations diverses;prestations;1;1.008;DGAFP_RA2026_DEPENSES
+2010;prestations_sociales;Prestations sociales;prestations;2;0.101;DGAFP_RA2026_DEPENSES
+2010;remboursement_transport;Remboursement transport;prestations;2;0.077;DGAFP_RA2026_DEPENSES
+2010;capital_deces;Capital décès;prestations;2;0.047;DGAFP_RA2026_DEPENSES
+2010;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.065;DGAFP_RA2026_DEPENSES
+2010;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.341;DGAFP_RA2026_DEPENSES
+2010;accidents_travail;Accidents du travail;prestations;2;0.118;DGAFP_RA2026_DEPENSES
+2010;prestations_autres;Autres;prestations;2;0.017;DGAFP_RA2026_DEPENSES
+2010;total_titre2;Total des dépenses de personnel (titre 2);total;0;117.807;DGAFP_RA2026_DEPENSES
+2010;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;46.764;DGAFP_RA2026_DEPENSES
+2010;budget_etat;Budget de l'État;annexe;0;322.753;DGAFP_RA2026_DEPENSES
+2011;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;69.607;DGAFP_RA2026_DEPENSES
+2011;traitement_brut;Traitement brut;remunerations_activite;2;51.911;DGAFP_RA2026_DEPENSES
+2011;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.2;DGAFP_RA2026_DEPENSES
+2011;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.175;DGAFP_RA2026_DEPENSES
+2011;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.9015;DGAFP_RA2026_DEPENSES
+2011;majorations;Majorations;remunerations_activite;2;1.166;DGAFP_RA2026_DEPENSES
+2011;indemnites_indexees;Indemnités indexées;remunerations_activite;2;9.352;DGAFP_RA2026_DEPENSES
+2011;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;4.901;DGAFP_RA2026_DEPENSES
+2011;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2011;cotisations;Cotisations et contributions sociales;cotisations;1;47.104;DGAFP_RA2026_DEPENSES
+2011;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;35.916;DGAFP_RA2026_DEPENSES
+2011;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;25.927;DGAFP_RA2026_DEPENSES
+2011;cas_pensions_militaires;CAS pensions militaires;cotisations;3;8.612;DGAFP_RA2026_DEPENSES
+2011;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.14;DGAFP_RA2026_DEPENSES
+2011;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0.237;DGAFP_RA2026_DEPENSES
+2011;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.351;DGAFP_RA2026_DEPENSES
+2011;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.323;DGAFP_RA2026_DEPENSES
+2011;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.41;DGAFP_RA2026_DEPENSES
+2011;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.416;DGAFP_RA2026_DEPENSES
+2011;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.074;DGAFP_RA2026_DEPENSES
+2011;cotisations_autres;Autres;cotisations;2;0.614;DGAFP_RA2026_DEPENSES
+2011;prestations;Prestations sociales et allocations diverses;prestations;1;0.998;DGAFP_RA2026_DEPENSES
+2011;prestations_sociales;Prestations sociales;prestations;2;0.102;DGAFP_RA2026_DEPENSES
+2011;remboursement_transport;Remboursement transport;prestations;2;0.083;DGAFP_RA2026_DEPENSES
+2011;capital_deces;Capital décès;prestations;2;0.043;DGAFP_RA2026_DEPENSES
+2011;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.063;DGAFP_RA2026_DEPENSES
+2011;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.342;DGAFP_RA2026_DEPENSES
+2011;accidents_travail;Accidents du travail;prestations;2;0.121;DGAFP_RA2026_DEPENSES
+2011;prestations_autres;Autres;prestations;2;0.004;DGAFP_RA2026_DEPENSES
+2011;total_titre2;Total des dépenses de personnel (titre 2);total;0;117.709;DGAFP_RA2026_DEPENSES
+2011;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;50.29;DGAFP_RA2026_DEPENSES
+2011;budget_etat;Budget de l'État;annexe;0;291.251;DGAFP_RA2026_DEPENSES
+2012;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;69.469462;DGAFP_RA2026_DEPENSES
+2012;traitement_brut;Traitement brut;remunerations_activite;2;51.838045;DGAFP_RA2026_DEPENSES
+2012;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.19542;DGAFP_RA2026_DEPENSES
+2012;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.168217;DGAFP_RA2026_DEPENSES
+2012;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.9012;DGAFP_RA2026_DEPENSES
+2012;majorations;Majorations;remunerations_activite;2;1.162131;DGAFP_RA2026_DEPENSES
+2012;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.968178;DGAFP_RA2026_DEPENSES
+2012;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;5.236271;DGAFP_RA2026_DEPENSES
+2012;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2012;cotisations;Cotisations et contributions sociales;cotisations;1;48.721462;DGAFP_RA2026_DEPENSES
+2012;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;37.579319;DGAFP_RA2026_DEPENSES
+2012;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;26.80993;DGAFP_RA2026_DEPENSES
+2012;cas_pensions_militaires;CAS pensions militaires;cotisations;3;9.20469;DGAFP_RA2026_DEPENSES
+2012;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.188338;DGAFP_RA2026_DEPENSES
+2012;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0.376361;DGAFP_RA2026_DEPENSES
+2012;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.347388;DGAFP_RA2026_DEPENSES
+2012;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.310362;DGAFP_RA2026_DEPENSES
+2012;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.458202;DGAFP_RA2026_DEPENSES
+2012;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.27052;DGAFP_RA2026_DEPENSES
+2012;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.13014;DGAFP_RA2026_DEPENSES
+2012;cotisations_autres;Autres;cotisations;2;0.62553;DGAFP_RA2026_DEPENSES
+2012;prestations;Prestations sociales et allocations diverses;prestations;1;0.754613;DGAFP_RA2026_DEPENSES
+2012;prestations_sociales;Prestations sociales;prestations;2;0.099545;DGAFP_RA2026_DEPENSES
+2012;remboursement_transport;Remboursement transport;prestations;2;0.081962;DGAFP_RA2026_DEPENSES
+2012;capital_deces;Capital décès;prestations;2;0.043951;DGAFP_RA2026_DEPENSES
+2012;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.065999;DGAFP_RA2026_DEPENSES
+2012;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.336154;DGAFP_RA2026_DEPENSES
+2012;accidents_travail;Accidents du travail;prestations;2;0.122633;DGAFP_RA2026_DEPENSES
+2012;prestations_autres;Autres;prestations;2;0.00437;DGAFP_RA2026_DEPENSES
+2012;total_titre2;Total des dépenses de personnel (titre 2);total;0;118.945537;DGAFP_RA2026_DEPENSES
+2012;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;51.999924;DGAFP_RA2026_DEPENSES
+2012;budget_etat;Budget de l'État;annexe;0;299.535529;DGAFP_RA2026_DEPENSES
+2013;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;69.049135;DGAFP_RA2026_DEPENSES
+2013;traitement_brut;Traitement brut;remunerations_activite;2;51.557848;DGAFP_RA2026_DEPENSES
+2013;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.189436;DGAFP_RA2026_DEPENSES
+2013;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.185598;DGAFP_RA2026_DEPENSES
+2013;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.903922;DGAFP_RA2026_DEPENSES
+2013;majorations;Majorations;remunerations_activite;2;1.159169;DGAFP_RA2026_DEPENSES
+2013;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.781176;DGAFP_RA2026_DEPENSES
+2013;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;5.271987;DGAFP_RA2026_DEPENSES
+2013;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2013;cotisations;Cotisations et contributions sociales;cotisations;1;49.776956;DGAFP_RA2026_DEPENSES
+2013;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;38.647228;DGAFP_RA2026_DEPENSES
+2013;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;27.909469;DGAFP_RA2026_DEPENSES
+2013;cas_pensions_militaires;CAS pensions militaires;cotisations;3;9.406215;DGAFP_RA2026_DEPENSES
+2013;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.331541;DGAFP_RA2026_DEPENSES
+2013;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0.000003;DGAFP_RA2026_DEPENSES
+2013;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.348063;DGAFP_RA2026_DEPENSES
+2013;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.299942;DGAFP_RA2026_DEPENSES
+2013;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.469194;DGAFP_RA2026_DEPENSES
+2013;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.26348;DGAFP_RA2026_DEPENSES
+2013;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.115296;DGAFP_RA2026_DEPENSES
+2013;cotisations_autres;Autres;cotisations;2;0.633753;DGAFP_RA2026_DEPENSES
+2013;prestations;Prestations sociales et allocations diverses;prestations;1;0.770432;DGAFP_RA2026_DEPENSES
+2013;prestations_sociales;Prestations sociales;prestations;2;0.102716;DGAFP_RA2026_DEPENSES
+2013;remboursement_transport;Remboursement transport;prestations;2;0.082795;DGAFP_RA2026_DEPENSES
+2013;capital_deces;Capital décès;prestations;2;0.040063;DGAFP_RA2026_DEPENSES
+2013;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.067135;DGAFP_RA2026_DEPENSES
+2013;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.344132;DGAFP_RA2026_DEPENSES
+2013;accidents_travail;Accidents du travail;prestations;2;0.114486;DGAFP_RA2026_DEPENSES
+2013;prestations_autres;Autres;prestations;2;0.019104;DGAFP_RA2026_DEPENSES
+2013;total_titre2;Total des dépenses de personnel (titre 2);total;0;119.596524;DGAFP_RA2026_DEPENSES
+2013;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;53.24031;DGAFP_RA2026_DEPENSES
+2013;budget_etat;Budget de l'État;annexe;0;298.648056;DGAFP_RA2026_DEPENSES
+2014;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;69.266379;DGAFP_RA2026_DEPENSES
+2014;traitement_brut;Traitement brut;remunerations_activite;2;51.684712;DGAFP_RA2026_DEPENSES
+2014;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.19815;DGAFP_RA2026_DEPENSES
+2014;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.168661;DGAFP_RA2026_DEPENSES
+2014;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.913613;DGAFP_RA2026_DEPENSES
+2014;majorations;Majorations;remunerations_activite;2;1.156814;DGAFP_RA2026_DEPENSES
+2014;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.749584;DGAFP_RA2026_DEPENSES
+2014;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;5.39076;DGAFP_RA2026_DEPENSES
+2014;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0.004087;DGAFP_RA2026_DEPENSES
+2014;cotisations;Cotisations et contributions sociales;cotisations;1;50.741411;DGAFP_RA2026_DEPENSES
+2014;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;39.620527;DGAFP_RA2026_DEPENSES
+2014;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;29.062798;DGAFP_RA2026_DEPENSES
+2014;cas_pensions_militaires;CAS pensions militaires;cotisations;3;9.295903;DGAFP_RA2026_DEPENSES
+2014;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.261821;DGAFP_RA2026_DEPENSES
+2014;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0.000005;DGAFP_RA2026_DEPENSES
+2014;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.354757;DGAFP_RA2026_DEPENSES
+2014;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.286472;DGAFP_RA2026_DEPENSES
+2014;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.490154;DGAFP_RA2026_DEPENSES
+2014;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.287217;DGAFP_RA2026_DEPENSES
+2014;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.052732;DGAFP_RA2026_DEPENSES
+2014;cotisations_autres;Autres;cotisations;2;0.649553;DGAFP_RA2026_DEPENSES
+2014;prestations;Prestations sociales et allocations diverses;prestations;1;0.757592;DGAFP_RA2026_DEPENSES
+2014;prestations_sociales;Prestations sociales;prestations;2;0.100357;DGAFP_RA2026_DEPENSES
+2014;remboursement_transport;Remboursement transport;prestations;2;0.086162;DGAFP_RA2026_DEPENSES
+2014;capital_deces;Capital décès;prestations;2;0.038692;DGAFP_RA2026_DEPENSES
+2014;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.066161;DGAFP_RA2026_DEPENSES
+2014;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.336035;DGAFP_RA2026_DEPENSES
+2014;accidents_travail;Accidents du travail;prestations;2;0.113872;DGAFP_RA2026_DEPENSES
+2014;prestations_autres;Autres;prestations;2;0.016313;DGAFP_RA2026_DEPENSES
+2014;total_titre2;Total des dépenses de personnel (titre 2);total;0;120.765383;DGAFP_RA2026_DEPENSES
+2014;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;54.055256;DGAFP_RA2026_DEPENSES
+2014;budget_etat;Budget de l'État;annexe;0;292.002597;DGAFP_RA2026_DEPENSES
+2015;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;69.578606;DGAFP_RA2026_DEPENSES
+2015;traitement_brut;Traitement brut;remunerations_activite;2;51.881222;DGAFP_RA2026_DEPENSES
+2015;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.19117;DGAFP_RA2026_DEPENSES
+2015;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.202172;DGAFP_RA2026_DEPENSES
+2015;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.913952;DGAFP_RA2026_DEPENSES
+2015;majorations;Majorations;remunerations_activite;2;1.149781;DGAFP_RA2026_DEPENSES
+2015;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.611684;DGAFP_RA2026_DEPENSES
+2015;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;5.628048;DGAFP_RA2026_DEPENSES
+2015;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0.000576;DGAFP_RA2026_DEPENSES
+2015;cotisations;Cotisations et contributions sociales;cotisations;1;51.230596;DGAFP_RA2026_DEPENSES
+2015;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;40.086028;DGAFP_RA2026_DEPENSES
+2015;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;29.443281;DGAFP_RA2026_DEPENSES
+2015;cas_pensions_militaires;CAS pensions militaires;cotisations;3;9.256204;DGAFP_RA2026_DEPENSES
+2015;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.386492;DGAFP_RA2026_DEPENSES
+2015;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0.000051;DGAFP_RA2026_DEPENSES
+2015;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.357791;DGAFP_RA2026_DEPENSES
+2015;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.255661;DGAFP_RA2026_DEPENSES
+2015;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.476589;DGAFP_RA2026_DEPENSES
+2015;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.312728;DGAFP_RA2026_DEPENSES
+2015;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.074398;DGAFP_RA2026_DEPENSES
+2015;cotisations_autres;Autres;cotisations;2;0.667402;DGAFP_RA2026_DEPENSES
+2015;prestations;Prestations sociales et allocations diverses;prestations;1;0.759586;DGAFP_RA2026_DEPENSES
+2015;prestations_sociales;Prestations sociales;prestations;2;0.099703;DGAFP_RA2026_DEPENSES
+2015;remboursement_transport;Remboursement transport;prestations;2;0.084745;DGAFP_RA2026_DEPENSES
+2015;capital_deces;Capital décès;prestations;2;0.037104;DGAFP_RA2026_DEPENSES
+2015;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.064476;DGAFP_RA2026_DEPENSES
+2015;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.342848;DGAFP_RA2026_DEPENSES
+2015;accidents_travail;Accidents du travail;prestations;2;0.111939;DGAFP_RA2026_DEPENSES
+2015;prestations_autres;Autres;prestations;2;0.018771;DGAFP_RA2026_DEPENSES
+2015;total_titre2;Total des dépenses de personnel (titre 2);total;0;121.568788;DGAFP_RA2026_DEPENSES
+2015;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;54.535947;DGAFP_RA2026_DEPENSES
+2015;budget_etat;Budget de l'État;annexe;0;301.573788;DGAFP_RA2026_DEPENSES
+2016;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;70.58934;DGAFP_RA2026_DEPENSES
+2016;traitement_brut;Traitement brut;remunerations_activite;2;52.701827;DGAFP_RA2026_DEPENSES
+2016;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.191768;DGAFP_RA2026_DEPENSES
+2016;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.220709;DGAFP_RA2026_DEPENSES
+2016;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.905889;DGAFP_RA2026_DEPENSES
+2016;majorations;Majorations;remunerations_activite;2;1.224835;DGAFP_RA2026_DEPENSES
+2016;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.075054;DGAFP_RA2026_DEPENSES
+2016;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;6.269238;DGAFP_RA2026_DEPENSES
+2016;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0.00002;DGAFP_RA2026_DEPENSES
+2016;cotisations;Cotisations et contributions sociales;cotisations;1;51.867085;DGAFP_RA2026_DEPENSES
+2016;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;40.540902;DGAFP_RA2026_DEPENSES
+2016;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;29.840201;DGAFP_RA2026_DEPENSES
+2016;cas_pensions_militaires;CAS pensions militaires;cotisations;3;9.364214;DGAFP_RA2026_DEPENSES
+2016;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.336832;DGAFP_RA2026_DEPENSES
+2016;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;-0.000345;DGAFP_RA2026_DEPENSES
+2016;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.36144;DGAFP_RA2026_DEPENSES
+2016;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.242991;DGAFP_RA2026_DEPENSES
+2016;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.510908;DGAFP_RA2026_DEPENSES
+2016;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.397273;DGAFP_RA2026_DEPENSES
+2016;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.118531;DGAFP_RA2026_DEPENSES
+2016;cotisations_autres;Autres;cotisations;2;0.695041;DGAFP_RA2026_DEPENSES
+2016;prestations;Prestations sociales et allocations diverses;prestations;1;0.73446;DGAFP_RA2026_DEPENSES
+2016;prestations_sociales;Prestations sociales;prestations;2;0.096519;DGAFP_RA2026_DEPENSES
+2016;remboursement_transport;Remboursement transport;prestations;2;0.078786;DGAFP_RA2026_DEPENSES
+2016;capital_deces;Capital décès;prestations;2;0.022672;DGAFP_RA2026_DEPENSES
+2016;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.061029;DGAFP_RA2026_DEPENSES
+2016;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.342542;DGAFP_RA2026_DEPENSES
+2016;accidents_travail;Accidents du travail;prestations;2;0.113729;DGAFP_RA2026_DEPENSES
+2016;prestations_autres;Autres;prestations;2;0.019182;DGAFP_RA2026_DEPENSES
+2016;total_titre2;Total des dépenses de personnel (titre 2);total;0;123.190885;DGAFP_RA2026_DEPENSES
+2016;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;55.053;DGAFP_RA2026_DEPENSES
+2016;budget_etat;Budget de l'État;annexe;0;314.384058;DGAFP_RA2026_DEPENSES
+2017;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;72.612202;DGAFP_RA2026_DEPENSES
+2017;traitement_brut;Traitement brut;remunerations_activite;2;54.779654;DGAFP_RA2026_DEPENSES
+2017;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.191459;DGAFP_RA2026_DEPENSES
+2017;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.242159;DGAFP_RA2026_DEPENSES
+2017;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.909383;DGAFP_RA2026_DEPENSES
+2017;majorations;Majorations;remunerations_activite;2;1.296382;DGAFP_RA2026_DEPENSES
+2017;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.104017;DGAFP_RA2026_DEPENSES
+2017;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;6.089147;DGAFP_RA2026_DEPENSES
+2017;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2017;cotisations;Cotisations et contributions sociales;cotisations;1;53.884925;DGAFP_RA2026_DEPENSES
+2017;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;41.997746;DGAFP_RA2026_DEPENSES
+2017;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;30.8781;DGAFP_RA2026_DEPENSES
+2017;cas_pensions_militaires;CAS pensions militaires;cotisations;3;9.7943;DGAFP_RA2026_DEPENSES
+2017;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.325305;DGAFP_RA2026_DEPENSES
+2017;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0.000041;DGAFP_RA2026_DEPENSES
+2017;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.374032;DGAFP_RA2026_DEPENSES
+2017;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.235336;DGAFP_RA2026_DEPENSES
+2017;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.583543;DGAFP_RA2026_DEPENSES
+2017;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.60323;DGAFP_RA2026_DEPENSES
+2017;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.355381;DGAFP_RA2026_DEPENSES
+2017;cotisations_autres;Autres;cotisations;2;0.735657;DGAFP_RA2026_DEPENSES
+2017;prestations;Prestations sociales et allocations diverses;prestations;1;0.715442;DGAFP_RA2026_DEPENSES
+2017;prestations_sociales;Prestations sociales;prestations;2;0.087857;DGAFP_RA2026_DEPENSES
+2017;remboursement_transport;Remboursement transport;prestations;2;0.082803;DGAFP_RA2026_DEPENSES
+2017;capital_deces;Capital décès;prestations;2;0.020254;DGAFP_RA2026_DEPENSES
+2017;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.062409;DGAFP_RA2026_DEPENSES
+2017;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.344137;DGAFP_RA2026_DEPENSES
+2017;accidents_travail;Accidents du travail;prestations;2;0.100866;DGAFP_RA2026_DEPENSES
+2017;prestations_autres;Autres;prestations;2;0.017116;DGAFP_RA2026_DEPENSES
+2017;total_titre2;Total des dépenses de personnel (titre 2);total;0;127.212569;DGAFP_RA2026_DEPENSES
+2017;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;55.783548;DGAFP_RA2026_DEPENSES
+2017;budget_etat;Budget de l'État;annexe;0;326.375239;DGAFP_RA2026_DEPENSES
+2018;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;74.480168;DGAFP_RA2026_DEPENSES
+2018;traitement_brut;Traitement brut;remunerations_activite;2;55.41868;DGAFP_RA2026_DEPENSES
+2018;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.192971;DGAFP_RA2026_DEPENSES
+2018;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.237685;DGAFP_RA2026_DEPENSES
+2018;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.906083;DGAFP_RA2026_DEPENSES
+2018;majorations;Majorations;remunerations_activite;2;1.331062;DGAFP_RA2026_DEPENSES
+2018;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.105909;DGAFP_RA2026_DEPENSES
+2018;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;7.287778;DGAFP_RA2026_DEPENSES
+2018;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2018;cotisations;Cotisations et contributions sociales;cotisations;1;54.41753;DGAFP_RA2026_DEPENSES
+2018;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;42.348791;DGAFP_RA2026_DEPENSES
+2018;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;31.107589;DGAFP_RA2026_DEPENSES
+2018;cas_pensions_militaires;CAS pensions militaires;cotisations;3;9.807434;DGAFP_RA2026_DEPENSES
+2018;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.433769;DGAFP_RA2026_DEPENSES
+2018;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2018;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.388467;DGAFP_RA2026_DEPENSES
+2018;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.220839;DGAFP_RA2026_DEPENSES
+2018;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.622419;DGAFP_RA2026_DEPENSES
+2018;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.689849;DGAFP_RA2026_DEPENSES
+2018;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.388616;DGAFP_RA2026_DEPENSES
+2018;cotisations_autres;Autres;cotisations;2;0.758549;DGAFP_RA2026_DEPENSES
+2018;prestations;Prestations sociales et allocations diverses;prestations;1;0.728366;DGAFP_RA2026_DEPENSES
+2018;prestations_sociales;Prestations sociales;prestations;2;0.090077;DGAFP_RA2026_DEPENSES
+2018;remboursement_transport;Remboursement transport;prestations;2;0.084395;DGAFP_RA2026_DEPENSES
+2018;capital_deces;Capital décès;prestations;2;0.019215;DGAFP_RA2026_DEPENSES
+2018;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.058755;DGAFP_RA2026_DEPENSES
+2018;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.363004;DGAFP_RA2026_DEPENSES
+2018;accidents_travail;Accidents du travail;prestations;2;0.091686;DGAFP_RA2026_DEPENSES
+2018;prestations_autres;Autres;prestations;2;0.021235;DGAFP_RA2026_DEPENSES
+2018;total_titre2;Total des dépenses de personnel (titre 2);total;0;129.626064;DGAFP_RA2026_DEPENSES
+2018;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;56.702616;DGAFP_RA2026_DEPENSES
+2018;budget_etat;Budget de l'État;annexe;0;329.72183;DGAFP_RA2026_DEPENSES
+2019;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;75.660998;DGAFP_RA2026_DEPENSES
+2019;traitement_brut;Traitement brut;remunerations_activite;2;56.248356;DGAFP_RA2026_DEPENSES
+2019;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.192554;DGAFP_RA2026_DEPENSES
+2019;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.244539;DGAFP_RA2026_DEPENSES
+2019;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.897028;DGAFP_RA2026_DEPENSES
+2019;majorations;Majorations;remunerations_activite;2;1.362257;DGAFP_RA2026_DEPENSES
+2019;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.318046;DGAFP_RA2026_DEPENSES
+2019;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;7.398218;DGAFP_RA2026_DEPENSES
+2019;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2019;cotisations;Cotisations et contributions sociales;cotisations;1;55.172075;DGAFP_RA2026_DEPENSES
+2019;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;42.931488;DGAFP_RA2026_DEPENSES
+2019;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;31.546955;DGAFP_RA2026_DEPENSES
+2019;cas_pensions_militaires;CAS pensions militaires;cotisations;3;9.988669;DGAFP_RA2026_DEPENSES
+2019;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.395864;DGAFP_RA2026_DEPENSES
+2019;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2019;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.39049;DGAFP_RA2026_DEPENSES
+2019;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.199596;DGAFP_RA2026_DEPENSES
+2019;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.63685;DGAFP_RA2026_DEPENSES
+2019;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.788658;DGAFP_RA2026_DEPENSES
+2019;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.447094;DGAFP_RA2026_DEPENSES
+2019;cotisations_autres;Autres;cotisations;2;0.777898;DGAFP_RA2026_DEPENSES
+2019;prestations;Prestations sociales et allocations diverses;prestations;1;0.747794;DGAFP_RA2026_DEPENSES
+2019;prestations_sociales;Prestations sociales;prestations;2;0.093063;DGAFP_RA2026_DEPENSES
+2019;remboursement_transport;Remboursement transport;prestations;2;0.08703;DGAFP_RA2026_DEPENSES
+2019;capital_deces;Capital décès;prestations;2;0.01828;DGAFP_RA2026_DEPENSES
+2019;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.058605;DGAFP_RA2026_DEPENSES
+2019;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.384406;DGAFP_RA2026_DEPENSES
+2019;accidents_travail;Accidents du travail;prestations;2;0.093235;DGAFP_RA2026_DEPENSES
+2019;prestations_autres;Autres;prestations;2;0.013176;DGAFP_RA2026_DEPENSES
+2019;total_titre2;Total des dépenses de personnel (titre 2);total;0;131.580867;DGAFP_RA2026_DEPENSES
+2019;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;57.277354;DGAFP_RA2026_DEPENSES
+2019;budget_etat;Budget de l'État;annexe;0;336.069;DGAFP_RA2026_DEPENSES
+2020;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;76.489358;DGAFP_RA2026_DEPENSES
+2020;traitement_brut;Traitement brut;remunerations_activite;2;56.908917;DGAFP_RA2026_DEPENSES
+2020;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.193132;DGAFP_RA2026_DEPENSES
+2020;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.260438;DGAFP_RA2026_DEPENSES
+2020;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.872827;DGAFP_RA2026_DEPENSES
+2020;majorations;Majorations;remunerations_activite;2;1.386767;DGAFP_RA2026_DEPENSES
+2020;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.151186;DGAFP_RA2026_DEPENSES
+2020;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;7.716092;DGAFP_RA2026_DEPENSES
+2020;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2020;cotisations;Cotisations et contributions sociales;cotisations;1;55.748703;DGAFP_RA2026_DEPENSES
+2020;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;43.396739;DGAFP_RA2026_DEPENSES
+2020;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;31.901734;DGAFP_RA2026_DEPENSES
+2020;cas_pensions_militaires;CAS pensions militaires;cotisations;3;10.067753;DGAFP_RA2026_DEPENSES
+2020;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.427252;DGAFP_RA2026_DEPENSES
+2020;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2020;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.390418;DGAFP_RA2026_DEPENSES
+2020;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.191869;DGAFP_RA2026_DEPENSES
+2020;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.656562;DGAFP_RA2026_DEPENSES
+2020;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.850069;DGAFP_RA2026_DEPENSES
+2020;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.479361;DGAFP_RA2026_DEPENSES
+2020;cotisations_autres;Autres;cotisations;2;0.783684;DGAFP_RA2026_DEPENSES
+2020;prestations;Prestations sociales et allocations diverses;prestations;1;0.758864;DGAFP_RA2026_DEPENSES
+2020;prestations_sociales;Prestations sociales;prestations;2;0.088717;DGAFP_RA2026_DEPENSES
+2020;remboursement_transport;Remboursement transport;prestations;2;0.079538;DGAFP_RA2026_DEPENSES
+2020;capital_deces;Capital décès;prestations;2;0.017783;DGAFP_RA2026_DEPENSES
+2020;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.055977;DGAFP_RA2026_DEPENSES
+2020;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.418353;DGAFP_RA2026_DEPENSES
+2020;accidents_travail;Accidents du travail;prestations;2;0.086808;DGAFP_RA2026_DEPENSES
+2020;prestations_autres;Autres;prestations;2;0.011687;DGAFP_RA2026_DEPENSES
+2020;total_titre2;Total des dépenses de personnel (titre 2);total;0;132.996925;DGAFP_RA2026_DEPENSES
+2020;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;58.518647;DGAFP_RA2026_DEPENSES
+2020;budget_etat;Budget de l'État;annexe;0;389.678;DGAFP_RA2026_DEPENSES
+2021;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;77.805532;DGAFP_RA2026_DEPENSES
+2021;traitement_brut;Traitement brut;remunerations_activite;2;57.4432;DGAFP_RA2026_DEPENSES
+2021;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.193364;DGAFP_RA2026_DEPENSES
+2021;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.231822;DGAFP_RA2026_DEPENSES
+2021;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.856596;DGAFP_RA2026_DEPENSES
+2021;majorations;Majorations;remunerations_activite;2;1.414064;DGAFP_RA2026_DEPENSES
+2021;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.254102;DGAFP_RA2026_DEPENSES
+2021;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;8.412384;DGAFP_RA2026_DEPENSES
+2021;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2021;cotisations;Cotisations et contributions sociales;cotisations;1;56.068754;DGAFP_RA2026_DEPENSES
+2021;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;43.590492;DGAFP_RA2026_DEPENSES
+2021;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;32.000324;DGAFP_RA2026_DEPENSES
+2021;cas_pensions_militaires;CAS pensions militaires;cotisations;3;10.14218;DGAFP_RA2026_DEPENSES
+2021;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.447987;DGAFP_RA2026_DEPENSES
+2021;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2021;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.40156;DGAFP_RA2026_DEPENSES
+2021;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.184781;DGAFP_RA2026_DEPENSES
+2021;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.632324;DGAFP_RA2026_DEPENSES
+2021;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;5.929326;DGAFP_RA2026_DEPENSES
+2021;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.5256;DGAFP_RA2026_DEPENSES
+2021;cotisations_autres;Autres;cotisations;2;0.80467;DGAFP_RA2026_DEPENSES
+2021;prestations;Prestations sociales et allocations diverses;prestations;1;0.823373;DGAFP_RA2026_DEPENSES
+2021;prestations_sociales;Prestations sociales;prestations;2;0.090117;DGAFP_RA2026_DEPENSES
+2021;remboursement_transport;Remboursement transport;prestations;2;0.084098;DGAFP_RA2026_DEPENSES
+2021;capital_deces;Capital décès;prestations;2;0.03259;DGAFP_RA2026_DEPENSES
+2021;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.054275;DGAFP_RA2026_DEPENSES
+2021;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.464545;DGAFP_RA2026_DEPENSES
+2021;accidents_travail;Accidents du travail;prestations;2;0.084409;DGAFP_RA2026_DEPENSES
+2021;prestations_autres;Autres;prestations;2;0.013341;DGAFP_RA2026_DEPENSES
+2021;total_titre2;Total des dépenses de personnel (titre 2);total;0;134.697658;DGAFP_RA2026_DEPENSES
+2021;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;59.26697;DGAFP_RA2026_DEPENSES
+2021;budget_etat;Budget de l'État;annexe;0;426.732;DGAFP_RA2026_DEPENSES
+2022;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;80.41546;DGAFP_RA2026_DEPENSES
+2022;traitement_brut;Traitement brut;remunerations_activite;2;58.826289;DGAFP_RA2026_DEPENSES
+2022;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.177614;DGAFP_RA2026_DEPENSES
+2022;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.27102;DGAFP_RA2026_DEPENSES
+2022;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.848784;DGAFP_RA2026_DEPENSES
+2022;majorations;Majorations;remunerations_activite;2;1.447932;DGAFP_RA2026_DEPENSES
+2022;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.21453;DGAFP_RA2026_DEPENSES
+2022;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;9.629289;DGAFP_RA2026_DEPENSES
+2022;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2022;cotisations;Cotisations et contributions sociales;cotisations;1;57.309782;DGAFP_RA2026_DEPENSES
+2022;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;44.365076;DGAFP_RA2026_DEPENSES
+2022;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;32.569544;DGAFP_RA2026_DEPENSES
+2022;cas_pensions_militaires;CAS pensions militaires;cotisations;3;10.334793;DGAFP_RA2026_DEPENSES
+2022;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.460757;DGAFP_RA2026_DEPENSES
+2022;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;-0.000018;DGAFP_RA2026_DEPENSES
+2022;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.418415;DGAFP_RA2026_DEPENSES
+2022;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.177807;DGAFP_RA2026_DEPENSES
+2022;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.793378;DGAFP_RA2026_DEPENSES
+2022;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;6.106645;DGAFP_RA2026_DEPENSES
+2022;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.60941;DGAFP_RA2026_DEPENSES
+2022;cotisations_autres;Autres;cotisations;2;0.83905;DGAFP_RA2026_DEPENSES
+2022;prestations;Prestations sociales et allocations diverses;prestations;1;1.078715;DGAFP_RA2026_DEPENSES
+2022;prestations_sociales;Prestations sociales;prestations;2;0.321904;DGAFP_RA2026_DEPENSES
+2022;remboursement_transport;Remboursement transport;prestations;2;0.097052;DGAFP_RA2026_DEPENSES
+2022;capital_deces;Capital décès;prestations;2;0.043119;DGAFP_RA2026_DEPENSES
+2022;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.054861;DGAFP_RA2026_DEPENSES
+2022;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.397718;DGAFP_RA2026_DEPENSES
+2022;accidents_travail;Accidents du travail;prestations;2;0.085017;DGAFP_RA2026_DEPENSES
+2022;prestations_autres;Autres;prestations;2;0.079045;DGAFP_RA2026_DEPENSES
+2022;total_titre2;Total des dépenses de personnel (titre 2);total;0;138.803957;DGAFP_RA2026_DEPENSES
+2022;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;60.805;DGAFP_RA2026_DEPENSES
+2022;budget_etat;Budget de l'État;annexe;0;445.672;DGAFP_RA2026_DEPENSES
+2023;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;84.005778;DGAFP_RA2026_DEPENSES
+2023;traitement_brut;Traitement brut;remunerations_activite;2;60.841591;DGAFP_RA2026_DEPENSES
+2023;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.172123;DGAFP_RA2026_DEPENSES
+2023;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.335307;DGAFP_RA2026_DEPENSES
+2023;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.848016;DGAFP_RA2026_DEPENSES
+2023;majorations;Majorations;remunerations_activite;2;1.502347;DGAFP_RA2026_DEPENSES
+2023;indemnites_indexees;Indemnités indexées;remunerations_activite;2;8.192294;DGAFP_RA2026_DEPENSES
+2023;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;11.1141;DGAFP_RA2026_DEPENSES
+2023;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2023;cotisations;Cotisations et contributions sociales;cotisations;1;59.207192;DGAFP_RA2026_DEPENSES
+2023;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;45.570061;DGAFP_RA2026_DEPENSES
+2023;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;33.346582;DGAFP_RA2026_DEPENSES
+2023;cas_pensions_militaires;CAS pensions militaires;cotisations;3;10.675535;DGAFP_RA2026_DEPENSES
+2023;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.547944;DGAFP_RA2026_DEPENSES
+2023;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2023;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.450826;DGAFP_RA2026_DEPENSES
+2023;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.163925;DGAFP_RA2026_DEPENSES
+2023;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;1.95933;DGAFP_RA2026_DEPENSES
+2023;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;6.394747;DGAFP_RA2026_DEPENSES
+2023;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.762259;DGAFP_RA2026_DEPENSES
+2023;cotisations_autres;Autres;cotisations;2;0.906043;DGAFP_RA2026_DEPENSES
+2023;prestations;Prestations sociales et allocations diverses;prestations;1;1.58327;DGAFP_RA2026_DEPENSES
+2023;prestations_sociales;Prestations sociales;prestations;2;0.332451;DGAFP_RA2026_DEPENSES
+2023;remboursement_transport;Remboursement transport;prestations;2;0.145143;DGAFP_RA2026_DEPENSES
+2023;capital_deces;Capital décès;prestations;2;0.044462;DGAFP_RA2026_DEPENSES
+2023;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.056633;DGAFP_RA2026_DEPENSES
+2023;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.44234;DGAFP_RA2026_DEPENSES
+2023;accidents_travail;Accidents du travail;prestations;2;0.091471;DGAFP_RA2026_DEPENSES
+2023;prestations_autres;Autres;prestations;2;0.47077;DGAFP_RA2026_DEPENSES
+2023;total_titre2;Total des dépenses de personnel (titre 2);total;0;144.79624;DGAFP_RA2026_DEPENSES
+2023;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;64.304;DGAFP_RA2026_DEPENSES
+2023;budget_etat;Budget de l'État;annexe;0;454.565;DGAFP_RA2026_DEPENSES
+2024;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;90.012284;DGAFP_RA2026_DEPENSES
+2024;traitement_brut;Traitement brut;remunerations_activite;2;63.67503;DGAFP_RA2026_DEPENSES
+2024;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.169204;DGAFP_RA2026_DEPENSES
+2024;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.392579;DGAFP_RA2026_DEPENSES
+2024;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.857205;DGAFP_RA2026_DEPENSES
+2024;majorations;Majorations;remunerations_activite;2;1.567671;DGAFP_RA2026_DEPENSES
+2024;indemnites_indexees;Indemnités indexées;remunerations_activite;2;9.094287;DGAFP_RA2026_DEPENSES
+2024;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;13.256307;DGAFP_RA2026_DEPENSES
+2024;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2024;cotisations;Cotisations et contributions sociales;cotisations;1;61.528476;DGAFP_RA2026_DEPENSES
+2024;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;46.930738;DGAFP_RA2026_DEPENSES
+2024;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;34.185695;DGAFP_RA2026_DEPENSES
+2024;cas_pensions_militaires;CAS pensions militaires;cotisations;3;11.114459;DGAFP_RA2026_DEPENSES
+2024;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.630574;DGAFP_RA2026_DEPENSES
+2024;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0.00001;DGAFP_RA2026_DEPENSES
+2024;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.47818;DGAFP_RA2026_DEPENSES
+2024;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.163434;DGAFP_RA2026_DEPENSES
+2024;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;2.266005;DGAFP_RA2026_DEPENSES
+2024;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;6.765427;DGAFP_RA2026_DEPENSES
+2024;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;3.952866;DGAFP_RA2026_DEPENSES
+2024;cotisations_autres;Autres;cotisations;2;0.971826;DGAFP_RA2026_DEPENSES
+2024;prestations;Prestations sociales et allocations diverses;prestations;1;1.23066;DGAFP_RA2026_DEPENSES
+2024;prestations_sociales;Prestations sociales;prestations;2;0.350961;DGAFP_RA2026_DEPENSES
+2024;remboursement_transport;Remboursement transport;prestations;2;0.204992;DGAFP_RA2026_DEPENSES
+2024;capital_deces;Capital décès;prestations;2;0.048937;DGAFP_RA2026_DEPENSES
+2024;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.05733;DGAFP_RA2026_DEPENSES
+2024;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.463046;DGAFP_RA2026_DEPENSES
+2024;accidents_travail;Accidents du travail;prestations;2;0.089602;DGAFP_RA2026_DEPENSES
+2024;prestations_autres;Autres;prestations;2;0.015792;DGAFP_RA2026_DEPENSES
+2024;total_titre2;Total des dépenses de personnel (titre 2);total;0;152.77142;DGAFP_RA2026_DEPENSES
+2024;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;67.885;DGAFP_RA2026_DEPENSES
+2024;budget_etat;Budget de l'État;annexe;0;443.413;DGAFP_RA2026_DEPENSES
+2025;remunerations_activite;Rémunérations d’activité;remunerations_activite;1;90.783333;DGAFP_RA2026_DEPENSES
+2025;traitement_brut;Traitement brut;remunerations_activite;2;64.760369;DGAFP_RA2026_DEPENSES
+2025;nbi;Nouvelle bonification indiciaire (NBI);remunerations_activite;2;0.158825;DGAFP_RA2026_DEPENSES
+2025;indemnite_residence;Indemnité de résidence;remunerations_activite;2;1.428934;DGAFP_RA2026_DEPENSES
+2025;supplement_familial;Supplément familial de traitement;remunerations_activite;2;0.845524;DGAFP_RA2026_DEPENSES
+2025;majorations;Majorations;remunerations_activite;2;1.586611;DGAFP_RA2026_DEPENSES
+2025;indemnites_indexees;Indemnités indexées;remunerations_activite;2;9.013275;DGAFP_RA2026_DEPENSES
+2025;indemnites_non_indexees;Indemnités non indexées;remunerations_activite;2;12.989793;DGAFP_RA2026_DEPENSES
+2025;remunerations_non_ventilees;Rémunérations d'activité non ventilées;remunerations_activite;2;0;DGAFP_RA2026_DEPENSES
+2025;cotisations;Cotisations et contributions sociales;cotisations;1;64.224177;DGAFP_RA2026_DEPENSES
+2025;cas_pensions;Contributions d'équilibre au CAS Pensions;cotisations;2;49.219294;DGAFP_RA2026_DEPENSES
+2025;cas_pensions_civils_ati;CAS pensions civils + ATI;cotisations;3;36.314331;DGAFP_RA2026_DEPENSES
+2025;cas_pensions_militaires;CAS pensions militaires;cotisations;3;11.254565;DGAFP_RA2026_DEPENSES
+2025;fspoeie_cas_cultes;Contributions au FSPOEIE et au CAS cultes;cotisations;3;1.650398;DGAFP_RA2026_DEPENSES
+2025;contribution_exceptionnelle_cas;Contribution exceptionnelle au CAS;cotisations;3;0;DGAFP_RA2026_DEPENSES
+2025;rafp;Régime additionnel de la fonction publique (RAFP);cotisations;2;0.476674;DGAFP_RA2026_DEPENSES
+2025;cotisations_fspoeie;Cotisations patronales au FSPOEIE;cotisations;2;0.154717;DGAFP_RA2026_DEPENSES
+2025;cotisations_retraites_autres;Cotisations retraites autres;cotisations;2;2.284913;DGAFP_RA2026_DEPENSES
+2025;cotisations_securite_sociale;Cotisations sécurité sociale (hors vieillesse);cotisations;2;6.948748;DGAFP_RA2026_DEPENSES
+2025;fnal_cnaf_csa;FNAL + CNAF + CSA;cotisations;2;4.001127;DGAFP_RA2026_DEPENSES
+2025;cotisations_autres;Autres;cotisations;2;1.138703;DGAFP_RA2026_DEPENSES
+2025;prestations;Prestations sociales et allocations diverses;prestations;1;1.234166;DGAFP_RA2026_DEPENSES
+2025;prestations_sociales;Prestations sociales;prestations;2;0.300563;DGAFP_RA2026_DEPENSES
+2025;remboursement_transport;Remboursement transport;prestations;2;0.22235;DGAFP_RA2026_DEPENSES
+2025;capital_deces;Capital décès;prestations;2;0.05284;DGAFP_RA2026_DEPENSES
+2025;cfa_caa;Congé de fin d'activité (CFA) et CAA;prestations;2;0.061603;DGAFP_RA2026_DEPENSES
+2025;allocation_retour_emploi;Allocation de retour à l'emploi;prestations;2;0.482929;DGAFP_RA2026_DEPENSES
+2025;accidents_travail;Accidents du travail;prestations;2;0.09246;DGAFP_RA2026_DEPENSES
+2025;prestations_autres;Autres;prestations;2;0.021421;DGAFP_RA2026_DEPENSES
+2025;total_titre2;Total des dépenses de personnel (titre 2);total;0;156.241675;DGAFP_RA2026_DEPENSES
+2025;pensions_versees;Pensions civiles, militaires et ouvriers d'État;annexe;0;67.265368;DGAFP_RA2026_DEPENSES
+2025;budget_etat;Budget de l'État;annexe;0;447.116571;DGAFP_RA2026_DEPENSES

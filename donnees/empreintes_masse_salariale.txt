@@ -1,0 +1,17 @@
+# Empreintes SHA-256 des fichiers officiels utilisés pour la masse salariale (téléchargés le 2026-11-05 ; outils/extraire_masse_salariale.py).
+  9c020cff6650162ffdec9c116f7bc288a6ac0084c2e0f5cc1ac8b572445d1845  insee/T_7301_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988833/T_7301_fr.xlsx>
+  5ae7620b8e8ccea9e9e0c5ec01491c268f7e555502aee35ad0022b2a3d44d642  insee/T_7302_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988833/T_7302_fr.xlsx>
+  dd8307762972965e60d6cf957ebdd2560011bd14139a8b905e2394a3e56d9c13  insee/T_7303_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988833/T_7303_fr.xlsx>
+  45fad5cae0ed0e2bce63a1722e7c6f03aecb12f8ffc08ab2dd7b1840936783a9  insee/T_7304_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988833/T_7304_fr.xlsx>
+  0a71c6e59248ae93e2718d2677dcf016b1f3c0c1cfdeefaa8399a4d159c55f9e  insee/T_7305_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988833/T_7305_fr.xlsx>
+  c7da36b34d56ed1ed18e011ea30b1c2aeb30cfc58fd5b376fe5681748ba09094  insee/T_7306_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988833/T_7306_fr.xlsx>
+  487d4299a5bac8d616000952fd012a0eb6d251a3586508165fc37d64a73a397a  insee/t_3201_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988845/t_3201_fr.xlsx>
+  2724c23d87881867fd2700374897d8f179fb0ce69f0c619e4f3ebad3ba00ecf4  insee/ipc_coefficient_011813530.xml  <https://bdm.insee.fr/series/sdmx/data/SERIES_BDM/011813530>
+  d3f0d381940fb2074979921df692d9a412aed0c8acbc185883aad7c11735b4a0  insee/T_1108_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988797/T_1108_fr.xlsx>
+  3ab95b194f24947f363cfa0c1eaba023840ebd30cf6c9f37fe5ce861ac367129  insee/T_1109_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988797/T_1109_fr.xlsx>
+  e17446a5f10ed5d0c7f4c1b7b6cb47ce82e648d18a4ad22add872e1151a95a4d  insee/T_1115_fr.xlsx  <https://www.insee.fr/fr/statistiques/fichier/8988797/T_1115_fr.xlsx>
+  33c844239d23eacca3b13b5411032398299301bae2cb2b6faec2aa96e2c32f8a  dgafp/ra_2026_remu_niveaux.zip  <https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/2026/ra_2026_remu_niveaux.zip>
+  6bb50c2e49962fd1281cfb99fff90f816b5ddec5dab958f4e55300c0fb2efa6c  dgafp/ra_2026_remu_evolutions.zip  <https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/2026/ra_2026_remu_evolutions.zip>
+  f2a510e729cb2e8671f5125b16e5d1f62391e44bf1b5e682781f41f5fcd3ecc2  dgafp/FT6.2-SL_Traitement_indiciaire.xlsx  <https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/series_longues/series-longues-2021/FT6.2-SL_Traitement_indiciaire.xlsx>
+  fab8e7433dcc571481e691dc7bde06adc92e0b3b131668adfe5e0281b9604688  eurostat/gov_10a_exp_FR_S13_D1.json  <https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?format=JSON&lang=fr&geo=FR&sector=S13&na_item=D1&unit=MIO_EUR>
+  50a8be6e9a8549714d19791fdbf45ef1e52ca5bc2f711ab5d1d0b14af06eb953  eurostat/gov_10a_main_S13_D1PAY_PC_GDP.json  <https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=fr&sector=S13&na_item=D1PAY&unit=PC_GDP>

@@ -64,6 +64,7 @@
         <li><a href="evolution.html">L'évolution</a></li>
         <li><a href="carte.html">La carte</a></li>
         <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
+        <li><a href="masse-salariale.html">La masse salariale</a></li>
         <li><a href="methode.html" aria-current="page">Sources et méthode</a></li>
       </ul>
     </div>
@@ -86,6 +87,7 @@
       <li><a href="#series">Séries et ruptures</a></li>
       <li><a href="#definitions">Définitions</a></li>
       <li><a href="#carte-methode">La carte</a></li>
+      <li><a href="#masse-salariale">Masse salariale</a></li>
       <li><a href="#limites">Limites</a></li>
       <li><a href="#telecharger">Télécharger les données</a></li>
       <li><a href="#accessibilite">Accessibilité</a></li>
@@ -158,10 +160,69 @@
       <li><strong>Avertissements.</strong> Les ruptures propres à un département (changement de rattachement, valeurs inhabituelles signalées) sont indiquées dans sa fiche. En 2009, les effectifs hospitaliers des Alpes-de-Haute-Provence et des Alpes-Maritimes semblent intervertis dans le fichier source : ils ne sont pas affichés.</li>
     </ul>
 
+    <h2 id="masse-salariale" style="margin-top:2.5rem">Masse salariale : sources, définitions et calculs</h2>
+    <p>Les fichiers officiels utilisés par la page <a href="masse-salariale.html">La masse salariale</a> ont été téléchargés le 5 novembre 2026 par le script <code>outils/extraire_masse_salariale.py</code>, qui relit les cellules publiées, contrôle les totaux de chaque tableau et recoupe les sources entre elles : la DGAFP reprend au million d'euros près les rémunérations publiques de l'Insee pour chaque année depuis 1978, et Eurostat aussi de 1999 à 2022. Les empreintes des fichiers sont dans <code>donnees/empreintes_masse_salariale.txt</code>.</p>
+    <ul class="source-liste">
+      <li><strong>Insee</strong> — Comptes nationaux annuels (base 2020), Les comptes de la Nation en 2025 – tableaux 7.301 à 7.306 : comptes des administrations publiques (S13), de l&#x27;administration centrale (S1311), de l&#x27;État (S13111), des organismes divers d&#x27;administration centrale (S13112), des administrations locales (S1313) et de sécurité sociale (S1314). Publication : 2026-08-28. <a href="https://www.insee.fr/fr/statistiques/8988833">Page de la publication</a> · <a href="https://www.insee.fr/fr/statistiques/fichier/8988833/T_7301_fr.xlsx">fichier source</a>.<br><small>Champ : Milliards d&#x27;euros courants. Rémunération des salariés (D1) = salaires et traitements bruts (D11) + cotisations sociales à la charge des employeurs (D12 : effectives D121 et imputées D122) ; impôts sur les salaires et la main-d&#x27;œuvre (D291) payés par les administrations. 1949-2025 (État et ODAC séparés à partir de 1978 ; D291 à partir de 1978). 2024 semi-définitif, 2025 provisoire.</small></li>
+      <li><strong>Insee</strong> — Comptes nationaux annuels (base 2020), Les comptes de la Nation en 2025 – tableaux 1.108 et 1.109 (emploi intérieur par secteur institutionnel, en personnes et en équivalents temps plein) et 1.115 (PIB et population). Publication : 2026-08-28. <a href="https://www.insee.fr/fr/statistiques/8988797">Page de la publication</a> · <a href="https://www.insee.fr/fr/statistiques/fichier/8988797/T_1115_fr.xlsx">fichier source</a>.<br><small>Champ : PIB en milliards d&#x27;euros courants (1949-2025) ; population moyenne de l&#x27;année, France y compris Mayotte (1949-2025) ; emploi des administrations publiques (1978-2025 ; sous-secteurs 2006-2024).</small></li>
+      <li><strong>Insee</strong> — Comptes nationaux annuels (base 2020), Les comptes de la Nation en 2025 – tableau 3.201 Dépenses et recettes des administrations publiques. Publication : 2026-08-28. <a href="https://www.insee.fr/fr/statistiques/8988845">Page de la publication</a> · <a href="https://www.insee.fr/fr/statistiques/fichier/8988845/t_3201_fr.xlsx">fichier source</a>.<br><small>Champ : Total des dépenses des administrations publiques (consolidé), milliards d&#x27;euros courants, 1959-2025.</small></li>
+      <li><strong>Insee</strong> — Indice des prix à la consommation – coefficient de transformation de l&#x27;euro ou du franc d&#x27;une année en euros d&#x27;une autre année, base 2025 (série 011813530, utilisée par le convertisseur franc-euro de l&#x27;Insee). Publication : 2026-02-05. <a href="https://www.insee.fr/fr/statistiques/serie/011813530">Page de la publication</a> · <a href="https://bdm.insee.fr/series/sdmx/data/SERIES_BDM/011813530">fichier source</a>.<br><small>Champ : France, indice des prix à la consommation y compris tabac, moyenne annuelle, 1901-2025, base 100 en 2025, arrondi à deux décimales. Sert à exprimer les montants en euros constants de 2025.</small></li>
+      <li><strong>DGAFP</strong> — Rapport annuel sur l&#x27;état de la fonction publique, édition 2026 – Les rémunérations dans la fonction publique en 2024 : données complémentaires « Les dépenses de personnel dans la fonction publique » (fichier ra_2026_remu_niveaux_donnees_comp_depenses.xlsx, figures 1, 2, 4, 5 et 6). Publication : 2026-10-15. <a href="https://www.fonction-publique.gouv.fr/toutes-les-publications/les-remunerations-dans-la-fonction-publique-en-2024">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/2026/ra_2026_remu_niveaux.zip">fichier source</a>.<br><small>Champ : État : dépenses de personnel du budget général (titre 2) en exécution, 2008-2025 ; collectivités locales et groupements à fiscalité propre (DGCL, DGFiP), 1996-2025 ; établissements publics de santé (DGOS, DGFiP), 2000-2025 ; rémunérations des administrations publiques en comptabilité nationale (Insee), 1978-2025. 2025 provisoire.</small></li>
+      <li><strong>DGAFP</strong> — Rapport annuel sur l&#x27;état de la fonction publique, édition 2026 – Les rémunérations dans la fonction publique en 2024 (fichiers ra_2026_remu_niveaux_donnees_comp.xlsx, figures 4 et FPE 13, et ra_2026_vue_renumerations_niveaux.xlsx, figures 1, 5 et 10). Publication : 2026-10-15. <a href="https://www.fonction-publique.gouv.fr/toutes-les-publications/les-remunerations-dans-la-fonction-publique-en-2024">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/2026/ra_2026_remu_niveaux.zip">fichier source</a>.<br><small>Champ : Salaires mensuels moyens bruts et nets en équivalent temps plein (EQTP), France hors Mayotte, source Siasp (Insee) ; FPE avant 2009 : fichier général de l&#x27;État. Deux niveaux publiés pour 2021, 2022 et 2023 (passage à la DSN).</small></li>
+      <li><strong>DGAFP</strong> — Rapport annuel sur l&#x27;état de la fonction publique, édition 2026 – L&#x27;évolution des rémunérations dans la fonction publique en 2024 (fichiers ra_2026_remu_evolutions_donnees_comp.xlsx, figure 0, et ra_2026_remu_evolutions_donnees_comp_point_indice.xlsx). Publication : 2026-10-15. <a href="https://www.fonction-publique.gouv.fr/toutes-les-publications/levolution-des-remunerations-dans-la-fonction-publique-en-2024">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/2026/ra_2026_remu_evolutions.zip">fichier source</a>.<br><small>Champ : Salaires nets mensuels moyens en EQTP en euros constants de 2024 (base Tous salariés, Insee), fonction publique et secteur privé, 2011-2024 ; dates et montants des revalorisations du point d&#x27;indice depuis 2002.</small></li>
+      <li><strong>DGAFP</strong> — Séries longues du rapport annuel 2021 – FT6.2 Traitement indiciaire : valeur annuelle moyenne de l&#x27;indice 100 depuis 1970 (FT6.2-SL_Traitement_indiciaire.xlsx). Publication : 2021-09-08. <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/series-longues.html">Page de la publication</a> · <a href="https://www.fonction-publique.gouv.fr/files/files/ArchivePortailFP/www.fonction-publique.gouv.fr/files/files/statistiques/series_longues/series-longues-2021/FT6.2-SL_Traitement_indiciaire.xlsx">fichier source</a>.<br><small>Champ : Valeur annuelle (en euros) du traitement brut correspondant à l&#x27;indice majoré 100, moyenne de l&#x27;année, 1970-2020 ; traitement DGAFP - SDessi.</small></li>
+      <li><strong>Eurostat</strong> — Dépenses des administrations publiques par fonction (CFAP/COFOG), jeu de données gov_10a_exp – rémunération des salariés (D1), France. Publication : 2026-10-21. <a href="https://ec.europa.eu/eurostat/databrowser/view/gov_10a_exp/default/table?lang=fr">Page de la publication</a> · <a href="https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?format=JSON&amp;lang=fr&amp;geo=FR&amp;sector=S13&amp;na_item=D1&amp;unit=MIO_EUR">fichier source</a>.<br><small>Champ : Administrations publiques (S13), millions d&#x27;euros courants, 1995-2024, 10 fonctions et 69 sous-fonctions. Données transmises par l&#x27;Insee ; 1995-1998 et 2024 dans une version antérieure à celle de l&#x27;Insee de 2026 (écart sur le total de 0,2 à 1 %).</small></li>
+      <li><strong>Eurostat</strong> — Principaux agrégats des administrations publiques, jeu de données gov_10a_main – rémunération des salariés (D1PAY) en % du PIB. Publication : 2026-10-21. <a href="https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr">Page de la publication</a> · <a href="https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&amp;lang=fr&amp;sector=S13&amp;na_item=D1PAY&amp;unit=PC_GDP">fichier source</a>.<br><small>Champ : Administrations publiques (S13), en % du PIB, pays de l&#x27;Union européenne et de l&#x27;AELE, 1995-2025 (Finlande depuis 1975).</small></li>
+    </ul>
+
+    <h3 style="margin-top:1.5rem">Définitions</h3>
+    <dl class="glossaire">
+      <dt>Rémunération des salariés (comptabilité nationale, opération D1)</dt>
+      <dd>Tout ce que les employeurs publics versent pour leurs salariés : salaires et traitements bruts (D11) et cotisations sociales à la charge des employeurs (D12). C'est la «&nbsp;masse salariale&nbsp;» au sens le plus courant ; elle n'inclut pas les impôts sur les salaires.</dd>
+      <dt>Salaires et traitements bruts (D11)</dt>
+      <dd>Traitements, soldes, primes, indemnités, heures supplémentaires et avantages en nature, avant les cotisations salariales et la CSG-CRDS prélevées sur le salaire.</dd>
+      <dt>Cotisations effectives (D121) et imputées (D122)</dt>
+      <dd>Les cotisations effectives sont versées à des caisses (CNRACL, Ircantec, régime général, assurance maladie, famille…). L'État n'ayant pas de caisse de retraite pour ses fonctionnaires, la comptabilité nationale inscrit en cotisations «&nbsp;imputées&nbsp;» la charge de leurs pensions qui n'est pas couverte par les retenues sur salaires.</dd>
+      <dt>Impôts sur les salaires et la main-d'œuvre (D291)</dt>
+      <dd>Impôts payés par les employeurs en proportion des salaires : taxe sur les salaires (due notamment par les hôpitaux publics), versement mobilité… Ajoutés à la rémunération des salariés, ils donnent le coût total pour les employeurs.</dd>
+      <dt>Administrations publiques et sous-secteurs</dt>
+      <dd>État ; organismes divers d'administration centrale (ODAC : universités, organismes de recherche, agences…) ; administrations publiques locales (collectivités et leurs établissements) ; administrations de sécurité sociale (régimes d'assurance sociale et organismes qui en dépendent, dont les hôpitaux publics et France Travail). Les entreprises publiques n'en font pas partie.</dd>
+      <dt>Titre 2</dt>
+      <dd>Dépenses de personnel du budget de l'État : rémunérations d'activité, cotisations et contributions sociales (dont les contributions au compte d'affectation spéciale «&nbsp;Pensions&nbsp;»), prestations sociales. Il inclut les enseignants des établissements privés sous contrat.</dd>
+      <dt>Salaire en équivalent temps plein (EQTP)</dt>
+      <dd>Salaire qu'aurait perçu un agent travaillant à temps plein toute l'année : il permet de comparer des salaires indépendamment du temps partiel.</dd>
+      <dt>Point d'indice</dt>
+      <dd>Valeur en euros de l'indice majoré 100 : le traitement indiciaire brut d'un fonctionnaire est le produit de son indice par cette valeur.</dd>
+      <dt>Classification des fonctions (COFOG)</dt>
+      <dd>Classification internationale des dépenses publiques selon leur but (enseignement, santé, défense…), commune aux pays européens.</dd>
+    </dl>
+
+    <h3 style="margin-top:1.5rem">Calculs effectués</h3>
+    <ul class="liste-lecture">
+      <li><strong>Euros constants.</strong> Montants courants multipliés par le rapport entre l'indice des prix à la consommation de 2025 et celui de l'année (coefficients du convertisseur franc-euro de l'Insee). C'est l'indice utilisé par l'Insee et la DGAFP pour corriger les salaires de l'inflation.</li>
+      <li><strong>Parts du PIB et des dépenses publiques.</strong> Rémunération des salariés des administrations publiques divisée par le PIB (1949-2025) ou par le total des dépenses publiques (1959-2025), les deux en euros courants.</li>
+      <li><strong>Par habitant et par emploi.</strong> Montants divisés par la population moyenne de l'année (comptes nationaux) ou par l'emploi en équivalent temps plein des administrations publiques (1978-2025 ; 2006-2024 par sous-secteur), puis par 12 pour un montant mensuel.</li>
+      <li><strong>Salaire net global (estimation).</strong> La statistique publique ne publie pas la masse des salaires nets. Nous appliquons aux salaires bruts des administrations publiques la part du salaire net dans le salaire brut mesurée par la DGAFP pour l'ensemble des agents publics en 2024 (2 742 € nets pour 3 382 € bruts, soit 81,1 %). Le champ diffère un peu (les comptes nationaux incluent les salariés des caisses de Sécurité sociale) : le résultat est un ordre de grandeur, présenté comme tel.</li>
+      <li><strong>«&nbsp;Sur 100 €&nbsp;».</strong> Parts du coût total (rémunération des salariés + impôts sur les salaires), arrondies à l'euro de façon que leur somme fasse exactement 100.</li>
+      <li><strong>Point d'indice 2021-2025.</strong> La série longue de la DGAFP s'arrête en 2020 ; pour les années suivantes, nous calculons la moyenne des douze valeurs mensuelles à partir des dates et des montants de revalorisation publiés par la DGAFP (+3,5 % au 1er juillet 2022, +1,5 % au 1er juillet 2023). Le même calcul redonne exactement la série de la DGAFP pour 2018-2020.</li>
+      <li><strong>Regroupements.</strong> Les lignes du titre 2 de l'État sont regroupées en cinq ensembles (traitement ; primes, indemnités et accessoires ; cotisations retraite ; autres cotisations ; prestations) dont la somme redonne le total publié ; les fonctions autres que les cinq principales sont additionnées en «&nbsp;autres fonctions&nbsp;».</li>
+    </ul>
+
+    <h3 style="margin-top:1.5rem">Ruptures et précautions</h3>
+    <ul class="liste-lecture">
+      <li><strong>Comptes nationaux.</strong> Les séries de l'Insee en base 2020 sont recalculées depuis 1949 avec les concepts actuels : elles sont homogènes sur toute la période. 2024 est semi-définitif et 2025 provisoire. L'État et les ODAC ne sont séparés qu'à partir de 1978, comme les impôts sur les salaires.</li>
+      <li><strong>Autonomie des universités (2009-2012).</strong> Une partie des personnels des universités, auparavant payés par l'État, est rémunérée par les universités (ODAC) : la masse salariale passe d'un sous-secteur à l'autre sans changer le total.</li>
+      <li><strong>Budget de l'État.</strong> Exécution du budget général (titre 2) depuis 2008 ; 2025 provisoire. Pour les rémunérations par statut, la DGAFP ajoute en 2024 à la ligne des contractuels ceux en CDI hors enseignement privé (2,8 milliards d'euros) ; certaines années, son total n'inclut pas la ligne «&nbsp;non réparti&nbsp;» (écart inférieur à 0,2 milliard).</li>
+      <li><strong>Collectivités locales.</strong> Les créations des collectivités uniques de Martinique et de Guyane (2016), de la collectivité de Corse (2018) et de la Ville de Paris (2019) déplacent des dépenses entre régions, départements et communes ; 2025 provisoire.</li>
+      <li><strong>Hôpitaux.</strong> Depuis 2006, les reports de charges ne sont plus comptés dans les «&nbsp;autres charges&nbsp;» ; 2025 provisoire.</li>
+      <li><strong>Salaires.</strong> Le passage à la déclaration sociale nominative a conduit la DGAFP à publier deux mesures pour 2021, 2022 et 2023 : les deux figurent dans le fichier téléchargeable ; le graphique public-privé reprend la série en euros constants 2011-2024 telle que la DGAFP la publie. Les salaires de la fonction publique de l'État de 2004 à 2008 viennent d'une autre source (fichier général de l'État) que les années suivantes (Siasp).</li>
+      <li><strong>Eurostat.</strong> Pour 1995-1998 et 2024, la répartition par fonction reprend une version des comptes antérieure à la dernière version de l'Insee (écart de 0,2 % à 1 % sur le total). Les comparaisons entre pays dépendent de la part des services publics confiés à des organismes privés.</li>
+    </ul>
+
     <h2 id="limites" style="margin-top:2.5rem">Limites à garder en tête</h2>
     <ul class="liste-lecture">
       <li><strong>Fonction publique ≠ emploi public.</strong> Ne sont pas comptés : les salariés des organismes de Sécurité sociale, des entreprises publiques (SNCF, EDF, RATP…), de La Poste, ni les emplois privés financés par des fonds publics (cliniques, associations…).</li>
-      <li><strong>Personnes et non volume de travail.</strong> Le nombre d'agents ne dit rien du temps de travail ni de la masse salariale.</li>
+      <li><strong>Personnes et non volume de travail.</strong> Le nombre d'agents ne dit rien du temps de travail ni de ce qu'ils coûtent : voir la page <a href="masse-salariale.html">La masse salariale</a>.</li>
       <li><strong>Lieu de travail.</strong> Les agents sont localisés là où ils travaillent, pas là où ils habitent ; les administrations centrales des ministères gonflent mécaniquement les chiffres de Paris et de l'Île-de-France.</li>
       <li><strong>Services publics délégués.</strong> Une même mission (eau, transports, ramassage des ordures, crèches, Ehpad…) peut être assurée par des agents publics dans un territoire et par des salariés d'entreprises ou d'associations dans un autre : un taux d'administration plus faible ne signifie pas forcément moins de services publics.</li>
       <li><strong>Révisions.</strong> L'Insee et la DGAFP révisent parfois les chiffres des années récentes ; nous utilisons la dernière version publiée.</li>
@@ -181,7 +242,22 @@
       <li><a href="donnees/csv/emploi_public_au_sens_large_2024.csv" download>emploi_public_au_sens_large_2024.csv</a> <span>Emploi dans la sphère publique au sens large, 2024</span> <small>1 ko</small></li>
       <li><a href="donnees/csv/mayotte_emploi_public.csv" download>mayotte_emploi_public.csv</a> <span>Mayotte : emploi public selon l&#x27;enquête Emploi de l&#x27;Insee (non comparable)</span> <small>3 ko</small></li>
       <li><a href="donnees/csv/effectifs_par_employeur_2024.csv" download>effectifs_par_employeur_2024.csv</a> <span>Effectifs par type d&#x27;employeur et par ministère, 2024 (Insee)</span> <small>1 ko</small></li>
-      <li><a href="donnees/csv/sources.csv" download>sources.csv</a> <span>Catalogue des sources (adresses des fichiers officiels)</span> <small>9 ko</small></li>
+      <li><a href="donnees/csv/masse_salariale_comptes_nationaux.csv" download>masse_salariale_comptes_nationaux.csv</a> <span>Rémunérations des administrations publiques et de leurs sous-secteurs : salaires bruts, cotisations effectives et imputées, impôts sur les salaires, 1949-2025 (Insee)</span> <small>26 ko</small></li>
+      <li><a href="donnees/csv/agregats_comptes_nationaux.csv" download>agregats_comptes_nationaux.csv</a> <span>PIB, population, prix à la consommation, dépenses publiques, emploi des administrations publiques (Insee)</span> <small>40 ko</small></li>
+      <li><a href="donnees/csv/remunerations_apu_dont.csv" download>remunerations_apu_dont.csv</a> <span>Rémunérations versées par les collectivités locales et par les hôpitaux et organismes dépendant de la Sécurité sociale, 2013-2025 (DGAFP)</span> <small>2 ko</small></li>
+      <li><a href="donnees/csv/depenses_personnel_etat.csv" download>depenses_personnel_etat.csv</a> <span>Dépenses de personnel de l&#x27;État (titre 2), ligne par ligne, et pensions versées, 2008-2025 (DGAFP)</span> <small>57 ko</small></li>
+      <li><a href="donnees/csv/remunerations_activite_etat.csv" download>remunerations_activite_etat.csv</a> <span>Rémunérations d&#x27;activité de l&#x27;État par statut et par nature, 2008-2025 (DGAFP)</span> <small>20 ko</small></li>
+      <li><a href="donnees/csv/depenses_personnel_collectivites.csv" download>depenses_personnel_collectivites.csv</a> <span>Dépenses de personnel des collectivités locales par niveau, 1996-2025 (DGAFP)</span> <small>3 ko</small></li>
+      <li><a href="donnees/csv/charges_personnel_hopitaux.csv" download>charges_personnel_hopitaux.csv</a> <span>Charges de personnel des hôpitaux publics, 2000-2025 (DGAFP)</span> <small>3 ko</small></li>
+      <li><a href="donnees/csv/remunerations_par_fonction.csv" download>remunerations_par_fonction.csv</a> <span>Rémunérations des administrations publiques par fonction et sous-fonction (COFOG), 1995-2024 (Eurostat)</span> <small>156 ko</small></li>
+      <li><a href="donnees/csv/remuneration_publique_europe.csv" download>remuneration_publique_europe.csv</a> <span>Rémunérations publiques en % du PIB, pays européens, 1995-2025 (Eurostat)</span> <small>45 ko</small></li>
+      <li><a href="donnees/csv/salaires_moyens_fonction_publique.csv" download>salaires_moyens_fonction_publique.csv</a> <span>Salaires mensuels moyens bruts et nets par versant et population, 2004-2024 (DGAFP)</span> <small>98 ko</small></li>
+      <li><a href="donnees/csv/salaires_2024_fonction_publique.csv" download>salaires_2024_fonction_publique.csv</a> <span>Salaires 2024 : moyennes, médiane et déciles par versant, statut, catégorie, sexe et âge (DGAFP)</span> <small>2 ko</small></li>
+      <li><a href="donnees/csv/decomposition_salaire_fonctionnaires_2024.csv" download>decomposition_salaire_fonctionnaires_2024.csv</a> <span>Du brut au net : traitement, primes, cotisations et CSG-CRDS des fonctionnaires, 2024 (DGAFP)</span> <small>2 ko</small></li>
+      <li><a href="donnees/csv/deciles_salaires_public_prive_2024.csv" download>deciles_salaires_public_prive_2024.csv</a> <span>Déciles des salaires nets, fonction publique et secteur privé, 2024 (DGAFP, Insee)</span> <small>1 ko</small></li>
+      <li><a href="donnees/csv/salaires_nets_public_prive_euros_constants.csv" download>salaires_nets_public_prive_euros_constants.csv</a> <span>Salaires nets moyens en euros constants, fonction publique et secteur privé, 2011-2024 (DGAFP, Insee)</span> <small>1 ko</small></li>
+      <li><a href="donnees/csv/point_indice.csv" download>point_indice.csv</a> <span>Valeur annuelle moyenne du point d&#x27;indice, 1970-2025 (DGAFP)</span> <small>3 ko</small></li>
+      <li><a href="donnees/csv/sources.csv" download>sources.csv</a> <span>Catalogue des sources (adresses des fichiers officiels)</span> <small>16 ko</small></li>
     </ul>
     <p class="figure__note">Le fond de carte (<a href="donnees/geo/fond_de_carte.json" download>fond_de_carte.json</a>) et les scripts qui produisent ces fichiers sont dans le dossier <code>outils/</code> du dépôt.</p>
 
@@ -199,7 +275,7 @@
 
     <h2 id="credits" style="margin-top:2.5rem">Crédits et mentions</h2>
     <ul>
-      <li>Données : Insee et DGAFP (ministère de la Transformation et de la Fonction publiques), réutilisées dans les conditions de la Licence Ouverte / Open Licence 2.0.</li>
+      <li>Données : Insee et DGAFP (ministère de la Transformation et de la Fonction publiques), réutilisées dans les conditions de la Licence Ouverte / Open Licence 2.0 ; Eurostat (réutilisation autorisée en citant la source).</li>
       <li>Fond de carte : IGN – ADMIN EXPRESS, contours généralisés par Etalab (Licence Ouverte 2.0) ; pays voisins : Natural Earth (domaine public).</li>
       <li>Polices de caractères : Jost (Owen Earl) et Atkinson Hyperlegible (Braille Institute), sous licence SIL Open Font License 1.1.</li>
       <li>Conception et réalisation : Parti Libéral Français. Les chiffres sont présentés tels que publiés ; les éventuels calculs (taux, évolutions, parts) sont expliqués sur cette page.</li>
@@ -215,7 +291,7 @@
     <div class="pied__grille">
       <div>
         <h2>Fonction publique : les chiffres</h2>
-        <p>Un site d'information du <a href="https://partiliberalfrancais.fr/">Parti Libéral Français</a>. Tous les chiffres proviennent de la statistique publique (Insee, DGAFP) ; les sources et les limites sont détaillées dans la page <a href="methode.html">Sources et méthode</a>.</p>
+        <p>Un site d'information du <a href="https://partiliberalfrancais.fr/">Parti Libéral Français</a>. Tous les chiffres proviennent de la statistique publique (Insee, DGAFP, Eurostat) ; les sources et les limites sont détaillées dans la page <a href="methode.html">Sources et méthode</a>.</p>
       </div>
       <div>
         <h2>Ce site</h2>
@@ -224,6 +300,7 @@
           <li><a href="evolution.html">L'évolution</a></li>
           <li><a href="carte.html">La carte</a></li>
           <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
+          <li><a href="masse-salariale.html">La masse salariale</a></li>
           <li><a href="methode.html">Sources et méthode</a></li>
         </ul>
       </div>
@@ -232,12 +309,13 @@
         <ul>
           <li><a href="methode.html#telecharger">Télécharger toutes les données (CSV)</a></li>
           <li><a href="https://www.insee.fr/fr/statistiques/2493501">Insee – effectifs de la fonction publique</a></li>
+          <li><a href="https://www.insee.fr/fr/statistiques/8988833">Insee – comptes des administrations publiques</a></li>
           <li><a href="https://www.fonction-publique.gouv.fr/collection-etudes-et-statistiques/rapport-annuel">DGAFP – rapport annuel</a></li>
         </ul>
       </div>
     </div>
     <div class="pied__bas">
-      <span>Données mises à jour le 4 novembre 2026. Contenus réutilisables en citant la source.</span>
+      <span>Données mises à jour le 5 novembre 2026. Contenus réutilisables en citant la source.</span>
       <span><a href="methode.html#accessibilite">Accessibilité : partiellement conforme</a> · Aucun cookie, aucun traceur</span>
     </div>
   </div>

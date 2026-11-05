@@ -329,6 +329,281 @@ def construire_departements(cat: dict, geo: dict) -> dict:
     }
 
 
+# --------------------------------------------------------------------------
+# Masse salariale (comptes nationaux, DGAFP, Eurostat) : fichiers produits par
+# outils/extraire_masse_salariale.py
+# --------------------------------------------------------------------------
+SECTEURS_CN = ["S13", "S1311", "S13111", "S13112", "S1313", "S1314"]
+OPERATIONS_CN = {"D1": "remuneration_salaries_D1", "D11": "salaires_bruts_D11", "D12": "cotisations_employeurs_D12",
+                 "D121": "cotisations_effectives_D121", "D122": "cotisations_imputees_D122",
+                 "D291": "impots_sur_salaires_D291"}
+COFOG_COURT = {"GF01": "Services généraux", "GF02": "Défense", "GF03": "Ordre et sécurité publics",
+               "GF04": "Affaires économiques", "GF05": "Environnement", "GF06": "Logement, équipements collectifs",
+               "GF07": "Santé", "GF08": "Culture, loisirs et cultes", "GF09": "Enseignement", "GF10": "Protection sociale"}
+
+
+def milliards(v: float, dec: int = 0) -> str:
+    """370,012 -> « 370 milliards » ; 11,81 -> « 11,8 milliards » (dec=1)."""
+    return fr(v, dec) + " milliards"
+
+
+def pct(v: float, dec: int = 1) -> str:
+    return fr(v, dec) + " %"
+
+
+def construire_masse_salariale(cat: dict) -> dict:
+    # 1. Comptes nationaux : rémunérations par sous-secteur des administrations publiques
+    cn = defaultdict(dict)
+    for l in lire("masse_salariale_comptes_nationaux.csv"):
+        cn[l["secteur"]][int(l["annee"])] = {k: nombre(l[c]) for k, c in OPERATIONS_CN.items()}
+    annees = sorted(cn["S13"])
+    verifier(annees[0] == 1949 and annees == list(range(annees[0], annees[-1] + 1)), "comptes nationaux : années manquantes")
+    fin = annees[-1]
+    agr = defaultdict(dict)
+    for l in lire("agregats_comptes_nationaux.csv"):
+        agr[l["indicateur"]][int(l["annee"])] = nombre(l["valeur"])
+    for ind in ["pib", "population", "prix_consommation"]:
+        verifier(all(a in agr[ind] for a in annees), f"agrégat {ind} incomplet")
+    for a in annees:
+        s = cn["S13"][a]
+        verifier(abs(s["D11"] + s["D12"] - s["D1"]) < 0.003, f"{a} : D11 + D12 ≠ D1")
+        verifier(abs(sum(cn[x][a]["D1"] for x in ("S1311", "S1313", "S1314")) - s["D1"]) < 0.005, f"{a} : sous-secteurs")
+
+    def serie(sect, op):
+        return [cn[sect][a][op] if a in cn[sect] else None for a in annees]
+
+    def agregat(ind):
+        return [agr[ind].get(a) for a in annees]
+
+    secteurs = {s: {op: serie(s, op) for op in OPERATIONS_CN} for s in SECTEURS_CN}
+    etp = {s: agregat(f"emploi_etp_{s}") for s in ["S13", "S13111", "S13112", "S1313", "S1314"]}
+    emploi = {s: agregat(f"emploi_{s}") for s in ["S13", "S13111", "S13112", "S1313", "S1314"]}
+    dont = defaultdict(dict)
+    for l in lire("remunerations_apu_dont.csv"):
+        dont[l["composante"]][int(l["annee"])] = nombre(l["remuneration_salaries_D1"])
+    an_dont = sorted(dont["collectivites_locales"])
+
+    # 2. État (titre 2), collectivités, hôpitaux (DGAFP)
+    etat = defaultdict(dict)
+    libelles_etat, info_etat = {}, {}
+    for l in lire("depenses_personnel_etat.csv"):
+        etat[l["rubrique"]][int(l["annee"])] = nombre(l["montant_milliards"])
+        libelles_etat[l["rubrique"]] = l["libelle"]
+        info_etat[l["rubrique"]] = (l["groupe"], int(l["niveau"]))
+    an_etat = sorted(etat["total_titre2"])
+    ordre_etat = list(dict.fromkeys(l["rubrique"] for l in lire("depenses_personnel_etat.csv")))
+    etat_remu = defaultdict(dict)
+    libelles_remu = {}
+    for l in lire("remunerations_activite_etat.csv"):
+        etat_remu[l["poste"]][int(l["annee"])] = nombre(l["montant_milliards"])
+        libelles_remu[l["poste"]] = (l["libelle"], int(l["niveau"]))
+    ordre_remu = list(dict.fromkeys(l["poste"] for l in lire("remunerations_activite_etat.csv")))
+    coll = lire("depenses_personnel_collectivites.csv")
+    hop = lire("charges_personnel_hopitaux.csv")
+
+    # 3. Par fonction et comparaison européenne (Eurostat)
+    fonctions = defaultdict(dict)
+    infos_f = {}
+    for l in lire("remunerations_par_fonction.csv"):
+        fonctions[l["code_cofog"]][int(l["annee"])] = nombre(l["millions_euros"])
+        infos_f[l["code_cofog"]] = (l["fonction"], int(l["niveau"]))
+    an_f = sorted(fonctions["TOTAL"])
+    europe = defaultdict(dict)
+    noms_pays = {}
+    for l in lire("remuneration_publique_europe.csv"):
+        europe[l["code_pays"]][int(l["annee"])] = nombre(l["remuneration_pct_pib"])
+        noms_pays[l["code_pays"]] = l["pays"]
+    an_eu = sorted({a for p in europe.values() for a in p if a >= 1995})
+    fr_eu = europe["FR"][fin]
+    verifier(abs(fr_eu - 100 * cn["S13"][fin]["D1"] / agr["pib"][fin]) < 0.1, "Eurostat : part de la France ≠ Insee")
+
+    # 4. Salaires (DGAFP)
+    s24 = {l["population"]: l for l in lire("salaires_2024_fonction_publique.csv")}
+    an_sal = int(next(iter(s24.values()))["annee"])
+    deciles = lire("deciles_salaires_public_prive_2024.csv")
+    decomp = lire("decomposition_salaire_fonctionnaires_2024.csv")
+    pp = lire("salaires_nets_public_prive_euros_constants.csv")
+    point = {int(l["annee"]): nombre(l["valeur_annuelle_indice_100_euros"]) for l in lire("point_indice.csv")}
+
+    # Part du salaire brut versée nette aux agents (DGAFP, ensemble de la fonction publique)
+    ratio_net = nombre(s24["ensemble"]["net_moyen"]) / nombre(s24["ensemble"]["brut_moyen"])
+    verifier(0.75 < ratio_net < 0.85, "rapport net / brut inattendu")
+
+    # 5. Chiffres clés (écrits aussi en toutes lettres dans les pages)
+    s = cn["S13"][fin]
+    pop, dep = agr["population"][fin], agr["depenses_publiques"][fin]
+    prix = agr["prix_consommation"]
+    net = s["D11"] * ratio_net
+    cout = s["D1"] + s["D291"]
+    part = lambda v: 100 * v / cout
+    pct_pib = {a: 100 * cn["S13"][a]["D1"] / agr["pib"][a] for a in annees}
+    a_max = max(pct_pib, key=pct_pib.get)
+    reel_1949 = s["D1"] / (cn["S13"][1949]["D1"] * prix[fin] / prix[1949])
+    etp_fin = agr["emploi_etp_S13"][fin]
+    a_etp0 = min(a for a in agr["emploi_etp_S13"])
+    cout_etp = lambda a: 1e9 * cn["S13"][a]["D1"] / (1e3 * agr["emploi_etp_S13"][a]) / 12 * prix[fin] / prix[a]
+    rang = sorted([(v[fin], k) for k, v in europe.items() if fin in v and len(k) == 2 and k not in ("IS", "NO", "CH")],
+                  reverse=True)
+    rang_fr = [k for _, k in rang].index("FR") + 1
+    f_tot = fonctions["TOTAL"][an_f[-1]]
+    f_ens = fonctions["GF09"][an_f[-1]]
+    f_san = fonctions["GF07"][an_f[-1]]
+    e_tot = etat["total_titre2"][an_etat[-1]]
+    pt_max_a = max(point, key=lambda a: point[a] / prix[a])
+    pt_perte = 100 * (1 - (point[fin] / prix[fin]) / (point[pt_max_a] / prix[pt_max_a]))
+    st = s24
+    dfp = next(l for l in decomp if l["versant"] == "fp" and l["categorie"] == "ensemble")
+    cles = {
+        "ms_annee": str(fin),
+        "ms_d1": milliards(s["D1"]),
+        "ms_d1_long": milliards(s["D1"]) + " d'euros",
+        "ms_cout_total": milliards(cout),
+        "ms_d11": milliards(s["D11"]),
+        "ms_d12": milliards(s["D12"]),
+        "ms_d121": milliards(s["D121"]),
+        "ms_d122": milliards(s["D122"]),
+        "ms_d291": milliards(s["D291"], 1),
+        "ms_net": milliards(round(net / 5) * 5),
+        "ms_prelevements_salaries": milliards(s["D11"] - net),
+        "ms_pct_pib": pct(pct_pib[fin]),
+        "ms_pct_depenses": pct(100 * s["D1"] / dep),
+        "ms_pct_pib_1949": pct(pct_pib[1949]),
+        "ms_pct_pib_max": pct(pct_pib[a_max]),
+        "ms_annee_pct_max": str(a_max),
+        "ms_par_habitant": fr(round(1e9 * s["D1"] / (1e3 * pop), -1)) + " €",
+        "ms_par_habitant_mois": fr(1e9 * s["D1"] / (1e3 * pop) / 12) + " €",
+        "ms_par_habitant_1949": fr(round(1e9 * cn["S13"][1949]["D1"] / (1e3 * agr["population"][1949])
+                                         * prix[fin] / prix[1949], -1)) + " €",
+        "ms_etat_part": pct(100 * cn["S13111"][fin]["D1"] / s["D1"], 0),
+        "ms_multiplie_1949": fr(reel_1949, 1),
+        "ms_cout_etp_mois": fr(round(cout_etp(fin), -1)) + " €",
+        "ms_cout_etp_mois_debut": fr(round(cout_etp(a_etp0), -1)) + " €",
+        "ms_annee_etp_debut": str(a_etp0),
+        "ms_brut_etp_mois": fr(round(1e9 * s["D11"] / (1e3 * etp_fin) / 12, -1)) + " €",
+        "ms_part_net": fr(part(net), 0),
+        "ms_part_prelevements": fr(part(s["D11"] - net), 0),
+        "ms_part_d121": fr(part(s["D121"]), 0),
+        "ms_part_d122": fr(part(s["D122"]), 0),
+        "ms_part_d291": fr(part(s["D291"]), 0),
+        "ms_etat_d1": milliards(cn["S13111"][fin]["D1"]),
+        "ms_etat_d122": milliards(cn["S13111"][fin]["D122"]),
+        "ms_apul_d1": milliards(cn["S1313"][fin]["D1"]),
+        "ms_asso_d1": milliards(cn["S1314"][fin]["D1"]),
+        "ms_odac_d1": milliards(cn["S13112"][fin]["D1"]),
+        "ms_ratio_net": fr(100 * ratio_net, 0) + " %",
+        "ms_annee_sal": str(an_sal),
+        "ms_net_fp": fr(nombre(st["ensemble"]["net_moyen"])) + " €",
+        "ms_brut_fp": fr(nombre(st["ensemble"]["brut_moyen"])) + " €",
+        "ms_net_fpe": fr(nombre(st["fpe"]["net_moyen"])) + " €",
+        "ms_net_fpt": fr(nombre(st["fpt"]["net_moyen"])) + " €",
+        "ms_net_fph": fr(nombre(st["fph"]["net_moyen"])) + " €",
+        "ms_median_fp": fr(nombre(st["ensemble"]["net_median"])) + " €",
+        "ms_net_prive": fr(nombre(pp[-1]["secteur_prive"])) + " €",
+        "ms_brut_fonctionnaire": fr(nombre(dfp["salaire_brut"])) + " €",
+        "ms_net_fonctionnaire": fr(nombre(dfp["salaire_net"])) + " €",
+        "ms_cot_fonctionnaire": fr(nombre(dfp["cotisations_salariales"])) + " €",
+        "ms_csg_fonctionnaire": fr(nombre(dfp["csg_crds"])) + " €",
+        "ms_part_primes": pct(100 * nombre(dfp["primes"]) / nombre(dfp["salaire_brut"]), 0),
+        "ms_net_fp_cst": fr(nombre(pp[-1]["fonction_publique"])) + " €",
+        "ms_annee_eu": str(fin),
+        "ms_eu_fr": pct(fr_eu),
+        "ms_eu_ue": pct(europe["EU27_2020"][fin]),
+        "ms_eu_de": pct(europe["DE"][fin]),
+        "ms_eu_rang": str(rang_fr),
+        "ms_eu_nb": str(len(rang)),
+        "ms_annee_f": str(an_f[-1]),
+        "ms_f_enseignement": milliards(f_ens / 1000),
+        "ms_f_enseignement_part": pct(100 * f_ens / f_tot, 0),
+        "ms_f_sante": milliards(f_san / 1000),
+        "ms_annee_etat": str(an_etat[-1]),
+        "ms_etat_titre2": milliards(e_tot, 1),
+        "ms_etat_cas": milliards(etat["cas_pensions"][an_etat[-1]], 1),
+        "ms_etat_pensions": milliards(etat["pensions_versees"][an_etat[-1]], 1),
+        "ms_coll": milliards(nombre(coll[-1]["ensemble"]), 1),
+        "ms_hop": milliards(nombre(hop[-1]["ensemble"]), 1),
+        "ms_point_annee_max": str(pt_max_a),
+        "ms_point_perte": fr(pt_perte, 0) + " %",
+    }
+
+    return {
+        "maj": date.today().isoformat(),
+        "cn": {
+            "annees": annees, "secteurs": secteurs,
+            "pib": agregat("pib"), "population": agregat("population"), "prix": agregat("prix_consommation"),
+            "depenses": agregat("depenses_publiques"), "etp": etp, "emploi": emploi,
+            "statut": {str(fin - 1): "semi-définitif", str(fin): "provisoire"},
+            "dont": {"annees": an_dont, "collectivites": [dont["collectivites_locales"][a] for a in an_dont],
+                     "hopitaux": [dont["organismes_dependant_assurances_sociales"][a] for a in an_dont]},
+            "source": libelle_source(cat, "INSEE_CN2025_APU"),
+            "sourceCourte": "Insee, comptes nationaux annuels (base 2020), comptes de la Nation 2025",
+            "sourcePib": libelle_source(cat, "INSEE_CN2025_PIB"),
+            "sourceDepenses": libelle_source(cat, "INSEE_CN2025_DEPENSES"),
+        },
+        "ratioNet": {"annee": an_sal, "valeur": round(ratio_net, 5),
+                     "source": libelle_source(cat, "DGAFP_RA2026_REMU")},
+        "etat": {
+            "annees": an_etat,
+            "rubriques": [{"cle": r, "libelle": libelles_etat[r], "groupe": info_etat[r][0], "niveau": info_etat[r][1],
+                           "valeurs": [etat[r].get(a) for a in an_etat]} for r in ordre_etat],
+            "statuts": {"annees": sorted({a for p in etat_remu.values() for a in p}),
+                        "postes": [{"cle": p, "libelle": libelles_remu[p][0], "niveau": libelles_remu[p][1],
+                                    "valeurs": [etat_remu[p].get(a) for a in sorted({a for q in etat_remu.values() for a in q})]}
+                                   for p in ordre_remu]},
+            "source": libelle_source(cat, "DGAFP_RA2026_DEPENSES"),
+        },
+        "collectivites": {
+            "annees": [int(l["annee"]) for l in coll],
+            **{k: [nombre(l[k]) for l in coll] for k in ["regions", "departements", "communes", "groupements",
+                                                          "ensemble", "depenses_totales"]},
+            "notes": {l["annee"]: l["note"] for l in coll if l["note"]},
+            "source": libelle_source(cat, "DGAFP_RA2026_DEPENSES"),
+        },
+        "hopitaux": {
+            "annees": [int(l["annee"]) for l in hop],
+            **{k: [nombre(l[k]) for l in hop] for k in ["remunerations_non_medical", "remunerations_medical",
+                                                         "charges_sociales", "impots_taxes", "autres_charges",
+                                                         "ensemble", "depenses_totales"]},
+            "notes": {l["annee"]: l["note"] for l in hop if l["note"]},
+            "source": libelle_source(cat, "DGAFP_RA2026_DEPENSES"),
+        },
+        "fonctions": {
+            "annees": an_f,
+            "total": [fonctions["TOTAL"].get(a) for a in an_f],
+            "divisions": [{"code": c, "libelle": infos_f[c][0], "court": COFOG_COURT[c],
+                           "valeurs": [fonctions[c].get(a) for a in an_f]}
+                          for c in sorted(infos_f) if infos_f[c][1] == 1],
+            "groupes": [{"code": c, "parent": c[:4], "libelle": infos_f[c][0],
+                         "valeurs": [fonctions[c].get(a) for a in an_f]}
+                        for c in sorted(infos_f) if infos_f[c][1] == 2 and any(fonctions[c].values())],
+            "source": libelle_source(cat, "EUROSTAT_COFOG"),
+        },
+        "europe": {
+            "annees": an_eu,
+            "pays": [{"code": k, "libelle": noms_pays[k], "valeurs": [europe[k].get(a) for a in an_eu]}
+                     for k in noms_pays if k not in ("EA19", "EA21")],
+            "source": libelle_source(cat, "EUROSTAT_GOV_MAIN"),
+        },
+        "salaires": {
+            "annee": an_sal,
+            "populations": {k: {c: nombre(v[c]) for c in ["part_eqtp_pct", "brut_moyen", "net_moyen", "net_median",
+                                                            "net_d1", "net_q1", "net_q3", "net_d9"]}
+                            for k, v in s24.items()},
+            "deciles": {k: [nombre(l[k]) for l in deciles] for k in ["fpe", "fpt", "fph", "fonction_publique", "secteur_prive"]},
+            "decomposition": [{k: (nombre(l[k]) if k not in ("versant", "categorie") else l[k])
+                               for k in ["versant", "categorie", "salaire_brut", "traitement_brut", "primes",
+                                         "cotisations_salariales", "csg_crds", "salaire_net"]} for l in decomp],
+            "publicPrive": {"annees": [int(l["annee"]) for l in pp],
+                            **{k: [nombre(l[k]) for l in pp] for k in ["fonction_publique", "fpe", "fpt", "fph",
+                                                                        "secteur_prive"]}},
+            "source": libelle_source(cat, "DGAFP_RA2026_REMU"),
+            "sourceEvol": libelle_source(cat, "DGAFP_RA2026_EVOL"),
+        },
+        "point": {"annees": sorted(point), "valeurs": [point[a] for a in sorted(point)],
+                  "source": f"{libelle_source(cat, 'DGAFP_SL2021_POINT')} ; {libelle_source(cat, 'DGAFP_RA2026_EVOL')}"},
+        "cles": cles,
+    }
+
+
 def main() -> int:
     try:
         cat = sources()
@@ -336,6 +611,8 @@ def main() -> int:
         print("Construction des données du site :")
         national = construire_national(cat)
         ecrire_js("national", national)
+        if (CSV / "masse_salariale_comptes_nationaux.csv").exists():
+            ecrire_js("masse_salariale", construire_masse_salariale(cat))
         if (CSV / "departements_effectifs.csv").exists():
             dep = construire_departements(cat, geo)
             ecrire_js("departements", dep)
