@@ -39,7 +39,9 @@ fichiers JavaScript (`donnees/site/*.js`), ce qui évite tout serveur.
 
 Pour un nom de domaine (ex. `chiffres.partiliberalfrancais.fr`), ajouter un
 fichier `CNAME` à la racine et un enregistrement DNS `CNAME` vers
-`<compte>.github.io`.
+`<compte>.github.io`, puis changer l'adresse `ADRESSE_SITE` en tête de
+`outils/images_partage.py` et relancer ce script (les réseaux sociaux exigent l'adresse
+complète des images de partage).
 
 ## Organisation des fichiers
 
@@ -55,7 +57,8 @@ assets/
   js/masse-salariale.js  pages « Coût et évolution » et « Salaires », encadré de la page d'accueil
   js/retraites.js      page « Retraites » (et chiffres clés de la page d'accueil)
   fonts/               Jost et Atkinson Hyperlegible (licence SIL OFL)
-  img/logo-plf.svg     logo du parti
+  img/logo-plf.svg     logo du parti (logo-plf-240.png : version matricielle pour les images de partage)
+  img/partage/         image de partage de chaque page (générées)
 donnees/
   csv/                 données propres, téléchargeables (séparateur « ; »), une source par ligne
   site/                mêmes données, au format lu par le site (générées)
@@ -72,6 +75,8 @@ outils/
                        avec contrôles de cohérence
   construire_donnees.py  transforme donnees/csv/ en donnees/site/
   test_accessibilite.mjs  test d'accessibilité automatique (axe-core), voir « Accessibilité »
+  images_partage.py    fabrique l'image de partage de chaque page (chiffre clé lu dans
+                       donnees/site/) et ses balises Open Graph (nécessite Pillow)
 package.json           outils de test uniquement (le site lui-même n'a aucune dépendance)
 ```
 
@@ -129,11 +134,17 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
    jour le… » du pied de page ne change que si les fichiers de `donnees/csv/` ont changé.
    Pour citer un nouveau chiffre dans une page, ajouter sa clé dans le script plutôt que de
    l'écrire en dur.
-3. Restent à revoir à la main : les références des sources dans `sources.csv` et dans
+3. Régénérer les images de partage (réseaux sociaux), qui reprennent le chiffre clé de chaque
+   page :
+   ```
+   python3 outils/images_partage.py
+   ```
+   (nécessite Pillow : `pip install pillow`).
+4. Restent à revoir à la main : les références des sources dans `sources.csv` et dans
    `outils/construire_donnees.py` (identifiants comme `DGAFP_RA2026_EFF`, noms de fichiers
    datés comme `salaires_2024_fonction_publique.csv`), la description des sources de
    `methode.html` et les commentaires qui décrivent une année précise (événements, ruptures).
-4. Ouvrir `index.html` pour contrôler, puis publier (commit + push).
+5. Ouvrir `index.html` pour contrôler, puis publier (commit + push).
 
 À chaque push et à chaque pull request, un contrôle automatique (GitHub Actions,
 `.github/workflows/controle.yml`) relance la construction et échoue si les fichiers de
