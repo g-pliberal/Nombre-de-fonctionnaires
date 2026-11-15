@@ -70,10 +70,6 @@ def lire_site(nom: str) -> dict:
     return json.loads(m.group(1))
 
 
-def fr(n: float, dec: int = 1) -> str:
-    return f"{n:,.{dec}f}".replace(",", " ").replace(".", ",")
-
-
 class Cles(dict):
     """Dictionnaire des chiffres clés : une clé absente arrête le script."""
 
@@ -85,26 +81,11 @@ class Cles(dict):
         raise Anomalie(f"chiffre clé « {cle} » absent de donnees/site/{self.source}.js")
 
 
-def taux_departements(D: dict) -> tuple:
-    """Agents civils pour 1 000 habitants, dernière année : France, minimum, maximum
-    (même calcul que la carte, assets/js/carte.js)."""
-    i = len(D["annees"]) - 1
-    taux = []
-    for code, d in D["departements"].items():
-        e, p = d["ensemble"][i], d["population"][i]
-        if e is not None and p:
-            taux.append((1000 * e / p, d["nom"]))
-    if len(taux) < 90:
-        raise Anomalie(f"carte : seulement {len(taux)} départements renseignés")
-    F = D["france"]
-    france = 1000 * F["ensemble"][i] / F["population"][i]
-    return D["annees"][i], france, min(taux), max(taux)
-
-
 def producteurs() -> list[str]:
     with open(RACINE / "donnees" / "csv" / "sources.csv", encoding="utf-8", newline="") as f:
         lignes = list(csv.DictReader(f, delimiter=";"))
-    return lignes, sorted({l["producteur"] for l in lignes}, key=lambda p: -sum(l["producteur"] == p for l in lignes))
+    # Du plus cité au moins cité ; à égalité, dans l'ordre de sources.csv (résultat stable).
+    return lignes, sorted(dict.fromkeys(l["producteur"] for l in lignes), key=lambda p: -sum(l["producteur"] == p for l in lignes))
 
 
 def cartes() -> dict:
@@ -113,6 +94,7 @@ def cartes() -> dict:
     R = lire_site("retraites")
     D = lire_site("departements")
     n, m, r = Cles("national", N["cles"]), Cles("masse_salariale", M["cles"]), Cles("retraites", R["cles"])
+    d = Cles("departements", D["cles"])
 
     def grand(texte):
         """« 5,85 millions » -> ("5,85", "millions")."""
@@ -123,7 +105,6 @@ def cartes() -> dict:
     i_ref = E["annees"].index(int(n["annee_ref"]))
     courbe = [(a, v) for a, v in zip(E["annees"][i_ref:], E["actuelle"]["total"][i_ref:]) if v is not None]
 
-    an_carte, t_fr, t_min, t_max = taux_departements(D)
     lignes_sources, prods = producteurs()
 
     c = {}
@@ -144,9 +125,9 @@ def cartes() -> dict:
     )
     c["carte"] = dict(
         question="Où travaillent les agents publics ?",
-        valeur=(fr(t_fr), ""),
-        libelle=f"agents publics civils pour 1 000 habitants en {an_carte}",
-        detail=f"De {fr(t_min[0])} ({t_min[1]}) à {fr(t_max[0])} ({t_max[1]}) selon le département.",
+        valeur=(d["dep_taux_france"], ""),
+        libelle=f"agents publics civils pour 1 000 habitants en {d['dep_derniere_annee']}",
+        detail=f"De {d['dep_taux_min']} ({d['dep_nom_min']}) à {d['dep_taux_max']} ({d['dep_nom_max']}) selon le département.",
         source="Sources : DGAFP, Insee",
     )
     c["composition"] = dict(

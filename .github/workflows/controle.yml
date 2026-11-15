@@ -24,6 +24,11 @@ jobs:
       - name: Reconstruire les données du site (contrôles de cohérence inclus)
         run: python3 outils/construire_donnees.py
 
+      - name: Reconstruire les images de partage (leurs textes sont repris dans les pages)
+        run: |
+          pip install pillow
+          python3 outils/images_partage.py
+
       - name: Vérifier que donnees/site/ et les pages correspondent aux CSV
         run: |
           if ! git diff --exit-code --stat -- donnees/site '*.html'; then
