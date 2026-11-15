@@ -47,8 +47,32 @@ def nombre(v: str):
     return int(x) if x.is_integer() else x
 
 
+def lire_js(nom: str):
+    """Relit l'objet d'un fichier donnees/site/<nom>.js déjà généré (None si absent ou illisible)."""
+    chemin = SITE / f"{nom}.js"
+    if not chemin.exists():
+        return None
+    prefixe = f"window.PLF_DONNEES.{nom} = "
+    for ligne in chemin.read_text(encoding="utf-8").splitlines():
+        if ligne.startswith(prefixe) and ligne.endswith(";"):
+            try:
+                return json.loads(ligne[len(prefixe):-1])
+            except ValueError:
+                return None
+    return None
+
+
 def ecrire_js(nom: str, objet) -> None:
     SITE.mkdir(parents=True, exist_ok=True)
+    # Date de mise à jour : on garde celle du fichier existant si les données n'ont pas
+    # changé, pour que deux constructions successives donnent exactement les mêmes
+    # fichiers (construction reproductible, vérifiée par l'intégration continue).
+    if isinstance(objet, dict) and "maj" in objet:
+        ancien = lire_js(nom)
+        if isinstance(ancien, dict) and "maj" in ancien:
+            sans_date = lambda o: {k: v for k, v in o.items() if k != "maj"}
+            if sans_date(ancien) == sans_date(objet):
+                objet = {**objet, "maj": ancien["maj"]}
     texte = json.dumps(objet, ensure_ascii=False, separators=(",", ":"))
     contenu = ("/* Fichier généré par outils/construire_donnees.py — ne pas modifier à la main. */\n"
                "window.PLF_DONNEES = window.PLF_DONNEES || {};\n"

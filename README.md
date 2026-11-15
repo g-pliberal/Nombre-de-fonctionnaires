@@ -118,10 +118,16 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
    python3 outils/construire_donnees.py
    ```
    Le script vérifie la cohérence (totaux, années, départements) et s'arrête en
-   cas d'anomalie.
+   cas d'anomalie. Relancé sans changement des CSV, il redonne exactement les mêmes
+   fichiers (la date de mise à jour ne change que si les données changent).
 3. Mettre à jour à la main les quelques chiffres écrits en toutes lettres dans les pages HTML
    (les chiffres clés et les graphiques se mettent à jour seuls).
 4. Ouvrir `index.html` pour contrôler, puis publier (commit + push).
+
+À chaque push et à chaque pull request, un contrôle automatique (GitHub Actions,
+`.github/workflows/controle.yml`) relance la construction et échoue si les fichiers de
+`donnees/site/` ne correspondent pas aux CSV (script oublié ou fichier modifié à la main),
+si un contrôle de cohérence échoue, ou si un script JavaScript est invalide.
 
 Le fond de carte n'a besoin d'être reconstruit qu'en cas de changement des
 limites départementales (`python3 outils/fond_de_carte.py`, nécessite Node.js).
