@@ -77,6 +77,8 @@
       racine.innerHTML = `<p class="erreur">${e.message}</p>`;
       return;
     }
+    // Chiffres cités dans le texte de la page (déjà écrits par outils/construire_donnees.py).
+    if (D.cles) document.querySelectorAll("[data-cle]").forEach((n) => { if (D.cles[n.dataset.cle] != null) n.textContent = D.cles[n.dataset.cle]; });
     const annees = D.annees;
     const ordreCode = (c) => (c === "2A" ? 20.1 : c === "2B" ? 20.2 : Number(c));
     const codes = Object.keys(geo.departements).filter((c) => D.departements[c]).sort((a, b) => ordreCode(a) - ordreCode(b));

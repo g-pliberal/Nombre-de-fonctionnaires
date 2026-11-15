@@ -50,6 +50,7 @@
   /* ======================= Page « L'essentiel » ======================= */
   function accueil(N) {
     remplirCles(N.cles);
+    if (window.PLF_DONNEES.departements) remplirCles(window.PLF_DONNEES.departements.cles || {});
     // Gaufre « sur 100 agents »
     const zone = document.getElementById("gaufre");
     if (zone && N.statuts) {
@@ -385,7 +386,7 @@
       if (zr && C.reperes && C.reperes.length) {
         const nomV = { ensemble: "Ensemble", fpe: "État", fpt: "Territoriale", fph: "Hospitalière" };
         const tr = PLF.tableau({
-          legende: "Repères avant 2010 : répartition par catégorie (%), sources et champs différents de la série 2010-2024",
+          legende: `Repères avant 2010 : répartition par catégorie (%), sources et champs différents de la série ${C.annees[0]}-${C.annees[C.annees.length - 1]}`,
           colonnes: [
             { titre: "Année", cle: "annee" },
             { titre: "Fonction publique", cle: "v", texte: true },
