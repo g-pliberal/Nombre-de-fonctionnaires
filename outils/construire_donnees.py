@@ -298,6 +298,8 @@ def construire_national(cat: dict) -> dict:
         "total_1996_actuelle": millions(actu[1996]["total"]),
         "total_1996_historique": millions(hist[1996]["total"]),
         "large_annee": str(a_large),
+        # Fonction publique, contrats aidés compris (somme des deux lignes DGAFP)
+        "large_fp_millions": millions(1000 * sum(l["milliers"] for l in large if l["ensemble"] == "Fonction publique")),
         "emp_annee": str(a_emp),
         **{c: arrondi_effectif(emp[k]) for k, c in cles_emp.items()},
         "emp_education_part_fpe": fr(100 * emp[("fpe", "Éducation, enseignement et recherche")] / emp_fpe, 0) + " %",

@@ -186,7 +186,7 @@ animations ». Le site n'a pas encore fait l'objet d'un audit indépendant.
 
 ### Test automatique
 
-Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les huit pages
+Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les neuf pages
 (règles WCAG 2.0, 2.1 et 2.2, niveaux A et AA, et bonnes pratiques), en thème
 clair et sombre, sur grand écran et sur téléphone, ainsi que le menu et le
 dialogue « Options d'affichage » ouverts. Il échoue à la moindre violation ou
