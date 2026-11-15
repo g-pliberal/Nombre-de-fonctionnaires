@@ -137,8 +137,9 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
 
 À chaque push et à chaque pull request, un contrôle automatique (GitHub Actions,
 `.github/workflows/controle.yml`) relance la construction et échoue si les fichiers de
-`donnees/site/` ne correspondent pas aux CSV (script oublié ou fichier modifié à la main),
-si un contrôle de cohérence échoue, ou si un script JavaScript est invalide.
+`donnees/site/` ou les chiffres des pages HTML ne correspondent pas aux CSV (script oublié
+ou fichier modifié à la main), si un contrôle de cohérence échoue, si un script JavaScript
+est invalide, ou si le test d'accessibilité (voir « Accessibilité ») trouve une violation.
 
 Le fond de carte n'a besoin d'être reconstruit qu'en cas de changement des
 limites départementales (`python3 outils/fond_de_carte.py`, nécessite Node.js).
