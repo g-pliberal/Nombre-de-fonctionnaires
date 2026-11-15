@@ -46,3 +46,11 @@ jobs:
           for f in assets/js/*.js donnees/site/*.js; do
             node --check "$f"
           done
+
+      - name: Installer les outils de test (axe-core, Playwright et Chromium)
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Test d'accessibilité (axe-core, WCAG 2.2 A et AA)
+        run: npm run test:accessibilite
