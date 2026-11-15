@@ -122,14 +122,26 @@
     const v = getComputedStyle(racine).getPropertyValue(nom.startsWith("--") ? nom : "--" + nom).trim();
     return v || "#888";
   }
-  // Texte lisible (noir ou blanc) sur une couleur de fond donnée.
+  // Texte lisible sur une couleur de fond donnée, avec un contraste d'au moins
+  // 4,5:1 (WCAG 1.4.3 / RGAA 3.2) : blanc ou encre pétrole selon la clarté du fond,
+  // l'autre si le premier choix n'atteint pas 4,5:1, et noir pur en dernier recours
+  // (fonds de luminosité moyenne, où ni le blanc ni l'encre ne suffisent).
+  function luminance(hex) {
+    const [r, g, b] = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)
+      .map((c) => (c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)));
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+  const L_ENCRE = luminance("0f2930");
   function texteSur(fond) {
     const hex = couleur(fond).replace("#", "");
     if (hex.length < 6) return "#fff";
-    const [r, g, b] = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)
-      .map((c) => (c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)));
-    const l = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-    return l > 0.22 ? "#0f2930" : "#ffffff";
+    const l = luminance(hex);
+    const blanc = { c: "#ffffff", r: 1.05 / (l + 0.05) };
+    const encre = { c: "#0f2930", r: (l + 0.05) / (L_ENCRE + 0.05) };
+    const [prefere, autre] = l > 0.22 ? [encre, blanc] : [blanc, encre];
+    if (prefere.r >= 4.5) return prefere.c;
+    if (autre.r >= 4.5) return autre.c;
+    return (l + 0.05) / 0.05 > blanc.r ? "#000000" : "#ffffff";
   }
 
   /* ---------- Données ---------- */

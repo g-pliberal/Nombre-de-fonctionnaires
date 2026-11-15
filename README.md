@@ -71,6 +71,8 @@ outils/
                        produit les CSV de la masse salariale, des salaires et des retraites,
                        avec contrôles de cohérence
   construire_donnees.py  transforme donnees/csv/ en donnees/site/
+  test_accessibilite.mjs  test d'accessibilité automatique (axe-core), voir « Accessibilité »
+package.json           outils de test uniquement (le site lui-même n'a aucune dépendance)
 ```
 
 ## Ce que contiennent les données
@@ -157,6 +159,27 @@ complète au clavier (y compris la carte : flèches pour passer d'un départemen
 lecteurs d'écran, options d'affichage (thème clair ou sombre, grande taille de
 texte, police très lisible, espacement aéré), respect du réglage « réduire les
 animations ». Le site n'a pas encore fait l'objet d'un audit indépendant.
+
+### Test automatique
+
+Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les huit pages
+(règles WCAG 2.0, 2.1 et 2.2, niveaux A et AA, et bonnes pratiques), en thème
+clair et sombre, sur grand écran et sur téléphone, ainsi que le menu et le
+dialogue « Options d'affichage » ouverts. Il échoue à la moindre violation ou
+erreur JavaScript. Il faut Node.js 18 ou plus :
+
+```
+npm install
+npx playwright install chromium   # la première fois seulement
+npm run test:accessibilite
+```
+
+Pour ne tester que certaines pages : `node outils/test_accessibilite.mjs index.html carte.html`.
+
+Un test automatique ne couvre qu'une partie des critères du RGAA (environ un
+tiers) : il ne remplace ni la vérification au clavier et au lecteur d'écran, ni
+un audit. En particulier, axe ne sait pas mesurer le contraste du texte placé
+dans les graphiques SVG, qu'il faut contrôler à la main.
 
 ## Licences
 
