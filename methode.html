@@ -17,10 +17,10 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Sources, définitions et limites 28 publications officielles citées. DGAFP, Insee, Eurostat, Cour des comptes et OFGL : chaque chiffre renvoie à sa source.">
+<meta property="og:image:alt" content="Sources, définitions et limites 31 publications officielles citées. DGAFP, Insee, Eurostat, OCDE, Cour des comptes et OFGL : chaque chiffre renvoie à sa source.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://g-pliberal.github.io/Nombre-de-fonctionnaires/assets/img/partage/methode.png">
-<meta name="twitter:image:alt" content="Sources, définitions et limites 28 publications officielles citées. DGAFP, Insee, Eurostat, Cour des comptes et OFGL : chaque chiffre renvoie à sa source.">
+<meta name="twitter:image:alt" content="Sources, définitions et limites 31 publications officielles citées. DGAFP, Insee, Eurostat, OCDE, Cour des comptes et OFGL : chaque chiffre renvoie à sa source.">
 <!-- partage:fin -->
 <link rel="icon" href="assets/img/logo-plf.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/jost-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -77,6 +77,7 @@
         <li><a href="carte.html">La carte</a></li>
         <li><a href="composition.html">Catégories A, B, C et statuts</a></li>
         <li><a href="masse-salariale.html">La masse salariale</a></li>
+        <li><a href="europe.html">En Europe</a></li>
         <li><a href="methode.html" aria-current="page">Sources et méthode</a></li>
       </ul>
     </div>
@@ -101,6 +102,7 @@
       <li><a href="#carte-methode">La carte</a></li>
       <li><a href="#masse-salariale">Masse salariale</a></li>
       <li><a href="#retraites">Retraites</a></li>
+      <li><a href="#europe">Comparaisons européennes</a></li>
       <li><a href="#limites">Limites</a></li>
       <li><a href="#telecharger">Télécharger les données</a></li>
       <li><a href="#accessibilite">Accessibilité</a></li>
@@ -284,6 +286,22 @@
       <li><strong>Taux de la CNRACL.</strong> 30,65 % de 2017 à 2023, 31,65 % en 2024, 34,65 % en 2025 ; le décret n° 2025-86 du 30 janvier 2025 prévoit 37,65 % en 2026, 40,65 % en 2027 et 43,65 % en 2028.</li>
     </ul>
 
+    <h2 id="europe" style="margin-top:2.5rem">Comparaisons européennes : sources, définitions et calculs</h2>
+    <p>La page <a href="europe.html">En Europe</a> utilise les fichiers officiels ci-dessous, téléchargés et contrôlés par le script <code>outils/extraire_europe.py</code> (empreintes dans <code>donnees/empreintes_europe.txt</code>).</p>
+    <ul class="source-liste">
+      <li><strong>OCDE</strong> — Panorama des administrations publiques (Government at a Glance), mises à jour annuelles – emploi dans les administrations publiques, en milliers de personnes et en % de l&#x27;emploi total (jeu de données DF_GOV_EMPPS_REP_YU). Consulté le 2026-11-15. <a href="https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&amp;df[id]=DSD_GOV%40DF_GOV_EMPPS_REP_YU&amp;df[ag]=OECD.GOV.GIP">Page de la publication</a> · <a href="https://sdmx.oecd.org/public/rest/data/OECD.GOV.GIP,DSD_GOV@DF_GOV_EMPPS_REP_YU,1.0/all?format=csvfile">fichier source</a>.<br><small>Champ : Administrations publiques (S13) au sens des comptes nationaux (SCN 2008 / SEC 2010) : administration centrale, États fédérés, administrations locales et sécurité sociale, y compris leurs établissements non marchands ; hors entreprises publiques. Emploi en personnes (et non en équivalents temps plein), 2007-2024 (dernière année variable selon les pays). Pour la France, l&#x27;emploi des administrations publiques des comptes nationaux de l&#x27;Insee (chiffres identiques jusqu&#x27;en 2022 ; en 2023 et 2024, écart d&#x27;au plus 0,12 % avec les comptes de la Nation publiés par l&#x27;Insee en 2026).</small></li>
+      <li><strong>OCDE</strong> — Comptes nationaux – emploi par sous-secteur des administrations publiques, concept intérieur (jeu de données DF_TABLE12_EMPDC). Consulté le 2026-11-15. <a href="https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&amp;df[id]=DSD_NASEC10%40DF_TABLE12_EMPDC&amp;df[ag]=OECD.SDD.NAD">Page de la publication</a> · <a href="https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC10@DF_TABLE12_EMPDC,1.1/all?format=csvfile">fichier source</a>.<br><small>Champ : Milliers de personnes. Administration centrale (S1311), États fédérés (S1312), administrations locales (S1313), administrations de sécurité sociale (S1314). Seuls quelques pays européens publient ce détail (Bulgarie, Italie, Pays-Bas, Portugal, Suède, Royaume-Uni).</small></li>
+      <li><strong>Eurostat</strong> — Population et emploi – comptes nationaux, jeu de données nama_10_pe – population totale (POP_NC). Publication : 2026-10-21. <a href="https://ec.europa.eu/eurostat/databrowser/view/nama_10_pe/default/table?lang=fr">Page de la publication</a> · <a href="https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pe?format=JSON&amp;lang=fr&amp;na_item=POP_NC&amp;unit=THS_PER&amp;sinceTimePeriod=2000">fichier source</a>.<br><small>Champ : Milliers de personnes, moyenne de l&#x27;année (concept national des comptes nationaux). Pays de l&#x27;Union européenne et de l&#x27;AELE </small></li>
+      <li><strong>Insee</strong> — Comptes nationaux annuels (base 2020), tableaux 1.108 et 1.109 (voir plus haut) : emploi de l'État, des organismes divers d'administration centrale, des administrations locales et de sécurité sociale, pour la répartition française par sous-secteur et le recoupement des chiffres de l'OCDE.</li>
+    </ul>
+    <ul class="liste-lecture">
+      <li><strong>Périmètre commun.</strong> Administrations publiques (secteur S13 du système européen des comptes SEC 2010 et du système de comptabilité nationale SCN 2008) : unités contrôlées par l'État, les collectivités locales ou la sécurité sociale et dont la production n'est pas vendue à un prix économiquement significatif. Tous les salariés en font partie, quel que soit leur statut ; les entreprises publiques (sociétés et établissements marchands) en sont exclues dans tous les pays.</li>
+      <li><strong>Unité.</strong> Personnes en emploi, et non équivalents temps plein ; emploi intérieur (là où il est exercé).</li>
+      <li><strong>Calculs.</strong> Les parts dans l'emploi total sont publiées par l'OCDE et reprises sans modification. Nous calculons seulement le nombre d'emplois publics pour 1 000 habitants (emploi publié par l'OCDE divisé par la population moyenne publiée par Eurostat) et la part de chaque sous-secteur dans l'emploi des administrations publiques. Les classements portent sur les pays ayant une donnée pour l'année la plus récente ; les pays dont la dernière donnée est plus ancienne sont affichés avec l'année entre parenthèses.</li>
+      <li><strong>Contrôles.</strong> Le script vérifie que les chiffres de l'OCDE pour la France correspondent à ceux de l'Insee (identiques jusqu'en 2022, écart d'au plus 0,12 % en 2023 et 2024), que la somme des sous-secteurs égale le total et que les parts publiées sont cohérentes avec les effectifs. Valeur nulle publiée pour la Suisse en 2009 et 2010 : traitée comme une donnée manquante.</li>
+      <li><strong>Couverture.</strong> 25 pays de l'Union européenne (sans Chypre ni Malte, non membres de l'OCDE), Norvège (jusqu'en 2022), Islande (jusqu'en 2019), Suisse (jusqu'en 2023) et Royaume-Uni (jusqu'en 2023, sans population chez Eurostat). Série de la Suisse : hausse de 11,5 % à 13,5 % de l'emploi total entre 2022 et 2023, publiée telle quelle par l'OCDE.</li>
+    </ul>
+
     <h2 id="limites" style="margin-top:2.5rem">Limites à garder en tête</h2>
     <ul class="liste-lecture">
       <li><strong>Fonction publique ≠ emploi public.</strong> Ne sont pas comptés : les salariés des organismes de Sécurité sociale, des entreprises publiques (SNCF, EDF, RATP…), de La Poste, ni les emplois privés financés par des fonds publics (cliniques, associations…).</li>
@@ -316,6 +334,9 @@
       <li><a href="donnees/csv/charges_personnel_hopitaux.csv" download>charges_personnel_hopitaux.csv</a> <span>Charges de personnel des hôpitaux publics, <span data-cle="ms_hop_debut">2000</span>-<span data-cle="ms_hop_fin">2025</span> (DGAFP)</span> <small>3 ko</small></li>
       <li><a href="donnees/csv/remunerations_par_fonction.csv" download>remunerations_par_fonction.csv</a> <span>Rémunérations des administrations publiques par fonction et sous-fonction (COFOG), 1995-<span data-cle="ms_annee_f">2024</span> (Eurostat)</span> <small>156 ko</small></li>
       <li><a href="donnees/csv/remuneration_publique_europe.csv" download>remuneration_publique_europe.csv</a> <span>Rémunérations publiques en % du PIB, pays européens, 1995-<span data-cle="ms_annee_eu">2025</span> (Eurostat)</span> <small>45 ko</small></li>
+      <li><a href="donnees/csv/emploi_public_europe.csv" download>emploi_public_europe.csv</a> <span>Emploi dans les administrations publiques, en milliers et en % de l'emploi total, pays européens, <span data-cle="eu_annee_debut">2007</span>-<span data-cle="eu_annee">2024</span> (OCDE)</span> <small>22 ko</small></li>
+      <li><a href="donnees/csv/population_europe.csv" download>population_europe.csv</a> <span>Population moyenne des pays européens, 2007-2025 (Eurostat, comptes nationaux)</span> <small>21 ko</small></li>
+      <li><a href="donnees/csv/emploi_public_europe_sous_secteurs.csv" download>emploi_public_europe_sous_secteurs.csv</a> <span>Emploi public par sous-secteur (administration centrale, locale, sécurité sociale), quelques pays européens (OCDE ; France : Insee)</span> <small>56 ko</small></li>
       <li><a href="donnees/csv/salaires_moyens_fonction_publique.csv" download>salaires_moyens_fonction_publique.csv</a> <span>Salaires mensuels moyens bruts et nets par versant et population, 2004-<span data-cle="ms_annee_sal">2024</span> (DGAFP)</span> <small>98 ko</small></li>
       <li><a href="donnees/csv/salaires_2024_fonction_publique.csv" download>salaires_2024_fonction_publique.csv</a> <span>Salaires 2024 : moyennes, médiane et déciles par versant, statut, catégorie, sexe et âge (DGAFP)</span> <small>2 ko</small></li>
       <li><a href="donnees/csv/decomposition_salaire_fonctionnaires_2024.csv" download>decomposition_salaire_fonctionnaires_2024.csv</a> <span>Du brut au net : traitement, primes, cotisations et CSG-CRDS des fonctionnaires, 2024 (DGAFP)</span> <small>2 ko</small></li>
@@ -388,6 +409,7 @@
           <li><a href="masse-salariale.html">La masse salariale</a></li>
           <li><a href="salaires.html">Les salaires</a></li>
           <li><a href="retraites.html">Les retraites</a></li>
+          <li><a href="europe.html">En Europe</a></li>
           <li><a href="methode.html">Sources et méthode</a></li>
         </ul>
       </div>
@@ -402,7 +424,7 @@
       </div>
     </div>
     <div class="pied__bas">
-      <span>Données mises à jour le <span data-cle="date_maj">5 novembre 2026</span>. Contenus réutilisables en citant la source.</span>
+      <span>Données mises à jour le <span data-cle="date_maj">15 novembre 2026</span>. Contenus réutilisables en citant la source.</span>
       <span><a href="methode.html#accessibilite">Accessibilité : partiellement conforme</a> · Aucun cookie, aucun traceur</span>
     </div>
   </div>

@@ -1,7 +1,7 @@
 # Fonction publique : les chiffres
 
 Site d'information du **Parti Libéral Français** qui présente, à partir des seules
-sources officielles (Insee, DGAFP, OFGL, Eurostat), le nombre d'agents de la fonction publique
+sources officielles (Insee, DGAFP, OFGL, Eurostat, OCDE), le nombre d'agents de la fonction publique
 en France, leur masse salariale et leurs retraites : évolution sur longue période, carte par
 département, répartition par versant (État, territoriale, hospitalière), par statut
 (fonctionnaires, contractuels, militaires…) et par catégorie hiérarchique (A, B, C),
@@ -24,6 +24,7 @@ GitHub Pages. Il ne dépose aucun cookie et n'utilise aucun traceur.
 | `masse-salariale.html` | La masse salariale (coût et évolution) : du coût employeur au salaire net, séries depuis 1949, par employeur (État, collectivités, hôpitaux, Sécurité sociale), paie de l'État ligne par ligne, par ministère et par type de collectivité, carte des frais de personnel des collectivités par département, par mission, comparaison européenne |
 | `salaires.html` | Les salaires : du brut au net par population, public/privé, déciles, point d'indice depuis 1970, salaires par ministère, collectivité et filière, plus hautes rémunérations (1 % le mieux payé, emplois de direction, dix plus hautes rémunérations publiées par les employeurs) |
 | `retraites.html` | Les retraites des fonctionnaires : pensions versées depuis 1990, pensions en paiement, montants, ratio démographique, compte « Pensions » de l'État, taux de cotisation, déficit de la CNRACL, départs et âge de départ |
+| `europe.html` | En Europe : emploi dans les administrations publiques en % de l'emploi total et pour 1 000 habitants, pays européens (OCDE, Eurostat), évolution depuis 2007, répartition entre État, collectivités et sécurité sociale, différences de périmètre |
 | `methode.html` | Sources, définitions, limites, téléchargements, accessibilité |
 
 ## Consulter le site sur son ordinateur
@@ -46,7 +47,7 @@ complète des images de partage).
 ## Organisation des fichiers
 
 ```
-index.html, evolution.html, carte.html, composition.html, methode.html
+index.html, evolution.html, carte.html, composition.html, europe.html, methode.html
 masse-salariale.html, salaires.html, retraites.html   rubrique « La masse salariale » (sous-navigation)
 assets/
   css/style.css        charte graphique PLF (pétrole, turquoise, safran) et mise en page
@@ -56,6 +57,7 @@ assets/
   js/pages.js          remplissage des pages à partir des données
   js/masse-salariale.js  pages « Coût et évolution » et « Salaires », encadré de la page d'accueil
   js/retraites.js      page « Retraites » (et chiffres clés de la page d'accueil)
+  js/europe.js         page « En Europe »
   fonts/               Jost et Atkinson Hyperlegible (licence SIL OFL)
   img/logo-plf.svg     logo du parti (logo-plf-240.png : version matricielle pour les images de partage)
   img/partage/         image de partage de chaque page (générées)
@@ -68,11 +70,14 @@ donnees/
   methodologie_masse_salariale.md     extraction des données de masse salariale : sources, contrôles, calculs, ruptures
   empreintes_fichiers_sources.txt     empreintes SHA-256 des fichiers officiels utilisés
   empreintes_masse_salariale.txt      idem pour la masse salariale (écrit par le script d'extraction)
+  empreintes_europe.txt               idem pour la comparaison européenne
 outils/
   fond_de_carte.py     construit le fond de carte (Lambert-93, encarts outre-mer)
   extraire_masse_salariale.py  télécharge les fichiers officiels (Insee, DGAFP, OFGL, Eurostat) et
                        produit les CSV de la masse salariale, des salaires et des retraites,
                        avec contrôles de cohérence
+  extraire_europe.py   télécharge les fichiers de l'OCDE et d'Eurostat et produit les CSV de la
+                       comparaison européenne de l'emploi public, avec recoupement Insee
   construire_donnees.py  transforme donnees/csv/ en donnees/site/
   test_accessibilite.mjs  test d'accessibilité automatique (axe-core), voir « Accessibilité »
   images_partage.py    fabrique l'image de partage de chaque page (chiffre clé lu dans
@@ -101,6 +106,10 @@ package.json           outils de test uniquement (le site lui-même n'a aucune d
   paiement et pension moyenne (2000-2025), ratio démographique (1990-2025), compte « Pensions »
   de l'État et compte de résultat de la CNRACL (2006-2025), taux de cotisation (2000-2025),
   départs (2000-2025) et âge de départ (2015-2025), d'après la DGAFP.
+- **Europe** : emploi dans les administrations publiques (comptes nationaux) en milliers et en % de
+  l'emploi total, 2007-2024, 25 pays de l'Union européenne, Norvège, Islande, Suisse et Royaume-Uni
+  (OCDE, Panorama des administrations publiques) ; population (Eurostat) ; emploi par sous-secteur
+  pour quelques pays (OCDE ; France : Insee).
 - Chaque chiffre renvoie à sa source dans `donnees/csv/sources.csv` (adresse exacte du fichier
   officiel). Les seuls calculs sont des sommes, des parts, des taux (pour 1 000 habitants, par
   habitant, par emploi, en % du PIB), des évolutions, des conversions en euros constants (indice
@@ -120,6 +129,9 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
    rapport annuel de la DGAFP publié en octobre-novembre), puis lancer
    `python3 outils/extraire_masse_salariale.py` : le script télécharge les fichiers, contrôle
    les totaux et réécrit les CSV de la masse salariale (et leurs empreintes).
+   Pour la comparaison européenne : vider `.cache/sources/ocde/` et `.cache/sources/eurostat/nama_10_pe*`,
+   puis lancer `python3 outils/extraire_europe.py` (après le script de la masse salariale, dont il
+   reprend l'emploi de l'Insee pour le recoupement).
 2. Régénérer les fichiers du site :
    ```
    python3 outils/construire_donnees.py
@@ -174,7 +186,7 @@ animations ». Le site n'a pas encore fait l'objet d'un audit indépendant.
 
 ### Test automatique
 
-Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les huit pages
+Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les neuf pages
 (règles WCAG 2.0, 2.1 et 2.2, niveaux A et AA, et bonnes pratiques), en thème
 clair et sombre, sur grand écran et sur téléphone, ainsi que le menu et le
 dialogue « Options d'affichage » ouverts. Il échoue à la moindre violation ou
@@ -195,7 +207,7 @@ dans les graphiques SVG, qu'il faut contrôler à la main.
 
 ## Licences
 
-- Données : Insee, DGAFP — Licence Ouverte / Open Licence 2.0 (Etalab) ; Eurostat — réutilisation
+- Données : Insee, DGAFP — Licence Ouverte / Open Licence 2.0 (Etalab) ; Eurostat, OCDE — réutilisation
   autorisée en citant la source.
 - Fond de carte : IGN ADMIN EXPRESS via Etalab (Licence Ouverte 2.0), Natural Earth (domaine public).
 - Polices : Jost et Atkinson Hyperlegible — SIL Open Font License 1.1.

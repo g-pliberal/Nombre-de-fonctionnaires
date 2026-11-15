@@ -92,9 +92,11 @@ def cartes() -> dict:
     N = lire_site("national")
     M = lire_site("masse_salariale")
     R = lire_site("retraites")
+    U = lire_site("europe")
     D = lire_site("departements")
     n, m, r = Cles("national", N["cles"]), Cles("masse_salariale", M["cles"]), Cles("retraites", R["cles"])
     d = Cles("departements", D["cles"])
+    u = Cles("europe", U["cles"])
 
     def grand(texte):
         """« 5,85 millions » -> ("5,85", "millions")."""
@@ -158,6 +160,13 @@ def cartes() -> dict:
         libelle=f"d'euros de pensions versées en {r['rt_annee']}",
         detail=f"État, collectivités et hôpitaux : {r['rt_pct_pib']} du PIB.",
         source="Source : DGAFP",
+    )
+    c["europe"] = dict(
+        question="Plus d'agents publics que nos voisins ?",
+        valeur=(u["eu_fr_part"], ""),
+        libelle=f"de l'emploi est dans les administrations publiques en France ({u['eu_annee']})",
+        detail=f"{u['eu_de_part']} en Allemagne, {u['eu_se_part']} en Suède. France : {u['eu_fr_rang_part']}.",
+        source="Sources : OCDE, Eurostat, Insee",
     )
     c["methode"] = dict(
         question="Sources, définitions et limites",
