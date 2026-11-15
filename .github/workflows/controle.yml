@@ -24,11 +24,11 @@ jobs:
       - name: Reconstruire les données du site (contrôles de cohérence inclus)
         run: python3 outils/construire_donnees.py
 
-      - name: Vérifier que donnees/site/ correspond aux CSV
+      - name: Vérifier que donnees/site/ et les pages correspondent aux CSV
         run: |
-          if ! git diff --exit-code --stat -- donnees/site; then
-            echo "::error::Les fichiers de donnees/site/ ne correspondent pas aux CSV. Lancez « python3 outils/construire_donnees.py » et validez le résultat."
-            git diff -- donnees/site | head -c 4000
+          if ! git diff --exit-code --stat -- donnees/site '*.html'; then
+            echo "::error::Les fichiers de donnees/site/ ou les chiffres des pages HTML ne correspondent pas aux CSV. Lancez « python3 outils/construire_donnees.py » et validez le résultat."
+            git diff -- donnees/site '*.html' | head -c 4000
             exit 1
           fi
           if [ -n "$(git status --porcelain -- donnees/site)" ]; then

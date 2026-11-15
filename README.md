@@ -118,10 +118,19 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
    python3 outils/construire_donnees.py
    ```
    Le script vérifie la cohérence (totaux, années, départements) et s'arrête en
-   cas d'anomalie. Relancé sans changement des CSV, il redonne exactement les mêmes
-   fichiers (la date de mise à jour ne change que si les données changent).
-3. Mettre à jour à la main les quelques chiffres écrits en toutes lettres dans les pages HTML
-   (les chiffres clés et les graphiques se mettent à jour seuls).
+   cas d'anomalie. Il recopie aussi les chiffres dans les pages HTML : tout chiffre cité
+   dans le texte est placé dans un élément `data-cle="…"` (par exemple
+   `<span data-cle="total_millions">5,85 millions</span>`), et les descriptions de partage
+   (`<meta … data-modele="{total_millions} d'agents publics fin {annee}…">`) sont réécrites
+   à partir de leur modèle. Les clés sont calculées dans `outils/construire_donnees.py`
+   (dictionnaires `cles`) ; une clé inconnue arrête le script. La date « Données mises à
+   jour le… » du pied de page ne change que si les fichiers de `donnees/csv/` ont changé.
+   Pour citer un nouveau chiffre dans une page, ajouter sa clé dans le script plutôt que de
+   l'écrire en dur.
+3. Restent à revoir à la main : les références des sources dans `sources.csv` et dans
+   `outils/construire_donnees.py` (identifiants comme `DGAFP_RA2026_EFF`, noms de fichiers
+   datés comme `salaires_2024_fonction_publique.csv`), la description des sources de
+   `methode.html` et les commentaires qui décrivent une année précise (événements, ruptures).
 4. Ouvrir `index.html` pour contrôler, puis publier (commit + push).
 
 À chaque push et à chaque pull request, un contrôle automatique (GitHub Actions,

@@ -5,13 +5,20 @@ des CSV de donnees/csv/ et du fond de carte donnees/geo/fond_de_carte.json.
 Les données sont écrites sous forme de fichiers JavaScript (et non JSON) pour que
 le site fonctionne aussi en ouvrant simplement index.html depuis le disque.
 
+Il recopie aussi dans les pages HTML les chiffres calculés à partir des données
+(éléments portant un attribut data-cle, descriptions portant un attribut data-modele) :
+après une mise à jour des CSV, aucun chiffre n'est à corriger à la main dans les pages.
+
 Le script contrôle la cohérence des données et s'arrête en cas d'anomalie.
 Usage : python3 outils/construire_donnees.py
 """
 from __future__ import annotations
 
 import csv
+import hashlib
+import html
 import json
+import re
 import sys
 from collections import defaultdict
 from datetime import date
@@ -23,6 +30,11 @@ SITE = RACINE / "donnees" / "site"
 GEO = RACINE / "donnees" / "geo" / "fond_de_carte.json"
 
 VERSANTS = ["fpe", "fpt", "fph"]
+# Date de mise à jour des données : celle du dernier changement des fichiers sources
+# (voir date_mise_a_jour), pas celle de la dernière exécution du script.
+DATE_MAJ = date.today().isoformat()
+MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre",
+        "novembre", "décembre"]
 DROM = ["971", "972", "973", "974", "976"]
 
 
@@ -38,6 +50,26 @@ def verifier(condition: bool, message: str) -> None:
 def lire(nom: str) -> list[dict]:
     with open(CSV / nom, encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f, delimiter=";"))
+
+
+def fichier_recent(prefixe: str) -> tuple[str, int]:
+    """Fichier « prefixe_AAAA.csv » le plus récent de donnees/csv/ et son année."""
+    trouves = sorted((int(m.group(1)), f.name) for f in CSV.glob(f"{prefixe}_*.csv")
+                     if (m := re.fullmatch(re.escape(prefixe) + r"_(\d{4})\.csv", f.name)))
+    verifier(bool(trouves), f"aucun fichier {prefixe}_AAAA.csv")
+    return trouves[-1][1], trouves[-1][0]
+
+
+def edition_dgafp(source_id: str) -> int:
+    """DGAFP_RA2026_EFF -> 2026 (édition du rapport annuel)."""
+    m = re.search(r"RA(\d{4})", source_id)
+    verifier(m is not None, f"{source_id} : édition du rapport annuel introuvable")
+    return int(m.group(1))
+
+
+def arrondi_effectif(v: float) -> str:
+    """2 061 000 -> « 2,06 millions » ; 130 300 -> « 130 000 »."""
+    return millions(v) if v >= 1e6 else fr(round(v, -3))
 
 
 def nombre(v: str):
@@ -118,6 +150,10 @@ def construire_national(cat: dict) -> dict:
                  f"total incohérent {l}")
     hist, actu = series["historique"], series["actuelle"]
     verifier(min(actu) == 1996 and max(actu) >= 2024, "série actuelle incomplète")
+    a_fin = max(actu)
+    # Édition du rapport DGAFP d'où vient la dernière année de la série actuelle.
+    edition = edition_dgafp(next(l["source_id"] for l in lignes
+                                 if l["serie"] == "actuelle" and int(l["annee"]) == a_fin))
     annees = sorted(set(hist) | set(actu))
 
     def colonne(serie, v):
@@ -135,7 +171,7 @@ def construire_national(cat: dict) -> dict:
         "interpolees": sorted(interpolees),
         "series": {
             "actuelle": {
-                "court": "série actuelle (DGAFP, 1996-2024)",
+                "court": f"série actuelle (DGAFP, {min(actu)}-{a_fin})",
                 "source": libelle_source(cat, "DGAFP_RA2026_EFF"),
                 "champ": "emplois principaux au 31 décembre, tous statuts, France hors Mayotte, hors contrats aidés",
             },
@@ -146,7 +182,6 @@ def construire_national(cat: dict) -> dict:
             },
         },
     }
-    a_fin = max(actu)
     tot = actu[a_fin]["total"]
 
     # Statuts (DGAFP, 2002-2024)
@@ -193,9 +228,32 @@ def construire_national(cat: dict) -> dict:
     # Taux officiel DGAFP (ETP civils pour 1 000 habitants)
     officiel = {int(l["annee"]): nombre(l["etp_civils_pour_1000_habitants"]) for l in lire("taux_administration_officiel.csv")}
 
-    # Emploi public au sens large (2024)
+    # Emploi public au sens large (fichier de l'année la plus récente)
+    nom_large, a_large = fichier_recent("emploi_public_au_sens_large")
     large = [{"ensemble": l["ensemble"], "composante": l["composante"], "milliers": nombre(l["effectif_milliers"])}
-             for l in lire("emploi_public_au_sens_large_2024.csv")]
+             for l in lire(nom_large)]
+
+    # Principaux employeurs (Insee, y compris contrats aidés) : page d'accueil
+    nom_emp, a_emp = fichier_recent("effectifs_par_employeur")
+    emp = {(l["versant"], l["employeur"]): nombre(l[f"effectif_{a_emp}"]) for l in lire(nom_emp)}
+    cles_emp = {
+        ("fpe", "Ministères"): "emp_fpe_ministeres",
+        ("fpe", "Éducation, enseignement et recherche"): "emp_fpe_education",
+        ("fpe", "Économie, finances et industrie"): "emp_fpe_economie",
+        ("fpe", "Intérieur et défense"): "emp_fpe_interieur",
+        ("fpe", "Logement, transports et développement durable"): "emp_fpe_logement",
+        ("fpe", "Affaires sociales, santé et travail"): "emp_fpe_social",
+        ("fpe", "Autres (y c. Justice)"): "emp_fpe_autres",
+        ("fpe", "Établissements publics à caractère administratif"): "emp_fpe_etablissements",
+        ("fpt", "Régions"): "emp_fpt_regions",
+        ("fpt", "Départements"): "emp_fpt_departements",
+        ("fpt", "Secteur communal"): "emp_fpt_communal",
+        ("fph", "Hôpitaux"): "emp_fph_hopitaux",
+        ("fph", "Établissements médico-sociaux"): "emp_fph_medico_social",
+    }
+    for k in cles_emp:
+        verifier(emp.get(k) is not None, f"{nom_emp} : employeur {k} manquant")
+    emp_fpe = next(v for (ver, lib), v in emp.items() if ver == "fpe" and lib.startswith("Fonction publique"))
 
     i_fin = annees_st.index(a_fin)
     fonct = st["ensemble"]["fonctionnaires"][a_fin]
@@ -234,16 +292,24 @@ def construire_national(cat: dict) -> dict:
         "fpe_nombre": millions(actu[a_fin]["fpe"]),
         "fpt_nombre": millions(actu[a_fin]["fpt"]),
         "fph_nombre": millions(actu[a_fin]["fph"]),
-        "source_courte": "DGAFP (rapport annuel 2026), Insee",
+        "source_courte": f"DGAFP (rapport annuel {edition}), Insee",
+        "edition_dgafp": str(edition),
+        "contractuels_millions_2016": millions(st["ensemble"]["contractuels"][2016]),
+        "total_1996_actuelle": millions(actu[1996]["total"]),
+        "total_1996_historique": millions(hist[1996]["total"]),
+        "large_annee": str(a_large),
+        "emp_annee": str(a_emp),
+        **{c: arrondi_effectif(emp[k]) for k, c in cles_emp.items()},
+        "emp_education_part_fpe": fr(100 * emp[("fpe", "Éducation, enseignement et recherche")] / emp_fpe, 0) + " %",
     }
     return {
-        "maj": date.today().isoformat(),
+        "maj": DATE_MAJ,
         "effectifs": E,
         "statuts": S,
         "categories": C,
         "tauxOfficiel": {"annees": sorted(officiel), "valeurs": [officiel[a] for a in sorted(officiel)],
                          "source": libelle_source(cat, "DGAFP_RA2026_POSTES")},
-        "emploiPublicLarge": {"annee": 2024, "lignes": large, "source": libelle_source(cat, "DGAFP_RA2026_EFF")},
+        "emploiPublicLarge": {"annee": a_large, "lignes": large, "source": libelle_source(cat, "DGAFP_RA2026_EFF")},
         "populationSource": libelle_source(cat, "INSEE_POP_2026"),
         "cles": cles,
     }
@@ -333,6 +399,32 @@ def construire_departements(cat: dict, geo: dict) -> dict:
     # Les totaux « France » ne sont utilisés que si tous les départements disponibles ont un total.
     debut_homogene = next(a for a in annees if periode[a].startswith("2010"))
     mayotte = {int(l["annee"]): nombre(l["emploi_public"]) for l in lire("mayotte_emploi_public.csv")}
+
+    # Chiffres cités dans les pages (préfixe dep_)
+    a_fin = annees[-1]
+    i_fin = len(annees) - 1
+    taux_dep = {c: 1000 * D[c]["ensemble"][i_fin] / D[c]["population"][i_fin]
+                for c in codes if D[c]["ensemble"][i_fin] is not None}
+    c_min, c_max = min(taux_dep, key=taux_dep.get), max(taux_dep, key=taux_dep.get)
+    officiel = {int(l["annee"]): nombre(l["etp_civils_pour_1000_habitants"]) for l in lire("taux_administration_officiel.csv")}
+    militaires = {int(l["annee"]): nombre(l["militaires"]) for l in lire("statuts_par_versant.csv") if l["versant"] == "ensemble"}
+    verifier(a_fin in officiel and a_fin in militaires, f"{a_fin} : taux officiel ou militaires manquants")
+    a_may = max(mayotte)
+    editions = sorted({edition_dgafp(l["source_id"]) for l in eff if re.search(r"RA\d{4}", l["source_id"])})
+    cles = {
+        "dep_premiere_annee": str(debut_homogene),
+        "dep_derniere_annee": str(a_fin),
+        "dep_annee_ancienne": str(annees[0]),
+        "dep_taux_france": fr(1000 * F["ensemble"][i_fin] / F["population"][i_fin], 1),
+        "dep_taux_officiel": fr(officiel[a_fin], 1),
+        "dep_taux_min": fr(taux_dep[c_min]),
+        "dep_nom_min": D[c_min]["nom"],
+        "dep_taux_max": fr(taux_dep[c_max]),
+        "dep_nom_max": D[c_max]["nom"],
+        "dep_militaires": fr(round(militaires[a_fin], -3)),
+        "dep_mayotte": fr(round(mayotte[a_may], -3)),
+        "dep_mayotte_annee": str(a_may),
+    }
     return {
         "annees": annees,
         "debutHomogene": debut_homogene,
@@ -344,12 +436,13 @@ def construire_departements(cat: dict, geo: dict) -> dict:
         "mayotte": {"annees": sorted(mayotte), "valeurs": [mayotte[a] for a in sorted(mayotte)],
                     "texte": ("Mayotte n'est pas couverte par la source (Siasp). L'enquête Emploi de l'Insee, "
                               "non comparable, estime l'emploi public à environ {v} personnes en {a}.")},
-        "champ": ("Agents civils (les militaires, environ 313 000, ne sont pas localisés par département), "
+        "champ": (f"Agents civils (les militaires, environ {cles['dep_militaires']}, ne sont pas localisés par département), "
                   "emplois principaux au 31 décembre, hors contrats aidés, comptés à leur lieu de travail. "
                   "Taux : agents rapportés à la population au 1er janvier de l'année suivante."),
         "source": (f"{libelle_source(cat, 'DGAFP_RA2026_LOC')} ; {libelle_source(cat, 'DGAFP_SL2021_LOC')} ; "
                    f"{libelle_source(cat, 'DGAFP_RA2011_COMPL_DEP')} ; population : {libelle_source(cat, 'INSEE_POP_2026')}"),
-        "sourceCourte": "DGAFP (rapports annuels 2011 à 2026), Insee (estimations de population)",
+        "sourceCourte": f"DGAFP (rapports annuels {editions[0]} à {editions[-1]}), Insee (estimations de population)",
+        "cles": cles,
     }
 
 
@@ -547,12 +640,19 @@ def construire_masse_salariale(cat: dict) -> dict:
         "ms_hop": milliards(nombre(hop[-1]["ensemble"]), 1),
         "ms_point_annee_max": str(pt_max_a),
         "ms_point_perte": fr(pt_perte, 0) + " %",
+        "ms_pop_multiplie_1949": fr(agr["population"][fin] / agr["population"][1949], 1),
+        # Comptes nationaux : l'année N est provisoire, N-1 semi-définitive.
+        "ms_annee_semi_def": str(fin - 1),
+        "ms_coll_debut": coll[0]["annee"],
+        "ms_coll_fin": coll[-1]["annee"],
+        "ms_hop_debut": hop[0]["annee"],
+        "ms_hop_fin": hop[-1]["annee"],
     }
     detail, carte, hautes, cles_detail = construire_detail(cat)
     cles.update(cles_detail)
 
     return {
-        "maj": date.today().isoformat(),
+        "maj": DATE_MAJ,
         "cn": {
             "annees": annees, "secteurs": secteurs,
             "pib": agregat("pib"), "population": agregat("population"), "prix": agregat("prix_consommation"),
@@ -935,7 +1035,7 @@ def construire_retraites(cat: dict) -> dict:
         "rt_annee_age_debut": str(an_age[0]),
     }
     return {
-        "maj": date.today().isoformat(),
+        "maj": DATE_MAJ,
         "annees": an_dep, "pib": suite(agr["pib"], an_dep), "prix": suite(prix, an_dep),
         "regimes": {k: {"libelle": v[0], "court": v[1]} for k, v in LIB_REGIMES.items()},
         "depenses": {"annees": an_dep, "series": {r: suite(dep[(r,)], an_dep) for r in regs_dep}},
@@ -962,21 +1062,111 @@ def construire_retraites(cat: dict) -> dict:
     }
 
 
+def lire_js(nom: str):
+    """Relit un fichier donnees/site/<nom>.js déjà écrit (None s'il n'existe pas)."""
+    f = SITE / f"{nom}.js"
+    if not f.exists():
+        return None
+    texte = f.read_text(encoding="utf-8").split(f"window.PLF_DONNEES.{nom} = ", 1)[1].strip()
+    return json.loads(texte.rstrip(";"))
+
+
+def date_mise_a_jour() -> tuple[str, str]:
+    """Garde la date de mise à jour précédente tant que les fichiers sources n'ont pas changé.
+    Renvoie (date ISO, empreinte des fichiers sources)."""
+    h = hashlib.sha256()
+    for f in sorted(CSV.glob("*.csv")) + [GEO]:
+        h.update(f.name.encode() + b"\0" + f.read_bytes() + b"\0")
+    empreinte = h.hexdigest()
+    precedent = lire_js("national") or {}
+    if precedent.get("maj") and precedent.get("empreinteSources") in (None, empreinte):
+        return precedent["maj"], empreinte
+    return date.today().isoformat(), empreinte
+
+
+def rendu_html(valeur: str, attributs: str) -> str:
+    """Même rendu que remplirCles() côté navigateur : dans un chiffre clé, l'unité
+    (« millions », « milliards ») est affichée plus petite."""
+    m = re.fullmatch(r"(.+?)\s(milliards?|millions?)", valeur)
+    if m and re.search(r'class="[^"]*\bchiffre__valeur\b', attributs):
+        return f'{html.escape(m.group(1), quote=False)} <span class="chiffre__unite">{m.group(2)}</span>'
+    return html.escape(valeur, quote=False)
+
+
+def mettre_a_jour_pages(cles: dict) -> None:
+    """Recopie les chiffres dans les pages HTML :
+    - contenu des éléments <x data-cle="cle">…</x> ;
+    - attribut content des <meta … data-modele="… {cle} …">.
+    Les pages restent ainsi justes sans JavaScript, pour les moteurs de recherche et
+    dans les aperçus de partage. Une clé inconnue arrête le script."""
+    ouvrante = re.compile(r'<([a-zA-Z][a-zA-Z0-9]*)\b([^>]*\bdata-cle="([^"]+)"[^>]*)>')
+    meta = re.compile(r'<meta\b[^>]*\bdata-modele="([^"]*)"[^>]*>')
+    for page in sorted(RACINE.glob("*.html")):
+        texte = page.read_text(encoding="utf-8")
+        sortie, pos = [], 0
+        for m in ouvrante.finditer(texte):
+            if m.start() < pos:
+                continue  # élément data-cle imbriqué dans un autre : déjà remplacé
+            balise, attributs, cle = m.groups()
+            verifier(cle in cles, f"{page.name} : clé « {cle} » inconnue")
+            # Fin de l'élément : balise fermante de même nom, en tenant compte des imbrications.
+            niveau, i = 1, m.end()
+            balises = re.compile(rf"<(/?){balise}\b[^>]*>")
+            while niveau:
+                b = balises.search(texte, i)
+                verifier(b is not None, f"{page.name} : élément « {cle} » non fermé")
+                niveau += -1 if b.group(1) else 1
+                i = b.end()
+            sortie += [texte[pos:m.end()], rendu_html(cles[cle], attributs), f"</{balise}>"]
+            pos = i
+        sortie.append(texte[pos:])
+        nouveau = "".join(sortie)
+
+        def remplir_meta(m):
+            modele = html.unescape(m.group(1))
+            for cle in re.findall(r"\{([a-z0-9_]+)\}", modele):
+                verifier(cle in cles, f"{page.name} : clé « {cle} » inconnue dans data-modele")
+            contenu = html.escape(re.sub(r"\{([a-z0-9_]+)\}", lambda c: cles[c.group(1)], modele))
+            contenu = contenu.replace("&#x27;", "'")
+            return re.sub(r'\bcontent="[^"]*"', lambda _: f'content="{contenu}"', m.group(0), count=1)
+
+        nouveau = meta.sub(remplir_meta, nouveau)
+        if nouveau != texte:
+            page.write_text(nouveau, encoding="utf-8")
+            print(f"  {page.name} : chiffres mis à jour")
+
+
 def main() -> int:
+    global DATE_MAJ
     try:
         cat = sources()
         geo = json.loads(GEO.read_text(encoding="utf-8"))
+        DATE_MAJ, empreinte = date_mise_a_jour()
         print("Construction des données du site :")
         national = construire_national(cat)
+        national["empreinteSources"] = empreinte
         ecrire_js("national", national)
+        cles = {}
+        jeux = [national]
         if (CSV / "masse_salariale_comptes_nationaux.csv").exists():
-            ecrire_js("masse_salariale", construire_masse_salariale(cat))
+            jeux.append(construire_masse_salariale(cat))
+            ecrire_js("masse_salariale", jeux[-1])
         if (CSV / "retraites_depenses_pensions.csv").exists():
-            ecrire_js("retraites", construire_retraites(cat))
+            jeux.append(construire_retraites(cat))
+            ecrire_js("retraites", jeux[-1])
         if (CSV / "departements_effectifs.csv").exists():
-            dep = construire_departements(cat, geo)
-            ecrire_js("departements", dep)
+            jeux.append(construire_departements(cat, geo))
+            ecrire_js("departements", jeux[-1])
         ecrire_js("fond_de_carte", geo)
+        # Chiffres des pages : toutes les clés, qui ne doivent pas se contredire d'un jeu à l'autre.
+        for jeu in jeux:
+            for k, v in jeu.get("cles", {}).items():
+                verifier(cles.get(k, v) == v, f"clé « {k} » définie deux fois avec des valeurs différentes")
+                cles[k] = v
+        a, mo, j = (int(x) for x in DATE_MAJ.split("-"))
+        cles["date_maj"] = f"{'1er' if j == 1 else j} {MOIS[mo - 1]} {a}"
+        print("Pages HTML :")
+        mettre_a_jour_pages(cles)
         print("Terminé.")
         return 0
     except Anomalie as e:

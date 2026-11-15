@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carte des agents publics par département – Fonction publique : les chiffres</title>
-<meta name="description" content="Carte interactive : agents de la fonction publique pour 1 000 habitants par département, de 2010 à 2024, outre-mer compris.">
+<meta name="description" content="Carte interactive : agents de la fonction publique pour 1 000 habitants par département, de 2010 à 2024, outre-mer compris." data-modele="Carte interactive : agents de la fonction publique pour 1 000 habitants par département, de {dep_premiere_annee} à {dep_derniere_annee}, outre-mer compris.">
 <meta name="theme-color" content="#003340">
 <meta property="og:title" content="Carte des agents publics par département – Fonction publique : les chiffres">
-<meta property="og:description" content="Carte interactive : agents de la fonction publique pour 1 000 habitants par département, de 2010 à 2024, outre-mer compris.">
+<meta property="og:description" content="Carte interactive : agents de la fonction publique pour 1 000 habitants par département, de 2010 à 2024, outre-mer compris." data-modele="Carte interactive : agents de la fonction publique pour 1 000 habitants par département, de {dep_premiere_annee} à {dep_derniere_annee}, outre-mer compris.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <link rel="icon" href="assets/img/logo-plf.svg" type="image/svg+xml">
@@ -73,7 +73,7 @@
   <div class="conteneur bandeau">
     <p class="bandeau__surtitre">La carte</p>
     <h1>Où travaillent les <span class="souligne">agents publics</span>&nbsp;?</h1>
-    <p class="bandeau__chapeau">Nombre d'agents civils de la fonction publique pour 1&nbsp;000 habitants, département par département, de 2010 à 2024, outre-mer compris. Choisissez l'année, la fonction publique et la mesure.</p>
+    <p class="bandeau__chapeau">Nombre d'agents civils de la fonction publique pour 1&nbsp;000 habitants, département par département, de <span data-cle="dep_premiere_annee">2010</span> à <span data-cle="dep_derniere_annee">2024</span>, outre-mer compris. Choisissez l'année, la fonction publique et la mesure.</p>
   </div>
 
 </header>
@@ -90,14 +90,14 @@
         <ul class="liste-lecture">
           <li><strong>Plus la couleur est foncée, plus il y a d'agents par habitant.</strong> Les classes de couleur sont les mêmes pour toutes les années : une couleur qui fonce d'une année sur l'autre signale une vraie hausse.</li>
           <li><strong>Les agents sont comptés là où ils travaillent.</strong> Les ministères, les sièges d'établissements nationaux et les grands hôpitaux expliquent les valeurs élevées de Paris.</li>
-          <li><strong>Les militaires ne sont pas sur la carte</strong> : la statistique publique ne les localise pas par département (environ 312 854 personnes).</li>
+          <li><strong>Les militaires ne sont pas sur la carte</strong> : la statistique publique ne les localise pas par département (environ <span data-cle="dep_militaires">313 000</span> personnes).</li>
           <li><strong>Un chiffre bas ne veut pas dire « moins de service public »</strong> : selon les territoires, les mêmes services (eau, transports, Ehpad, crèches…) sont assurés par des agents publics ou par des entreprises et des associations.</li>
         </ul>
       </div>
       <div class="carte-info">
         <h2 style="font-size:1.25rem">Ce que mesure le taux</h2>
         <p>Nous rapportons le <strong>nombre de personnes</strong> employées (agents civils, au 31 décembre) à la population du département au 1<sup>er</sup> janvier suivant.</p>
-        <p>Le «&nbsp;taux d'administration&nbsp;» publié par la DGAFP est calculé en <strong>équivalent temps plein</strong> : il est un peu plus bas (en 2024, 76,8 pour 1&nbsp;000 habitants en France, contre 80,8 ici).</p>
+        <p>Le «&nbsp;taux d'administration&nbsp;» publié par la DGAFP est calculé en <strong>équivalent temps plein</strong> : il est un peu plus bas (en <span data-cle="dep_derniere_annee">2024</span>, <span data-cle="dep_taux_officiel">76,8</span> pour 1&nbsp;000 habitants en France, contre <span data-cle="dep_taux_france">80,8</span> ici).</p>
         <p><a class="lien-fleche" href="methode.html#carte-methode">Méthode détaillée de la carte</a></p>
       </div>
     </div>
@@ -141,7 +141,7 @@
       </div>
     </div>
     <div class="pied__bas">
-      <span>Données mises à jour le 5 novembre 2026. Contenus réutilisables en citant la source.</span>
+      <span>Données mises à jour le <span data-cle="date_maj">5 novembre 2026</span>. Contenus réutilisables en citant la source.</span>
       <span><a href="methode.html#accessibilite">Accessibilité : partiellement conforme</a> · Aucun cookie, aucun traceur</span>
     </div>
   </div>
