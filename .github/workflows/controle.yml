@@ -1,0 +1,48 @@
+# Contrôle automatique à chaque modification : reconstruit les données du site à
+# partir des CSV et vérifie que les fichiers publiés sont bien à jour.
+name: Contrôle
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Reconstruire les données du site (contrôles de cohérence inclus)
+        run: python3 outils/construire_donnees.py
+
+      - name: Vérifier que donnees/site/ correspond aux CSV
+        run: |
+          if ! git diff --exit-code --stat -- donnees/site; then
+            echo "::error::Les fichiers de donnees/site/ ne correspondent pas aux CSV. Lancez « python3 outils/construire_donnees.py » et validez le résultat."
+            git diff -- donnees/site | head -c 4000
+            exit 1
+          fi
+          if [ -n "$(git status --porcelain -- donnees/site)" ]; then
+            echo "::error::La construction a créé des fichiers non suivis dans donnees/site/."
+            git status --porcelain -- donnees/site
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Vérifier la syntaxe des scripts JavaScript
+        run: |
+          for f in assets/js/*.js donnees/site/*.js; do
+            node --check "$f"
+          done
