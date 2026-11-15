@@ -1,0 +1,672 @@
+annee;code_pays;pays;code_secteur;secteur;emploi_milliers;source_id
+2014;BG;Bulgarie;S13;Ensemble des administrations publiques;570.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;BG;Bulgarie;S1311;Administration centrale;324.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;BG;Bulgarie;S1313;Administrations locales;236.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;BG;Bulgarie;S1314;Administrations de sécurité sociale;10;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;BG;Bulgarie;S13;Ensemble des administrations publiques;557.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;BG;Bulgarie;S1311;Administration centrale;314.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;BG;Bulgarie;S1313;Administrations locales;233.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;BG;Bulgarie;S1314;Administrations de sécurité sociale;9.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;BG;Bulgarie;S13;Ensemble des administrations publiques;552.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;BG;Bulgarie;S1311;Administration centrale;315.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;BG;Bulgarie;S1313;Administrations locales;230.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;BG;Bulgarie;S13;Ensemble des administrations publiques;551.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;BG;Bulgarie;S1311;Administration centrale;308.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;BG;Bulgarie;S1313;Administrations locales;237.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;BG;Bulgarie;S13;Ensemble des administrations publiques;557.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;BG;Bulgarie;S1311;Administration centrale;310;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;BG;Bulgarie;S1313;Administrations locales;241.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;BG;Bulgarie;S13;Ensemble des administrations publiques;563.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;BG;Bulgarie;S1311;Administration centrale;309.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;BG;Bulgarie;S1313;Administrations locales;248.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;BG;Bulgarie;S13;Ensemble des administrations publiques;563.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;BG;Bulgarie;S1311;Administration centrale;307.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;BG;Bulgarie;S1313;Administrations locales;249.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;BG;Bulgarie;S13;Ensemble des administrations publiques;580.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;BG;Bulgarie;S1311;Administration centrale;315.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;BG;Bulgarie;S1313;Administrations locales;257.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;BG;Bulgarie;S13;Ensemble des administrations publiques;585.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;BG;Bulgarie;S1311;Administration centrale;311;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;BG;Bulgarie;S1313;Administrations locales;268.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;BG;Bulgarie;S13;Ensemble des administrations publiques;595.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;BG;Bulgarie;S1311;Administration centrale;312.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;BG;Bulgarie;S1313;Administrations locales;276.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;BG;Bulgarie;S13;Ensemble des administrations publiques;606.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;BG;Bulgarie;S1311;Administration centrale;312.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;BG;Bulgarie;S1313;Administrations locales;287.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;BG;Bulgarie;S13;Ensemble des administrations publiques;612.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;BG;Bulgarie;S1311;Administration centrale;317.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;BG;Bulgarie;S1313;Administrations locales;288.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;BG;Bulgarie;S1314;Administrations de sécurité sociale;6.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;FR;France;S13;Ensemble des administrations publiques;6120.4;INSEE_CN2025_PIB
+2006;FR;France;S1311;Administration centrale;2686;INSEE_CN2025_PIB
+2006;FR;France;S1313;Administrations locales;1981.8;INSEE_CN2025_PIB
+2006;FR;France;S1314;Administrations de sécurité sociale;1452.7;INSEE_CN2025_PIB
+2007;FR;France;S13;Ensemble des administrations publiques;6162.8;INSEE_CN2025_PIB
+2007;FR;France;S1311;Administration centrale;2629.6;INSEE_CN2025_PIB
+2007;FR;France;S1313;Administrations locales;2075.6;INSEE_CN2025_PIB
+2007;FR;France;S1314;Administrations de sécurité sociale;1457.5;INSEE_CN2025_PIB
+2008;FR;France;S13;Ensemble des administrations publiques;6168.8;INSEE_CN2025_PIB
+2008;FR;France;S1311;Administration centrale;2549.3;INSEE_CN2025_PIB
+2008;FR;France;S1313;Administrations locales;2164.3;INSEE_CN2025_PIB
+2008;FR;France;S1314;Administrations de sécurité sociale;1455.2;INSEE_CN2025_PIB
+2009;FR;France;S13;Ensemble des administrations publiques;6187.8;INSEE_CN2025_PIB
+2009;FR;France;S1311;Administration centrale;2483.4;INSEE_CN2025_PIB
+2009;FR;France;S1313;Administrations locales;2204.2;INSEE_CN2025_PIB
+2009;FR;France;S1314;Administrations de sécurité sociale;1500.2;INSEE_CN2025_PIB
+2010;FR;France;S13;Ensemble des administrations publiques;6195.9;INSEE_CN2025_PIB
+2010;FR;France;S1311;Administration centrale;2472.1;INSEE_CN2025_PIB
+2010;FR;France;S1313;Administrations locales;2220.2;INSEE_CN2025_PIB
+2010;FR;France;S1314;Administrations de sécurité sociale;1503.6;INSEE_CN2025_PIB
+2011;FR;France;S13;Ensemble des administrations publiques;6124.3;INSEE_CN2025_PIB
+2011;FR;France;S1311;Administration centrale;2397.6;INSEE_CN2025_PIB
+2011;FR;France;S1313;Administrations locales;2217.7;INSEE_CN2025_PIB
+2011;FR;France;S1314;Administrations de sécurité sociale;1509;INSEE_CN2025_PIB
+2012;FR;France;S13;Ensemble des administrations publiques;6081;INSEE_CN2025_PIB
+2012;FR;France;S1311;Administration centrale;2355;INSEE_CN2025_PIB
+2012;FR;France;S1313;Administrations locales;2214.1;INSEE_CN2025_PIB
+2012;FR;France;S1314;Administrations de sécurité sociale;1512;INSEE_CN2025_PIB
+2013;FR;France;S13;Ensemble des administrations publiques;6116.3;INSEE_CN2025_PIB
+2013;FR;France;S1311;Administration centrale;2337.6;INSEE_CN2025_PIB
+2013;FR;France;S1313;Administrations locales;2256.7;INSEE_CN2025_PIB
+2013;FR;France;S1314;Administrations de sécurité sociale;1522;INSEE_CN2025_PIB
+2014;FR;France;S13;Ensemble des administrations publiques;6173.6;INSEE_CN2025_PIB
+2014;FR;France;S1311;Administration centrale;2330.1;INSEE_CN2025_PIB
+2014;FR;France;S1313;Administrations locales;2310;INSEE_CN2025_PIB
+2014;FR;France;S1314;Administrations de sécurité sociale;1533.5;INSEE_CN2025_PIB
+2015;FR;France;S13;Ensemble des administrations publiques;6196.7;INSEE_CN2025_PIB
+2015;FR;France;S1311;Administration centrale;2337.5;INSEE_CN2025_PIB
+2015;FR;France;S1313;Administrations locales;2325.3;INSEE_CN2025_PIB
+2015;FR;France;S1314;Administrations de sécurité sociale;1534;INSEE_CN2025_PIB
+2016;FR;France;S13;Ensemble des administrations publiques;6223.8;INSEE_CN2025_PIB
+2016;FR;France;S1311;Administration centrale;2380.9;INSEE_CN2025_PIB
+2016;FR;France;S1313;Administrations locales;2307.3;INSEE_CN2025_PIB
+2016;FR;France;S1314;Administrations de sécurité sociale;1535.6;INSEE_CN2025_PIB
+2017;FR;France;S13;Ensemble des administrations publiques;6227.2;INSEE_CN2025_PIB
+2017;FR;France;S1311;Administration centrale;2419.8;INSEE_CN2025_PIB
+2017;FR;France;S1313;Administrations locales;2276.9;INSEE_CN2025_PIB
+2017;FR;France;S1314;Administrations de sécurité sociale;1530.5;INSEE_CN2025_PIB
+2018;FR;France;S13;Ensemble des administrations publiques;6203.4;INSEE_CN2025_PIB
+2018;FR;France;S1311;Administration centrale;2447;INSEE_CN2025_PIB
+2018;FR;France;S1313;Administrations locales;2235.8;INSEE_CN2025_PIB
+2018;FR;France;S1314;Administrations de sécurité sociale;1520.6;INSEE_CN2025_PIB
+2019;FR;France;S13;Ensemble des administrations publiques;6209.1;INSEE_CN2025_PIB
+2019;FR;France;S1311;Administration centrale;2465.2;INSEE_CN2025_PIB
+2019;FR;France;S1313;Administrations locales;2221.4;INSEE_CN2025_PIB
+2019;FR;France;S1314;Administrations de sécurité sociale;1522.6;INSEE_CN2025_PIB
+2020;FR;France;S13;Ensemble des administrations publiques;6217.1;INSEE_CN2025_PIB
+2020;FR;France;S1311;Administration centrale;2453;INSEE_CN2025_PIB
+2020;FR;France;S1313;Administrations locales;2224.1;INSEE_CN2025_PIB
+2020;FR;France;S1314;Administrations de sécurité sociale;1539.9;INSEE_CN2025_PIB
+2021;FR;France;S13;Ensemble des administrations publiques;6278.6;INSEE_CN2025_PIB
+2021;FR;France;S1311;Administration centrale;2462.2;INSEE_CN2025_PIB
+2021;FR;France;S1313;Administrations locales;2243.9;INSEE_CN2025_PIB
+2021;FR;France;S1314;Administrations de sécurité sociale;1572.6;INSEE_CN2025_PIB
+2022;FR;France;S13;Ensemble des administrations publiques;6297.1;INSEE_CN2025_PIB
+2022;FR;France;S1311;Administration centrale;2469.5;INSEE_CN2025_PIB
+2022;FR;France;S1313;Administrations locales;2246.2;INSEE_CN2025_PIB
+2022;FR;France;S1314;Administrations de sécurité sociale;1581.4;INSEE_CN2025_PIB
+2023;FR;France;S13;Ensemble des administrations publiques;6340.7;INSEE_CN2025_PIB
+2023;FR;France;S1311;Administration centrale;2503.5;INSEE_CN2025_PIB
+2023;FR;France;S1313;Administrations locales;2251.2;INSEE_CN2025_PIB
+2023;FR;France;S1314;Administrations de sécurité sociale;1585.9;INSEE_CN2025_PIB
+2024;FR;France;S13;Ensemble des administrations publiques;6415.8;INSEE_CN2025_PIB
+2024;FR;France;S1311;Administration centrale;2567.9;INSEE_CN2025_PIB
+2024;FR;France;S1313;Administrations locales;2243.5;INSEE_CN2025_PIB
+2024;FR;France;S1314;Administrations de sécurité sociale;1604.4;INSEE_CN2025_PIB
+1995;IT;Italie;S13;Ensemble des administrations publiques;3723.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;IT;Italie;S1311;Administration centrale;2136.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;IT;Italie;S1313;Administrations locales;1529.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;IT;Italie;S1314;Administrations de sécurité sociale;57;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;IT;Italie;S13;Ensemble des administrations publiques;3700.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;IT;Italie;S1311;Administration centrale;2125.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;IT;Italie;S1313;Administrations locales;1517.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;IT;Italie;S1314;Administrations de sécurité sociale;57.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;IT;Italie;S13;Ensemble des administrations publiques;3665.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;IT;Italie;S1311;Administration centrale;2096.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;IT;Italie;S1313;Administrations locales;1511.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;IT;Italie;S1314;Administrations de sécurité sociale;57.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;IT;Italie;S13;Ensemble des administrations publiques;3634.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;IT;Italie;S1311;Administration centrale;2066.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;IT;Italie;S1313;Administrations locales;1512;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;IT;Italie;S1314;Administrations de sécurité sociale;56.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;IT;Italie;S13;Ensemble des administrations publiques;3630;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;IT;Italie;S1311;Administration centrale;2058.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;IT;Italie;S1313;Administrations locales;1514.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;IT;Italie;S1314;Administrations de sécurité sociale;56.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;IT;Italie;S13;Ensemble des administrations publiques;3651.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;IT;Italie;S1311;Administration centrale;2093.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;IT;Italie;S1313;Administrations locales;1501.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;IT;Italie;S1314;Administrations de sécurité sociale;57.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;IT;Italie;S13;Ensemble des administrations publiques;3727.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;IT;Italie;S1311;Administration centrale;2171.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;IT;Italie;S1313;Administrations locales;1497;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;IT;Italie;S1314;Administrations de sécurité sociale;58.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;IT;Italie;S13;Ensemble des administrations publiques;3735;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;IT;Italie;S1311;Administration centrale;2168.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;IT;Italie;S1313;Administrations locales;1508.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;IT;Italie;S1314;Administrations de sécurité sociale;58;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;IT;Italie;S13;Ensemble des administrations publiques;3713.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;IT;Italie;S1311;Administration centrale;2135.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;IT;Italie;S1313;Administrations locales;1518;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;IT;Italie;S1314;Administrations de sécurité sociale;59.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;IT;Italie;S13;Ensemble des administrations publiques;3700.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;IT;Italie;S1311;Administration centrale;2114.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;IT;Italie;S1313;Administrations locales;1526.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;IT;Italie;S1314;Administrations de sécurité sociale;59.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;IT;Italie;S13;Ensemble des administrations publiques;3695.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;IT;Italie;S1311;Administration centrale;2103.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;IT;Italie;S1313;Administrations locales;1533;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;IT;Italie;S1314;Administrations de sécurité sociale;58.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;IT;Italie;S13;Ensemble des administrations publiques;3696.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;IT;Italie;S1311;Administration centrale;2099.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;IT;Italie;S1313;Administrations locales;1540.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;IT;Italie;S1314;Administrations de sécurité sociale;57.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;IT;Italie;S13;Ensemble des administrations publiques;3679.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;IT;Italie;S1311;Administration centrale;2089.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;IT;Italie;S1313;Administrations locales;1534.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;IT;Italie;S1314;Administrations de sécurité sociale;56.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;IT;Italie;S13;Ensemble des administrations publiques;3650.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;IT;Italie;S1311;Administration centrale;2065.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;IT;Italie;S1313;Administrations locales;1530.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;IT;Italie;S1314;Administrations de sécurité sociale;54.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;IT;Italie;S13;Ensemble des administrations publiques;3614.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;IT;Italie;S1311;Administration centrale;2030.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;IT;Italie;S1313;Administrations locales;1532;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;IT;Italie;S1314;Administrations de sécurité sociale;52;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;IT;Italie;S13;Ensemble des administrations publiques;3563.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;IT;Italie;S1311;Administration centrale;1979;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;IT;Italie;S1313;Administrations locales;1533.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;IT;Italie;S1314;Administrations de sécurité sociale;51.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;IT;Italie;S13;Ensemble des administrations publiques;3512.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;IT;Italie;S1311;Administration centrale;1942.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;IT;Italie;S1313;Administrations locales;1520.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;IT;Italie;S1314;Administrations de sécurité sociale;49.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;IT;Italie;S13;Ensemble des administrations publiques;3444;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;IT;Italie;S1311;Administration centrale;1914.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;IT;Italie;S1313;Administrations locales;1481.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;IT;Italie;S1314;Administrations de sécurité sociale;47.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;IT;Italie;S13;Ensemble des administrations publiques;3406.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;IT;Italie;S1311;Administration centrale;1898.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;IT;Italie;S1313;Administrations locales;1462.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;IT;Italie;S1314;Administrations de sécurité sociale;46.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;IT;Italie;S13;Ensemble des administrations publiques;3398.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;IT;Italie;S1311;Administration centrale;1904.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;IT;Italie;S1313;Administrations locales;1449.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;IT;Italie;S1314;Administrations de sécurité sociale;44.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;IT;Italie;S13;Ensemble des administrations publiques;3388.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;IT;Italie;S1311;Administration centrale;1920.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;IT;Italie;S1313;Administrations locales;1425.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;IT;Italie;S1314;Administrations de sécurité sociale;42.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;IT;Italie;S13;Ensemble des administrations publiques;3403.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;IT;Italie;S1311;Administration centrale;1956.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;IT;Italie;S1313;Administrations locales;1406.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;IT;Italie;S1314;Administrations de sécurité sociale;41.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;IT;Italie;S13;Ensemble des administrations publiques;3375.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;IT;Italie;S1311;Administration centrale;1955;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;IT;Italie;S1313;Administrations locales;1379.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;IT;Italie;S1314;Administrations de sécurité sociale;40.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;IT;Italie;S13;Ensemble des administrations publiques;3390.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;IT;Italie;S1311;Administration centrale;1968;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;IT;Italie;S1313;Administrations locales;1382.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;IT;Italie;S1314;Administrations de sécurité sociale;39.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;IT;Italie;S13;Ensemble des administrations publiques;3407.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;IT;Italie;S1311;Administration centrale;1992.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;IT;Italie;S1313;Administrations locales;1375;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;IT;Italie;S1314;Administrations de sécurité sociale;39.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;IT;Italie;S13;Ensemble des administrations publiques;3388.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;IT;Italie;S1311;Administration centrale;1986;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;IT;Italie;S1313;Administrations locales;1363.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;IT;Italie;S1314;Administrations de sécurité sociale;39;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;IT;Italie;S13;Ensemble des administrations publiques;3462.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;IT;Italie;S1311;Administration centrale;2045;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;IT;Italie;S1313;Administrations locales;1381;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;IT;Italie;S1314;Administrations de sécurité sociale;36.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;IT;Italie;S13;Ensemble des administrations publiques;3506.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;IT;Italie;S1311;Administration centrale;2060.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;IT;Italie;S1313;Administrations locales;1412.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;IT;Italie;S1314;Administrations de sécurité sociale;34.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;IT;Italie;S13;Ensemble des administrations publiques;3528.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;IT;Italie;S1311;Administration centrale;2067.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;IT;Italie;S1313;Administrations locales;1424.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;IT;Italie;S1314;Administrations de sécurité sociale;36.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;IT;Italie;S13;Ensemble des administrations publiques;3593.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;IT;Italie;S1311;Administration centrale;2105.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;IT;Italie;S1313;Administrations locales;1451.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;IT;Italie;S1314;Administrations de sécurité sociale;36.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;IT;Italie;S13;Ensemble des administrations publiques;3632.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;IT;Italie;S1311;Administration centrale;2124.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;IT;Italie;S1313;Administrations locales;1472.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;IT;Italie;S1314;Administrations de sécurité sociale;35.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;NL;Pays-Bas;S13;Ensemble des administrations publiques;1016;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;NL;Pays-Bas;S1311;Administration centrale;293;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;NL;Pays-Bas;S1313;Administrations locales;692;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;NL;Pays-Bas;S1314;Administrations de sécurité sociale;31;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;NL;Pays-Bas;S13;Ensemble des administrations publiques;1010;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;NL;Pays-Bas;S1311;Administration centrale;288;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;NL;Pays-Bas;S1313;Administrations locales;691;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;NL;Pays-Bas;S1314;Administrations de sécurité sociale;30;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;NL;Pays-Bas;S13;Ensemble des administrations publiques;1020;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;NL;Pays-Bas;S1311;Administration centrale;290;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;NL;Pays-Bas;S1313;Administrations locales;700;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;NL;Pays-Bas;S1314;Administrations de sécurité sociale;30;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;NL;Pays-Bas;S13;Ensemble des administrations publiques;1034;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;NL;Pays-Bas;S1311;Administration centrale;296;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;NL;Pays-Bas;S1313;Administrations locales;708;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;NL;Pays-Bas;S1314;Administrations de sécurité sociale;31;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;NL;Pays-Bas;S13;Ensemble des administrations publiques;1062;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;NL;Pays-Bas;S1311;Administration centrale;299;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;NL;Pays-Bas;S1313;Administrations locales;731;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;NL;Pays-Bas;S1314;Administrations de sécurité sociale;31;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;NL;Pays-Bas;S13;Ensemble des administrations publiques;1082;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;NL;Pays-Bas;S1311;Administration centrale;297;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;NL;Pays-Bas;S1313;Administrations locales;753;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;NL;Pays-Bas;S1314;Administrations de sécurité sociale;32;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;NL;Pays-Bas;S13;Ensemble des administrations publiques;1107;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;NL;Pays-Bas;S1311;Administration centrale;305;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;NL;Pays-Bas;S1313;Administrations locales;770;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;NL;Pays-Bas;S1314;Administrations de sécurité sociale;32;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;NL;Pays-Bas;S13;Ensemble des administrations publiques;1133;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;NL;Pays-Bas;S1311;Administration centrale;313;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;NL;Pays-Bas;S1313;Administrations locales;787;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;NL;Pays-Bas;S1314;Administrations de sécurité sociale;33;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;NL;Pays-Bas;S13;Ensemble des administrations publiques;1159;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;NL;Pays-Bas;S1311;Administration centrale;314;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;NL;Pays-Bas;S1313;Administrations locales;811;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;NL;Pays-Bas;S1314;Administrations de sécurité sociale;34;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;NL;Pays-Bas;S13;Ensemble des administrations publiques;1155;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;NL;Pays-Bas;S1311;Administration centrale;310;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;NL;Pays-Bas;S1313;Administrations locales;812;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;NL;Pays-Bas;S1314;Administrations de sécurité sociale;33;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;NL;Pays-Bas;S13;Ensemble des administrations publiques;1141;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;NL;Pays-Bas;S1311;Administration centrale;306;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;NL;Pays-Bas;S1313;Administrations locales;803;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;NL;Pays-Bas;S1314;Administrations de sécurité sociale;32;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;NL;Pays-Bas;S13;Ensemble des administrations publiques;1134;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;NL;Pays-Bas;S1311;Administration centrale;305;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;NL;Pays-Bas;S1313;Administrations locales;806;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;NL;Pays-Bas;S1314;Administrations de sécurité sociale;24;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;NL;Pays-Bas;S13;Ensemble des administrations publiques;1143;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;NL;Pays-Bas;S1311;Administration centrale;303;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;NL;Pays-Bas;S1313;Administrations locales;816;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;NL;Pays-Bas;S1314;Administrations de sécurité sociale;24;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;NL;Pays-Bas;S13;Ensemble des administrations publiques;1157;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;NL;Pays-Bas;S1311;Administration centrale;303;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;NL;Pays-Bas;S1313;Administrations locales;831;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;NL;Pays-Bas;S1314;Administrations de sécurité sociale;24;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;NL;Pays-Bas;S13;Ensemble des administrations publiques;1174;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;NL;Pays-Bas;S1311;Administration centrale;308;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;NL;Pays-Bas;S1313;Administrations locales;841;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;NL;Pays-Bas;S1314;Administrations de sécurité sociale;25;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;NL;Pays-Bas;S13;Ensemble des administrations publiques;1191;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;NL;Pays-Bas;S1311;Administration centrale;319;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;NL;Pays-Bas;S1313;Administrations locales;847;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;NL;Pays-Bas;S1314;Administrations de sécurité sociale;25;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;NL;Pays-Bas;S13;Ensemble des administrations publiques;1171;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;NL;Pays-Bas;S1311;Administration centrale;312;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;NL;Pays-Bas;S1313;Administrations locales;834;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;NL;Pays-Bas;S1314;Administrations de sécurité sociale;25;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;NL;Pays-Bas;S13;Ensemble des administrations publiques;1154;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;NL;Pays-Bas;S1311;Administration centrale;309;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;NL;Pays-Bas;S1313;Administrations locales;820;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;NL;Pays-Bas;S1314;Administrations de sécurité sociale;24;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;NL;Pays-Bas;S13;Ensemble des administrations publiques;1140;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;NL;Pays-Bas;S1311;Administration centrale;356;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;NL;Pays-Bas;S1313;Administrations locales;759;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;NL;Pays-Bas;S1314;Administrations de sécurité sociale;24;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;NL;Pays-Bas;S13;Ensemble des administrations publiques;1126;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;NL;Pays-Bas;S1311;Administration centrale;353;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;NL;Pays-Bas;S1313;Administrations locales;750;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;NL;Pays-Bas;S1314;Administrations de sécurité sociale;24;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;NL;Pays-Bas;S13;Ensemble des administrations publiques;1120;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;NL;Pays-Bas;S1311;Administration centrale;352;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;NL;Pays-Bas;S1313;Administrations locales;744;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;NL;Pays-Bas;S1314;Administrations de sécurité sociale;23;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;NL;Pays-Bas;S13;Ensemble des administrations publiques;1115;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;NL;Pays-Bas;S1311;Administration centrale;354;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;NL;Pays-Bas;S1313;Administrations locales;738;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;NL;Pays-Bas;S1314;Administrations de sécurité sociale;23;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;NL;Pays-Bas;S13;Ensemble des administrations publiques;1119;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;NL;Pays-Bas;S1311;Administration centrale;355;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;NL;Pays-Bas;S1313;Administrations locales;742;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;NL;Pays-Bas;S1314;Administrations de sécurité sociale;22;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;NL;Pays-Bas;S13;Ensemble des administrations publiques;1123;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;NL;Pays-Bas;S1311;Administration centrale;360;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;NL;Pays-Bas;S1313;Administrations locales;741;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;NL;Pays-Bas;S1314;Administrations de sécurité sociale;21;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;NL;Pays-Bas;S13;Ensemble des administrations publiques;1145;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;NL;Pays-Bas;S1311;Administration centrale;373;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;NL;Pays-Bas;S1313;Administrations locales;750;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;NL;Pays-Bas;S1314;Administrations de sécurité sociale;22;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;NL;Pays-Bas;S13;Ensemble des administrations publiques;1166;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;NL;Pays-Bas;S1311;Administration centrale;388;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;NL;Pays-Bas;S1313;Administrations locales;755;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;NL;Pays-Bas;S1314;Administrations de sécurité sociale;23;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;NL;Pays-Bas;S13;Ensemble des administrations publiques;1195;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;NL;Pays-Bas;S1311;Administration centrale;390;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;NL;Pays-Bas;S1313;Administrations locales;780;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;NL;Pays-Bas;S1314;Administrations de sécurité sociale;25;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;NL;Pays-Bas;S13;Ensemble des administrations publiques;1228;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;NL;Pays-Bas;S1311;Administration centrale;405;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;NL;Pays-Bas;S1313;Administrations locales;796;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;NL;Pays-Bas;S1314;Administrations de sécurité sociale;27;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;NL;Pays-Bas;S13;Ensemble des administrations publiques;1267;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;NL;Pays-Bas;S1311;Administration centrale;424;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;NL;Pays-Bas;S1313;Administrations locales;816;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;NL;Pays-Bas;S1314;Administrations de sécurité sociale;27;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;NL;Pays-Bas;S13;Ensemble des administrations publiques;1299;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;NL;Pays-Bas;S1311;Administration centrale;443;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;NL;Pays-Bas;S1313;Administrations locales;828;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;NL;Pays-Bas;S1314;Administrations de sécurité sociale;28;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;NL;Pays-Bas;S13;Ensemble des administrations publiques;1328;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;NL;Pays-Bas;S1311;Administration centrale;455;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;NL;Pays-Bas;S1313;Administrations locales;843;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;NL;Pays-Bas;S1314;Administrations de sécurité sociale;29;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;PT;Portugal;S13;Ensemble des administrations publiques;768.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;PT;Portugal;S1311;Administration centrale;579.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;PT;Portugal;S1313;Administrations locales;171.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;PT;Portugal;S1314;Administrations de sécurité sociale;16.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;PT;Portugal;S13;Ensemble des administrations publiques;764.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;PT;Portugal;S1311;Administration centrale;577.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;PT;Portugal;S1313;Administrations locales;170.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;PT;Portugal;S1314;Administrations de sécurité sociale;16.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;PT;Portugal;S13;Ensemble des administrations publiques;763.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;PT;Portugal;S1311;Administration centrale;575.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;PT;Portugal;S1313;Administrations locales;172;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;PT;Portugal;S1314;Administrations de sécurité sociale;16;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;PT;Portugal;S13;Ensemble des administrations publiques;769.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;PT;Portugal;S1311;Administration centrale;571.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;PT;Portugal;S1313;Administrations locales;183.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;PT;Portugal;S1314;Administrations de sécurité sociale;15.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;PT;Portugal;S13;Ensemble des administrations publiques;771.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;PT;Portugal;S1311;Administration centrale;572.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;PT;Portugal;S1313;Administrations locales;184;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;PT;Portugal;S1314;Administrations de sécurité sociale;14.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;PT;Portugal;S13;Ensemble des administrations publiques;750.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;PT;Portugal;S1311;Administration centrale;562.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;PT;Portugal;S1313;Administrations locales;175;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;PT;Portugal;S1314;Administrations de sécurité sociale;12.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;PT;Portugal;S13;Ensemble des administrations publiques;737.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;PT;Portugal;S1311;Administration centrale;534.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;PT;Portugal;S1313;Administrations locales;191.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;PT;Portugal;S1314;Administrations de sécurité sociale;12.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;PT;Portugal;S13;Ensemble des administrations publiques;720.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;PT;Portugal;S1311;Administration centrale;519.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;PT;Portugal;S1313;Administrations locales;188.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;PT;Portugal;S1314;Administrations de sécurité sociale;11.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;PT;Portugal;S13;Ensemble des administrations publiques;713.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;PT;Portugal;S1311;Administration centrale;510.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;PT;Portugal;S1313;Administrations locales;191;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;PT;Portugal;S1314;Administrations de sécurité sociale;11.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;PT;Portugal;S13;Ensemble des administrations publiques;705.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;PT;Portugal;S1311;Administration centrale;504.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;PT;Portugal;S1313;Administrations locales;190.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;PT;Portugal;S1314;Administrations de sécurité sociale;10.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;PT;Portugal;S13;Ensemble des administrations publiques;712.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;PT;Portugal;S1311;Administration centrale;512.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;PT;Portugal;S1313;Administrations locales;189.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;PT;Portugal;S1314;Administrations de sécurité sociale;10.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;PT;Portugal;S13;Ensemble des administrations publiques;717.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;PT;Portugal;S1311;Administration centrale;516.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;PT;Portugal;S1313;Administrations locales;191;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;PT;Portugal;S1314;Administrations de sécurité sociale;10.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;PT;Portugal;S13;Ensemble des administrations publiques;722.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;PT;Portugal;S1311;Administration centrale;516.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;PT;Portugal;S1313;Administrations locales;194.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;PT;Portugal;S1314;Administrations de sécurité sociale;10.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;PT;Portugal;S13;Ensemble des administrations publiques;729.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;PT;Portugal;S1311;Administration centrale;518.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;PT;Portugal;S1313;Administrations locales;200.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;PT;Portugal;S1314;Administrations de sécurité sociale;10.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;PT;Portugal;S13;Ensemble des administrations publiques;748.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;PT;Portugal;S1311;Administration centrale;527.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;PT;Portugal;S1313;Administrations locales;210.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;PT;Portugal;S1314;Administrations de sécurité sociale;11.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;PT;Portugal;S13;Ensemble des administrations publiques;783.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;PT;Portugal;S1311;Administration centrale;551.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;PT;Portugal;S1313;Administrations locales;220.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;PT;Portugal;S1314;Administrations de sécurité sociale;11.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;PT;Portugal;S13;Ensemble des administrations publiques;802.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;PT;Portugal;S1311;Administration centrale;556.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;PT;Portugal;S1313;Administrations locales;234.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;PT;Portugal;S1314;Administrations de sécurité sociale;11.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;PT;Portugal;S13;Ensemble des administrations publiques;817;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;PT;Portugal;S1311;Administration centrale;560;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;PT;Portugal;S1313;Administrations locales;245.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;PT;Portugal;S1314;Administrations de sécurité sociale;11.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;PT;Portugal;S13;Ensemble des administrations publiques;830.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;PT;Portugal;S1311;Administration centrale;565;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;PT;Portugal;S1313;Administrations locales;254.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;PT;Portugal;S1314;Administrations de sécurité sociale;11;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1991;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5403;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1991;UK;Royaume-Uni;S1311;Administration centrale;2333;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1991;UK;Royaume-Uni;S1313;Administrations locales;3070;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1992;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5366;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1992;UK;Royaume-Uni;S1311;Administration centrale;2348;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1992;UK;Royaume-Uni;S1313;Administrations locales;3018;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1993;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5316;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1993;UK;Royaume-Uni;S1311;Administration centrale;2529;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1993;UK;Royaume-Uni;S1313;Administrations locales;2787;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1994;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5222;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1994;UK;Royaume-Uni;S1311;Administration centrale;2470;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1994;UK;Royaume-Uni;S1313;Administrations locales;2752;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5174;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;UK;Royaume-Uni;S1311;Administration centrale;2417;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;UK;Royaume-Uni;S1313;Administrations locales;2757;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5111;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;UK;Royaume-Uni;S1311;Administration centrale;2379;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;UK;Royaume-Uni;S1313;Administrations locales;2732;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5064;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;UK;Royaume-Uni;S1311;Administration centrale;2338;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;UK;Royaume-Uni;S1313;Administrations locales;2726;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5050;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;UK;Royaume-Uni;S1311;Administration centrale;2342;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;UK;Royaume-Uni;S1313;Administrations locales;2708;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5062;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;UK;Royaume-Uni;S1311;Administration centrale;2315;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;UK;Royaume-Uni;S1313;Administrations locales;2747;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5135;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;UK;Royaume-Uni;S1311;Administration centrale;2352;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;UK;Royaume-Uni;S1313;Administrations locales;2782;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5212;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;UK;Royaume-Uni;S1311;Administration centrale;2429;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;UK;Royaume-Uni;S1313;Administrations locales;2783;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5319;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;UK;Royaume-Uni;S1311;Administration centrale;2518;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;UK;Royaume-Uni;S1313;Administrations locales;2801;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5471;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;UK;Royaume-Uni;S1311;Administration centrale;2627;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;UK;Royaume-Uni;S1313;Administrations locales;2844;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5614;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;UK;Royaume-Uni;S1311;Administration centrale;2712;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;UK;Royaume-Uni;S1313;Administrations locales;2902;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5703;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;UK;Royaume-Uni;S1311;Administration centrale;2770;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;UK;Royaume-Uni;S1313;Administrations locales;2933;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5693;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;UK;Royaume-Uni;S1311;Administration centrale;2749;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;UK;Royaume-Uni;S1313;Administrations locales;2945;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5663;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;UK;Royaume-Uni;S1311;Administration centrale;2709;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;UK;Royaume-Uni;S1313;Administrations locales;2954;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5646;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;UK;Royaume-Uni;S1311;Administration centrale;2713;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;UK;Royaume-Uni;S1313;Administrations locales;2933;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5732;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;UK;Royaume-Uni;S1311;Administration centrale;2811;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;UK;Royaume-Uni;S1313;Administrations locales;2921;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5748;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;UK;Royaume-Uni;S1311;Administration centrale;2829;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;UK;Royaume-Uni;S1313;Administrations locales;2920;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5574;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;UK;Royaume-Uni;S1311;Administration centrale;2801;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;UK;Royaume-Uni;S1313;Administrations locales;2773;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5247;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;UK;Royaume-Uni;S1311;Administration centrale;2672;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;UK;Royaume-Uni;S1313;Administrations locales;2575;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5216;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;UK;Royaume-Uni;S1311;Administration centrale;2776;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;UK;Royaume-Uni;S1313;Administrations locales;2439;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5208;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;UK;Royaume-Uni;S1311;Administration centrale;2838;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;UK;Royaume-Uni;S1313;Administrations locales;2370;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5160;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;UK;Royaume-Uni;S1311;Administration centrale;2873;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;UK;Royaume-Uni;S1313;Administrations locales;2287;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5149;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;UK;Royaume-Uni;S1311;Administration centrale;2931;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;UK;Royaume-Uni;S1313;Administrations locales;2217;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5152;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;UK;Royaume-Uni;S1311;Administration centrale;3026;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;UK;Royaume-Uni;S1313;Administrations locales;2127;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5175;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;UK;Royaume-Uni;S1311;Administration centrale;3115;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;UK;Royaume-Uni;S1313;Administrations locales;2060;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5237;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;UK;Royaume-Uni;S1311;Administration centrale;3215;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;UK;Royaume-Uni;S1313;Administrations locales;2022;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5344;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;UK;Royaume-Uni;S1311;Administration centrale;3343;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;UK;Royaume-Uni;S1313;Administrations locales;2001;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5476;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;UK;Royaume-Uni;S1311;Administration centrale;3475;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;UK;Royaume-Uni;S1313;Administrations locales;2001;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5552;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;UK;Royaume-Uni;S1311;Administration centrale;3557;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;UK;Royaume-Uni;S1313;Administrations locales;1995;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;UK;Royaume-Uni;S13;Ensemble des administrations publiques;5665;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;UK;Royaume-Uni;S1311;Administration centrale;3663;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;UK;Royaume-Uni;S1313;Administrations locales;2002;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;SE;Suède;S13;Ensemble des administrations publiques;1370.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;SE;Suède;S1311;Administration centrale;262.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;SE;Suède;S1313;Administrations locales;1107.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1995;SE;Suède;S1314;Administrations de sécurité sociale;0.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;SE;Suède;S13;Ensemble des administrations publiques;1347.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;SE;Suède;S1311;Administration centrale;258;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;SE;Suède;S1313;Administrations locales;1089;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1996;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;SE;Suède;S13;Ensemble des administrations publiques;1325.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;SE;Suède;S1311;Administration centrale;253.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;SE;Suède;S1313;Administrations locales;1071.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1997;SE;Suède;S1314;Administrations de sécurité sociale;0.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;SE;Suède;S13;Ensemble des administrations publiques;1322.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;SE;Suède;S1311;Administration centrale;250.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;SE;Suède;S1313;Administrations locales;1072;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1998;SE;Suède;S1314;Administrations de sécurité sociale;0.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;SE;Suède;S13;Ensemble des administrations publiques;1339.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;SE;Suède;S1311;Administration centrale;246.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;SE;Suède;S1313;Administrations locales;1092.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+1999;SE;Suède;S1314;Administrations de sécurité sociale;0.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;SE;Suède;S13;Ensemble des administrations publiques;1314.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;SE;Suède;S1311;Administration centrale;245.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;SE;Suède;S1313;Administrations locales;1068.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2000;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;SE;Suède;S13;Ensemble des administrations publiques;1328.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;SE;Suède;S1311;Administration centrale;245.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;SE;Suède;S1313;Administrations locales;1083;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2001;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;SE;Suède;S13;Ensemble des administrations publiques;1347.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;SE;Suède;S1311;Administration centrale;249.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;SE;Suède;S1313;Administrations locales;1098.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2002;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;SE;Suède;S13;Ensemble des administrations publiques;1361.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;SE;Suède;S1311;Administration centrale;254.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;SE;Suède;S1313;Administrations locales;1106.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2003;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;SE;Suède;S13;Ensemble des administrations publiques;1367.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;SE;Suède;S1311;Administration centrale;252.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;SE;Suède;S1313;Administrations locales;1115;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2004;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;SE;Suède;S13;Ensemble des administrations publiques;1364.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;SE;Suède;S1311;Administration centrale;249.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;SE;Suède;S1313;Administrations locales;1114.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2005;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;SE;Suède;S13;Ensemble des administrations publiques;1381.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;SE;Suède;S1311;Administration centrale;249.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;SE;Suède;S1313;Administrations locales;1131.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2006;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;SE;Suède;S13;Ensemble des administrations publiques;1380.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;SE;Suède;S1311;Administration centrale;245.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;SE;Suède;S1313;Administrations locales;1134.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2007;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;SE;Suède;S13;Ensemble des administrations publiques;1351.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;SE;Suède;S1311;Administration centrale;238.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;SE;Suède;S1313;Administrations locales;1113.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2008;SE;Suède;S1314;Administrations de sécurité sociale;0.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;SE;Suède;S13;Ensemble des administrations publiques;1324.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;SE;Suède;S1311;Administration centrale;237;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;SE;Suède;S1313;Administrations locales;1087.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2009;SE;Suède;S1314;Administrations de sécurité sociale;0.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;SE;Suède;S13;Ensemble des administrations publiques;1318.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;SE;Suède;S1311;Administration centrale;241.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;SE;Suède;S1313;Administrations locales;1076.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2010;SE;Suède;S1314;Administrations de sécurité sociale;1.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;SE;Suède;S13;Ensemble des administrations publiques;1324.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;SE;Suède;S1311;Administration centrale;241.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;SE;Suède;S1313;Administrations locales;1081.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2011;SE;Suède;S1314;Administrations de sécurité sociale;1.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;SE;Suède;S13;Ensemble des administrations publiques;1333.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;SE;Suède;S1311;Administration centrale;246.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;SE;Suède;S1313;Administrations locales;1086.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2012;SE;Suède;S1314;Administrations de sécurité sociale;1.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;SE;Suède;S13;Ensemble des administrations publiques;1348.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;SE;Suède;S1311;Administration centrale;251.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;SE;Suède;S1313;Administrations locales;1095.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2013;SE;Suède;S1314;Administrations de sécurité sociale;1.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;SE;Suède;S13;Ensemble des administrations publiques;1365.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;SE;Suède;S1311;Administration centrale;255;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;SE;Suède;S1313;Administrations locales;1109.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2014;SE;Suède;S1314;Administrations de sécurité sociale;1.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;SE;Suède;S13;Ensemble des administrations publiques;1396.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;SE;Suède;S1311;Administration centrale;256.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;SE;Suède;S1313;Administrations locales;1139.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2015;SE;Suède;S1314;Administrations de sécurité sociale;1.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;SE;Suède;S13;Ensemble des administrations publiques;1436.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;SE;Suède;S1311;Administration centrale;259.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;SE;Suède;S1313;Administrations locales;1175.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2016;SE;Suède;S1314;Administrations de sécurité sociale;1.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;SE;Suède;S13;Ensemble des administrations publiques;1462.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;SE;Suède;S1311;Administration centrale;262.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;SE;Suède;S1313;Administrations locales;1198.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2017;SE;Suède;S1314;Administrations de sécurité sociale;1.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;SE;Suède;S13;Ensemble des administrations publiques;1476;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;SE;Suède;S1311;Administration centrale;266.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;SE;Suède;S1313;Administrations locales;1208.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2018;SE;Suède;S1314;Administrations de sécurité sociale;1.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;SE;Suède;S13;Ensemble des administrations publiques;1486.2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;SE;Suède;S1311;Administration centrale;269.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;SE;Suède;S1313;Administrations locales;1215;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2019;SE;Suède;S1314;Administrations de sécurité sociale;1.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;SE;Suède;S13;Ensemble des administrations publiques;1482.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;SE;Suède;S1311;Administration centrale;273.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;SE;Suède;S1313;Administrations locales;1207.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2020;SE;Suède;S1314;Administrations de sécurité sociale;1.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;SE;Suède;S13;Ensemble des administrations publiques;1500.3;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;SE;Suède;S1311;Administration centrale;281.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;SE;Suède;S1313;Administrations locales;1217.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2021;SE;Suède;S1314;Administrations de sécurité sociale;1.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;SE;Suède;S13;Ensemble des administrations publiques;1520.8;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;SE;Suède;S1311;Administration centrale;290.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;SE;Suède;S1313;Administrations locales;1228.7;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2022;SE;Suède;S1314;Administrations de sécurité sociale;2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;SE;Suède;S13;Ensemble des administrations publiques;1538.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;SE;Suède;S1311;Administration centrale;299;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;SE;Suède;S1313;Administrations locales;1237.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2023;SE;Suède;S1314;Administrations de sécurité sociale;2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;SE;Suède;S13;Ensemble des administrations publiques;1551.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;SE;Suède;S1311;Administration centrale;306.9;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;SE;Suède;S1313;Administrations locales;1242.5;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2024;SE;Suède;S1314;Administrations de sécurité sociale;2;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;SE;Suède;S13;Ensemble des administrations publiques;1556.1;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;SE;Suède;S1311;Administration centrale;314.6;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;SE;Suède;S1313;Administrations locales;1239.4;OCDE_CN_EMPLOI_SOUS_SECTEURS
+2025;SE;Suède;S1314;Administrations de sécurité sociale;2.1;OCDE_CN_EMPLOI_SOUS_SECTEURS

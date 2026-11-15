@@ -1,0 +1,4 @@
+# Empreintes SHA-256 des fichiers officiels utilisés pour la comparaison européenne (téléchargés le 2026-11-15 ; outils/extraire_europe.py).
+  fd28b9f5545261df8dca222327fcf4831604212048b98eb0c0d3e821dcbeebc8  ocde/gaag_emploi_public_yu.csv  <https://sdmx.oecd.org/public/rest/data/OECD.GOV.GIP,DSD_GOV@DF_GOV_EMPPS_REP_YU,1.0/all?format=csvfile>
+  700e1bb043d2165097860be5b0e7785b85907cf406f71dd970beab8b7e4a1052  ocde/cn_emploi_sous_secteurs_apu.csv  <https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC10@DF_TABLE12_EMPDC,1.1/all?format=csvfile>
+  91fb30237cca61df56659b54e76fb57687eb413f0d2abda867ff66b9ed049b55  eurostat/nama_10_pe_POP_NC.json  <https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pe?format=JSON&lang=fr&na_item=POP_NC&unit=THS_PER&sinceTimePeriod=2000>

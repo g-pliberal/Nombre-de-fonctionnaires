@@ -1062,15 +1062,6 @@ def construire_retraites(cat: dict) -> dict:
     }
 
 
-def lire_js(nom: str):
-    """Relit un fichier donnees/site/<nom>.js déjà écrit (None s'il n'existe pas)."""
-    f = SITE / f"{nom}.js"
-    if not f.exists():
-        return None
-    texte = f.read_text(encoding="utf-8").split(f"window.PLF_DONNEES.{nom} = ", 1)[1].strip()
-    return json.loads(texte.rstrip(";"))
-
-
 def date_mise_a_jour() -> tuple[str, str]:
     """Garde la date de mise à jour précédente tant que les fichiers sources n'ont pas changé.
     Renvoie (date ISO, empreinte des fichiers sources)."""
@@ -1136,6 +1127,104 @@ def mettre_a_jour_pages(cles: dict) -> None:
             print(f"  {page.name} : chiffres mis à jour")
 
 
+# --------------------------------------------------------------------------
+# Comparaison européenne de l'emploi public (OCDE, Eurostat ; France : Insee)
+# --------------------------------------------------------------------------
+UE_HORS = ("IS", "NO", "CH", "UK")  # pays européens hors Union européenne
+
+
+def construire_europe(cat: dict) -> dict:
+    emp, part, pop, noms = defaultdict(dict), defaultdict(dict), defaultdict(dict), {}
+    for l in lire("emploi_public_europe.csv"):
+        c, a = l["code_pays"], int(l["annee"])
+        noms[c] = l["pays"]
+        if l["emploi_apu_milliers"]:
+            emp[c][a] = nombre(l["emploi_apu_milliers"])
+        if l["part_emploi_total_pct"]:
+            part[c][a] = nombre(l["part_emploi_total_pct"])
+    for l in lire("population_europe.csv"):
+        pop[l["code_pays"]][int(l["annee"])] = nombre(l["population_milliers"])
+    annees = sorted({a for d in list(emp.values()) + list(part.values()) for a in d})
+    verifier(annees == list(range(annees[0], annees[-1] + 1)), "comparaison européenne : années manquantes")
+    fin = max(part["FR"])
+    verifier(fin == max(emp["FR"]), "France : dernière année différente pour l'emploi et la part")
+
+    # Recoupement : emploi de l'OCDE pour la France = emploi des administrations publiques de l'Insee
+    agr = defaultdict(dict)
+    for l in lire("agregats_comptes_nationaux.csv"):
+        agr[l["indicateur"]][int(l["annee"])] = nombre(l["valeur"])
+    for a, v in emp["FR"].items():
+        if a in agr["emploi_S13"]:
+            verifier(abs(v - agr["emploi_S13"][a]) <= 0.002 * agr["emploi_S13"][a], f"France {a} : OCDE ≠ Insee")
+
+    def taux(c, a):  # emplois publics pour 1 000 habitants (calcul)
+        if a in emp[c] and a in pop[c]:
+            return round(1000 * emp[c][a] / pop[c][a], 1)
+        return None
+
+    pays = [{"code": c, "libelle": noms[c], "ue": c not in UE_HORS,
+             "emploi": [emp[c].get(a) for a in annees],
+             "part": [part[c].get(a) for a in annees],
+             "taux": [taux(c, a) for a in annees]} for c in sorted(noms, key=lambda k: noms[k])]
+    i = annees.index(fin)
+    P = {p["code"]: p for p in pays}
+
+    def rang(cle):  # rang de la France parmi les pays ayant une valeur la dernière année
+        L = sorted((p for p in pays if p[cle][i] is not None), key=lambda p: -p[cle][i])
+        return [p["code"] for p in L].index("FR") + 1, len(L)
+    r_part, n_part = rang("part")
+    r_taux, n_taux = rang("taux")
+
+    # Sous-secteurs (dernière année disponible pour chaque pays)
+    ss, src_ss = defaultdict(dict), {}
+    for l in lire("emploi_public_europe_sous_secteurs.csv"):
+        ss[(l["code_pays"], int(l["annee"]))][l["code_secteur"]] = nombre(l["emploi_milliers"])
+        src_ss[l["code_pays"]] = l["source_id"]
+    sous = []
+    for c in sorted({k[0] for k in ss}, key=lambda k: noms.get(k, k)):
+        a = max(an for (k, an) in ss if k == c)
+        v = ss[(c, a)]
+        verifier(abs(sum(v.get(k) or 0 for k in SS_CODES) - v["S13"]) <= 0.005 * v["S13"] + 0.2,
+                 f"{c} {a} : sous-secteurs incohérents")
+        sous.append({"code": c, "libelle": noms.get(c, c), "annee": a, "total": v["S13"],
+                     **{k: v.get(k) for k in SS_CODES}, "source": libelle_source(cat, src_ss[c])})
+    fs = next(s for s in sous if s["code"] == "FR")
+
+    cles = {
+        "eu_annee": str(fin),
+        "eu_annee_debut": str(annees[0]),
+        "eu_fr_part": pct(P["FR"]["part"][i]),
+        "eu_fr_part_debut": pct(P["FR"]["part"][0]),
+        "eu_fr_rang_part": f"{r_part}e sur {n_part}",
+        "eu_fr_taux": fr(P["FR"]["taux"][i], 0),
+        "eu_fr_rang_taux": f"{r_taux}e sur {n_taux}",
+        "eu_fr_emploi": millions(1000 * P["FR"]["emploi"][i]),
+        "eu_de_part": pct(P["DE"]["part"][i]),
+        "eu_de_taux": fr(P["DE"]["taux"][i], 0),
+        "eu_de_emploi": millions(1000 * P["DE"]["emploi"][i]),
+        "eu_de_pop": fr(pop["DE"][fin] / 1000, 1) + " millions",
+        "eu_it_taux": fr(P["IT"]["taux"][i], 0),
+        "eu_es_taux": fr(P["ES"]["taux"][i], 0),
+        "eu_se_part": pct(P["SE"]["part"][i]),
+        "eu_se_taux": fr(P["SE"]["taux"][i], 0),
+        "eu_dk_part": pct(P["DK"]["part"][i]),
+        "eu_fr_ss_annee": str(fs["annee"]),
+        "eu_fr_ss_local": pct(100 * fs["S1313"] / fs["total"], 0),
+        "eu_fr_ss_central": pct(100 * fs["S1311"] / fs["total"], 0),
+        "eu_fr_ss_secu": pct(100 * fs["S1314"] / fs["total"], 0),
+        "eu_nb_pays": str(len(pays)),
+    }
+    return {
+        "annees": annees, "fin": fin, "pays": pays, "sousSecteurs": sous, "cles": cles,
+        "sources": {"emploi": libelle_source(cat, "OCDE_GAAG_EMPLOI"),
+                    "population": libelle_source(cat, "EUROSTAT_POP_CN"),
+                    "insee": libelle_source(cat, "INSEE_CN2025_PIB")},
+    }
+
+
+SS_CODES = ("S1311", "S1312", "S1313", "S1314")
+
+
 def main() -> int:
     global DATE_MAJ
     try:
@@ -1154,6 +1243,9 @@ def main() -> int:
         if (CSV / "retraites_depenses_pensions.csv").exists():
             jeux.append(construire_retraites(cat))
             ecrire_js("retraites", jeux[-1])
+        if (CSV / "emploi_public_europe.csv").exists():
+            jeux.append(construire_europe(cat))
+            ecrire_js("europe", jeux[-1])
         if (CSV / "departements_effectifs.csv").exists():
             jeux.append(construire_departements(cat, geo))
             ecrire_js("departements", jeux[-1])
