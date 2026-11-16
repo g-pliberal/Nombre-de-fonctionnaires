@@ -29,6 +29,7 @@ const PAGES = process.argv.slice(2).length
   ? process.argv.slice(2)
   : ["index.html", "evolution.html", "carte.html", "composition.html",
      "masse-salariale.html", "salaires.html", "retraites.html", "europe.html", "methode.html",
+     "404.html",
      // Fiches des départements (générées) : la liste, un cas courant, Paris, la Corse, Mayotte (sans effectifs).
      "departements/index.html", "departements/01.html", "departements/75.html", "departements/2A.html", "departements/976.html"];
 const THEMES = ["clair", "sombre"];
@@ -46,7 +47,9 @@ const TYPES = {
   ".json": "application/json", ".csv": "text/csv; charset=utf-8",
 };
 const serveur = createServer(async (req, res) => {
-  const chemin = normalize(decodeURIComponent(new URL(req.url, "http://x").pathname)).replace(/^([/\\])+/, "");
+  const chemin = normalize(decodeURIComponent(new URL(req.url, "http://x").pathname)).replace(/^([/\\])+/, "")
+    // La page 404 (balise <base>) pointe vers l'adresse publique /Nombre-de-fonctionnaires/… : même fichier.
+    .replace(/^Nombre-de-fonctionnaires[/\\]/, "");
   try {
     const contenu = await readFile(join(RACINE, chemin || "index.html"));
     res.writeHead(200, { "Content-Type": TYPES[extname(chemin)] || "application/octet-stream" });

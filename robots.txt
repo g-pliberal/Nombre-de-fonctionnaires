@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://g-pliberal.github.io/Nombre-de-fonctionnaires/sitemap.xml

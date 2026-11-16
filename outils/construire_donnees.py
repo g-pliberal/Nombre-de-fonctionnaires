@@ -26,6 +26,8 @@ from collections import defaultdict
 from datetime import date
 from pathlib import Path
 
+import referencement
+
 RACINE = Path(__file__).resolve().parent.parent
 CSV = RACINE / "donnees" / "csv"
 SITE = RACINE / "donnees" / "site"
@@ -1271,6 +1273,11 @@ def main() -> int:
             from fiches_departements import ecrire_fiches
             n = ecrire_fiches(RACINE, dep, ms["carte"], cles, fr=fr, verifier=verifier)
             print(f"  departements/ : {n} pages")
+        print("Référencement (plan du site, robots.txt, données structurées) :")
+        try:
+            referencement.construire()
+        except referencement.Anomalie as e:
+            raise Anomalie(str(e)) from e
         print("Terminé.")
         return 0
     except Anomalie as e:

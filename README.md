@@ -42,8 +42,26 @@ fichiers JavaScript (`donnees/site/*.js`), ce qui évite tout serveur.
 Pour un nom de domaine (ex. `chiffres.partiliberalfrancais.fr`), ajouter un
 fichier `CNAME` à la racine et un enregistrement DNS `CNAME` vers
 `<compte>.github.io`, puis changer l'adresse `ADRESSE_SITE` en tête de
-`outils/images_partage.py` et relancer ce script (les réseaux sociaux exigent l'adresse
-complète des images de partage).
+`outils/referencement.py` et relancer `outils/construire_donnees.py` puis
+`outils/images_partage.py` (les réseaux sociaux et le plan du site exigent l'adresse complète).
+
+## Référencement (Google)
+
+- `sitemap.xml` (plan du site) et `robots.txt` sont **générés** par `outils/referencement.py`,
+  lancé à la fin de `outils/construire_donnees.py`. Toute page HTML du dépôt (à la racine ou
+  dans un sous-dossier, hors `assets/`, `donnees/`, `outils/`) entre d'elle-même dans le plan
+  du site, sauf si elle porte `<meta name="robots" content="noindex">`. Le contrôle automatique
+  échoue si `sitemap.xml` n'a pas été régénéré après l'ajout d'une page.
+- `methode.html` contient une description schema.org `Dataset` (JSON-LD) pour
+  [Google Dataset Search](https://datasetsearch.research.google.com/) : la liste des fichiers
+  reprend la section « Télécharger les données » de la page, les sources viennent de
+  `donnees/csv/sources.csv`. Ne pas modifier ce bloc à la main.
+- `404.html` est la page affichée par GitHub Pages pour une adresse inconnue (exclue du plan du site).
+- Tant que le site est publié à l'adresse `g-pliberal.github.io/Nombre-de-fonctionnaires/`,
+  `robots.txt` n'est pas lu par les moteurs (ils ne le cherchent qu'à la racine du domaine) :
+  il faut déclarer le plan du site dans [Google Search Console](https://search.google.com/search-console)
+  (propriété « préfixe de l'URL » sur l'adresse du site, puis *Sitemaps* → `sitemap.xml`).
+  Avec un nom de domaine propre, `robots.txt` prend effet tel quel.
 
 ## Organisation des fichiers
 
@@ -83,6 +101,8 @@ outils/
   construire_donnees.py  transforme donnees/csv/ en donnees/site/ et écrit les fiches des départements
   fiches_departements.py  fiches des départements (departements/*.html), appelé par construire_donnees.py
   test_accessibilite.mjs  test d'accessibilité automatique (axe-core), voir « Accessibilité »
+  referencement.py     génère sitemap.xml, robots.txt et les données structurées schema.org
+                       (appelé par construire_donnees.py)
   images_partage.py    fabrique l'image de partage de chaque page (chiffre clé lu dans
                        donnees/site/) et ses balises Open Graph (nécessite Pillow)
 package.json           outils de test uniquement (le site lui-même n'a aucune dépendance)
@@ -192,8 +212,8 @@ animations ». Le site n'a pas encore fait l'objet d'un audit indépendant.
 
 ### Test automatique
 
-Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les neuf pages et cinq fiches de
-départements (règles WCAG 2.0, 2.1 et 2.2, niveaux A et AA, et bonnes pratiques), en thème
+Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les neuf pages, la page 404 et
+cinq fiches de départements (règles WCAG 2.0, 2.1 et 2.2, niveaux A et AA, et bonnes pratiques), en thème
 clair et sombre, sur grand écran et sur téléphone, ainsi que le menu et le
 dialogue « Options d'affichage » ouverts. Il échoue à la moindre violation ou
 erreur JavaScript. Il faut Node.js 18 ou plus :

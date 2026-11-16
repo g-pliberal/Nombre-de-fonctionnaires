@@ -36,11 +36,9 @@ POLICES = RACINE / "assets" / "fonts"
 SORTIE = RACINE / "assets" / "img" / "partage"
 LOGO = RACINE / "assets" / "img" / "logo-plf-240.png"
 
-# Adresse publique du site, avec la barre finale. Les réseaux sociaux exigent une adresse
-# complète pour l'image : en cas de nom de domaine propre (fichier CNAME), changer cette
-# ligne puis relancer le script.
-ADRESSE_SITE = "https://g-pliberal.github.io/Nombre-de-fonctionnaires/"
-NOM_SITE = "Fonction publique : les chiffres"
+# Adresse publique du site (les réseaux sociaux exigent une adresse complète pour l'image) :
+# définie dans outils/referencement.py, à changer là en cas de nom de domaine propre.
+from referencement import ADRESSE_SITE, NOM_SITE, indexable  # noqa: E402
 
 LARGEUR, HAUTEUR = 1200, 630
 MARGE = 72
@@ -348,7 +346,8 @@ def mettre_a_jour_html(page: str, bloc: str) -> bool:
 def main() -> int:
     try:
         tout = cartes()
-        pages = sorted(p.stem for p in RACINE.glob("*.html"))
+        # Pages exclues des moteurs de recherche (404…) : pas d'image de partage.
+        pages = sorted(p.stem for p in RACINE.glob("*.html") if indexable(p.read_text(encoding="utf-8")))
         manquantes = set(pages) - set(tout)
         if manquantes:
             raise Anomalie(f"pas d'image de partage prévue pour : {', '.join(sorted(manquantes))}")

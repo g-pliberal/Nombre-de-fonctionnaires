@@ -40,10 +40,10 @@ NBSP = " "
 e = lambda s: html.escape(str(s), quote=True)  # noqa: E731
 
 
-def _adresse_site(racine: Path) -> str:
-    """Adresse publique du site, définie une seule fois dans outils/images_partage.py."""
-    m = re.search(r'^ADRESSE_SITE = "([^"]+)"', (racine / "outils" / "images_partage.py").read_text(encoding="utf-8"), re.M)
-    return m.group(1) if m else ""
+def _adresse_site() -> str:
+    """Adresse publique du site, définie une seule fois dans outils/referencement.py."""
+    from referencement import ADRESSE_SITE
+    return ADRESSE_SITE
 
 
 def _gabarit(racine: Path, verifier: Callable) -> dict:
@@ -106,7 +106,7 @@ def _page(g: dict, *, titre: str, description: str, url: str, image: dict, page:
 def ecrire_fiches(racine: Path, D: dict, C: dict, cles: dict, *, fr: Callable, verifier: Callable) -> int:
     """Écrit departements/<code>.html et departements/index.html. Renvoie le nombre de pages."""
     g = _gabarit(racine, verifier)
-    site = _adresse_site(racine)
+    site = _adresse_site()
     annees = D["annees"]
     a0 = D["debutHomogene"]
     i0, i_fin = annees.index(a0), len(annees) - 1
