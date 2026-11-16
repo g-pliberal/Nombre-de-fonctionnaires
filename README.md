@@ -25,6 +25,7 @@ GitHub Pages. Il ne dépose aucun cookie et n'utilise aucun traceur.
 | `salaires.html` | Les salaires : du brut au net par population, public/privé, déciles, point d'indice depuis 1970, salaires par ministère, collectivité et filière, plus hautes rémunérations (1 % le mieux payé, emplois de direction, dix plus hautes rémunérations publiées par les employeurs) |
 | `retraites.html` | Les retraites des fonctionnaires : pensions versées depuis 1990, pensions en paiement, montants, ratio démographique, compte « Pensions » de l'État, taux de cotisation, déficit de la CNRACL, départs et âge de départ |
 | `europe.html` | En Europe : emploi dans les administrations publiques en % de l'emploi total et pour 1 000 habitants, pays européens (OCDE, Eurostat), évolution depuis 2007, répartition entre État, collectivités et sécurité sociale, différences de périmètre |
+| `idees-recues.html` | Idées reçues : onze questions courantes (plus de fonctionnaires qu'avant ? mieux payés que le privé ? retraite avant 60 ans ?…), réponses courtes et sourcées, chacune renvoyant au graphique concerné ; chiffres recalculés depuis les données et réponses courtes contrôlées par `construire_donnees.py` |
 | `methode.html` | Sources, définitions, limites, téléchargements, accessibilité |
 
 ## Consulter le site sur son ordinateur
@@ -47,7 +48,7 @@ complète des images de partage).
 ## Organisation des fichiers
 
 ```
-index.html, evolution.html, carte.html, composition.html, europe.html, methode.html
+index.html, evolution.html, carte.html, composition.html, europe.html, idees-recues.html, methode.html
 masse-salariale.html, salaires.html, retraites.html   rubrique « La masse salariale » (sous-navigation)
 assets/
   css/style.css        charte graphique PLF (pétrole, turquoise, safran) et mise en page
@@ -146,6 +147,9 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
    jour le… » du pied de page ne change que si les fichiers de `donnees/csv/` ont changé.
    Pour citer un nouveau chiffre dans une page, ajouter sa clé dans le script plutôt que de
    l'écrire en dur.
+   Les réponses courtes de la page `idees-recues.html` (« non », « en moyenne, non »…) sont
+   écrites à la main : `controler_idees_recues()` vérifie qu'elles restent confirmées par les
+   chiffres et arrête le script sinon (réponse à réécrire, puis condition à adapter).
 3. Régénérer les images de partage (réseaux sociaux), qui reprennent le chiffre clé de chaque
    page :
    ```
@@ -186,7 +190,7 @@ animations ». Le site n'a pas encore fait l'objet d'un audit indépendant.
 
 ### Test automatique
 
-Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les neuf pages
+Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les dix pages
 (règles WCAG 2.0, 2.1 et 2.2, niveaux A et AA, et bonnes pratiques), en thème
 clair et sombre, sur grand écran et sur téléphone, ainsi que le menu et le
 dialogue « Options d'affichage » ouverts. Il échoue à la moindre violation ou

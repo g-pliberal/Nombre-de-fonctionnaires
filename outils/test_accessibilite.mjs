@@ -28,7 +28,8 @@ const AXE = await readFile(require.resolve("axe-core/axe.min.js"), "utf8");
 const PAGES = process.argv.slice(2).length
   ? process.argv.slice(2)
   : ["index.html", "evolution.html", "carte.html", "composition.html",
-     "masse-salariale.html", "salaires.html", "retraites.html", "europe.html", "methode.html"];
+     "masse-salariale.html", "salaires.html", "retraites.html", "europe.html", "idees-recues.html",
+     "methode.html"];
 const THEMES = ["clair", "sombre"];
 const ECRANS = [
   { nom: "ordinateur", width: 1280, height: 900 },

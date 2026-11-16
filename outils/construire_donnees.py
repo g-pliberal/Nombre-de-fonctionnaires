@@ -1227,6 +1227,89 @@ def construire_europe(cat: dict) -> dict:
 SS_CODES = ("S1311", "S1312", "S1313", "S1314")
 
 
+# --------------------------------------------------------------------------
+# Page « Idées reçues » : chiffres qui ne figurent pas déjà dans les autres jeux de clés.
+# Tous sont lus dans les CSV (ou dans les séries nationales déjà construites) ; aucun n'est saisi.
+# --------------------------------------------------------------------------
+def construire_idees_recues(national: dict) -> dict:
+    E = national["effectifs"]
+    a_ref = int(national["cles"]["annee_ref"])
+    i_ref = E["annees"].index(a_ref)
+    # Même calcul que la page Évolution : effectifs au 31/12 / population au 1er janvier suivant.
+    taux_ref = 1000 * E["actuelle"]["total"][i_ref] / E["population"][i_ref]
+
+    # Salaires nets moyens public / privé en euros constants (DGAFP), première et dernière année
+    pp = sorted(lire("salaires_nets_public_prive_euros_constants.csv"), key=lambda l: int(l["annee"]))
+    debut, fin = pp[0], pp[-1]
+    evol = lambda c: 100 * (nombre(fin[c]) / nombre(debut[c]) - 1)  # noqa: E731
+
+    # Déciles du salaire net, public et privé
+    nom_dec, a_dec = fichier_recent("deciles_salaires_public_prive")
+    dec = {l["decile"]: l for l in lire(nom_dec)}
+    verifier(set(dec) == {f"D{i}" for i in range(1, 10)}, f"{nom_dec} : déciles incomplets")
+
+    # Âge moyen de départ des fonctionnaires selon le type d'emploi (DGAFP)
+    age = defaultdict(dict)
+    for l in lire("retraites_age_depart.csv"):
+        age[l["motif"]][int(l["annee"])] = nombre(l["age_moyen"])
+    a_age = max(age["ensemble"])
+
+    signe = lambda v: ("+" if v >= 0 else "−") + fr(abs(v), 1) + " %"  # noqa: E731
+    cles = {
+        "ir_taux_ref": fr(taux_ref, 1),
+        "ir_sal_annee_debut": debut["annee"],
+        "ir_sal_annee_fin": fin["annee"],
+        "ir_net_fp_debut": fr(nombre(debut["fonction_publique"])) + " €",
+        "ir_net_prive_debut": fr(nombre(debut["secteur_prive"])) + " €",
+        "ir_net_fp_evol": signe(evol("fonction_publique")),
+        "ir_net_prive_evol": signe(evol("secteur_prive")),
+        "ir_dec_annee": str(a_dec),
+        "ir_d1_fp": fr(nombre(dec["D1"]["fonction_publique"])) + " €",
+        "ir_d1_prive": fr(nombre(dec["D1"]["secteur_prive"])) + " €",
+        "ir_d5_prive": fr(nombre(dec["D5"]["secteur_prive"])) + " €",
+        "ir_d9_fp": fr(nombre(dec["D9"]["fonction_publique"])) + " €",
+        "ir_d9_prive": fr(nombre(dec["D9"]["secteur_prive"])) + " €",
+        "ir_age_annee": str(a_age),
+        "ir_age_actif": fr(age["actif"][a_age], 1) + " ans",
+        "ir_age_sedentaire": fr(age["sedentaire"][a_age], 1) + " ans",
+    }
+    return {"cles": cles}
+
+
+def controler_idees_recues(cles: dict) -> None:
+    """Les réponses courtes (« Non », « En moyenne, non »…) de idees-recues.html sont écrites
+    à la main : on vérifie ici que les chiffres du moment les confirment toujours. Si une mise à
+    jour des données en contredit une, la construction s'arrête et la réponse est à revoir."""
+    def v(cle):
+        t = re.sub(r"[^0-9,−-]", "", cles[cle]).replace(",", ".").replace("−", "-")
+        return float(t)
+    tests = {
+        "plus qu'avant : agents en hausse plus vite que la population, au-delà de la croissance démographique":
+            v("croissance_depuis_ref") > v("croissance_pop_depuis_ref") and v("taux_france") > v("ir_taux_ref"),
+        "plus qu'avant : fonctionnaires au sens strict sous leur maximum":
+            int(cles["fonctionnaires_max_annee"]) < int(cles["annee"]) and v("fonctionnaires_millions") < v("fonctionnaires_max_millions"),
+        "tous fonctionnaires : environ deux sur trois": 55 <= v("fonctionnaires_part") <= 72,
+        "ministères : l'État emploie moins de la moitié des agents": v("fpe_nombre") < v("total_millions") / 2,
+        "partout : du simple au triple": v("dep_taux_max") >= 3 * v("dep_taux_min"),
+        "voisins : plus que l'Allemagne, l'Italie, l'Espagne":
+            v("eu_fr_taux") > max(v("eu_de_taux"), v("eu_it_taux"), v("eu_es_taux")) and v("eu_fr_part") > v("eu_de_part"),
+        "voisins : moins que la Suède et le Danemark": v("eu_fr_part") < min(v("eu_se_part"), v("eu_dk_part")),
+        "mieux payés : salaire net moyen public inférieur au privé": v("ms_net_fp") < v("ms_net_prive"),
+        "mieux payés : l'inverse en début de série": v("ir_net_fp_debut") > v("ir_net_prive_debut"),
+        "mieux payés : salaires plus resserrés dans le public":
+            v("ir_d1_fp") > v("ir_d1_prive") and v("ir_d9_fp") < v("ir_d9_prive"),
+        "point d'indice : le salaire moyen a moins baissé que le point": v("ir_net_fp_evol") > -v("ms_point_perte"),
+        "mieux payés de la fonction publique : surtout des médecins hospitaliers": v("ms_centile_ph") > 50,
+        "masse salariale : la dernière année n'est pas le record": v("ms_pct_pib") < v("ms_pct_pib_max")
+            and cles["ms_annee_pct_max"] != cles["ms_annee"],
+        "retraite avant 60 ans : âge moyen supérieur à 60 ans": v("rt_age_depart") > 60 and v("ir_age_actif") > 60,
+        "cotisations : retenues des fonctionnaires minoritaires, contributions de l'État majoritaires":
+            v("rt_cas_salaries") < 0.25 * v("rt_cas_recettes") and v("rt_cas_etat") > 0.5 * v("rt_cas_recettes"),
+    }
+    for nom, ok in tests.items():
+        verifier(ok, f"idees-recues.html : la réponse « {nom} » n'est plus confirmée par les données")
+
+
 def main() -> int:
     global DATE_MAJ
     try:
@@ -1252,6 +1335,9 @@ def main() -> int:
             jeux.append(construire_departements(cat, geo))
             ecrire_js("departements", jeux[-1])
         ecrire_js("fond_de_carte", geo)
+        # Chiffres propres à la page « Idées reçues » (rien n'est écrit dans donnees/site/ :
+        # la page n'a pas de graphique, ses chiffres sont recopiés dans le HTML ci-dessous).
+        jeux.append(construire_idees_recues(national))
         # Chiffres des pages : toutes les clés, qui ne doivent pas se contredire d'un jeu à l'autre.
         for jeu in jeux:
             for k, v in jeu.get("cles", {}).items():
@@ -1259,6 +1345,7 @@ def main() -> int:
                 cles[k] = v
         a, mo, j = (int(x) for x in DATE_MAJ.split("-"))
         cles["date_maj"] = f"{'1er' if j == 1 else j} {MOIS[mo - 1]} {a}"
+        controler_idees_recues(cles)
         print("Pages HTML :")
         mettre_a_jour_pages(cles)
         print("Terminé.")
