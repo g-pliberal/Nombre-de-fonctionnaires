@@ -59,3 +59,6 @@ jobs:
 
       - name: Test d'accessibilité (axe-core, WCAG 2.2 A et AA)
         run: npm run test:accessibilite
+
+      - name: Test des images téléchargeables (bouton PNG sous chaque graphique)
+        run: npm run test:images

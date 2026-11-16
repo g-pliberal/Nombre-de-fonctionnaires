@@ -267,7 +267,7 @@
         noteAnnee: (a) => (a === debutActuelle ? "Changement de série : variation non calculée." : interpolees.has(a) || interpolees.has(a - 1) ? "Calculée avec une année estimée par la DGAFP : variation lissée." : ""),
         titreAccessible: "Variation annuelle du nombre total d'agents",
       });
-      document.getElementById("variation-note").textContent = `Jusqu'en ${debutActuelle - 1} : série historique ; à partir de ${debutActuelle + 1} : série actuelle. Pas de variation calculée en ${debutActuelle} (changement de série) ni entre 1980 et 1982 (1981 manquant). Les années ${[...interpolees].join(", ")} étant estimées par la DGAFP, les variations qui les encadrent sont lissées.`;
+      document.getElementById("variation-note").textContent = `Jusqu'en ${debutActuelle - 1} : série historique ; à partir de ${debutActuelle + 1} : série actuelle. Pas de variation calculée en ${debutActuelle} (changement de série) ni entre 1980 et 1982 (1981 manquant). Les années ${[...interpolees].join(", ")} étant estimées par la DGAFP, les variations qui les encadrent sont lissées. Sources : ${E.series.historique.source} ; ${E.series.actuelle.source}.`;
       const t2 = PLF.tableau({
         legende: "Variation annuelle du nombre total d'agents",
         colonnes: [

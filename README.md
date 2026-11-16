@@ -58,6 +58,7 @@ assets/
   js/masse-salariale.js  pages « Coût et évolution » et « Salaires », encadré de la page d'accueil
   js/retraites.js      page « Retraites » (et chiffres clés de la page d'accueil)
   js/europe.js         page « En Europe »
+  js/image.js          bouton « Télécharger l'image (PNG) » sous chaque graphique
   fonts/               Jost et Atkinson Hyperlegible (licence SIL OFL)
   img/logo-plf.svg     logo du parti (logo-plf-240.png : version matricielle pour les images de partage)
   img/partage/         image de partage de chaque page (générées)
@@ -80,6 +81,7 @@ outils/
                        comparaison européenne de l'emploi public, avec recoupement Insee
   construire_donnees.py  transforme donnees/csv/ en donnees/site/
   test_accessibilite.mjs  test d'accessibilité automatique (axe-core), voir « Accessibilité »
+  test_images.mjs      test du bouton « Télécharger l'image (PNG) » de chaque graphique
   images_partage.py    fabrique l'image de partage de chaque page (chiffre clé lu dans
                        donnees/site/) et ses balises Open Graph (nécessite Pillow)
 package.json           outils de test uniquement (le site lui-même n'a aucune dépendance)
@@ -199,6 +201,17 @@ npm run test:accessibilite
 ```
 
 Pour ne tester que certaines pages : `node outils/test_accessibilite.mjs index.html carte.html`.
+
+### Images des graphiques
+
+Sous chaque graphique, le bouton « Télécharger l'image (PNG) » produit une image
+prête à partager : le graphique tel qu'il est affiché (réglages choisis, thème
+clair ou sombre), son titre, sa légende, sa note avec la source, et un bandeau
+avec le logo, le nom du site et l'adresse de la page. Tout est fait dans le
+navigateur (assets/js/image.js), sans dépendance. Sur téléphone, la figure est
+élargie le temps de la capture pour obtenir une image lisible. Le test
+`npm run test:images` active chaque bouton (le premier de chaque page au
+clavier) et vérifie le fichier produit.
 
 Un test automatique ne couvre qu'une partie des critères du RGAA (environ un
 tiers) : il ne remplace ni la vérification au clavier et au lecteur d'écran, ni

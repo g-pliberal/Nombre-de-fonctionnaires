@@ -4,7 +4,8 @@
   "description": "Outils de contrôle du site (le site lui-même n'a aucune dépendance).",
   "type": "module",
   "scripts": {
-    "test:accessibilite": "node outils/test_accessibilite.mjs"
+    "test:accessibilite": "node outils/test_accessibilite.mjs",
+    "test:images": "node outils/test_images.mjs"
   },
   "devDependencies": {
     "axe-core": "4.10.3",
