@@ -1085,7 +1085,8 @@
       panneau.innerHTML = `<h3>${C.noms[i]} (${code})</h3><p class="fiche-dep__valeur" style="margin:0">${fmtHab(vals[i])}</p><p style="margin:.2rem 0 .4rem">par habitant (${NIVEAUX[niveau].long}), ${C.annee}</p>
         <dl>${ligneFiche("Communes", parHab("communes", i), C.communes[i])}${ligneFiche("Intercommunalités", parHab("groupements", i), C.groupements[i])}${ligneFiche("Département", parHab("departement", i), C.departement[i])}
         <dt>Total</dt><dd>${fmtM(C.total[i])}</dd><dt>Population</dt><dd>${nf(0).format(C.population[i])}</dd></dl>
-        ${note ? `<p class="encadre encadre--attention" style="font-size:.9em;margin-top:.6rem"><strong>À noter :</strong> ${note}.</p>` : ""}`;
+        ${note ? `<p class="encadre encadre--attention" style="font-size:.9em;margin-top:.6rem"><strong>À noter :</strong> ${note}.</p>` : ""}
+        <p style="margin-top:.6rem"><a class="lien-fleche" href="departements/${code}.html">Fiche du département</a></p>`;
     }
     function survol(evt) {
       const p = evt.target.closest(".dep");

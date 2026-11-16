@@ -29,16 +29,16 @@ jobs:
           pip install pillow
           python3 outils/images_partage.py
 
-      - name: Vérifier que donnees/site/ et les pages correspondent aux CSV
+      - name: Vérifier que donnees/site/, les pages et les fiches des départements correspondent aux CSV
         run: |
           if ! git diff --exit-code --stat -- donnees/site '*.html'; then
             echo "::error::Les fichiers de donnees/site/ ou les chiffres des pages HTML ne correspondent pas aux CSV. Lancez « python3 outils/construire_donnees.py » et validez le résultat."
             git diff -- donnees/site '*.html' | head -c 4000
             exit 1
           fi
-          if [ -n "$(git status --porcelain -- donnees/site)" ]; then
-            echo "::error::La construction a créé des fichiers non suivis dans donnees/site/."
-            git status --porcelain -- donnees/site
+          if [ -n "$(git status --porcelain -- donnees/site departements)" ]; then
+            echo "::error::La construction a créé ou supprimé des fichiers dans donnees/site/ ou departements/."
+            git status --porcelain -- donnees/site departements
             exit 1
           fi
 
