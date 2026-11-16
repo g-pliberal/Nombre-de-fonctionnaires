@@ -79,6 +79,21 @@ ADRESSES = {
         f"{ARCH}/rapports_annuels/2010-2011/xls/RA2010-2011_COMPLEMENT_Effectifs_physiques_ETP_3FP_dep_2005_2009_20120530.xls",
 }
 
+# Séries de la base BDM de l'Insee (format SDMX) : la réponse porte dans son en-tête l'heure
+# à laquelle elle a été préparée, donc ses octets changent à chaque téléchargement. On compare
+# alors les observations (période, valeur) à une empreinte de référence, calculée par
+# empreinte_observations() sur le fichier utilisé (None : pas encore de référence).
+OBSERVATIONS_SDMX: dict[str, str | None] = {
+    "insee/ipc_coefficient_011813530.xml": None,
+}
+OBS = re.compile(r'TIME_PERIOD="([^"]+)"\s+OBS_VALUE="([^"]*)"')
+
+
+def empreinte_observations(contenu: bytes) -> str:
+    obs = sorted(OBS.findall(contenu.decode("utf-8", errors="replace")))
+    return hashlib.sha256("\n".join(f"{p};{v}" for p, v in obs).encode()).hexdigest()
+
+
 LIGNE = re.compile(r"^\s*([0-9a-f]{64})\s+(\S+)(?:\s+<(\S+)>)?\s*$")
 
 
@@ -165,6 +180,15 @@ def verifier(sources: list[Source]) -> list[Resultat]:
         h = hashlib.sha256(donnees).hexdigest()
         if h == s.empreinte:
             resultats.append(Resultat(s, "identique"))
+        elif s.chemin in OBSERVATIONS_SDMX:
+            ho = empreinte_observations(donnees)
+            ref = OBSERVATIONS_SDMX[s.chemin]
+            if ref is None:
+                resultats.append(Resultat(s, "sans référence", f"empreinte des observations : {ho}"))
+            elif ho == ref:
+                resultats.append(Resultat(s, "identique", "observations identiques, seul l'en-tête change"))
+            else:
+                resultats.append(Resultat(s, "modifié", f"observations modifiées ({len(OBS.findall(donnees.decode('utf-8', 'replace')))} valeurs)", ho))
         else:
             resultats.append(Resultat(s, "modifié", f"{len(donnees):,} octets".replace(",", " "), h))
     return resultats
@@ -172,7 +196,7 @@ def verifier(sources: list[Source]) -> list[Resultat]:
 
 def rapport(resultats: list[Resultat]) -> str:
     modifies = [r for r in resultats if r.etat == "modifié"]
-    autres = [r for r in resultats if r.etat in ("inaccessible", "sans adresse")]
+    autres = [r for r in resultats if r.etat in ("inaccessible", "sans adresse", "sans référence")]
     n_ok = sum(r.etat == "identique" for r in resultats)
     # Empreinte du rapport : permet de ne pas signaler deux fois la même situation.
     cle = hashlib.sha256("\n".join(
@@ -195,7 +219,7 @@ def rapport(resultats: list[Resultat]) -> str:
     if autres:
         L += ["### Fichiers inaccessibles", "",
               "Le fichier n'a pas pu être téléchargé : adresse déplacée (souvent le signe d'une "
-              "nouvelle édition), site indisponible ou adresse à compléter.", "",
+              "nouvelle édition), site indisponible, adresse à compléter ou empreinte de référence à ajouter dans OBSERVATIONS_SDMX.", "",
               "| Fichier | Adresse | Erreur |", "|---|---|---|"]
         for r in autres:
             L.append(f"| `{r.source.chemin}` | {r.source.url or '—'} | {r.detail} |")
