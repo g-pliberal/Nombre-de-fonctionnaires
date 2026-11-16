@@ -29,16 +29,16 @@ jobs:
           pip install pillow
           python3 outils/images_partage.py
 
-      - name: Vérifier que donnees/site/ et les pages correspondent aux CSV
+      - name: Vérifier que donnees/site/, les pages et le plan du site correspondent aux CSV
         run: |
-          if ! git diff --exit-code --stat -- donnees/site '*.html'; then
-            echo "::error::Les fichiers de donnees/site/ ou les chiffres des pages HTML ne correspondent pas aux CSV. Lancez « python3 outils/construire_donnees.py » et validez le résultat."
-            git diff -- donnees/site '*.html' | head -c 4000
+          if ! git diff --exit-code --stat -- donnees/site '*.html' sitemap.xml robots.txt; then
+            echo "::error::Les fichiers de donnees/site/, les chiffres des pages HTML ou le plan du site (sitemap.xml) ne sont pas à jour. Lancez « python3 outils/construire_donnees.py » et validez le résultat."
+            git diff -- donnees/site '*.html' sitemap.xml robots.txt | head -c 4000
             exit 1
           fi
-          if [ -n "$(git status --porcelain -- donnees/site)" ]; then
-            echo "::error::La construction a créé des fichiers non suivis dans donnees/site/."
-            git status --porcelain -- donnees/site
+          if [ -n "$(git status --porcelain -- donnees/site sitemap.xml robots.txt)" ]; then
+            echo "::error::La construction a créé des fichiers non suivis (donnees/site/, sitemap.xml ou robots.txt)."
+            git status --porcelain -- donnees/site sitemap.xml robots.txt
             exit 1
           fi
 

@@ -24,6 +24,8 @@ from collections import defaultdict
 from datetime import date
 from pathlib import Path
 
+import referencement
+
 RACINE = Path(__file__).resolve().parent.parent
 CSV = RACINE / "donnees" / "csv"
 SITE = RACINE / "donnees" / "site"
@@ -1261,6 +1263,11 @@ def main() -> int:
         cles["date_maj"] = f"{'1er' if j == 1 else j} {MOIS[mo - 1]} {a}"
         print("Pages HTML :")
         mettre_a_jour_pages(cles)
+        print("Référencement (plan du site, robots.txt, données structurées) :")
+        try:
+            referencement.construire()
+        except referencement.Anomalie as e:
+            raise Anomalie(str(e)) from e
         print("Terminé.")
         return 0
     except Anomalie as e:
