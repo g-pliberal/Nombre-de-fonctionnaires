@@ -365,7 +365,7 @@ img, svg { max-width: 100%; }
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  padding: 0.4rem 0.85rem;
+  padding: 0.4rem 0.75rem;
   border-radius: var(--rayon-petit);
   color: #fff;
   text-decoration: none;
@@ -1037,6 +1037,39 @@ select { max-width: 100%; }
 .liste-lecture { padding-left: 1.2rem; }
 .liste-lecture li { margin-bottom: 0.75rem; }
 .liste-lecture li::marker { color: var(--accent); font-weight: 700; }
+
+/* ---------- Page « Idées reçues » : une carte par question ---------- */
+.questions-liste { columns: 2 22rem; column-gap: 2rem; padding-left: 1.6rem; margin: 0 0 0.8rem; }
+.questions-liste li { margin: 0; break-inside: avoid; }
+.questions-liste li::marker { color: var(--accent); font-weight: 700; }
+.sommaire-page .questions-liste a { display: inline-block; min-height: 0; line-height: 1.4; padding-block: 0.35rem; }
+.idees {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+  margin-top: 1.25rem;
+}
+.idee {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 1.2rem 1.35rem 1.1rem 1.6rem;
+  box-shadow: var(--ombre);
+  overflow: hidden;
+  scroll-margin-top: 1rem;
+}
+.idee::before {
+  content: "";
+  position: absolute; inset: 0 auto 0 0;
+  width: 6px;
+  background: var(--safran);
+}
+.idee h3 { margin-bottom: 0.55rem; }
+.idee__verdict { font-family: var(--police-titres); font-weight: 600; font-size: 1.12em; color: var(--titre); }
+.idee__bref { font-size: 0.78em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-right: 0.2em; }
+.idee__liens a { display: inline-block; padding-block: 0.3rem; }
+.idee__source { color: var(--texte-doux); font-size: 0.86em; margin-bottom: 0; }
 .etapes-liste { padding-left: 1.1rem; margin: 0; }
 .etapes-liste li { margin-bottom: 0.6rem; }
 .etapes-liste li::marker { color: var(--accent); }
@@ -1057,7 +1090,7 @@ select { max-width: 100%; }
 
 @media (forced-colors: active) {
   .dep { stroke: CanvasText; }
-  .chiffre::before { background: CanvasText; }
+  .chiffre::before, .idee::before { background: CanvasText; }
   .choix label:has(input:checked) { outline: 3px solid Highlight; }
 }
 

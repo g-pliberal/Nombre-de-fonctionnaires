@@ -166,6 +166,14 @@ def cartes() -> dict:
         detail=f"{u['eu_de_part']} en Allemagne, {u['eu_se_part']} en Suède. France : {u['eu_fr_rang_part']}.",
         source="Sources : OCDE, Eurostat, Insee",
     )
+    c["idees-recues"] = dict(
+        question="Mieux payés que dans le privé ? Plus nombreux qu'avant ?",
+        valeur=(m["ms_net_fp"], ""),
+        libelle=f"nets par mois en moyenne dans le public, {m['ms_net_prive']} dans le privé ({m['ms_annee_sal']})",
+        detail=(f"{n['croissance_depuis_ref']} d'agents publics depuis {n['annee_ref']}, "
+                f"{n['croissance_pop_depuis_ref']} d'habitants : onze idées reçues face aux chiffres officiels."),
+        source="Sources : Insee, DGAFP, OCDE, Eurostat",
+    )
     c["methode"] = dict(
         question="Sources, définitions et limites",
         valeur=(str(len(lignes_sources)), ""),
