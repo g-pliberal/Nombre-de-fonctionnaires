@@ -82,6 +82,8 @@ outils/
   test_accessibilite.mjs  test d'accessibilité automatique (axe-core), voir « Accessibilité »
   images_partage.py    fabrique l'image de partage de chaque page (chiffre clé lu dans
                        donnees/site/) et ses balises Open Graph (nécessite Pillow)
+  verifier_sources.py  re-télécharge les fichiers officiels et compare leurs empreintes à
+                       celles de donnees/empreintes_*.txt (veille, ne modifie rien)
 package.json           outils de test uniquement (le site lui-même n'a aucune dépendance)
 ```
 
@@ -163,6 +165,13 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
 `donnees/site/` ou les chiffres des pages HTML ne correspondent pas aux CSV (script oublié
 ou fichier modifié à la main), si un contrôle de cohérence échoue, si un script JavaScript
 est invalide, ou si le test d'accessibilité (voir « Accessibilité ») trouve une violation.
+
+Chaque mois (le 2, et à la demande depuis l'onglet Actions), la veille des sources
+(`.github/workflows/veille-sources.yml`) re-télécharge les fichiers officiels dont les
+empreintes figurent dans `donnees/empreintes_*.txt` et ouvre une issue « Nouvelles données
+officielles à examiner » (étiquette `sources officielles`) si l'un d'eux a changé ou n'est
+plus accessible. Elle ne modifie aucun chiffre : c'est le signal pour suivre la procédure
+ci-dessus. Pour la lancer à la main : `python3 outils/verifier_sources.py`.
 
 Le fond de carte n'a besoin d'être reconstruit qu'en cas de changement des
 limites départementales (`python3 outils/fond_de_carte.py`, nécessite Node.js).

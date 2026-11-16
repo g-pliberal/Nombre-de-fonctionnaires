@@ -1,0 +1,64 @@
+# Veille des sources : chaque mois, re-télécharge les fichiers officiels (Insee, DGAFP, OFGL,
+# OCDE, Eurostat) dont les empreintes SHA-256 sont dans donnees/empreintes_*.txt et ouvre une
+# issue si l'un d'eux a changé ou n'est plus accessible. Ne modifie aucun fichier du dépôt.
+name: Veille des sources
+
+on:
+  schedule:
+    - cron: "17 6 2 * *" # le 2 de chaque mois, 6 h 17 UTC
+  workflow_dispatch:
+  # Sur une PR qui modifie le script ou ce workflow : vérification seule, sans issue.
+  pull_request:
+    paths:
+      - outils/verifier_sources.py
+      - .github/workflows/veille-sources.yml
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: veille-sources
+  cancel-in-progress: false
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Comparer les fichiers officiels aux empreintes du dépôt
+        id: verif
+        run: |
+          set +e
+          python3 outils/verifier_sources.py --rapport rapport.md
+          rc=$?
+          if [ "$rc" -eq 0 ]; then echo "changement=non"; else echo "changement=oui"; fi >> "$GITHUB_OUTPUT"
+          cat rapport.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Ouvrir ou compléter l'issue de veille
+        if: steps.verif.outputs.changement == 'oui' && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          LABEL="sources officielles"
+          gh label create "$LABEL" --color FBCA04 \
+            --description "Un fichier officiel utilisé par le site a changé" 2>/dev/null || true
+          cle=$(grep -o 'verifier-sources: [0-9a-f]*' rapport.md)
+          numero=$(gh issue list --label "$LABEL" --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ -z "$numero" ]; then
+            gh issue create --title "Nouvelles données officielles à examiner" \
+              --label "$LABEL" --body-file rapport.md
+          elif gh issue view "$numero" --json body,comments \
+                 --jq '[.body] + [.comments[].body] | join("\n")' | grep -qF "$cle"; then
+            echo "Situation déjà signalée dans l'issue #$numero : rien à ajouter."
+          else
+            gh issue comment "$numero" --body-file rapport.md
+          fi
