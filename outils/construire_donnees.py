@@ -8,6 +8,8 @@ le site fonctionne aussi en ouvrant simplement index.html depuis le disque.
 Il recopie aussi dans les pages HTML les chiffres calculés à partir des données
 (éléments portant un attribut data-cle, descriptions portant un attribut data-modele) :
 après une mise à jour des CSV, aucun chiffre n'est à corriger à la main dans les pages.
+Il écrit enfin une fiche par département (departements/<code>.html, voir
+outils/fiches_departements.py).
 
 Le script contrôle la cohérence des données et s'arrête en cas d'anomalie.
 Usage : python3 outils/construire_donnees.py
@@ -1263,6 +1265,14 @@ def main() -> int:
         cles["date_maj"] = f"{'1er' if j == 1 else j} {MOIS[mo - 1]} {a}"
         print("Pages HTML :")
         mettre_a_jour_pages(cles)
+        # Fiches des départements (departements/*.html), après les pages : elles reprennent
+        # l'en-tête et le pied de page de carte.html, déjà à jour.
+        dep = next((j for j in jeux if "departements" in j and "debutHomogene" in j), None)
+        ms = next((j for j in jeux if "carte" in j and "cn" in j), None)
+        if dep and ms:
+            from fiches_departements import ecrire_fiches
+            n = ecrire_fiches(RACINE, dep, ms["carte"], cles, fr=fr, verifier=verifier)
+            print(f"  departements/ : {n} pages")
         print("Référencement (plan du site, robots.txt, données structurées) :")
         try:
             referencement.construire()

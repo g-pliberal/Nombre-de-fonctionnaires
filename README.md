@@ -24,6 +24,7 @@ GitHub Pages. Il ne dépose aucun cookie et n'utilise aucun traceur.
 | `masse-salariale.html` | La masse salariale (coût et évolution) : du coût employeur au salaire net, séries depuis 1949, par employeur (État, collectivités, hôpitaux, Sécurité sociale), paie de l'État ligne par ligne, par ministère et par type de collectivité, carte des frais de personnel des collectivités par département, par mission, comparaison européenne |
 | `salaires.html` | Les salaires : du brut au net par population, public/privé, déciles, point d'indice depuis 1970, salaires par ministère, collectivité et filière, plus hautes rémunérations (1 % le mieux payé, emplois de direction, dix plus hautes rémunérations publiées par les employeurs) |
 | `retraites.html` | Les retraites des fonctionnaires : pensions versées depuis 1990, pensions en paiement, montants, ratio démographique, compte « Pensions » de l'État, taux de cotisation, déficit de la CNRACL, départs et âge de départ |
+| `departements/<code>.html` | Fiche de chaque département (101 pages générées, ex. `departements/33.html`) : effectifs, taux pour 1 000 habitants et rang, évolution depuis 2010, répartition par versant, frais de personnel des collectivités, comparés à la France entière ; `departements/index.html` les liste |
 | `europe.html` | En Europe : emploi dans les administrations publiques en % de l'emploi total et pour 1 000 habitants, pays européens (OCDE, Eurostat), évolution depuis 2007, répartition entre État, collectivités et sécurité sociale, différences de périmètre |
 | `methode.html` | Sources, définitions, limites, téléchargements, accessibilité |
 
@@ -76,6 +77,7 @@ assets/
   js/masse-salariale.js  pages « Coût et évolution » et « Salaires », encadré de la page d'accueil
   js/retraites.js      page « Retraites » (et chiffres clés de la page d'accueil)
   js/europe.js         page « En Europe »
+  js/departement.js    graphiques des fiches des départements
   fonts/               Jost et Atkinson Hyperlegible (licence SIL OFL)
   img/logo-plf.svg     logo du parti (logo-plf-240.png : version matricielle pour les images de partage)
   img/partage/         image de partage de chaque page (générées)
@@ -96,7 +98,8 @@ outils/
                        avec contrôles de cohérence
   extraire_europe.py   télécharge les fichiers de l'OCDE et d'Eurostat et produit les CSV de la
                        comparaison européenne de l'emploi public, avec recoupement Insee
-  construire_donnees.py  transforme donnees/csv/ en donnees/site/
+  construire_donnees.py  transforme donnees/csv/ en donnees/site/ et écrit les fiches des départements
+  fiches_departements.py  fiches des départements (departements/*.html), appelé par construire_donnees.py
   test_accessibilite.mjs  test d'accessibilité automatique (axe-core), voir « Accessibilité »
   referencement.py     génère sitemap.xml, robots.txt et les données structurées schema.org
                        (appelé par construire_donnees.py)
@@ -166,6 +169,9 @@ L'Insee et la DGAFP publient les effectifs de l'année N-1 en fin d'année N
    jour le… » du pied de page ne change que si les fichiers de `donnees/csv/` ont changé.
    Pour citer un nouveau chiffre dans une page, ajouter sa clé dans le script plutôt que de
    l'écrire en dur.
+   Le script réécrit aussi les fiches des départements (`departements/*.html`) : elles sont
+   entièrement générées par `outils/fiches_departements.py` à partir des mêmes données, avec
+   l'en-tête et le pied de page de `carte.html` ; ne pas les modifier à la main.
 3. Régénérer les images de partage (réseaux sociaux), qui reprennent le chiffre clé de chaque
    page :
    ```
@@ -206,8 +212,8 @@ animations ». Le site n'a pas encore fait l'objet d'un audit indépendant.
 
 ### Test automatique
 
-Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les neuf pages et la page 404
-(règles WCAG 2.0, 2.1 et 2.2, niveaux A et AA, et bonnes pratiques), en thème
+Un test [axe-core](https://github.com/dequelabs/axe-core) vérifie les neuf pages, la page 404 et
+cinq fiches de départements (règles WCAG 2.0, 2.1 et 2.2, niveaux A et AA, et bonnes pratiques), en thème
 clair et sombre, sur grand écran et sur téléphone, ainsi que le menu et le
 dialogue « Options d'affichage » ouverts. Il échoue à la moindre violation ou
 erreur JavaScript. Il faut Node.js 18 ou plus :

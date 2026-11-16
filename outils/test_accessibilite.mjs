@@ -2,7 +2,7 @@
    Test d'accessibilité automatique (axe-core), règles WCAG 2.0, 2.1 et 2.2
    niveaux A et AA, que reprend le RGAA 4.1, et bonnes pratiques d'axe.
 
-   Chaque page est ouverte dans Chromium (Playwright), une fois en thème clair
+   Chaque page (et quelques fiches de départements) est ouverte dans Chromium (Playwright), une fois en thème clair
    et une fois en thème sombre, sur grand écran et sur écran de téléphone,
    après le dessin des graphiques ; sur la page d'accueil, le menu et le
    dialogue « Options d'affichage » sont aussi testés ouverts.
@@ -29,7 +29,9 @@ const PAGES = process.argv.slice(2).length
   ? process.argv.slice(2)
   : ["index.html", "evolution.html", "carte.html", "composition.html",
      "masse-salariale.html", "salaires.html", "retraites.html", "europe.html", "methode.html",
-     "404.html"];
+     "404.html",
+     // Fiches des départements (générées) : la liste, un cas courant, Paris, la Corse, Mayotte (sans effectifs).
+     "departements/index.html", "departements/01.html", "departements/75.html", "departements/2A.html", "departements/976.html"];
 const THEMES = ["clair", "sombre"];
 const ECRANS = [
   { nom: "ordinateur", width: 1280, height: 900 },

@@ -608,6 +608,7 @@
       if (effectif(c, "ensemble", i) == null && effectif(c, "fpe", i) == null) {
         zoneFiche.innerHTML = `<h3>${nomDe(c)} <span style="font-weight:500;color:var(--texte-doux)">(${c})</span></h3>
           <p>${messageSansDonnee(c)}</p>
+          <p><a class="lien-fleche" href="departements/${c}.html">Fiche du département</a></p>
           <p><button type="button" class="bouton bouton--secondaire" id="fiche-fermer">Revenir à la France entière</button></p>`;
         zoneFiche.querySelector("#fiche-fermer").addEventListener("click", () => selectionner(null, true));
         return;
@@ -633,6 +634,7 @@
         </dl>
         ${alerte ? `<p class="encadre encadre--attention" style="font-size:.9em"><strong>À noter :</strong> ${alerte}</p>` : ""}
         <div class="sparkline" id="fiche-spark"></div>
+        <p><a class="lien-fleche" href="departements/${c}.html">Fiche complète du département</a></p>
         <p><button type="button" class="bouton bouton--secondaire" id="fiche-fermer">Revenir à la France entière</button></p>`;
       // La petite courbe suit la période affichée (homogène par défaut).
       const k0 = premierIndice();
