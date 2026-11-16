@@ -82,9 +82,10 @@ ADRESSES = {
 # Séries de la base BDM de l'Insee (format SDMX) : la réponse porte dans son en-tête l'heure
 # à laquelle elle a été préparée, donc ses octets changent à chaque téléchargement. On compare
 # alors les observations (période, valeur) à une empreinte de référence, calculée par
-# empreinte_observations() sur le fichier utilisé (None : pas encore de référence).
+# empreinte_observations() (None : pas de référence ; le script affiche alors celle qu'il
+# obtient, à recopier ici après avoir vérifié que les valeurs sont celles utilisées).
 OBSERVATIONS_SDMX: dict[str, str | None] = {
-    "insee/ipc_coefficient_011813530.xml": None,
+    "insee/ipc_coefficient_011813530.xml": "567edd0238d657d29cf150a398a34e5772be43f904f0876fb788226d7e721c6b",
 }
 OBS = re.compile(r'TIME_PERIOD="([^"]+)"\s+OBS_VALUE="([^"]*)"')
 
